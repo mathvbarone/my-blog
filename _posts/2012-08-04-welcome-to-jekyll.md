@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "Welcome to Jekyll"
-date: 2015-08-04 03:21:35
-image: '/assets/img/'
-description: 'Put your description here.'
+title: "Dica rápida #1"
+date: 2012-01-07 21:31:05
+description: "Detalhes fazem a diferença, vamos falar sobre Favicons, Touch Icons e Tile Icons e como eles fazem a diferença."
+main-class: 'dev'
+color: '#637a91'
 tags:
-- jekyll
-- web
-categories:
-- Jekyll is awesome
-twitter_text: 'Put your twitter description here.'
+- "dicarapida"
+twitter_text: "Favicons, touch icons e tile icons..."
+introduction: "Qual a importância dos favicons, touch icons e tile icons. Como criá-los automáticamente e como usá-los em seu site."
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

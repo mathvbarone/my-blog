@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.html %}
     <body>
-        {% include header-post.html %}
-        <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        {% include header-default.html %}
 
-            <article role="article" id="scroll" class="post-content" itemprop="articleBody">
+        <header class="header-post" role="banner">
+                <div class="content">
+                   {% if page.date %}
+                       <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">{{ page.date | date_to_string }}</time>
+                   {% endif %}
+                   <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+                   <p itemprop="description" class="subtitle">{{ page.description }}</p>
+               </div>
+           </header>
+
+        <section class="post">
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
                 {{ content }}
             </article>
-
-
 
             {% include comments.html %}
             {% include footer.html %}

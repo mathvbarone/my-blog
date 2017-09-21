@@ -45,27 +45,27 @@ var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
  */
 gulp.task('jekyll-build', function (done) {
 	browserSync.notify(messages.jekyllBuild);
-	return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
+	return cp.spawn(jekyllCommand, ['s'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-	browserSync.reload();
-});
+// gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+// 	browserSync.reload();
+// });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-	browserSync({
-		server: {
-			baseDir: '_site'
-		}
-	});
-});
+// gulp.task('browser-sync', ['jekyll-build'], function() {
+// 	browserSync({
+// 		server: {
+// 			baseDir: '_site'
+// 		}
+// 	});
+// });
 
 /**
  * Stylus task
@@ -125,12 +125,13 @@ gulp.task('imagemin', function() {
  gulp.task('watch', function () {
 	gulp.watch(paths.src.sass, ['css']);
 	gulp.watch(paths.src.js, ['js']);
-	gulp.watch('paths.src.{jpg,png,gif}', ['imagemin']);
-	gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+	gulp.watch('assets/src/img/**/*.{jpg,png,gif}', ['imagemin']);
+	gulp.watch(['jekyll-build']);
+	// gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['js', 'css', 'browser-sync', 'watch']);
+gulp.task('default', [ 'jekyll-build', 'imagemin', 'js', 'css', 'watch']);

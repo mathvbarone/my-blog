@@ -1,79 +1,103 @@
 ---
-layout: default
+layout: 
 ---
 
-<!-- HERO -->
-<section class="panel hero is-fullheight hero-index has-header" data-section-name="home">
-    <div class="hero-index-body">
-        <a href="/blog" title="© 2017 Matheus Barone - Desenvolvedor Front-end | Todos os Direitos Reservados">
-                {% include logo-hero.html %}
-        </a>
-        <h1 class="title wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.4s">
-            Olá, meu nome é Matheus. <span>Sou desenvolvedor Front-end</span>
-        </h1>
-        <h2 class="subtitle wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.6s">
-            Isso quer dizer que crio
-            <strong id="typed-strings">
-                <p class="typed-words">portais.</p>
-                <p class="typed-words">e-commerce.</p>
-                <p class="typed-words">web-apps.</p>
-                <p class="typed-words">sites institucionais.</p>                                        
-                <p class="typed-words">landing-pages.</p>                    
-                <p class="typed-words">e-commerce.</p>
-            </strong>
-            <strong id="typed"></strong>
-        </h2>
-        <a class="button is-success button-hero wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">Vamos trabalhar juntos? :)</a>
-        <div class="learn-more wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="1s">
-            <a href="#last-posts" class="go">
-                <span>Deixe eu me apresentar</span>
-                <i class="fa fa-angle-down" aria-hidden="true"></i>	
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+{% include head.html %}
+
+<body>
+    <section id="main-box" class="main-box">
+        {% include header-index.html %}
+
+        <!-- HERO -->
+        <section class="panel hero is-fullheight hero-index has-header" data-section-name="home">
+            <div class="hero-index-body">
+                <a href="/blog" title="© 2017 Matheus Barone - Desenvolvedor Front-end | Todos os Direitos Reservados">
+                    {% include logo-hero.html %}
             </a>
-        </div>
-    </div>
-</section>
-<!-- /HERO -->
+                <h1 class="title wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.4s">
+                    Olá, meu nome é Matheus. <span>Sou desenvolvedor Front-end</span>
+                </h1>
+                <h2 class="subtitle wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.6s">
+                    Isso quer dizer que crio
+                    <strong id="typed-strings">
+                    <p class="typed-words">portais.</p>
+                    <p class="typed-words">e-commerce.</p>
+                    <p class="typed-words">web-apps.</p>
+                    <p class="typed-words">sites institucionais.</p>                                        
+                    <p class="typed-words">landing-pages.</p>                    
+                    <p class="typed-words">e-commerce.</p>
+                </strong>
+                    <strong id="typed"></strong>
+                </h2>
+                <a class="button is-success button-hero wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">Vamos trabalhar juntos? :)</a>
+                <div class="learn-more wow fadeInDown" data-wow-duration="0.3s" data-wow-delay="1s">
+                    <a href="#last-posts" class="go">
+                    <span>Deixe eu me apresentar</span>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>	
+                </a>
+                </div>
+            </div>
+        </section>
+        <!-- /HERO -->
 
 
-<div class="offset">
-    <main id="last-posts" class="content-main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered has-text-weight-bold">Últimos posts</h2>
-            <ul class="columns is-multiline">
-                {% for post in site.posts offset: 0 limit: 4 %}
-                <li class="column is-half">                       
-                        <div class="card">   
-                            <div class="card-content">
-                                <div class="content">
-                                    <article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                                        <a href="{{ post.url | prepend: site.baseurl }}">     
-                                        <meta itemprop="datePublished" content="{{post.date}}">
-                                            <time datetime="{{ post.date | date_to_xmlschema }}">
-                                                <span class="day">
-                                                    {{ post.date | date: "%d" }}
-                                                </span>
-                                                <span class="month-year">
-                                                    {{ post.date | date: "%B %Y" }}
-                                                </span>
-                                            </time>                                                                               
-                                            <h2 class="post-title" itemprop="name">{{ post.title }}</h2>
-                                            <p class="description">
-                                                {{ post.content | strip_html | truncatewords:40 }}                                                
-                                            </p>
-                                        </a>
-                                        <div class="tags">
-                                            {% for tag in post.tags %}
-                                                <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
-                                            {% endfor %}
-                                        </div> 
-                                    </article>  
-                                </div>    
+        <div class="offset">
+
+            <!-- ULTIMOS POSTS -->
+            <main id="last-posts" class="content-main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+                <div class="container">
+                    <!-- TITULO -->
+                    <h2 class="title is-2 has-text-centered has-text-weight-bold">Últimos posts</h2>
+                    <!-- /TITULO -->
+
+                    <!-- LISTA DE POSTS -->
+                    <ul class="columns is-multiline p-b-60">
+                        {% for post in site.posts offset: 0 limit: 4 %}
+                        <li class="column is-one-third wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                                            <a href="{{ post.url | prepend: site.baseurl }}">
+                                                <meta itemprop="datePublished" content="{{post.date}}">
+                                                <time datetime="{{ post.date | date_to_xmlschema }}">
+                                                    {% include date.html date=post.date %}
+                                                </time>
+                                                <h2 class="title is-4" itemprop="name">{{ post.title }}</h2>
+                                                <p class="description">
+                                                    {{ post.content | strip_html | truncatewords:20 }}
+                                                </p>
+                                            </a>
+                                            <div class="tags">
+                                                {% for tag in post.tags %}
+                                                <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a> {% endfor
+                                                %}
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </main>
-</div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <!-- LISTA DE POSTS -->
 
+                    <!-- BUTTON VER MAIS -->
+                    <div class="columns is-mobile is-centered">
+                        <div class="column is-narrow">
+                            <a href="/blog" title="Veja mais" class="button button-hero has-text-centered is-primary">Veja Mais</a>
+                        </div>
+                    </div>
+                    <!-- /BUTTON VER MAIS -->
+
+                </div>
+            </main>
+            <!-- ULTIMOS POSTS -->
+        </div>
+
+
+        {% include footer.html %}
+    </section>
+</body>

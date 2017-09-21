@@ -13906,6 +13906,38 @@ a {
     padding-right: 50px
 }
 
+.m-t-60 {
+    margin-top: 60px
+}
+
+.p-t-60 {
+    padding-top: 60px
+}
+
+.m-b-60 {
+    margin-bottom: 60px
+}
+
+.p-b-60 {
+    padding-bottom: 60px
+}
+
+.m-l-60 {
+    margin-left: 60px
+}
+
+.p-l-60 {
+    padding-left: 60px
+}
+
+.m-r-60 {
+    margin-right: 60px
+}
+
+.p-r-60 {
+    padding-right: 60px
+}
+
 .m-t-75 {
     margin-top: 75px
 }
@@ -13968,6 +14000,26 @@ a {
 
 .p-r-100 {
     padding-right: 100px
+}
+
+.post-jekyll .title-galery {
+    color: #000
+}
+
+.post-html .title-galery {
+    color: #fff
+}
+
+.post-css .title-galery {
+    color: #ccc
+}
+
+.post-js .title-galery {
+    color: #ddd
+}
+
+.post-misc .title-galery {
+    color: red
 }
 
 .button-hero {
