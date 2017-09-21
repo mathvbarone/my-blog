@@ -1,0 +1,40 @@
+// HEADER
+
+.mast-header
+    z-index: 10
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12)
+    padding: 5px 10px
+    top: -46px
+    position: fixed
+    width: 100%
+    max-width 100%
+    background: #fff
+    transition: linear 0.3s all
+
+    &.is-active
+        top: 0
+
+.header-logo
+    .logo-mb-1 
+        fill: #000200
+        stroke: #fff
+        stroke-miterlimit: 10
+        stroke-width: 2px
+        transition: ease-in-out 0.2s all
+    
+    .logo-mb-2 
+        fill: none
+    
+
+    .logo-mb-3 
+        fill: #fff
+        transition: ease-in-out 0.2s all
+    
+
+    &:hover
+        .logo-mb-1 
+            fill: #fff
+            stroke: #000
+        
+        .logo-mb-3 
+            fill: #000
