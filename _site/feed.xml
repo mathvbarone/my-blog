@@ -6,20 +6,139 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Sep 2017 08:39:59 -0300</pubDate>
-    <lastBuildDate>Fri, 22 Sep 2017 08:39:59 -0300</lastBuildDate>
+    <pubDate>Fri, 22 Sep 2017 12:14:43 -0300</pubDate>
+    <lastBuildDate>Fri, 22 Sep 2017 12:14:43 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>Primeiro Post</title>
-        <description>&lt;p&gt;Primeiro post&lt;/p&gt;
+        <title>Post MISC</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-misc&quot;&gt;Como escrever um post de MISC.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
 </description>
-        <pubDate>Thu, 21 Sep 2017 14:05:05 -0300</pubDate>
-        <link>http://localhost:4000/primeio-post</link>
-        <guid isPermaLink="true">http://localhost:4000/primeio-post</guid>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-misc</link>
+        <guid isPermaLink="true">http://localhost:4000/post-misc</guid>
         
-        <category>jekyll</category>
+        <category>misc</category>
         
+        
+        <category>Front Dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>Post JS</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-js&quot;&gt;Como escrever um post de JS.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-js</link>
+        <guid isPermaLink="true">http://localhost:4000/post-js</guid>
+        
+        <category>js</category>
+        
+        
+        <category>Front Dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>Post HTML</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-html&quot;&gt;Como escrever um post de HTML.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-html</link>
+        <guid isPermaLink="true">http://localhost:4000/post-html</guid>
+        
+        <category>html</category>
+        
+        
+        <category>Front Dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>Post FRONT</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-front&quot;&gt;Como escrever um post de FRONT.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-front</link>
+        <guid isPermaLink="true">http://localhost:4000/post-front</guid>
+        
+        <category>front</category>
+        
+        
+        <category>Front Dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>Post CSS</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-css&quot;&gt;Como escrever um post de CSS.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-css</link>
+        <guid isPermaLink="true">http://localhost:4000/post-css</guid>
+        
+        <category>css</category>
+        
+        
+        <category>Front Dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>Post Blog</title>
+        <description>&lt;h1 id=&quot;como-escrever-um-post-de-blog&quot;&gt;Como escrever um post de blog.&lt;/h1&gt;
+&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+  &lt;li&gt;lista&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
+        <link>http://localhost:4000/post-blog</link>
+        <guid isPermaLink="true">http://localhost:4000/post-blog</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Front Dicas</category>
         
       </item>
     

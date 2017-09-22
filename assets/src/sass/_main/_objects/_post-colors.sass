@@ -1,0 +1,88 @@
+$type-post: "blog" "html" "css" "js" "misc" "front";
+$color-post: $blog-color $html-color $css-color $js-color $misc-color $front-color;
+
+
+// DEFAULT OPTIONS
+
+.ribbon
+     position: absolute
+     right: -8px
+     top: 10px
+     color: #fff
+     width: 110px
+     text-align: center
+     font-size: 0.9rem
+     padding: 2px 0
+     &:before
+          content: ""
+          width: 0
+          height: 0
+          border-left: 5px solid transparent
+          border-right: 5px solid transparent
+          border-bottom: 5px solid #000
+          transform: rotate(-139deg)
+          position: absolute
+          top: -5px
+          right: 0
+
+.card-description
+     color: #656565
+     +transition (ease-in-out, 0.2s, all) 
+
+@each $type in $type-post 
+     .post-#{$type} 
+          .card          
+               border-color: nth($color-post, index($type-post, $type))
+               border-width: 2px
+               border-style: solid
+               box-shadow: none
+               cursor: pointer
+               +transition (ease-in-out, 0.2s, all)  
+
+               .ribbon
+                    background-color: nth($color-post, index($type-post, $type)) 
+                    border-color: nth($color-post, index($type-post, $type))
+                    border-width: 1px
+                    border-style: solid
+                    +transition (ease-in-out, 0.2s, all)  
+
+               .card-date,
+               .card-title,                             
+                    color: nth($color-post, index($type-post, $type)) 
+                    +transition (ease-in-out, 0.2s, all)            
+               
+               .card-tags
+                    border-color: #fff
+                    border-width: 1px
+                    border-style: solid
+                    transition: ease-in-out 0.2s all
+                    display: inline-block
+                    background-color: nth($color-post, index($type-post, $type))
+                    color: #fff
+                    font-size: 0.8rem
+                    min-width: 60px
+                    text-transform: lowercase
+                    text-align: center
+                    padding: 3px 8px
+                    border-radius: 3px
+                    margin: 10px 2px 0 0
+
+                    &:hover
+                         background-color: #fff
+                         color: nth($color-post, index($type-post, $type))     
+
+          .card:hover
+               background-color: nth($color-post, index($type-post, $type))
+
+               .ribbon
+                    background-color: #fff
+                    color: nth($color-post, index($type-post, $type))
+               .card-date,
+               .card-title,    
+               .card-description                         
+                    color: #fff 
+                 
+
+
+
+           

@@ -1,9 +1,10 @@
 ---
-layout: 
+layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"
+    {% endif %}>
 {% include head.html %}
 
 <body>
@@ -53,30 +54,33 @@ layout:
                     <!-- /TITULO -->
 
                     <!-- LISTA DE POSTS -->
-                    <ul class="columns is-multiline p-b-60">
-                        {% for post in site.posts offset: 0 limit: 4 %}
-                        <li class="column is-one-third wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <div class="box">
-                                <div class="media">
-                                    <div class="media-content">
-                                        <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                    <ul class="columns is-multiline m-t-60 p-b-60">
+                        {% for post in site.posts offset: 0 limit: 6 %}
+                        <li class="column is-one-third wow bounceInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                            <div class="media">
+                                <div class="media-content">
+                                    <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                                        <div class="card box">
                                             <a href="{{ post.url | prepend: site.baseurl }}">
+                                                <div class="ribbon">
+                                                    <span>{{ post.main-class }}</span>   
+                                                </div>
                                                 <meta itemprop="datePublished" content="{{post.date}}">
-                                                <time datetime="{{ post.date | date_to_xmlschema }}">
+                                                <time class="card-date" datetime="{{ post.date | date_to_xmlschema }}">
                                                     {% include date.html date=post.date %}
                                                 </time>
-                                                <h2 class="title is-4" itemprop="name">{{ post.title }}</h2>
-                                                <p class="description">
+                                                <h2 class="card-title title is-4" itemprop="name">{{ post.title }}</h2>
+                                                <p class="card-description description">
                                                     {{ post.content | strip_html | truncatewords:20 }}
                                                 </p>
                                             </a>
-                                            <div class="tags">
+                                            <div>
                                                 {% for tag in post.tags %}
-                                                <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a> {% endfor
-                                                %}
+                                                <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a> {%
+                                                endfor %}
                                             </div>
-                                        </article>
-                                    </div>
+                                        </div>
+                                    </article>
                                 </div>
                             </div>
                         </li>

@@ -14,16 +14,22 @@ $sides: (top, bottom, left, right) // Leave this variable alone
 
 
 
-
 // COLOR VARIATION
-$type-post: "jekyll" "html" "css" "js" "misc";
-$color-post: #000 #fff #ccc #ddd red;
+$blog-color: #e80000
+$html-color: #f16528
+$css-color: #1474a4
+$js-color: #f8c101
+$misc-color: #cd2b46
+$front-color: #2dbf80
 
-.post
-    @each $type in $type-post 
-        &-#{$type} 
-            .title-galery
-              color: nth($color-post, index($type-post, $type))
+
+// TRANSITION
+=transition ($transition, $time, $elements)
+     transition: $transition $time $elements
+
+
+
+
         
     
 
