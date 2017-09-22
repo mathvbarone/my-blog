@@ -6,6 +6,7 @@ layout: compress
 <html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.html %}
     <body>
+        {% include analytics.html %}
         <section id="main-box" class="main-box">
             {% include header-default.html %}
                 {{ content }}     
