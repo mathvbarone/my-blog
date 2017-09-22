@@ -30,15 +30,6 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
-.content pre,pre code {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto
-}
-
-.control.has-icon.has-icon-right .icon,.control.has-icons-right .icon.is-right {
-    right: 0
-}
-
 .button,.file,.is-unselectable {
     -webkit-touch-callout: none
 }
@@ -49,6 +40,11 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
 
 .button,a {
     cursor: pointer
+}
+
+.button,.input,.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none
 }
 
 @-webkit-keyframes spinAround {
@@ -187,9 +183,11 @@ pre {
 }
 
 pre code {
+    -webkit-overflow-scrolling: touch;
     background: 0 0;
     color: inherit;
     font-size: 1em;
+    overflow-x: auto;
     padding: 1.25rem 1.5rem
 }
 
@@ -1190,6 +1188,10 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     box-shadow: none!important
 }
 
+.box,.card {
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
+}
+
 .is-unselectable {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1206,18 +1208,10 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     display: block;
     padding: 1.25rem
-}
-
-.button,.input,.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex
 }
 
 .box:not(:last-child) {
@@ -1244,6 +1238,8 @@ a.box:active {
     border-radius: 3px;
     -webkit-box-shadow: none;
     box-shadow: none;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 1rem;
@@ -2447,12 +2443,18 @@ a.box:active {
 }
 
 .content pre {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
     padding: 1.25em 1.5em;
     white-space: pre
 }
 
 .breadcrumb,.file-label,.file-name,.highlight,.progress {
     overflow: hidden
+}
+
+.breadcrumb,.file-cta,.file-name,.learn-more,.nav-left,.pagination-next,.pagination-previous,.tabs,.tag:not(body),a.dropdown-item {
+    white-space: nowrap
 }
 
 .content sub,.content sup {
@@ -2505,6 +2507,8 @@ a.box:active {
     border: 1px solid #dbdbdb;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 1rem;
@@ -2535,8 +2539,7 @@ a.box:active {
     -webkit-box-align: center;
     vertical-align: top;
     -moz-appearance: none;
-    -webkit-appearance: none;
-    line-height: 1.5
+    -webkit-appearance: none
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -2703,11 +2706,6 @@ a.box:active {
     min-height: 120px
 }
 
-.delete,.modal-close {
-    min-height: 20px;
-    outline: 0
-}
-
 .textarea[rows] {
     height: unset
 }
@@ -2776,6 +2774,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
@@ -2977,6 +2976,10 @@ a.box:active {
 
 .file,.file-label {
     position: relative
+}
+
+.control.has-icon.has-icon-right .icon,.control.has-icons-right .icon.is-right {
+    right: 0
 }
 
 .select.is-loading.is-small:after {
@@ -3433,6 +3436,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
@@ -3441,8 +3445,7 @@ a.box:active {
     border-radius: 3px;
     font-size: 1em;
     padding-left: 1em;
-    padding-right: 1em;
-    white-space: nowrap
+    padding-right: 1em
 }
 
 .file-icon,.icon {
@@ -3819,7 +3822,7 @@ a.box:active {
     z-index: 4
 }
 
-.breadcrumb a,.control.has-icon .input:focus+.icon,.control.has-icons-left .input:focus~.icon,.control.has-icons-left .select:focus~.icon,.control.has-icons-right .input:focus~.icon,.control.has-icons-right .select:focus~.icon {
+.control.has-icon .input:focus+.icon,.control.has-icons-left .input:focus~.icon,.control.has-icons-left .select:focus~.icon,.control.has-icons-right .input:focus~.icon,.control.has-icons-right .select:focus~.icon {
     color: #7a7a7a
 }
 
@@ -4403,8 +4406,7 @@ a.box:active {
     justify-content: center;
     line-height: 1.5;
     padding-left: .75em;
-    padding-right: .75em;
-    white-space: nowrap
+    padding-right: .75em
 }
 
 .tag:not(body) .delete {
@@ -4605,7 +4607,7 @@ a.tag:hover {
     font-size: 1.5rem
 }
 
-.subtitle.is-5 {
+.number,.subtitle.is-5 {
     font-size: 1.25rem
 }
 
@@ -4638,7 +4640,9 @@ a.tag:hover {
     height: 20px;
     max-height: 20px;
     max-width: 20px;
+    min-height: 20px;
     min-width: 20px;
+    outline: 0;
     width: 20px
 }
 
@@ -4746,7 +4750,6 @@ a.tag:hover {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 1.25rem;
     height: 2em;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -4772,13 +4775,13 @@ a.tag:hover {
     align-items: stretch;
     display: flex;
     font-size: 1rem;
-    overflow-x: auto;
-    white-space: nowrap
+    overflow-x: auto
 }
 
 .modal-close,.pagination-ellipsis,.pagination-link,.pagination-next,.pagination-previous {
     -moz-appearance: none;
     -webkit-appearance: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-touch-callout: none;
@@ -4790,6 +4793,7 @@ a.tag:hover {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    color: #7a7a7a;
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -4900,7 +4904,6 @@ a.tag:hover {
 
 .card {
     background-color: #fff;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     max-width: 100%
@@ -5060,8 +5063,7 @@ a.tag:hover {
 }
 
 a.dropdown-item {
-    padding-right: 3rem;
-    white-space: nowrap
+    padding-right: 3rem
 }
 
 a.dropdown-item:hover {
@@ -5320,6 +5322,10 @@ a.dropdown-item.is-active {
     -ms-flex-negative: 1;
     flex-shrink: 1;
     text-align: left
+}
+
+.nav,.pagination,.pagination-list,.panel-icon,.ribbon {
+    text-align: center
 }
 
 .menu {
@@ -5647,7 +5653,6 @@ a.dropdown-item.is-active {
 }
 
 .modal-close {
-    -webkit-user-select: none;
     user-select: none;
     border: none;
     -webkit-border-radius: 290486px;
@@ -5664,7 +5669,9 @@ a.dropdown-item.is-active {
     font-size: 1rem;
     max-height: 20px;
     max-width: 20px;
+    min-height: 20px;
     min-width: 20px;
+    outline: 0;
     background: 0 0;
     height: 40px;
     position: fixed;
@@ -6019,8 +6026,7 @@ a.dropdown-item.is-active {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    white-space: nowrap
+    justify-content: flex-start
 }
 
 .nav-right {
@@ -6089,7 +6095,6 @@ a.dropdown-item.is-active {
     align-items: stretch;
     display: flex;
     height: 3.25rem;
-    text-align: center;
     z-index: 10
 }
 
@@ -6887,8 +6892,7 @@ a.dropdown-item.is-active {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center
+    justify-content: center
 }
 
 .pagination-ellipsis,.pagination-link,.pagination-next,.pagination-previous {
@@ -6912,7 +6916,6 @@ a.dropdown-item.is-active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    -webkit-user-select: none;
     user-select: none;
     font-size: 1em;
     padding-left: .5em;
@@ -6931,11 +6934,6 @@ a.dropdown-item.is-active {
 
 .pagination-ellipsis.is-active,.pagination-ellipsis.is-focused,.pagination-ellipsis:active,.pagination-ellipsis:focus,.pagination-link.is-active,.pagination-link.is-focused,.pagination-link:active,.pagination-link:focus,.pagination-next.is-active,.pagination-next.is-focused,.pagination-next:active,.pagination-next:focus,.pagination-previous.is-active,.pagination-previous.is-focused,.pagination-previous:active,.pagination-previous:focus {
     outline: 0
-}
-
-.post-blog .card,.post-html .card {
-    cursor: pointer;
-    -webkit-box-shadow: none
 }
 
 .pagination-link,.pagination-next,.pagination-previous {
@@ -6968,8 +6966,7 @@ a.dropdown-item.is-active {
 
 .pagination-next,.pagination-previous {
     padding-left: .75em;
-    padding-right: .75em;
-    white-space: nowrap
+    padding-right: .75em
 }
 
 .pagination-link.is-current {
@@ -7225,7 +7222,6 @@ a.panel-block,label.panel-block {
     font-size: 14px;
     height: 1em;
     line-height: 1em;
-    text-align: center;
     vertical-align: top;
     width: 1em;
     color: #7a7a7a
@@ -7253,8 +7249,7 @@ a.panel-block,label.panel-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap
+    overflow-x: auto
 }
 
 .tabs:not(:last-child) {
@@ -10119,7 +10114,7 @@ a.panel-block,label.panel-block {
     min-height: 50vh
 }
 
-.content-main,.hero-index,.hero.is-fullheight {
+.hero.is-fullheight {
     min-height: 100vh
 }
 
@@ -13593,7 +13588,7 @@ a {
     transition: linear .2s all
 }
 
-.card-description,.post-blog .card {
+.card-date,.card-description,.post-blog .card {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
@@ -13950,36 +13945,100 @@ a {
     padding-right: 60px
 }
 
-.m-t-75 {
-    margin-top: 75px
+.m-t-70 {
+    margin-top: 70px
 }
 
-.p-t-75 {
-    padding-top: 75px
+.p-t-70 {
+    padding-top: 70px
 }
 
-.m-b-75 {
-    margin-bottom: 75px
+.m-b-70 {
+    margin-bottom: 70px
 }
 
-.p-b-75 {
-    padding-bottom: 75px
+.p-b-70 {
+    padding-bottom: 70px
 }
 
-.m-l-75 {
-    margin-left: 75px
+.m-l-70 {
+    margin-left: 70px
 }
 
-.p-l-75 {
-    padding-left: 75px
+.p-l-70 {
+    padding-left: 70px
 }
 
-.m-r-75 {
-    margin-right: 75px
+.m-r-70 {
+    margin-right: 70px
 }
 
-.p-r-75 {
-    padding-right: 75px
+.p-r-70 {
+    padding-right: 70px
+}
+
+.m-t-80 {
+    margin-top: 80px
+}
+
+.p-t-80 {
+    padding-top: 80px
+}
+
+.m-b-80 {
+    margin-bottom: 80px
+}
+
+.p-b-80 {
+    padding-bottom: 80px
+}
+
+.m-l-80 {
+    margin-left: 80px
+}
+
+.p-l-80 {
+    padding-left: 80px
+}
+
+.m-r-80 {
+    margin-right: 80px
+}
+
+.p-r-80 {
+    padding-right: 80px
+}
+
+.m-t-90 {
+    margin-top: 90px
+}
+
+.p-t-90 {
+    padding-top: 90px
+}
+
+.m-b-90 {
+    margin-bottom: 90px
+}
+
+.p-b-90 {
+    padding-bottom: 90px
+}
+
+.m-l-90 {
+    margin-left: 90px
+}
+
+.p-l-90 {
+    padding-left: 90px
+}
+
+.m-r-90 {
+    margin-right: 90px
+}
+
+.p-r-90 {
+    padding-right: 90px
 }
 
 .m-t-100 {
@@ -14048,12 +14107,22 @@ a {
 
 .ribbon {
     right: -8px;
-    top: 10px;
-    color: #fff;
+    top: 15px;
     width: 110px;
-    text-align: center;
     font-size: .9rem;
     padding: 2px 0
+}
+
+.post-blog .card .card-tags,.post-css .card .card-tags,.post-front .card .card-tags,.post-html .card .card-tags,.post-js .card .card-tags,.post-misc .card .card-tags {
+    display: inline-block;
+    min-width: 60px;
+    text-transform: lowercase;
+    padding: 3px 8px;
+    text-align: center
+}
+
+.ribbon a {
+    color: #fff
 }
 
 .ribbon:before {
@@ -14075,16 +14144,16 @@ a {
     width: 100%
 }
 
-.card-description {
+.card-date,.card-description {
     color: #656565;
     transition: ease-in-out .2s all
 }
 
 .post-blog .card {
-    border-color: #e80000;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -14094,18 +14163,21 @@ a {
     background-color: #e80000
 }
 
+.post-blog .card .card-title,.post-blog .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-blog .card .ribbon {
     border-color: #e80000;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-blog .card .card-date,.post-blog .card .card-title {
+.post-blog .card .card-title {
     color: #e80000;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
 }
 
 .post-blog .card .card-tags,.post-html .card {
@@ -14113,29 +14185,22 @@ a {
     -o-transition: ease-in-out .2s all
 }
 
+.post-blog .card .card-description {
+    font-size: 1rem
+}
+
+.post-blog .card .card-date {
+    font-size: .8rem
+}
+
 .post-blog .card .card-tags {
     border-color: #fff;
     transition: ease-in-out .2s all;
-    display: inline-block;
     color: #fff;
     font-size: .8rem;
-    min-width: 60px;
-    text-transform: lowercase;
-    text-align: center;
-    padding: 3px 8px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 10px 2px 0 0
-}
-
-.post-css .card .card-tags,.post-html .card .card-tags {
-    display: inline-block;
-    font-size: .8rem;
-    min-width: 60px;
-    text-transform: lowercase;
-    text-align: center;
-    padding: 3px 8px;
-    -webkit-border-radius: 3px
 }
 
 .post-blog .card .card-tags:hover {
@@ -14148,7 +14213,10 @@ a {
 }
 
 .post-blog .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-blog .card:hover .ribbon a {
     color: #e80000
 }
 
@@ -14157,10 +14225,10 @@ a {
 }
 
 .post-html .card {
-    border-color: #f16528;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -14170,18 +14238,21 @@ a {
     background-color: #f16528
 }
 
+.post-html .card .card-title,.post-html .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-html .card .ribbon {
     border-color: #f16528;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-html .card .card-date,.post-html .card .card-title {
+.post-html .card .card-title {
     color: #f16528;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
 }
 
 .post-css .card,.post-html .card .card-tags {
@@ -14189,10 +14260,20 @@ a {
     -o-transition: ease-in-out .2s all
 }
 
+.post-html .card .card-description {
+    font-size: 1rem
+}
+
+.post-html .card .card-date {
+    font-size: .8rem
+}
+
 .post-html .card .card-tags {
     border-color: #fff;
     transition: ease-in-out .2s all;
     color: #fff;
+    font-size: .8rem;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 10px 2px 0 0
 }
@@ -14207,7 +14288,10 @@ a {
 }
 
 .post-html .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-html .card:hover .ribbon a {
     color: #f16528
 }
 
@@ -14216,9 +14300,7 @@ a {
 }
 
 .post-css .card {
-    border-color: #1474a4;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
     cursor: pointer;
@@ -14236,18 +14318,21 @@ a {
     cursor: pointer
 }
 
+.post-css .card .card-title,.post-css .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-css .card .ribbon {
     border-color: #1474a4;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-css .card .card-date,.post-css .card .card-title {
+.post-css .card .card-title {
     color: #1474a4;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
 }
 
 .post-css .card .card-tags,.post-js .card {
@@ -14255,23 +14340,22 @@ a {
     -o-transition: ease-in-out .2s all
 }
 
+.post-css .card .card-description {
+    font-size: 1rem
+}
+
+.post-css .card .card-date {
+    font-size: .8rem
+}
+
 .post-css .card .card-tags {
     border-color: #fff;
     transition: ease-in-out .2s all;
     color: #fff;
+    font-size: .8rem;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 10px 2px 0 0
-}
-
-.post-js .card .card-tags,.post-misc .card .card-tags {
-    -webkit-border-radius: 3px;
-    display: inline-block;
-    font-size: .8rem;
-    min-width: 60px;
-    text-transform: lowercase;
-    padding: 3px 8px;
-    margin: 10px 2px 0 0;
-    text-align: center
 }
 
 .post-css .card .card-tags:hover {
@@ -14284,7 +14368,10 @@ a {
 }
 
 .post-css .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-css .card:hover .ribbon a {
     color: #1474a4
 }
 
@@ -14293,9 +14380,7 @@ a {
 }
 
 .post-js .card {
-    border-color: #f8c101;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
 }
@@ -14306,18 +14391,21 @@ a {
     background-color: #f8c101
 }
 
+.post-js .card .card-title,.post-js .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-js .card .ribbon {
     border-color: #f8c101;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-js .card .card-date,.post-js .card .card-title {
+.post-js .card .card-title {
     color: #f8c101;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
 }
 
 .post-js .card .card-tags,.post-misc .card {
@@ -14325,11 +14413,22 @@ a {
     -o-transition: ease-in-out .2s all
 }
 
+.post-js .card .card-description {
+    font-size: 1rem
+}
+
+.post-js .card .card-date {
+    font-size: .8rem
+}
+
 .post-js .card .card-tags {
     border-color: #fff;
     transition: ease-in-out .2s all;
     color: #fff;
-    border-radius: 3px
+    font-size: .8rem;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 10px 2px 0 0
 }
 
 .post-js .card .card-tags:hover {
@@ -14342,7 +14441,10 @@ a {
 }
 
 .post-js .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-js .card:hover .ribbon a {
     color: #f8c101
 }
 
@@ -14351,9 +14453,7 @@ a {
 }
 
 .post-misc .card {
-    border-color: #cd2b46;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
 }
@@ -14364,18 +14464,21 @@ a {
     background-color: #cd2b46
 }
 
+.post-misc .card .card-title,.post-misc .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-misc .card .ribbon {
     border-color: #cd2b46;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-misc .card .card-date,.post-misc .card .card-title {
+.post-misc .card .card-title {
     color: #cd2b46;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
 }
 
 .post-front .card,.post-misc .card .card-tags {
@@ -14383,11 +14486,22 @@ a {
     -o-transition: ease-in-out .2s all
 }
 
+.post-misc .card .card-description {
+    font-size: 1rem
+}
+
+.post-misc .card .card-date {
+    font-size: .8rem
+}
+
 .post-misc .card .card-tags {
     border-color: #fff;
     transition: ease-in-out .2s all;
     color: #fff;
-    border-radius: 3px
+    font-size: .8rem;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 10px 2px 0 0
 }
 
 .post-misc .card .card-tags:hover {
@@ -14400,7 +14514,10 @@ a {
 }
 
 .post-misc .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-misc .card:hover .ribbon a {
     color: #cd2b46
 }
 
@@ -14409,9 +14526,7 @@ a {
 }
 
 .post-front .card {
-    border-color: #2dbf80;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
     cursor: pointer;
@@ -14424,18 +14539,29 @@ a {
     background-color: #2dbf80
 }
 
+.post-front .card .card-title,.post-front .card .ribbon {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-front .card .ribbon {
     border-color: #2dbf80;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
-.post-front .card .card-date,.post-front .card .card-title {
+.post-front .card .card-title {
     color: #2dbf80;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    margin-bottom: 10px;
+    font-size: 1.3rem
+}
+
+.post-front .card .card-description {
+    font-size: 1rem
+}
+
+.post-front .card .card-date {
+    font-size: .8rem
 }
 
 .post-front .card .card-tags {
@@ -14443,13 +14569,8 @@ a {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
-    display: inline-block;
     color: #fff;
     font-size: .8rem;
-    min-width: 60px;
-    text-transform: lowercase;
-    text-align: center;
-    padding: 3px 8px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 10px 2px 0 0
@@ -14465,7 +14586,10 @@ a {
 }
 
 .post-front .card:hover .ribbon {
-    background-color: #fff;
+    background-color: #fff
+}
+
+.post-front .card:hover .ribbon a {
     color: #2dbf80
 }
 
@@ -14545,6 +14669,7 @@ a {
 }
 
 .hero-index {
+    min-height: 100vh;
     height: 100vh;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -14689,7 +14814,6 @@ a {
 .learn-more {
     font-size: 1.3rem;
     padding: 20px;
-    white-space: nowrap;
     z-index: 2;
     text-decoration: none;
     -webkit-transition: color .2s ease-out;
@@ -14754,5 +14878,6 @@ a {
 }
 
 .content-main {
+    min-height: 100vh;
     padding: 60px 20px 0
 }

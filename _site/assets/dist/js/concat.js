@@ -10252,114 +10252,191 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-$(document).ready(function() {
-
-  //FUNÇÃO DE SCROLL
-  $(function() {
-    // SELECIONA TODOS OS LINKS COM HASHTAG
-    $('a[href*="#"]')
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function(event) {
-        // LINKS NA PÁGINA
-        if (
-          location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
-          location.hostname == this.hostname
-        ) {
-          // DESCOBRE QUAL ELEMENTO VAI SCROLLAR
-          var target = $(this.hash);
-          target = target.length
-            ? target
-            : $("[name=" + this.hash.slice(1) + "]");
-          // VE SE EXISTE O ALVO
-          if (target.length) {           
-            event.preventDefault();
-
-            $("html, body").animate(
-              {
-                scrollTop: target.offset().top
-              },
-              600,
-              function() {
-                //CALLBACK
-                var $target = $(target);
-                $target.focus();
-                if ($target.is(":focus")) {
-                  //CHECA SE O TARGET TA FOCUS
-                  return false;
-                } else {
-                  $target.attr("tabindex", "-1"); // ADICIONA TABLEINDEX SE O ELEMENTO NAO PUDER TER FOUS
-                  $target.focus(); // SETA O FOCUS DE NOVO
-                }
-              }
-            );
+(function() {
+    var Util,
+      __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  
+    Util = (function() {
+      function Util() {}
+  
+      Util.prototype.extend = function(custom, defaults) {
+        var key, value;
+        for (key in custom) {
+          value = custom[key];
+          if (value != null) {
+            defaults[key] = value;
           }
         }
-      });
-  });
-
-  //FUNÇAO DE CHAMADA DO ANIMATION
-  $(function() {
-    wow = new WOW({
-      mobile: true
-    });
-    wow.init();
-  });
-
-
-  //EFEITO DE PARALLAX NO CONTEUDO DO HEADER
-  var scrollBanner = function () {
-    var headerContent = $(".hero-index-body");
-    var headerContentHeight = headerContent.height();
-    var scrollPos = window.scrollY;
-
-    if (scrollPos <= headerContentHeight) {
-      headerContent.css(
-        "transform",
-        "translateY(" + -scrollPos / 2 + "px" + ")"
-      );
-      headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
-    }
-  }
- 
-  var showHeader = function() {
-      if($(this).scrollTop() > 40){
-        $(".mast-header").addClass("is-active");
-      }
-      else{
-        $(".mast-header").removeClass("is-active");
-      }
-  }
-
-
-// SCROLLIFY
-  var scrollify = function() {
-    $.scrollify({
-      section : ".panel",
-      scrollSpeed: 1100,
-    })
-  }
-
-
-  var typeScript = function(){
-    Typed.new('#typed', {
-      stringsElement: document.getElementById('typed-strings'),
-      loop:true
-    });
-  }
-
-  // scrollify();
-  typeScript();
-  window.addEventListener("scroll", scrollBanner );
-  window.addEventListener("scroll",  showHeader );
-
-});
-
-
+        return defaults;
+      };
   
-
-
+      Util.prototype.isMobile = function(agent) {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
+      };
+  
+      return Util;
+  
+    })();
+  
+    this.WOW = (function() {
+      WOW.prototype.defaults = {
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true
+      };
+  
+      function WOW(options) {
+        if (options == null) {
+          options = {};
+        }
+        this.scrollCallback = __bind(this.scrollCallback, this);
+        this.scrollHandler = __bind(this.scrollHandler, this);
+        this.start = __bind(this.start, this);
+        this.scrolled = true;
+        this.config = this.util().extend(options, this.defaults);
+      }
+  
+      WOW.prototype.init = function() {
+        var _ref;
+        this.element = window.document.documentElement;
+        this.boxes = this.element.getElementsByClassName(this.config.boxClass);
+        if (this.boxes.length) {
+          if (this.disabled()) {
+            return this.resetStyle();
+          } else {
+            if ((_ref = document.readyState) === "interactive" || _ref === "complete") {
+              return this.start();
+            } else {
+              return document.addEventListener('DOMContentLoaded', this.start);
+            }
+          }
+        }
+      };
+  
+      WOW.prototype.start = function() {
+        var box, _i, _len, _ref;
+        _ref = this.boxes;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          box = _ref[_i];
+          this.applyStyle(box, true);
+        }
+        window.addEventListener('scroll', this.scrollHandler, false);
+        window.addEventListener('resize', this.scrollHandler, false);
+        return this.interval = setInterval(this.scrollCallback, 50);
+      };
+  
+      WOW.prototype.stop = function() {
+        window.removeEventListener('scroll', this.scrollHandler, false);
+        window.removeEventListener('resize', this.scrollHandler, false);
+        if (this.interval != null) {
+          return clearInterval(this.interval);
+        }
+      };
+  
+      WOW.prototype.show = function(box) {
+        this.applyStyle(box);
+        return box.className = "" + box.className + " " + this.config.animateClass;
+      };
+  
+      WOW.prototype.applyStyle = function(box, hidden) {
+        var delay, duration, iteration;
+        duration = box.getAttribute('data-wow-duration');
+        delay = box.getAttribute('data-wow-delay');
+        iteration = box.getAttribute('data-wow-iteration');
+        return box.setAttribute('style', this.customStyle(hidden, duration, delay, iteration));
+      };
+  
+      WOW.prototype.resetStyle = function() {
+        var box, _i, _len, _ref, _results;
+        _ref = this.boxes;
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          box = _ref[_i];
+          _results.push(box.setAttribute('style', 'visibility: visible;'));
+        }
+        return _results;
+      };
+  
+      WOW.prototype.customStyle = function(hidden, duration, delay, iteration) {
+        var style;
+        style = hidden ? "visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;" : "visibility: visible;";
+        if (duration) {
+          style += "-webkit-animation-duration: " + duration + "; -moz-animation-duration: " + duration + "; animation-duration: " + duration + ";";
+        }
+        if (delay) {
+          style += "-webkit-animation-delay: " + delay + "; -moz-animation-delay: " + delay + "; animation-delay: " + delay + ";";
+        }
+        if (iteration) {
+          style += "-webkit-animation-iteration-count: " + iteration + "; -moz-animation-iteration-count: " + iteration + "; animation-iteration-count: " + iteration + ";";
+        }
+        return style;
+      };
+  
+      WOW.prototype.scrollHandler = function() {
+        return this.scrolled = true;
+      };
+  
+      WOW.prototype.scrollCallback = function() {
+        var box;
+        if (this.scrolled) {
+          this.scrolled = false;
+          this.boxes = (function() {
+            var _i, _len, _ref, _results;
+            _ref = this.boxes;
+            _results = [];
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              box = _ref[_i];
+              if (!(box)) {
+                continue;
+              }
+              if (this.isVisible(box)) {
+                this.show(box);
+                continue;
+              }
+              _results.push(box);
+            }
+            return _results;
+          }).call(this);
+          if (!this.boxes.length) {
+            return this.stop();
+          }
+        }
+      };
+  
+      WOW.prototype.offsetTop = function(element) {
+        var top;
+        top = element.offsetTop;
+        while (element = element.offsetParent) {
+          top += element.offsetTop;
+        }
+        return top;
+      };
+  
+      WOW.prototype.isVisible = function(box) {
+        var bottom, offset, top, viewBottom, viewTop;
+        offset = box.getAttribute('data-wow-offset') || this.config.offset;
+        viewTop = window.pageYOffset;
+        viewBottom = viewTop + this.element.clientHeight - offset;
+        top = this.offsetTop(box);
+        bottom = top + box.clientHeight;
+        return top <= viewBottom && bottom >= viewTop;
+      };
+  
+      WOW.prototype.util = function() {
+        return this._util || (this._util = new Util());
+      };
+  
+      WOW.prototype.disabled = function() {
+        return this.config.mobile === false && this.util().isMobile(navigator.userAgent);
+      };
+  
+      return WOW;
+  
+    })();
+  
+  }).call(this);
+  
 /*!
  * jQuery Scrollify
  * Version 1.0.17
@@ -11197,188 +11274,112 @@ if touchScroll is false - update index
 }));
 
 !function(a,b,c){"use strict";var d=function(a,b){var d=this;this.el=a,this.options={},Object.keys(e).forEach(function(a){d.options[a]=e[a]}),Object.keys(b).forEach(function(a){d.options[a]=b[a]}),this.isInput="input"===this.el.tagName.toLowerCase(),this.attr=this.options.attr,this.showCursor=!this.isInput&&this.options.showCursor,this.elContent=this.attr?this.el.getAttribute(this.attr):this.el.textContent,this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,c&&this.options.stringsElement instanceof c?this.stringsElement=this.options.stringsElement[0]:this.stringsElement=this.options.stringsElement,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};d.prototype={constructor:d,init:function(){var a=this;a.timeout=setTimeout(function(){for(var b=0;b<a.strings.length;++b)a.sequence[b]=b;a.shuffle&&(a.sequence=a.shuffleArray(a.sequence)),a.typewrite(a.strings[a.sequence[a.arrayPos]],a.strPos)},a.startDelay)},build:function(){var a=this;if(!0===this.showCursor&&(this.cursor=b.createElement("span"),this.cursor.className="typed-cursor",this.cursor.innerHTML=this.cursorChar,this.el.parentNode&&this.el.parentNode.insertBefore(this.cursor,this.el.nextSibling)),this.stringsElement){this.strings=[],this.stringsElement.style.display="none";Array.prototype.slice.apply(this.stringsElement.children).forEach(function(b){a.strings.push(b.innerHTML)})}this.init()},typewrite:function(a,b){if(!0!==this.stop){var c=Math.round(70*Math.random())+this.typeSpeed,d=this;d.timeout=setTimeout(function(){var c=0,e=a.substr(b);if("^"===e.charAt(0)){var f=1;/^\^\d+/.test(e)&&(e=/\d+/.exec(e)[0],f+=e.length,c=parseInt(e)),a=a.substring(0,b)+a.substring(b+f)}if("html"===d.contentType){var g=a.substr(b).charAt(0);if("<"===g||"&"===g){var h="",i="";for(i="<"===g?">":";";a.substr(b+1).charAt(0)!==i&&(h+=a.substr(b).charAt(0),!(++b+1>a.length)););b++,h+=i}}d.timeout=setTimeout(function(){if(b===a.length){if(d.options.onStringTyped(d.arrayPos),d.arrayPos===d.strings.length-1&&(d.options.callback(),d.curLoop++,!1===d.loop||d.curLoop===d.loopCount))return;d.timeout=setTimeout(function(){d.backspace(a,b)},d.backDelay)}else{0===b&&d.options.preStringTyped(d.arrayPos);var c=a.substr(0,b+1);d.attr?d.el.setAttribute(d.attr,c):d.isInput?d.el.value=c:"html"===d.contentType?d.el.innerHTML=c:d.el.textContent=c,b++,d.typewrite(a,b)}},c)},c)}},backspace:function(a,b){if(!0!==this.stop){var c=Math.round(70*Math.random())+this.backSpeed,d=this;d.timeout=setTimeout(function(){if("html"===d.contentType&&">"===a.substr(b).charAt(0)){for(var c="";"<"!==a.substr(b-1).charAt(0)&&(c-=a.substr(b).charAt(0),!(--b<0)););b--,c+="<"}var e=a.substr(0,b);d.attr?d.el.setAttribute(d.attr,e):d.isInput?d.el.value=e:"html"===d.contentType?d.el.innerHTML=e:d.el.textContent=e,b>d.stopNum?(b--,d.backspace(a,b)):b<=d.stopNum&&(d.arrayPos++,d.arrayPos===d.strings.length?(d.arrayPos=0,d.shuffle&&(d.sequence=d.shuffleArray(d.sequence)),d.init()):d.typewrite(d.strings[d.sequence[d.arrayPos]],b))},c)}},shuffleArray:function(a){var b,c,d=a.length;if(d)for(;--d;)c=Math.floor(Math.random()*(d+1)),b=a[c],a[c]=a[d],a[d]=b;return a},reset:function(){var a=this;clearInterval(a.timeout);this.el.getAttribute("id");this.el.textContent="",void 0!==this.cursor&&void 0!==this.cursor.parentNode&&this.cursor.parentNode.removeChild(this.cursor),this.strPos=0,this.arrayPos=0,this.curLoop=0,this.options.resetCallback()}},d.new=function(a,c){Array.prototype.slice.apply(b.querySelectorAll(a)).forEach(function(a){var b=a._typed,e="object"==typeof c&&c;b&&b.reset(),a._typed=b=new d(a,e),"string"==typeof c&&b[c]()})},c&&(c.fn.typed=function(a){return this.each(function(){var b=c(this),e=b.data("typed"),f="object"==typeof a&&a;e&&e.reset(),b.data("typed",e=new d(this,f)),"string"==typeof a&&e[a]()})}),a.Typed=d;var e={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsElement:null,typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window,document,window.jQuery);
-(function() {
-    var Util,
-      __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  
-    Util = (function() {
-      function Util() {}
-  
-      Util.prototype.extend = function(custom, defaults) {
-        var key, value;
-        for (key in custom) {
-          value = custom[key];
-          if (value != null) {
-            defaults[key] = value;
+$(document).ready(function() {
+
+  //FUNÇÃO DE SCROLL
+  $(function() {
+    // SELECIONA TODOS OS LINKS COM HASHTAG
+    $('a[href*="#"]')
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // LINKS NA PÁGINA
+        if (
+          location.pathname.replace(/^\//, "") ==
+            this.pathname.replace(/^\//, "") &&
+          location.hostname == this.hostname
+        ) {
+          // DESCOBRE QUAL ELEMENTO VAI SCROLLAR
+          var target = $(this.hash);
+          target = target.length
+            ? target
+            : $("[name=" + this.hash.slice(1) + "]");
+          // VE SE EXISTE O ALVO
+          if (target.length) {           
+            event.preventDefault();
+
+            $("html, body").animate(
+              {
+                scrollTop: target.offset().top
+              },
+              600,
+              function() {
+                //CALLBACK
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) {
+                  //CHECA SE O TARGET TA FOCUS
+                  return false;
+                } else {
+                  $target.attr("tabindex", "-1"); // ADICIONA TABLEINDEX SE O ELEMENTO NAO PUDER TER FOUS
+                  $target.focus(); // SETA O FOCUS DE NOVO
+                }
+              }
+            );
           }
         }
-        return defaults;
-      };
-  
-      Util.prototype.isMobile = function(agent) {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
-      };
-  
-      return Util;
-  
-    })();
-  
-    this.WOW = (function() {
-      WOW.prototype.defaults = {
-        boxClass: 'wow',
-        animateClass: 'animated',
-        offset: 0,
-        mobile: true
-      };
-  
-      function WOW(options) {
-        if (options == null) {
-          options = {};
-        }
-        this.scrollCallback = __bind(this.scrollCallback, this);
-        this.scrollHandler = __bind(this.scrollHandler, this);
-        this.start = __bind(this.start, this);
-        this.scrolled = true;
-        this.config = this.util().extend(options, this.defaults);
+      });
+  });
+
+
+
+  //FUNÇAO DE CHAMADA DO ANIMATION
+  $(function() {
+    wow = new WOW({
+      mobile: true
+    });
+    wow.init();
+  });
+
+
+  //EFEITO DE PARALLAX NO CONTEUDO DO HEADER
+  var scrollBanner = function () {
+    var headerContent = $(".hero-index-body");
+    var headerContentHeight = headerContent.height();
+    var scrollPos = window.scrollY;
+
+    if (scrollPos <= headerContentHeight) {
+      headerContent.css(
+        "transform",
+        "translateY(" + -scrollPos / 2 + "px" + ")"
+      );
+      headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
+    }
+  }
+ 
+  var showHeader = function() {
+      if($(this).scrollTop() > 40){
+        $(".index-header").addClass("is-active");
       }
+      else{
+        $(".index-header").removeClass("is-active");
+      }
+  }
+
+
+// SCROLLIFY
+  var scrollify = function() {
+    $.scrollify({
+      section : ".panel",
+      scrollSpeed: 1100,
+    })
+  }
+
+
+  var typeScript = function(){
+    Typed.new('#typed', {
+      stringsElement: document.getElementById('typed-strings'),
+      loop:true
+    });
+  }
+
+  // scrollify();
+  typeScript();
+  window.addEventListener("scroll", scrollBanner );
+  window.addEventListener("scroll",  showHeader );
+
+});
+
+
   
-      WOW.prototype.init = function() {
-        var _ref;
-        this.element = window.document.documentElement;
-        this.boxes = this.element.getElementsByClassName(this.config.boxClass);
-        if (this.boxes.length) {
-          if (this.disabled()) {
-            return this.resetStyle();
-          } else {
-            if ((_ref = document.readyState) === "interactive" || _ref === "complete") {
-              return this.start();
-            } else {
-              return document.addEventListener('DOMContentLoaded', this.start);
-            }
-          }
-        }
-      };
-  
-      WOW.prototype.start = function() {
-        var box, _i, _len, _ref;
-        _ref = this.boxes;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          box = _ref[_i];
-          this.applyStyle(box, true);
-        }
-        window.addEventListener('scroll', this.scrollHandler, false);
-        window.addEventListener('resize', this.scrollHandler, false);
-        return this.interval = setInterval(this.scrollCallback, 50);
-      };
-  
-      WOW.prototype.stop = function() {
-        window.removeEventListener('scroll', this.scrollHandler, false);
-        window.removeEventListener('resize', this.scrollHandler, false);
-        if (this.interval != null) {
-          return clearInterval(this.interval);
-        }
-      };
-  
-      WOW.prototype.show = function(box) {
-        this.applyStyle(box);
-        return box.className = "" + box.className + " " + this.config.animateClass;
-      };
-  
-      WOW.prototype.applyStyle = function(box, hidden) {
-        var delay, duration, iteration;
-        duration = box.getAttribute('data-wow-duration');
-        delay = box.getAttribute('data-wow-delay');
-        iteration = box.getAttribute('data-wow-iteration');
-        return box.setAttribute('style', this.customStyle(hidden, duration, delay, iteration));
-      };
-  
-      WOW.prototype.resetStyle = function() {
-        var box, _i, _len, _ref, _results;
-        _ref = this.boxes;
-        _results = [];
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          box = _ref[_i];
-          _results.push(box.setAttribute('style', 'visibility: visible;'));
-        }
-        return _results;
-      };
-  
-      WOW.prototype.customStyle = function(hidden, duration, delay, iteration) {
-        var style;
-        style = hidden ? "visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;" : "visibility: visible;";
-        if (duration) {
-          style += "-webkit-animation-duration: " + duration + "; -moz-animation-duration: " + duration + "; animation-duration: " + duration + ";";
-        }
-        if (delay) {
-          style += "-webkit-animation-delay: " + delay + "; -moz-animation-delay: " + delay + "; animation-delay: " + delay + ";";
-        }
-        if (iteration) {
-          style += "-webkit-animation-iteration-count: " + iteration + "; -moz-animation-iteration-count: " + iteration + "; animation-iteration-count: " + iteration + ";";
-        }
-        return style;
-      };
-  
-      WOW.prototype.scrollHandler = function() {
-        return this.scrolled = true;
-      };
-  
-      WOW.prototype.scrollCallback = function() {
-        var box;
-        if (this.scrolled) {
-          this.scrolled = false;
-          this.boxes = (function() {
-            var _i, _len, _ref, _results;
-            _ref = this.boxes;
-            _results = [];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              box = _ref[_i];
-              if (!(box)) {
-                continue;
-              }
-              if (this.isVisible(box)) {
-                this.show(box);
-                continue;
-              }
-              _results.push(box);
-            }
-            return _results;
-          }).call(this);
-          if (!this.boxes.length) {
-            return this.stop();
-          }
-        }
-      };
-  
-      WOW.prototype.offsetTop = function(element) {
-        var top;
-        top = element.offsetTop;
-        while (element = element.offsetParent) {
-          top += element.offsetTop;
-        }
-        return top;
-      };
-  
-      WOW.prototype.isVisible = function(box) {
-        var bottom, offset, top, viewBottom, viewTop;
-        offset = box.getAttribute('data-wow-offset') || this.config.offset;
-        viewTop = window.pageYOffset;
-        viewBottom = viewTop + this.element.clientHeight - offset;
-        top = this.offsetTop(box);
-        bottom = top + box.clientHeight;
-        return top <= viewBottom && bottom >= viewTop;
-      };
-  
-      WOW.prototype.util = function() {
-        return this._util || (this._util = new Util());
-      };
-  
-      WOW.prototype.disabled = function() {
-        return this.config.mobile === false && this.util().isMobile(navigator.userAgent);
-      };
-  
-      return WOW;
-  
-    })();
-  
-  }).call(this);
-  
+

@@ -7,12 +7,15 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 .ribbon
      position: absolute
      right: -8px
-     top: 10px
-     color: #fff
+     top: 15px
      width: 110px
      text-align: center
      font-size: 0.9rem
      padding: 2px 0
+
+     a
+          color: #fff
+
      &:before
           content: ""
           width: 0
@@ -25,16 +28,17 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
           top: -5px
           right: 0
 
+.card-date,
 .card-description
      color: #656565
      +transition (ease-in-out, 0.2s, all) 
 
+
+//VARIABLE COLORS
 @each $type in $type-post 
      .post-#{$type} 
           .card          
-               border-color: nth($color-post, index($type-post, $type))
-               border-width: 2px
-               border-style: solid
+               border: 1px solid gainsboro
                box-shadow: none
                cursor: pointer
                +transition (ease-in-out, 0.2s, all)  
@@ -46,10 +50,18 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                     border-style: solid
                     +transition (ease-in-out, 0.2s, all)  
 
-               .card-date,
+               
                .card-title,                             
                     color: nth($color-post, index($type-post, $type)) 
-                    +transition (ease-in-out, 0.2s, all)            
+                    +transition (ease-in-out, 0.2s, all) 
+                    margin-bottom: 10px 
+                    font-size: 1.3rem
+
+               .card-description
+                    font-size: 1rem
+               
+               .card-date
+                    font-size: 0.8rem;               
                
                .card-tags
                     border-color: #fff
@@ -76,7 +88,10 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
                .ribbon
                     background-color: #fff
-                    color: nth($color-post, index($type-post, $type))
+
+                    a
+                         color: nth($color-post, index($type-post, $type))
+
                .card-date,
                .card-title,    
                .card-description                         

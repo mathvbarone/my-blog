@@ -30,7 +30,9 @@ var paths = {
 			sass: 'assets/dist/css/beauty'
 		}
 	}
-	}
+}
+
+
 
 
 
@@ -93,11 +95,11 @@ gulp.task('css', function() {
  * Javascript Task
  */
 gulp.task('js', function() {
-	gulp.src(['src/js/jquery-3.2.1.js',
-			'src/js/wow.js',
-			'src/js/scrollify.js',
-			'src/js/typed.js',
-			'src/js/main.js'])
+	gulp.src(['assets/src/js/jquery-3.2.1.js',
+			'assets/src/js/wow.js',
+			'assets/src/js/scrollify.js',
+			'assets/src/js/typed.js',
+			'assets/src/js/main.js'])
 	    .pipe(plumber())
 	    .pipe(concat('concat.js'))
 	    .pipe(gulp.dest(paths.dest.js))

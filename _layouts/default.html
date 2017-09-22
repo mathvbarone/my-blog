@@ -1,5 +1,5 @@
 ---
-layout: compress
+<!-- layout: compress -->
 ---
 
 <!DOCTYPE html>
@@ -7,9 +7,9 @@ layout: compress
     {% include head.html %}
     <body>
         {% include analytics.html %}
-        <section id="main-box" class="main-box">
             {% include header-default.html %}
-                {{ content }}     
+                <div class="container p-t-80">
+                    {{ content }}  
+                </div>   
             {% include footer.html %}
-        </section>
     </body>
