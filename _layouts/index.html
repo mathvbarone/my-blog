@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+     <!-- HEAD -->
+     {% include head.html %}
+     <!-- /HEAD -->
+     <body>
+          <section id="main-box" class="main-box">
+
+               <!-- ANALYTICS -->
+               {% include analytics.html %}
+               <!-- /ANALYTICS -->
+               
+               <!-- HEADER -->
+               {% include header-index.html %}
+               <!-- /HEADER -->
+
+               <!-- /HERO -->
+               {% include hero-index.html %}
+               <!-- HERO -->
+
+               <!-- CONTENT -->
+               <div class="offset">
+                    {{ content }}
+               </div>
+               <!-- /CONTENT -->
+
+               <!-- FOOTER -->
+               {% include footer.html %}
+               <!-- /FOOTER -->
+          </section>
+     </body>

@@ -45,11 +45,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
                .ribbon
                     background-color: nth($color-post, index($type-post, $type)) 
-                    border-color: nth($color-post, index($type-post, $type))
-                    border-width: 1px
-                    border-style: solid
+                    border: 1px solid #fff;
                     +transition (ease-in-out, 0.2s, all)  
-
                
                .card-title,                             
                     color: nth($color-post, index($type-post, $type)) 
@@ -64,9 +61,7 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                     font-size: 0.8rem;               
                
                .card-tags
-                    border-color: #fff
-                    border-width: 1px
-                    border-style: solid
+                    border-color: #fff 1px solid
                     transition: ease-in-out 0.2s all
                     display: inline-block
                     background-color: nth($color-post, index($type-post, $type))
@@ -79,23 +74,28 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                     border-radius: 3px
                     margin: 10px 2px 0 0
 
-                    &:hover
-                         background-color: #fff
-                         color: nth($color-post, index($type-post, $type))     
 
           .card:hover
+               transform: scale(1.04)
                background-color: nth($color-post, index($type-post, $type))
-
-               .ribbon
-                    background-color: #fff
-
-                    a
-                         color: nth($color-post, index($type-post, $type))
+               
 
                .card-date,
                .card-title,    
                .card-description                         
                     color: #fff 
+
+               
+               .ribbon,
+               .card-tags  
+                    border-color: nth($color-post, index($type-post, $type))  
+                    border-width: 1px
+                    border-style: solid 
+                    background-color: #fff 
+                    color: nth($color-post, index($type-post, $type))                    
+
+               .ribbon a
+                     color: nth($color-post, index($type-post, $type))  
                  
 
 

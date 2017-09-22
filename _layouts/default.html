@@ -1,15 +1,28 @@
 ---
-<!-- layout: compress -->
+layout: compress
 ---
 
 <!DOCTYPE html>
 <html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+    <!-- HEAD -->
     {% include head.html %}
+    <!-- /HEAD -->
     <body>
+        <!-- ANALYTICS -->
         {% include analytics.html %}
-            {% include header-default.html %}
-                <div class="container p-t-80">
-                    {{ content }}  
-                </div>   
-            {% include footer.html %}
+        <!-- /ANALYTICS -->
+
+        <!-- HEADER -->
+        {% include header-default.html %}
+        <!-- /HEADER -->
+        
+        <!-- CONTENT -->
+        <div class="container p-t-80">
+            {{ content }}  
+        </div>   
+        <!-- CONTENT -->
+
+        <!-- FOOTER -->
+        {% include footer.html %}
+        <!-- /FOOTER -->
     </body>

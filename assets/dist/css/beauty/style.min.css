@@ -2,7 +2,7 @@ a,code {
     color: #cd2b46
 }
 
-body,code,h1,h2,h3,h4,h5,h6 {
+body,code {
     font-weight: 400
 }
 
@@ -30,10 +30,6 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
-.button,.file,.is-unselectable {
-    -webkit-touch-callout: none
-}
-
 .button,body {
     line-height: 1.5
 }
@@ -42,9 +38,9 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     cursor: pointer
 }
 
-.button,.input,.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-index-body,.modal-card,.tile.is-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
 }
 
 @-webkit-keyframes spinAround {
@@ -75,7 +71,8 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-size: 100%
+    font-size: 100%;
+    font-weight: 400
 }
 
 ul {
@@ -146,6 +143,10 @@ a {
     text-decoration: none
 }
 
+.button.is-link,.message-body a:not(.button),.message-header a:not(.button),a.tag:hover {
+    text-decoration: underline
+}
+
 a strong {
     color: currentColor
 }
@@ -174,7 +175,7 @@ span {
     font-weight: inherit
 }
 
-.label,strong {
+strong {
     font-weight: 700
 }
 
@@ -610,6 +611,10 @@ table td,table th {
 
 .is-uppercase {
     text-transform: uppercase!important
+}
+
+.heading,.menu-label {
+    text-transform: uppercase
 }
 
 .has-text-white {
@@ -1188,11 +1193,8 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     box-shadow: none!important
 }
 
-.box,.card {
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
-}
-
 .is-unselectable {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1200,6 +1202,7 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .button,.file {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none
@@ -1208,10 +1211,18 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     display: block;
     padding: 1.25rem
+}
+
+.button,.input,.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: -webkit-inline-box;
+    padding-bottom: -webkit-calc(.375em - 1px)
 }
 
 .box:not(:last-child) {
@@ -1238,13 +1249,11 @@ a.box:active {
     border-radius: 3px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 1rem;
     height: 2.25em;
-    padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
@@ -1323,8 +1332,7 @@ a.box:active {
 .button.is-link {
     background-color: transparent;
     border-color: transparent;
-    color: #4a4a4a;
-    text-decoration: underline
+    color: #4a4a4a
 }
 
 .button.is-link.is-focused,.button.is-link.is-hovered,.button.is-link:focus,.button.is-link:hover {
@@ -2237,6 +2245,10 @@ a.box:active {
     background-color: #f5f5f5
 }
 
+.nav-toggle.is-active span:nth-child(2),.navbar-burger.is-active span:nth-child(2) {
+    opacity: 0
+}
+
 .button.is-fullwidth {
     display: flex;
     width: 100%
@@ -2277,10 +2289,6 @@ a.box:active {
 .container {
     margin: 0 auto;
     position: relative
-}
-
-.content:not(:last-child),.notification:not(:last-child),.progress:not(:last-child),.table {
-    margin-bottom: 1.5rem
 }
 
 @media screen and (min-width:1024px) {
@@ -2329,12 +2337,20 @@ a.box:active {
     width: 100%
 }
 
+.content:not(:last-child) {
+    margin-bottom: 1.5rem
+}
+
 .content li+li {
     margin-top: .25em
 }
 
 .content blockquote:not(:last-child),.content dl:not(:last-child),.content ol:not(:last-child),.content p:not(:last-child),.content pre:not(:last-child),.content table:not(:last-child),.content ul:not(:last-child) {
     margin-bottom: 1em
+}
+
+.content h1,.label:not(:last-child) {
+    margin-bottom: .5em
 }
 
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
@@ -2344,8 +2360,7 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em;
-    margin-bottom: .5em
+    font-size: 2em
 }
 
 .content h1:not(:first-child) {
@@ -2507,7 +2522,6 @@ a.box:active {
     border: 1px solid #dbdbdb;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -2518,7 +2532,6 @@ a.box:active {
     -ms-flex-pack: start;
     justify-content: flex-start;
     line-height: 1.5;
-    padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
     padding-left: calc(.625em - 1px);
@@ -2537,9 +2550,10 @@ a.box:active {
 
 .file-cta,.file-name,.select select {
     -webkit-box-align: center;
-    vertical-align: top;
     -moz-appearance: none;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    vertical-align: top;
+    line-height: 1.5
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -2774,7 +2788,6 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
@@ -2974,7 +2987,11 @@ a.box:active {
     transform: none
 }
 
-.file,.file-label {
+.control.is-loading::after,.loader {
+    -webkit-animation: spinAround .5s infinite linear
+}
+
+.control,.file,.file-label {
     position: relative
 }
 
@@ -3288,16 +3305,12 @@ a.box:active {
 }
 
 .file.is-boxed .file-label {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
 .file.is-boxed .file-cta {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3436,7 +3449,6 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
@@ -3509,11 +3521,8 @@ a.box:active {
 
 .label {
     color: #363636;
-    font-size: 1rem
-}
-
-.label:not(:last-child) {
-    margin-bottom: .5em
+    font-size: 1rem;
+    font-weight: 700
 }
 
 .label.is-small {
@@ -3806,9 +3815,12 @@ a.box:active {
     }
 }
 
+.notification:not(:last-child),.progress:not(:last-child),.table {
+    margin-bottom: 1.5rem
+}
+
 .control {
     font-size: 1rem;
-    position: relative;
     text-align: left
 }
 
@@ -3873,7 +3885,6 @@ a.box:active {
 }
 
 .control.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -4511,10 +4522,6 @@ a.box:active {
     border-radius: 290486px
 }
 
-a.tag:hover {
-    text-decoration: underline
-}
-
 .subtitle,.title {
     word-break: break-word
 }
@@ -4525,10 +4532,6 @@ a.tag:hover {
 
 .subtitle .tag,.title .tag {
     vertical-align: middle
-}
-
-.delete,.number {
-    vertical-align: top
 }
 
 .title {
@@ -4643,6 +4646,7 @@ a.tag:hover {
     min-height: 20px;
     min-width: 20px;
     outline: 0;
+    vertical-align: top;
     width: 20px
 }
 
@@ -4705,8 +4709,7 @@ a.tag:hover {
     display: block;
     font-size: 11px;
     letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase
+    margin-bottom: 5px
 }
 
 .breadcrumb:not(:last-child),.highlight:not(:last-child) {
@@ -4725,7 +4728,6 @@ a.tag:hover {
 }
 
 .loader {
-    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -4758,7 +4760,8 @@ a.tag:hover {
     margin-right: 1.5rem;
     min-width: 2.5em;
     padding: .25rem .5rem;
-    text-align: center
+    text-align: center;
+    vertical-align: top
 }
 
 .breadcrumb,.breadcrumb a {
@@ -4904,6 +4907,7 @@ a.tag:hover {
 
 .card {
     background-color: #fff;
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     max-width: 100%
@@ -5371,8 +5375,7 @@ a.dropdown-item.is-active {
 .menu-label {
     color: #7a7a7a;
     font-size: .75em;
-    letter-spacing: .1em;
-    text-transform: uppercase
+    letter-spacing: .1em
 }
 
 .menu-label:not(:first-child) {
@@ -5557,10 +5560,6 @@ a.dropdown-item.is-active {
     color: currentColor
 }
 
-.message-header a:not(.button) {
-    text-decoration: underline
-}
-
 .message-header .delete {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -5590,10 +5589,6 @@ a.dropdown-item.is-active {
 
 .message-body a:not(.button),.message-body strong {
     color: currentColor
-}
-
-.message-body a:not(.button) {
-    text-decoration: underline
 }
 
 .message-body code,.message-body pre {
@@ -5742,8 +5737,6 @@ a.dropdown-item.is-active {
 
 .modal-card {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5881,10 +5874,6 @@ a.dropdown-item.is-active {
     -webkit-transform-origin: left top;
     -ms-transform-origin: left top;
     transform-origin: left top
-}
-
-.nav-toggle.is-active span:nth-child(2) {
-    opacity: 0
 }
 
 .nav-toggle.is-active span:nth-child(3) {
@@ -6534,10 +6523,6 @@ a.dropdown-item.is-active {
     -webkit-transform-origin: left top;
     -ms-transform-origin: left top;
     transform-origin: left top
-}
-
-.navbar-burger.is-active span:nth-child(2) {
-    opacity: 0
 }
 
 .navbar-burger.is-active span:nth-child(3) {
@@ -9174,8 +9159,6 @@ a.panel-block,label.panel-block {
 }
 
 .tile.is-vertical {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -9296,8 +9279,6 @@ a.panel-block,label.panel-block {
     -ms-flex-align: stretch;
     align-items: stretch;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -14157,19 +14138,14 @@ a {
     transition: ease-in-out .2s all
 }
 
-.post-blog .card .card-tags,.post-blog .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #e80000
-}
-
 .post-blog .card .card-title,.post-blog .card .ribbon {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-blog .card .ribbon {
-    border-color: #e80000;
+    background-color: #e80000;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14194,8 +14170,9 @@ a {
 }
 
 .post-blog .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     transition: ease-in-out .2s all;
+    background-color: #e80000;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14203,25 +14180,32 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-blog .card .card-tags:hover {
-    background-color: #fff;
-    color: #e80000
-}
-
 .post-blog .card:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
     background-color: #e80000
 }
 
-.post-blog .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-blog .card:hover .ribbon a {
-    color: #e80000
+.post-css .card:hover,.post-html .card:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04)
 }
 
 .post-blog .card:hover .card-date,.post-blog .card:hover .card-description,.post-blog .card:hover .card-title {
     color: #fff
+}
+
+.post-blog .card:hover .card-tags,.post-blog .card:hover .ribbon {
+    border-color: #e80000;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #e80000
+}
+
+.post-blog .card:hover .ribbon a {
+    color: #e80000
 }
 
 .post-html .card {
@@ -14232,19 +14216,14 @@ a {
     transition: ease-in-out .2s all
 }
 
-.post-html .card .card-tags,.post-html .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #f16528
-}
-
 .post-html .card .card-title,.post-html .card .ribbon {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-html .card .ribbon {
-    border-color: #f16528;
+    background-color: #f16528;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14269,8 +14248,9 @@ a {
 }
 
 .post-html .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     transition: ease-in-out .2s all;
+    background-color: #f16528;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14278,25 +14258,25 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-html .card .card-tags:hover {
-    background-color: #fff;
-    color: #f16528
-}
-
 .post-html .card:hover {
+    transform: scale(1.04);
     background-color: #f16528
-}
-
-.post-html .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-html .card:hover .ribbon a {
-    color: #f16528
 }
 
 .post-html .card:hover .card-date,.post-html .card:hover .card-description,.post-html .card:hover .card-title {
     color: #fff
+}
+
+.post-html .card:hover .card-tags,.post-html .card:hover .ribbon {
+    border-color: #f16528;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #f16528
+}
+
+.post-html .card:hover .ribbon a {
+    color: #f16528
 }
 
 .post-css .card {
@@ -14305,12 +14285,6 @@ a {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
-}
-
-.post-css .card .card-tags,.post-css .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #1474a4
 }
 
 .post-js .card,.post-misc .card {
@@ -14324,7 +14298,8 @@ a {
 }
 
 .post-css .card .ribbon {
-    border-color: #1474a4;
+    background-color: #1474a4;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14349,8 +14324,9 @@ a {
 }
 
 .post-css .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     transition: ease-in-out .2s all;
+    background-color: #1474a4;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14358,25 +14334,30 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-css .card .card-tags:hover {
-    background-color: #fff;
-    color: #1474a4
-}
-
 .post-css .card:hover {
+    transform: scale(1.04);
     background-color: #1474a4
 }
 
-.post-css .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-css .card:hover .ribbon a {
-    color: #1474a4
+.post-js .card:hover,.post-misc .card:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04)
 }
 
 .post-css .card:hover .card-date,.post-css .card:hover .card-description,.post-css .card:hover .card-title {
     color: #fff
+}
+
+.post-css .card:hover .card-tags,.post-css .card:hover .ribbon {
+    border-color: #1474a4;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #1474a4
+}
+
+.post-css .card:hover .ribbon a {
+    color: #1474a4
 }
 
 .post-js .card {
@@ -14385,19 +14366,14 @@ a {
     transition: ease-in-out .2s all
 }
 
-.post-js .card .card-tags,.post-js .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #f8c101
-}
-
 .post-js .card .card-title,.post-js .card .ribbon {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-js .card .ribbon {
-    border-color: #f8c101;
+    background-color: #f8c101;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14422,8 +14398,9 @@ a {
 }
 
 .post-js .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     transition: ease-in-out .2s all;
+    background-color: #f8c101;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14431,25 +14408,25 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-js .card .card-tags:hover {
-    background-color: #fff;
-    color: #f8c101
-}
-
 .post-js .card:hover {
+    transform: scale(1.04);
     background-color: #f8c101
-}
-
-.post-js .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-js .card:hover .ribbon a {
-    color: #f8c101
 }
 
 .post-js .card:hover .card-date,.post-js .card:hover .card-description,.post-js .card:hover .card-title {
     color: #fff
+}
+
+.post-js .card:hover .card-tags,.post-js .card:hover .ribbon {
+    border-color: #f8c101;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #f8c101
+}
+
+.post-js .card:hover .ribbon a {
+    color: #f8c101
 }
 
 .post-misc .card {
@@ -14458,19 +14435,14 @@ a {
     transition: ease-in-out .2s all
 }
 
-.post-misc .card .card-tags,.post-misc .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #cd2b46
-}
-
 .post-misc .card .card-title,.post-misc .card .ribbon {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-misc .card .ribbon {
-    border-color: #cd2b46;
+    background-color: #cd2b46;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14495,8 +14467,9 @@ a {
 }
 
 .post-misc .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     transition: ease-in-out .2s all;
+    background-color: #cd2b46;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14504,25 +14477,25 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-misc .card .card-tags:hover {
-    background-color: #fff;
-    color: #cd2b46
-}
-
 .post-misc .card:hover {
+    transform: scale(1.04);
     background-color: #cd2b46
-}
-
-.post-misc .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-misc .card:hover .ribbon a {
-    color: #cd2b46
 }
 
 .post-misc .card:hover .card-date,.post-misc .card:hover .card-description,.post-misc .card:hover .card-title {
     color: #fff
+}
+
+.post-misc .card:hover .card-tags,.post-misc .card:hover .ribbon {
+    border-color: #cd2b46;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #cd2b46
+}
+
+.post-misc .card:hover .ribbon a {
+    color: #cd2b46
 }
 
 .post-front .card {
@@ -14533,19 +14506,14 @@ a {
     transition: ease-in-out .2s all
 }
 
-.post-front .card .card-tags,.post-front .card .ribbon {
-    border-width: 1px;
-    border-style: solid;
-    background-color: #2dbf80
-}
-
 .post-front .card .card-title,.post-front .card .ribbon {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-front .card .ribbon {
-    border-color: #2dbf80;
+    background-color: #2dbf80;
+    border: 1px solid #fff;
     transition: ease-in-out .2s all
 }
 
@@ -14565,10 +14533,11 @@ a {
 }
 
 .post-front .card .card-tags {
-    border-color: #fff;
+    border-color: #fff 1px solid;
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
+    background-color: #2dbf80;
     color: #fff;
     font-size: .8rem;
     -webkit-border-radius: 3px;
@@ -14576,25 +14545,27 @@ a {
     margin: 10px 2px 0 0
 }
 
-.post-front .card .card-tags:hover {
-    background-color: #fff;
-    color: #2dbf80
-}
-
 .post-front .card:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
     background-color: #2dbf80
-}
-
-.post-front .card:hover .ribbon {
-    background-color: #fff
-}
-
-.post-front .card:hover .ribbon a {
-    color: #2dbf80
 }
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-title {
     color: #fff
+}
+
+.post-front .card:hover .card-tags,.post-front .card:hover .ribbon {
+    border-color: #2dbf80;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: #2dbf80
+}
+
+.post-front .card:hover .ribbon a {
+    color: #2dbf80
 }
 
 .mast-header {
@@ -14684,8 +14655,6 @@ a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
