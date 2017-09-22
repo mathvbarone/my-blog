@@ -30,6 +30,14 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
+.control.has-icon.has-icon-right .icon,.control.has-icons-right .icon.is-right {
+    right: 0
+}
+
+.button,.file,.is-unselectable {
+    -webkit-touch-callout: none
+}
+
 .button,body {
     line-height: 1.5
 }
@@ -38,9 +46,9 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     cursor: pointer
 }
 
-.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-index-body,.modal-card,.tile.is-vertical {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal
+.button,.input,.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none
 }
 
 @-webkit-keyframes spinAround {
@@ -141,10 +149,6 @@ code,pre,small {
 
 a {
     text-decoration: none
-}
-
-.button.is-link,.message-body a:not(.button),.message-header a:not(.button),a.tag:hover {
-    text-decoration: underline
 }
 
 a strong {
@@ -1193,8 +1197,11 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     box-shadow: none!important
 }
 
+.box,.card {
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
+}
+
 .is-unselectable {
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1202,7 +1209,6 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .button,.file {
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none
@@ -1211,18 +1217,10 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     display: block;
     padding: 1.25rem
-}
-
-.button,.input,.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    display: -webkit-inline-box;
-    padding-bottom: -webkit-calc(.375em - 1px)
 }
 
 .box:not(:last-child) {
@@ -1249,11 +1247,13 @@ a.box:active {
     border-radius: 3px;
     -webkit-box-shadow: none;
     box-shadow: none;
+    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 1rem;
     height: 2.25em;
+    padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
@@ -1332,7 +1332,8 @@ a.box:active {
 .button.is-link {
     background-color: transparent;
     border-color: transparent;
-    color: #4a4a4a
+    color: #4a4a4a;
+    text-decoration: underline
 }
 
 .button.is-link.is-focused,.button.is-link.is-hovered,.button.is-link:focus,.button.is-link:hover {
@@ -2245,10 +2246,6 @@ a.box:active {
     background-color: #f5f5f5
 }
 
-.nav-toggle.is-active span:nth-child(2),.navbar-burger.is-active span:nth-child(2) {
-    opacity: 0
-}
-
 .button.is-fullwidth {
     display: flex;
     width: 100%
@@ -2289,6 +2286,10 @@ a.box:active {
 .container {
     margin: 0 auto;
     position: relative
+}
+
+.content:not(:last-child),.notification:not(:last-child),.progress:not(:last-child),.table {
+    margin-bottom: 1.5rem
 }
 
 @media screen and (min-width:1024px) {
@@ -2337,20 +2338,12 @@ a.box:active {
     width: 100%
 }
 
-.content:not(:last-child) {
-    margin-bottom: 1.5rem
-}
-
 .content li+li {
     margin-top: .25em
 }
 
 .content blockquote:not(:last-child),.content dl:not(:last-child),.content ol:not(:last-child),.content p:not(:last-child),.content pre:not(:last-child),.content table:not(:last-child),.content ul:not(:last-child) {
     margin-bottom: 1em
-}
-
-.content h1,.label:not(:last-child) {
-    margin-bottom: .5em
 }
 
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
@@ -2360,7 +2353,8 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em
+    font-size: 2em;
+    margin-bottom: .5em
 }
 
 .content h1:not(:first-child) {
@@ -2468,10 +2462,6 @@ a.box:active {
     overflow: hidden
 }
 
-.breadcrumb,.file-cta,.file-name,.learn-more,.nav-left,.pagination-next,.pagination-previous,.tabs,.tag:not(body),a.dropdown-item {
-    white-space: nowrap
-}
-
 .content sub,.content sup {
     font-size: 75%
 }
@@ -2522,6 +2512,7 @@ a.box:active {
     border: 1px solid #dbdbdb;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -2532,6 +2523,7 @@ a.box:active {
     -ms-flex-pack: start;
     justify-content: flex-start;
     line-height: 1.5;
+    padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
     padding-left: calc(.625em - 1px);
@@ -2550,10 +2542,9 @@ a.box:active {
 
 .file-cta,.file-name,.select select {
     -webkit-box-align: center;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     vertical-align: top;
-    line-height: 1.5
+    -moz-appearance: none;
+    -webkit-appearance: none
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -2720,6 +2711,11 @@ a.box:active {
     min-height: 120px
 }
 
+.delete,.modal-close {
+    min-height: 20px;
+    outline: 0
+}
+
 .textarea[rows] {
     height: unset
 }
@@ -2788,6 +2784,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
@@ -2987,16 +2984,8 @@ a.box:active {
     transform: none
 }
 
-.control.is-loading::after,.loader {
-    -webkit-animation: spinAround .5s infinite linear
-}
-
-.control,.file,.file-label {
+.file,.file-label {
     position: relative
-}
-
-.control.has-icon.has-icon-right .icon,.control.has-icons-right .icon.is-right {
-    right: 0
 }
 
 .select.is-loading.is-small:after {
@@ -3305,12 +3294,16 @@ a.box:active {
 }
 
 .file.is-boxed .file-label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
 .file.is-boxed .file-cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3449,6 +3442,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
@@ -3457,7 +3451,8 @@ a.box:active {
     border-radius: 3px;
     font-size: 1em;
     padding-left: 1em;
-    padding-right: 1em
+    padding-right: 1em;
+    white-space: nowrap
 }
 
 .file-icon,.icon {
@@ -3523,6 +3518,10 @@ a.box:active {
     color: #363636;
     font-size: 1rem;
     font-weight: 700
+}
+
+.label:not(:last-child) {
+    margin-bottom: .5em
 }
 
 .label.is-small {
@@ -3815,12 +3814,9 @@ a.box:active {
     }
 }
 
-.notification:not(:last-child),.progress:not(:last-child),.table {
-    margin-bottom: 1.5rem
-}
-
 .control {
     font-size: 1rem;
+    position: relative;
     text-align: left
 }
 
@@ -3834,7 +3830,7 @@ a.box:active {
     z-index: 4
 }
 
-.control.has-icon .input:focus+.icon,.control.has-icons-left .input:focus~.icon,.control.has-icons-left .select:focus~.icon,.control.has-icons-right .input:focus~.icon,.control.has-icons-right .select:focus~.icon {
+.breadcrumb a,.control.has-icon .input:focus+.icon,.control.has-icons-left .input:focus~.icon,.control.has-icons-left .select:focus~.icon,.control.has-icons-right .input:focus~.icon,.control.has-icons-right .select:focus~.icon {
     color: #7a7a7a
 }
 
@@ -3885,6 +3881,7 @@ a.box:active {
 }
 
 .control.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -4417,7 +4414,8 @@ a.box:active {
     justify-content: center;
     line-height: 1.5;
     padding-left: .75em;
-    padding-right: .75em
+    padding-right: .75em;
+    white-space: nowrap
 }
 
 .tag:not(body) .delete {
@@ -4522,6 +4520,10 @@ a.box:active {
     border-radius: 290486px
 }
 
+a.tag:hover {
+    text-decoration: underline
+}
+
 .subtitle,.title {
     word-break: break-word
 }
@@ -4532,6 +4534,10 @@ a.box:active {
 
 .subtitle .tag,.title .tag {
     vertical-align: middle
+}
+
+.delete,.number {
+    vertical-align: top
 }
 
 .title {
@@ -4610,7 +4616,7 @@ a.box:active {
     font-size: 1.5rem
 }
 
-.number,.subtitle.is-5 {
+.subtitle.is-5 {
     font-size: 1.25rem
 }
 
@@ -4643,10 +4649,7 @@ a.box:active {
     height: 20px;
     max-height: 20px;
     max-width: 20px;
-    min-height: 20px;
     min-width: 20px;
-    outline: 0;
-    vertical-align: top;
     width: 20px
 }
 
@@ -4728,6 +4731,7 @@ a.box:active {
 }
 
 .loader {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -4752,6 +4756,7 @@ a.box:active {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    font-size: 1.25rem;
     height: 2em;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -4760,8 +4765,7 @@ a.box:active {
     margin-right: 1.5rem;
     min-width: 2.5em;
     padding: .25rem .5rem;
-    text-align: center;
-    vertical-align: top
+    text-align: center
 }
 
 .breadcrumb,.breadcrumb a {
@@ -4778,7 +4782,8 @@ a.box:active {
     align-items: stretch;
     display: flex;
     font-size: 1rem;
-    overflow-x: auto
+    overflow-x: auto;
+    white-space: nowrap
 }
 
 .modal-close,.pagination-ellipsis,.pagination-link,.pagination-next,.pagination-previous {
@@ -4796,7 +4801,6 @@ a.box:active {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #7a7a7a;
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -4907,7 +4911,6 @@ a.box:active {
 
 .card {
     background-color: #fff;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     max-width: 100%
@@ -5067,7 +5070,8 @@ a.box:active {
 }
 
 a.dropdown-item {
-    padding-right: 3rem
+    padding-right: 3rem;
+    white-space: nowrap
 }
 
 a.dropdown-item:hover {
@@ -5560,6 +5564,10 @@ a.dropdown-item.is-active {
     color: currentColor
 }
 
+.message-header a:not(.button) {
+    text-decoration: underline
+}
+
 .message-header .delete {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -5589,6 +5597,10 @@ a.dropdown-item.is-active {
 
 .message-body a:not(.button),.message-body strong {
     color: currentColor
+}
+
+.message-body a:not(.button) {
+    text-decoration: underline
 }
 
 .message-body code,.message-body pre {
@@ -5664,9 +5676,7 @@ a.dropdown-item.is-active {
     font-size: 1rem;
     max-height: 20px;
     max-width: 20px;
-    min-height: 20px;
     min-width: 20px;
-    outline: 0;
     background: 0 0;
     height: 40px;
     position: fixed;
@@ -5737,6 +5747,8 @@ a.dropdown-item.is-active {
 
 .modal-card {
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5874,6 +5886,10 @@ a.dropdown-item.is-active {
     -webkit-transform-origin: left top;
     -ms-transform-origin: left top;
     transform-origin: left top
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+    opacity: 0
 }
 
 .nav-toggle.is-active span:nth-child(3) {
@@ -6015,7 +6031,8 @@ a.dropdown-item.is-active {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: flex-start
+    justify-content: flex-start;
+    white-space: nowrap
 }
 
 .nav-right {
@@ -6525,6 +6542,10 @@ a.dropdown-item.is-active {
     transform-origin: left top
 }
 
+.navbar-burger.is-active span:nth-child(2) {
+    opacity: 0
+}
+
 .navbar-burger.is-active span:nth-child(3) {
     margin-left: -5px;
     -webkit-transform: rotate(-45deg);
@@ -6951,7 +6972,8 @@ a.dropdown-item.is-active {
 
 .pagination-next,.pagination-previous {
     padding-left: .75em;
-    padding-right: .75em
+    padding-right: .75em;
+    white-space: nowrap
 }
 
 .pagination-link.is-current {
@@ -7234,7 +7256,8 @@ a.panel-block,label.panel-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
-    overflow-x: auto
+    overflow-x: auto;
+    white-space: nowrap
 }
 
 .tabs:not(:last-child) {
@@ -9159,6 +9182,8 @@ a.panel-block,label.panel-block {
 }
 
 .tile.is-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -9279,6 +9304,8 @@ a.panel-block,label.panel-block {
     -ms-flex-align: stretch;
     align-items: stretch;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -14120,11 +14147,6 @@ a {
     right: 0
 }
 
-.hero-index,.mast-header {
-    position: fixed;
-    width: 100%
-}
-
 .card-date,.card-description {
     color: #656565;
     transition: ease-in-out .2s all
@@ -14181,15 +14203,19 @@ a {
 }
 
 .post-blog .card:hover {
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04);
-    transform: scale(1.04);
+    position: relative;
+    z-index: 5;
+    -webkit-transform: translateY(-10px) scale(1.04);
+    -ms-transform: translateY(-10px) scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #e80000
 }
 
 .post-css .card:hover,.post-html .card:hover {
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04)
+    position: relative;
+    z-index: 5;
+    -webkit-transform: translateY(-10px) scale(1.04);
+    -ms-transform: translateY(-10px) scale(1.04)
 }
 
 .post-blog .card:hover .card-date,.post-blog .card:hover .card-description,.post-blog .card:hover .card-title {
@@ -14259,7 +14285,7 @@ a {
 }
 
 .post-html .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #f16528
 }
 
@@ -14335,13 +14361,15 @@ a {
 }
 
 .post-css .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #1474a4
 }
 
 .post-js .card:hover,.post-misc .card:hover {
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04)
+    -webkit-transform: translateY(-10px) scale(1.04);
+    -ms-transform: translateY(-10px) scale(1.04);
+    position: relative;
+    z-index: 5
 }
 
 .post-css .card:hover .card-date,.post-css .card:hover .card-description,.post-css .card:hover .card-title {
@@ -14409,7 +14437,7 @@ a {
 }
 
 .post-js .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #f8c101
 }
 
@@ -14478,7 +14506,7 @@ a {
 }
 
 .post-misc .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #cd2b46
 }
 
@@ -14546,10 +14574,17 @@ a {
 }
 
 .post-front .card:hover {
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04);
-    transform: scale(1.04);
+    position: relative;
+    z-index: 5;
+    -webkit-transform: translateY(-10px) scale(1.04);
+    -ms-transform: translateY(-10px) scale(1.04);
+    transform: translateY(-10px) scale(1.04);
     background-color: #2dbf80
+}
+
+.hero-index,.mast-header {
+    position: fixed;
+    width: 100%
 }
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-title {
@@ -14655,6 +14690,8 @@ a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -14783,6 +14820,7 @@ a {
 .learn-more {
     font-size: 1.3rem;
     padding: 20px;
+    white-space: nowrap;
     z-index: 2;
     text-decoration: none;
     -webkit-transition: color .2s ease-out;
@@ -14848,5 +14886,10 @@ a {
 
 .content-main {
     min-height: 100vh;
-    padding: 60px 20px 0
+    padding: 60px 20px 0;
+    outline: 0
+}
+
+.content-main:active,.content-main:focus {
+    outline: 0
 }

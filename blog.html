@@ -6,10 +6,22 @@ layout: default
 <main role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
      <div class="container">
           <h2 class="title is-2 has-text-centered has-text-weight-bold">Últimos posts</h2>
-          <ul class="columns is-multiline m-t-60 p-b-60">
+
+            <!-- FILTER -->
+                <form action="" class="form">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" id="input" type="text" placeholder="Procurar...">
+                            <button class="is-danger button-clean">Apagar</button>
+                        </div>
+                    </div>
+                </form>
+            <!-- FILTER -->
+
+          <ul class="columns card-list is-multiline m-t-60 p-b-60">
                {% for post in site.posts %}
-               <li class="column is-one-third wow bounceInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    <div class="media">
+               <li class="column is-one-third wow bounceInUp card-item" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <div class="media card-inner">
                         <div class="media-content">
                             <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                                 <div class="card box">

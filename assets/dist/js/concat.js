@@ -11323,6 +11323,37 @@ $(document).ready(function() {
 
 
 
+// FILTRO
+var postFilter = function(){
+  //DECLARANDO VARIÁVEIS
+  var input, filter, ul, li, searchButton, inner;
+  input = document.getElementById("input");
+  filter = input.value.toUpperCase();
+  ul = document.getElementsByClassName("card-list");
+  li = document.getElementsByClassName("card-item");
+  searchButton = document.getElementsByClassName("button-clean");
+
+
+  //LOOP NA LI PARA RENDERIZAR OS USUÁRIOS
+  for (var i = 0; i < li.length; i++) {
+      inner = li[i].getElementsByClassName("card-inner")[0];
+      if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].classList.remove("is-hidden");
+      } else {;
+          li[i].classList.add("is-hidden");
+      }
+  }
+
+  // BOTÃO QUE LIMPA O INPUT
+  // searchButton.addEventListener("click", function() {
+  //     $(".user-list-item").removeClass("hide");
+  //     input.value = "";
+  // });
+}
+
+
+
+
   //FUNÇAO DE CHAMADA DO ANIMATION
   $(function() {
     wow = new WOW({
@@ -11377,6 +11408,8 @@ $(document).ready(function() {
   typeScript();
   window.addEventListener("scroll", scrollBanner );
   window.addEventListener("scroll",  showHeader );
+  $(".form").on("keyup", postFilter );
+
 
 });
 
