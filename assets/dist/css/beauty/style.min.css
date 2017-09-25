@@ -5330,7 +5330,7 @@ a.dropdown-item.is-active {
     text-align: left
 }
 
-.hero-index-body,.learn-more span,.nav,.pagination,.pagination-list,.panel-icon,.ribbon {
+.hero-index-body,.learn-more span,.nav,.pagination,.pagination-list,.panel-icon,.ribbon,.up-arrow {
     text-align: center
 }
 
@@ -7386,10 +7386,6 @@ a.panel-block,label.panel-block {
     border-width: 1px;
     margin-bottom: 0;
     position: relative
-}
-
-.hero-video,.hero-video video,.ribbon,.ribbon:before {
-    position: absolute
 }
 
 .tabs.is-toggle a:hover {
@@ -10115,6 +10111,7 @@ a.panel-block,label.panel-block {
 .hero-video {
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
     top: 0;
     overflow: hidden
@@ -10124,6 +10121,7 @@ a.panel-block,label.panel-block {
     left: 50%;
     min-height: 100%;
     min-width: 100%;
+    position: absolute;
     top: 50%;
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0)
@@ -14102,12 +14100,44 @@ a {
     padding: 0 20px
 }
 
+.up-arrow {
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    z-index: 10;
+    position: fixed;
+    right: 20px;
+    bottom: -60px;
+    background: #cd2b46;
+    display: block;
+    width: 50px;
+    line-height: 45px;
+    height: 50px;
+    border: 2px solid #cd2b46
+}
+
+.ribbon,.up-arrow:hover {
+    background: #fff
+}
+
+.up-arrow.is-active {
+    bottom: 20px
+}
+
+.up-arrow .fa {
+    color: #fff
+}
+
+.up-arrow:hover .fa {
+    color: #cd2b46
+}
+
 .card-item {
     -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
 .ribbon {
+    position: absolute;
     right: -8px;
     top: 15px;
     width: 110px;
@@ -14115,8 +14145,7 @@ a {
     border: 1px solid #fff;
     -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
-    font-size: .9rem;
-    background: #fff
+    font-size: .9rem
 }
 
 .card-date,.card-description,.post-blog .card {
@@ -14139,6 +14168,7 @@ a {
     -webkit-transform: rotate(-139deg);
     -ms-transform: rotate(-139deg);
     transform: rotate(-139deg);
+    position: absolute;
     top: -5px;
     right: 0
 }

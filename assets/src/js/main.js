@@ -103,13 +103,23 @@ var postFilter = function(){
   }
  
   var showHeader = function() {
-      if($(this).scrollTop() > 40){
+      if($(window).scrollTop() > 40){
         $(".index-header").addClass("is-active");
       }
       else{
         $(".index-header").removeClass("is-active");
       }
   }
+
+
+  var showArrow = function() {
+    if($(window).scrollTop() > 40){
+      $(".up-arrow").addClass("is-active");
+    }
+    else{
+      $(".up-arrow").removeClass("is-active");
+    }
+}
 
 
 // SCROLLIFY
@@ -134,6 +144,7 @@ var postFilter = function(){
   typeScript();
   $(window).on("scroll", scrollBanner );
   $(window).on("scroll", showHeader );
+  $(window).on("scroll", showArrow );
   $(".form").on("keyup", postFilter );
 
 

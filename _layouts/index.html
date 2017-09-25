@@ -8,6 +8,7 @@ layout: compress
      {% include head.html %}
      <!-- /HEAD -->
      <body>
+          <div id="top"></div>
           <section id="main-box" class="main-box">
 
                <!-- ANALYTICS -->
@@ -27,6 +28,12 @@ layout: compress
                     {{ content }}
                </div>
                <!-- /CONTENT -->
+
+               <!-- ARROW -->
+               <a href="#top" class="up-arrow">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+               </a>
+               <!-- ARROW -->
 
                <!-- FOOTER -->
                {% include footer.html %}
