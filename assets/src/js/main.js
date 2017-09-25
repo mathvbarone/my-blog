@@ -50,12 +50,12 @@ $(document).ready(function() {
 // FILTRO
 var postFilter = function(){
   //DECLARANDO VARIÁVEIS
-  var input, filter, ul, li, searchButton, inner;
+  var input, filter, ul, li, cleanButton, inner;
   input = document.getElementById("input");
   filter = input.value.toUpperCase();
   ul = document.getElementsByClassName("card-list");
   li = document.getElementsByClassName("card-item");
-  searchButton = document.getElementsByClassName("button-clean");
+  cleanButton = document.getElementsByClassName("button-clean");
 
 
   //LOOP NA LI PARA RENDERIZAR OS USUÁRIOS
@@ -67,15 +67,14 @@ var postFilter = function(){
           li[i].classList.add("is-hidden");
       }
   }
-
-  // BOTÃO QUE LIMPA O INPUT
-  // searchButton.addEventListener("click", function() {
-  //     $(".user-list-item").removeClass("hide");
-  //     input.value = "";
-  // });
 }
 
-
+  // BOTÃO QUE LIMPA O INPUT
+  var cleanField = function(e){
+    e.preventDefault();
+    $(".card-item").removeClass("is-hidden");
+    $(".searchInput").val("");
+  }
 
 
   //FUNÇAO DE CHAMADA DO ANIMATION
@@ -146,8 +145,7 @@ var postFilter = function(){
   $(window).on("scroll", showHeader );
   $(window).on("scroll", showArrow );
   $(".form").on("keyup", postFilter );
-
-
+  $(".cleanButton").on("click", cleanField);
 });
 
 
