@@ -11404,10 +11404,12 @@ var postFilter = function(){
     });
   }
 
+
+  //CALLBACKS
   scrollify();
   typeScript();
-  window.addEventListener("scroll", scrollBanner );
-  window.addEventListener("scroll",  showHeader );
+  $(window).on("scroll", scrollBanner );
+  $(window).on("scroll", showHeader );
   $(".form").on("keyup", postFilter );
 
 
