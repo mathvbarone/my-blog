@@ -128,7 +128,7 @@ var postFilter = function(){
     });
   }
 
-  // scrollify();
+  scrollify();
   typeScript();
   window.addEventListener("scroll", scrollBanner );
   window.addEventListener("scroll",  showHeader );
