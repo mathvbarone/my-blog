@@ -10,11 +10,12 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
      top: 15px
      width: 110px
      text-align: center
-     font-size: 0.9rem
      padding: 2px 0
-
-     a
-          color: #fff
+     border: 1px solid #fff;
+     +transition (ease-in-out, 0.2s, all)  
+     text-transform: uppercase
+     font-size: 0.9rem
+     background: #fff
 
      &:before
           content: ""
@@ -44,12 +45,19 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   +transition (ease-in-out, 0.2s, all)  
 
                   .ribbon
-                        background-color: nth($color-post, index($type-post, $type)) 
-                        border: 1px solid #fff;
-                        +transition (ease-in-out, 0.2s, all)  
-                  
+                        border-color: nth($color-post, index($type-post, $type))  
+                        border-width: 1px
+                        border-style: solid 
+                        font-size: 0.7rem
+
+                        a                              
+                              color: nth($color-post, index($type-post, $type))
+                              font-weight: 500
+                              
+                        
+
                   .card-title,                             
-                        color: nth($color-post, index($type-post, $type)) 
+                        color: nth($color-post, index($type-post, $type))
                         +transition (ease-in-out, 0.2s, all) 
                         margin-bottom: 10px 
                         font-size: 1.3rem
@@ -61,17 +69,11 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                         font-size: 0.8rem;               
                   
                   .card-tags
-                        border-color: #fff 1px solid
                         transition: ease-in-out 0.2s all
                         display: inline-block
-                        background-color: nth($color-post, index($type-post, $type))
-                        color: #fff
+                        color: nth($color-post, index($type-post, $type))
                         font-size: 0.8rem
-                        min-width: 60px
                         text-transform: lowercase
-                        text-align: center
-                        padding: 3px 8px
-                        border-radius: 3px
                         margin: 10px 2px 0 0
 
 
@@ -86,22 +88,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
                   .card-date,
                   .card-title,    
-                  .card-description                         
+                  .card-description,
+                  .card-tags                         
                         color: #fff 
-
-                  
-                  .ribbon,
-                  .card-tags  
-                        border-color: nth($color-post, index($type-post, $type))  
-                        border-width: 1px
-                        border-style: solid 
-                        background-color: #fff 
-                        color: nth($color-post, index($type-post, $type))                    
-
-                  .ribbon a
-                        color: nth($color-post, index($type-post, $type))  
-                 
-
-
 
            
