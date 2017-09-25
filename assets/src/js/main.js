@@ -80,11 +80,8 @@ var postFilter = function(){
   }
 
   preventEnter();
-  
+
 }
-
-
-
 
 
 

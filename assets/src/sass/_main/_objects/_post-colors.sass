@@ -96,4 +96,13 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   .card-tags                         
                         color: #fff 
 
+
+            //INTERNAS
+            
+            
+            .breadcrumb
+                  li.is-active
+                        a
+                              color: nth($color-post, index($type-post, $type))
+
            

@@ -14249,6 +14249,10 @@ a {
     color: #fff
 }
 
+.post-blog .breadcrumb li.is-active a {
+    color: #C35163
+}
+
 .post-html .card {
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
@@ -14303,6 +14307,10 @@ a {
 
 .post-html .card:hover .card-date,.post-html .card:hover .card-description,.post-html .card:hover .card-tags,.post-html .card:hover .card-title {
     color: #fff
+}
+
+.post-html .breadcrumb li.is-active a {
+    color: #4986b1
 }
 
 .post-css .card {
@@ -14377,6 +14385,10 @@ a {
     color: #fff
 }
 
+.post-css .breadcrumb li.is-active a {
+    color: #378574
+}
+
 .post-js .card {
     border: 1px solid #dcdcdc;
     box-shadow: none;
@@ -14429,6 +14441,10 @@ a {
 
 .post-js .card:hover .card-date,.post-js .card:hover .card-description,.post-js .card:hover .card-tags,.post-js .card:hover .card-title {
     color: #fff
+}
+
+.post-js .breadcrumb li.is-active a {
+    color: #f8c101
 }
 
 .post-misc .card {
@@ -14487,6 +14503,10 @@ a {
 
 .post-misc .card:hover .card-date,.post-misc .card:hover .card-description,.post-misc .card:hover .card-tags,.post-misc .card:hover .card-title {
     color: #fff
+}
+
+.post-misc .breadcrumb li.is-active a {
+    color: #af1da2
 }
 
 .post-front .card {
@@ -14549,6 +14569,10 @@ a {
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-tags,.post-front .card:hover .card-title {
     color: #fff
+}
+
+.post-front .breadcrumb li.is-active a {
+    color: #65B149
 }
 
 .mast-header {

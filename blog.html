@@ -4,53 +4,61 @@ layout: default
 
 
 <main role="main" itemprop="mainContentOfPage" id="main-box" itemscope="itemscope" itemtype="http://schema.org/Blog">
-     <div class="container main-container">
-          <h2 class="title is-2 has-text-centered has-text-weight-bold">Blog</h2>
+    <div class="container main-container">
+        <h2 class="title is-2 has-text-centered has-text-weight-bold">Blog</h2>
 
-            <!-- FILTER -->
-                <form action="" class="form">
-                    <div class="field has-addons">
-                        <div class="control is-expanded">
-                          <input class="input searchInput" id="input" type="text" placeholder="Procurar...">
-                        </div>
-                        <div class="control">
-                          <button class="button is-danger cleanButton"><i class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                      </div>
-                </form>
-            <!-- FILTER -->
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="{{ site.url }}{{site.baseurl}}/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>
+                <li class="is-active"><a href="{{ site.url }}{{site.baseurl}}/blog" aria-current="page"><span class="icon is-small"><i class="fa fa-th-large" aria-hidden="true"></i></span><span>Blog</span></a></li>
+            </ul>
+        </nav>
+        <!-- BREADCRUMB -->
 
-          <ul class="columns card-list is-multiline m-t-30 p-b-60">
-               {% for post in site.posts %}
-               <li class="column is-one-third wow slideInUp card-item" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    <div class="media card-inner">
-                        <div class="media-content">
-                            <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                                <div class="card box">
-                                    <div class="ribbon">
-                                        <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}" title="{{post.main-class}}"><span>{{post.main-class}}</span></a>
-                                    </div>
-                                    <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
-                                        <meta itemprop="datePublished" content="{{post.date}}">
-                                        <time class="card-date" datetime="{{ post.date | date_to_xmlschema }}">
-                                            {% include date.html date=post.date %}
-                                        </time>
-                                        <h2 class="card-title title is-4" itemprop="name">{{ post.title }}</h2>
-                                        <p class="card-description description">
-                                            {{ post.introduction | strip_html | truncatewords:20 }}
-                                        </p>
-                                    </a>
-                                    <div>
-                                        {% for tag in post.tags %}
-                                        <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}" title="{{ tag }}">#{{ tag }}</a>                                                {% endfor %}
-                                    </div>
+        <!-- FILTER -->
+        <form action="" class="form">
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input searchInput" id="input" type="text" placeholder="Procurar...">
+                </div>
+                <div class="control">
+                    <button class="button is-danger cleanButton"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- FILTER -->
+
+        <ul class="columns card-list is-multiline m-t-30 p-b-60">
+            {% for post in site.posts %}
+            <li class="column is-one-third wow slideInUp card-item" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <div class="media card-inner">
+                    <div class="media-content">
+                        <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                            <div class="card box">
+                                <div class="ribbon">
+                                    <a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}" title="{{post.main-class}}"><span>{{post.main-class}}</span></a>
                                 </div>
-                            </article>
-                        </div>
+                                <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+                                    <meta itemprop="datePublished" content="{{post.date}}">
+                                    <time class="card-date" datetime="{{ post.date | date_to_xmlschema }}">
+                                        {% include date.html date=post.date %}
+                                    </time>
+                                    <h2 class="card-title title is-4" itemprop="name">{{ post.title }}</h2>
+                                    <p class="card-description description">
+                                        {{ post.introduction | strip_html | truncatewords:20 }}
+                                    </p>
+                                </a>
+                                <div>
+                                    {% for tag in post.tags %}
+                                    <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}" title="{{ tag }}">#{{ tag }}</a>                                    {% endfor %}
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </li>
-               {% endfor %}
-           </ul>                    
-     </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </main>
-
