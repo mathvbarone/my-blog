@@ -11322,9 +11322,20 @@ $(document).ready(function() {
   });
 
 
+  //PREVENT ENTER
+var preventEnter = function(){
+  $(window).keydown(function(e){
+    if(e.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+}
+
 
 // FILTRO
 var postFilter = function(){
+
   //DECLARANDO VARIÁVEIS
   var input, filter, ul, li, cleanButton, inner;
   input = document.getElementById("input");
@@ -11343,7 +11354,15 @@ var postFilter = function(){
           li[i].classList.add("is-hidden");
       }
   }
+
+  preventEnter();
+  
 }
+
+
+
+
+
 
   // BOTÃO QUE LIMPA O INPUT
   var cleanField = function(e){
