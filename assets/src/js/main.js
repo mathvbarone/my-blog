@@ -104,7 +104,7 @@ var postFilter = function(){
 
   //EFEITO DE PARALLAX NO CONTEUDO DO HEADER
   var scrollBanner = function () {
-    var headerContent = $(".hero-index-body");
+    var headerContent = $(".hero-body");
     var headerContentHeight = headerContent.height();
     var scrollPos = window.scrollY;
 
@@ -155,7 +155,7 @@ var postFilter = function(){
 
 
   //CALLBACKS
-  scrollify();
+  // scrollify();
   typeScript();
   $(window).on("scroll", scrollBanner );
   $(window).on("scroll", showHeader );

@@ -42,7 +42,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 //VARIABLE COLORS
 @each $type in $type-post 
       .post-#{$type} 
-            .card                      
+            .card           
+                  min-height: 180px           
                   border: 1px solid gainsboro
                   box-shadow: none
                   cursor: pointer
@@ -103,6 +104,32 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
             .breadcrumb
                   li.is-active
                         a
-                              color: nth($color-post, index($type-post, $type))
+                               color: nth($color-post, index($type-post, $type))
 
-           
+            .hero-posts
+                  height: 80vh
+                  min-height: 80vh
+                  background-color: nth($color-post, index($type-post, $type))
+                  
+
+                  &-body
+                        margin: auto
+                        max-width: 50rem;
+                        justify-content: center
+
+
+            .post-date,
+            .post-title,
+            .post-description
+                  color: #fff
+
+            .post-title
+                  font-weight: 700;
+                  padding: 20px 0 
+                  font-size: 3.5em
+                  line-height: 1.3em
+
+            .post-description
+                  font-size: 1.6em      
+
+               
