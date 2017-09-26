@@ -14299,12 +14299,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-blog .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -14324,11 +14325,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -14367,7 +14368,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-blog .post-content .highlight pre .language-html .nt {
@@ -14505,12 +14506,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-html .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -14530,11 +14532,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -14573,7 +14575,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-html .post-content .highlight pre .language-html .nt {
@@ -14722,12 +14724,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-css .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -14747,11 +14750,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -14790,7 +14793,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-css .post-content .highlight pre .language-html .nt {
@@ -14926,12 +14929,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-js .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -14951,11 +14955,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -14994,7 +14998,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-js .post-content .highlight pre .language-html .nt {
@@ -15130,12 +15134,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-misc .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -15155,11 +15160,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -15198,7 +15203,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-misc .post-content .highlight pre .language-html .nt {
@@ -15339,12 +15344,13 @@ a {
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
-    line-height: 1em
+    line-height: 1.4em
 }
 
 @media (max-width:540px) {
     .post-front .post-title {
-        font-size: 2em
+        line-height: 1.2em;
+        font-size: 1.9em
     }
 }
 
@@ -15364,11 +15370,11 @@ a {
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
-    padding: 0;
+    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.5em;
     letter-spacing: .01rem
 }
 
@@ -15409,7 +15415,7 @@ a {
     max-width: 50rem;
     margin: auto;
     background: #193549;
-    padding: 40px 0
+    padding: 2em 1em
 }
 
 .post-front .post-content .highlight pre .language-html .nt {
