@@ -1,3 +1,7 @@
+.button,a {
+    cursor: pointer
+}
+
 a,code {
     color: #cd2b46
 }
@@ -30,21 +34,17 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
-.button,.file,.is-unselectable {
-    -webkit-touch-callout: none
-}
-
 .button,body {
     line-height: 1.5
-}
-
-.button,a {
-    cursor: pointer
 }
 
 .button,.input,.textarea {
     -moz-appearance: none;
     -webkit-appearance: none
+}
+
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-body,.modal-card,.tile.is-vertical {
+    -webkit-box-direction: normal
 }
 
 @-webkit-keyframes spinAround {
@@ -146,6 +146,10 @@ a {
     text-decoration: none
 }
 
+.button.is-link,.message-body a:not(.button),.message-header a:not(.button),a.tag:hover {
+    text-decoration: underline
+}
+
 a strong {
     color: currentColor
 }
@@ -204,6 +208,10 @@ table td,table th {
     clear: both;
     content: " ";
     display: table
+}
+
+.button.is-loading:after,.control.is-loading::after,.select.is-loading::after {
+    content: ""
 }
 
 .is-pulled-left {
@@ -610,6 +618,10 @@ table td,table th {
 
 .is-uppercase {
     text-transform: uppercase!important
+}
+
+.heading,.menu-label,.ribbon {
+    text-transform: uppercase
 }
 
 .has-text-white {
@@ -1188,11 +1200,8 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     box-shadow: none!important
 }
 
-.box,.card {
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
-}
-
 .is-unselectable {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1200,6 +1209,7 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .button,.file {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none
@@ -1208,6 +1218,7 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     display: block;
@@ -1323,8 +1334,7 @@ a.box:active {
 .button.is-link {
     background-color: transparent;
     border-color: transparent;
-    color: #4a4a4a;
-    text-decoration: underline
+    color: #4a4a4a
 }
 
 .button.is-link.is-focused,.button.is-link.is-hovered,.button.is-link:focus,.button.is-link:hover {
@@ -2255,7 +2265,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2337,6 +2346,10 @@ a.box:active {
     margin-bottom: 1em
 }
 
+.content h1,.label:not(:last-child) {
+    margin-bottom: .5em
+}
+
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     color: #363636;
     font-weight: 400;
@@ -2344,8 +2357,7 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em;
-    margin-bottom: .5em
+    font-size: 2em
 }
 
 .content h1:not(:first-child) {
@@ -2533,9 +2545,9 @@ a.box:active {
 
 .file-cta,.file-name,.select select {
     -webkit-box-align: center;
-    vertical-align: top;
     -moz-appearance: none;
-    -webkit-appearance: none
+    vertical-align: top;
+    line-height: 1.5
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -2757,6 +2769,7 @@ a.box:active {
 }
 
 .select select {
+    -webkit-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2770,7 +2783,6 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
@@ -2957,7 +2969,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2970,7 +2981,7 @@ a.box:active {
     transform: none
 }
 
-.file,.file-label {
+.control,.file,.file-label {
     position: relative
 }
 
@@ -3285,7 +3296,6 @@ a.box:active {
 
 .file.is-boxed .file-label {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -3293,7 +3303,6 @@ a.box:active {
 
 .file.is-boxed .file-cta {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3416,6 +3425,7 @@ a.box:active {
 }
 
 .file-cta,.file-name {
+    -webkit-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3432,7 +3442,6 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
@@ -3507,10 +3516,6 @@ a.box:active {
 .label {
     color: #363636;
     font-size: 1rem
-}
-
-.label:not(:last-child) {
-    margin-bottom: .5em
 }
 
 .label.is-small {
@@ -3805,7 +3810,6 @@ a.box:active {
 
 .control {
     font-size: 1rem;
-    position: relative;
     text-align: left
 }
 
@@ -3877,7 +3881,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -4514,10 +4517,6 @@ a.box:active {
     border-radius: 290486px
 }
 
-a.tag:hover {
-    text-decoration: underline
-}
-
 .subtitle,.title {
     word-break: break-word
 }
@@ -4528,10 +4527,6 @@ a.tag:hover {
 
 .subtitle .tag,.title .tag {
     vertical-align: middle
-}
-
-.delete,.number {
-    vertical-align: top
 }
 
 .title {
@@ -4646,6 +4641,7 @@ a.tag:hover {
     min-height: 20px;
     min-width: 20px;
     outline: 0;
+    vertical-align: top;
     width: 20px
 }
 
@@ -4708,8 +4704,7 @@ a.tag:hover {
     display: block;
     font-size: 11px;
     letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase
+    margin-bottom: 5px
 }
 
 .breadcrumb:not(:last-child),.highlight:not(:last-child) {
@@ -4761,7 +4756,8 @@ a.tag:hover {
     margin-right: 1.5rem;
     min-width: 2.5em;
     padding: .25rem .5rem;
-    text-align: center
+    text-align: center;
+    vertical-align: top
 }
 
 .breadcrumb,.breadcrumb a {
@@ -4907,6 +4903,7 @@ a.tag:hover {
 
 .card {
     background-color: #fff;
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     max-width: 100%
@@ -5375,8 +5372,7 @@ a.dropdown-item.is-active {
 .menu-label {
     color: #7a7a7a;
     font-size: .75em;
-    letter-spacing: .1em;
-    text-transform: uppercase
+    letter-spacing: .1em
 }
 
 .menu-label:not(:first-child) {
@@ -5561,10 +5557,6 @@ a.dropdown-item.is-active {
     color: currentColor
 }
 
-.message-header a:not(.button) {
-    text-decoration: underline
-}
-
 .message-header .delete {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -5594,10 +5586,6 @@ a.dropdown-item.is-active {
 
 .message-body a:not(.button),.message-body strong {
     color: currentColor
-}
-
-.message-body a:not(.button) {
-    text-decoration: underline
 }
 
 .message-body code,.message-body pre {
@@ -5746,7 +5734,6 @@ a.dropdown-item.is-active {
 .modal-card {
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -9178,7 +9165,6 @@ a.panel-block,label.panel-block {
 
 .tile.is-vertical {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -9300,7 +9286,6 @@ a.panel-block,label.panel-block {
     align-items: stretch;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -14180,23 +14165,12 @@ a {
     border: 1px solid #fff;
     -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
-    text-transform: uppercase;
     font-size: .9rem
-}
-
-.post-blog .post-title,.post-css .post-title,.post-front .post-title,.post-html .post-title,.post-js .post-title,.post-misc .post-title {
-    padding: 20px 0;
-    line-height: 1.3em
 }
 
 .card-date,.card-description,.post-blog .card {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
-}
-
-.post-blog .card .card-tags,.post-css .card .card-tags,.post-front .card .card-tags,.post-html .card .card-tags,.post-js .card .card-tags,.post-misc .card .card-tags {
-    display: inline-block;
-    text-transform: lowercase
 }
 
 .ribbon:before {
@@ -14212,6 +14186,12 @@ a {
     position: absolute;
     top: -5px;
     right: 0
+}
+
+.post-blog .post-content a:after,.post-css .post-content a:after,.post-front .post-content a:after,.post-html .post-content a:after,.post-js .post-content a:after,.post-misc .post-content a:after {
+    content: '';
+    bottom: 0;
+    left: 0
 }
 
 .card-date,.card-description {
@@ -14262,11 +14242,13 @@ a {
 
 .post-blog .card .card-tags {
     transition: ease-in-out .2s all;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
-.post-html .card,.post-html .card .card-title {
+.post-blog .post-content a:after,.post-html .card {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
@@ -14281,7 +14263,6 @@ a {
 }
 
 .post-css .card:hover,.post-html .card:hover {
-    position: relative;
     z-index: 5;
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04)
@@ -14316,11 +14297,121 @@ a {
 
 .post-blog .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-blog .post-title {
+        font-size: 2em
+    }
 }
 
 .post-blog .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-blog .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-blog .post-content .button-post,.post-blog .post-content .tags,.post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content iframe,.post-blog .post-content ol,.post-blog .post-content p,.post-blog .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-blog .post-content h2 {
+    color: #C35163;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-blog .post-content a {
+    color: #C35163;
+    font-weight: 500;
+    position: relative
+}
+
+.post-blog .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #C35163;
+    transition: ease-in-out .2s all
+}
+
+.post-blog .post-content a:hover:after {
+    height: 0
+}
+
+.post-blog .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-blog .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-blog .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-blog .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-blog .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-blog .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-blog .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-blog .post-content .highlight pre .language-css .nc,.post-blog .post-content .highlight pre .language-js .kr,.post-blog .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-blog .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-blog .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-blog .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-blog .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
 }
 
 .post-html .card {
@@ -14330,6 +14421,12 @@ a {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
+}
+
+.post-html .card .card-tags,.post-html .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #4986b1
 }
 
 .post-html .card .ribbon {
@@ -14345,15 +14442,9 @@ a {
 }
 
 .post-html .card .card-title {
-    color: #4986b1;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
-}
-
-.post-css .card,.post-html .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
 }
 
 .post-html .card .card-description {
@@ -14366,12 +14457,19 @@ a {
 
 .post-html .card .card-tags {
     transition: ease-in-out .2s all;
-    color: #4986b1;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
+.post-css .card,.post-html .post-content a:after {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-html .card:hover {
+    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #4986b1
 }
@@ -14405,11 +14503,121 @@ a {
 
 .post-html .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-html .post-title {
+        font-size: 2em
+    }
 }
 
 .post-html .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-html .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-html .post-content .button-post,.post-html .post-content .tags,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content iframe,.post-html .post-content ol,.post-html .post-content p,.post-html .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-html .post-content h2 {
+    color: #4986b1;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-html .post-content a {
+    color: #4986b1;
+    font-weight: 500;
+    position: relative
+}
+
+.post-html .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #4986b1;
+    transition: ease-in-out .2s all
+}
+
+.post-html .post-content a:hover:after {
+    height: 0
+}
+
+.post-html .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-html .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-html .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-html .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-html .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-html .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-html .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-html .post-content .highlight pre .language-css .nc,.post-html .post-content .highlight pre .language-js .kr,.post-html .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-html .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-html .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-html .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-html .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
 }
 
 .post-css .card {
@@ -14460,16 +14668,19 @@ a {
 
 .post-css .card .card-tags {
     transition: ease-in-out .2s all;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
-.post-js .card,.post-js .card .card-title {
+.post-css .post-content a:after,.post-js .card {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-css .card:hover {
+    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #378574
 }
@@ -14477,7 +14688,6 @@ a {
 .post-js .card:hover,.post-misc .card:hover {
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04);
-    position: relative;
     z-index: 5
 }
 
@@ -14510,11 +14720,121 @@ a {
 
 .post-css .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-css .post-title {
+        font-size: 2em
+    }
 }
 
 .post-css .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-css .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-css .post-content .button-post,.post-css .post-content .tags,.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content iframe,.post-css .post-content ol,.post-css .post-content p,.post-css .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-css .post-content h2 {
+    color: #378574;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-css .post-content a {
+    color: #378574;
+    font-weight: 500;
+    position: relative
+}
+
+.post-css .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #378574;
+    transition: ease-in-out .2s all
+}
+
+.post-css .post-content a:hover:after {
+    height: 0
+}
+
+.post-css .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-css .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-css .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-css .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-css .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-css .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-css .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-css .post-content .highlight pre .language-css .nc,.post-css .post-content .highlight pre .language-js .kr,.post-css .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-css .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-css .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-css .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-css .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
 }
 
 .post-js .card {
@@ -14522,6 +14842,12 @@ a {
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
+}
+
+.post-js .card .card-tags,.post-js .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #f8c101
 }
 
 .post-js .card .ribbon {
@@ -14537,15 +14863,9 @@ a {
 }
 
 .post-js .card .card-title {
-    color: #f8c101;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
-}
-
-.post-js .card .card-tags,.post-misc .card {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
 }
 
 .post-js .card .card-description {
@@ -14558,12 +14878,19 @@ a {
 
 .post-js .card .card-tags {
     transition: ease-in-out .2s all;
-    color: #f8c101;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
+.post-js .post-content a:after,.post-misc .card {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-js .card:hover {
+    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #f8c101
 }
@@ -14597,11 +14924,121 @@ a {
 
 .post-js .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-js .post-title {
+        font-size: 2em
+    }
 }
 
 .post-js .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-js .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-js .post-content .button-post,.post-js .post-content .tags,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content iframe,.post-js .post-content ol,.post-js .post-content p,.post-js .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-js .post-content h2 {
+    color: #f8c101;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-js .post-content a {
+    color: #f8c101;
+    font-weight: 500;
+    position: relative
+}
+
+.post-js .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f8c101;
+    transition: ease-in-out .2s all
+}
+
+.post-js .post-content a:hover:after {
+    height: 0
+}
+
+.post-js .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-js .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-js .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-js .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-js .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-js .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-js .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-js .post-content .highlight pre .language-css .nc,.post-js .post-content .highlight pre .language-js .kr,.post-js .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-js .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-js .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-js .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-js .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
 }
 
 .post-misc .card {
@@ -14645,16 +15082,19 @@ a {
 
 .post-misc .card .card-tags {
     transition: ease-in-out .2s all;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
-.post-front .card,.post-front .card .card-title {
+.post-front .card,.post-misc .post-content a:after {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
 
 .post-misc .card:hover {
+    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #af1da2
 }
@@ -14688,11 +15128,121 @@ a {
 
 .post-misc .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-misc .post-title {
+        font-size: 2em
+    }
 }
 
 .post-misc .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-misc .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-misc .post-content .button-post,.post-misc .post-content .tags,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content iframe,.post-misc .post-content ol,.post-misc .post-content p,.post-misc .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-misc .post-content h2 {
+    color: #af1da2;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-misc .post-content a {
+    color: #af1da2;
+    font-weight: 500;
+    position: relative
+}
+
+.post-misc .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #af1da2;
+    transition: ease-in-out .2s all
+}
+
+.post-misc .post-content a:hover:after {
+    height: 0
+}
+
+.post-misc .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-misc .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-misc .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-misc .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-misc .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-misc .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-misc .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-misc .post-content .highlight pre .language-css .nc,.post-misc .post-content .highlight pre .language-js .kr,.post-misc .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-misc .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-misc .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-misc .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-misc .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
 }
 
 .post-front .card {
@@ -14702,6 +15252,12 @@ a {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
+}
+
+.post-front .card .card-tags,.post-front .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #65B149
 }
 
 .post-front .card .ribbon {
@@ -14717,7 +15273,6 @@ a {
 }
 
 .post-front .card .card-title {
-    color: #65B149;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -14732,11 +15287,10 @@ a {
 }
 
 .post-front .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
-    color: #65B149;
+    display: inline-block;
     font-size: .8rem;
+    text-transform: lowercase;
     margin: 10px 2px 0 0
 }
 
@@ -14747,11 +15301,6 @@ a {
     -ms-transform: translateY(-10px) scale(1.04);
     transform: translateY(-10px) scale(1.04);
     background-color: #65B149
-}
-
-.hero,.mast-header {
-    position: fixed;
-    width: 100%
 }
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-tags,.post-front .card:hover .card-title {
@@ -14788,11 +15337,128 @@ a {
 
 .post-front .post-title {
     font-weight: 700;
-    font-size: 3.5em
+    padding: 20px 0;
+    font-size: 3.4em;
+    line-height: 1em
+}
+
+@media (max-width:540px) {
+    .post-front .post-title {
+        font-size: 2em
+    }
 }
 
 .post-front .post-description {
-    font-size: 1.6em
+    font-size: 1.4em;
+    font-weight: 300
+}
+
+@media (max-width:540px) {
+    .post-front .post-description {
+        font-size: 1.2em
+    }
+}
+
+.post-front .post-content .button-post,.post-front .post-content .tags,.post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content iframe,.post-front .post-content ol,.post-front .post-content p,.post-front .post-content ul {
+    width: auto;
+    max-width: 50rem;
+    display: block;
+    margin: 0 auto 1.875rem;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .01rem
+}
+
+.post-front .post-content h2 {
+    color: #65B149;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+
+.post-front .post-content a {
+    color: #65B149;
+    font-weight: 500;
+    position: relative
+}
+
+.post-front .post-content a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #65B149;
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    transition: ease-in-out .2s all
+}
+
+.post-front .post-content a:hover:after {
+    height: 0
+}
+
+.post-front .post-content .highlight pre {
+    color: #fff;
+    background: #193549
+}
+
+.post-front .post-content .highlight pre code {
+    width: auto;
+    max-width: 50rem;
+    margin: auto;
+    background: #193549;
+    padding: 40px 0
+}
+
+.post-front .post-content .highlight pre .language-html .nt {
+    color: #9eeccb
+}
+
+.post-front .post-content .highlight pre .language-html .na {
+    color: #ffb336;
+    font-style: italic
+}
+
+.post-front .post-content .highlight pre .language-html .s {
+    color: #86ff90
+}
+
+.post-front .post-content .highlight pre .language-css .nt {
+    color: #7cffff
+}
+
+.post-front .post-content .highlight pre .language-css .nl {
+    color: #9eeccb
+}
+
+.post-front .post-content .highlight pre .language-css .nc,.post-front .post-content .highlight pre .language-js .kr,.post-front .post-content .highlight pre .language-js .s2 {
+    color: #ffb336
+}
+
+.post-front .post-content .highlight pre .language-js .nx {
+    color: #9eeccb
+}
+
+.post-front .post-content .highlight pre .language-js .s1 {
+    color: #86ff90
+}
+
+.post-front .post-content .highlight pre .language-js .kd {
+    color: #db6283
+}
+
+.post-front .comments {
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 50rem;
+    padding: .75em
+}
+
+.hero,.mast-header {
+    position: fixed;
+    width: 100%
 }
 
 .mast-header {
@@ -14866,6 +15532,16 @@ a {
     }
 }
 
+@media (max-width:340px) {
+    .menu-link {
+        font-size: .8rem
+    }
+}
+
+.breadcrumb {
+    max-width: 51rem
+}
+
 .hero {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0)
@@ -14877,7 +15553,6 @@ a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;

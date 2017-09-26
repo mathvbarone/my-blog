@@ -126,10 +126,117 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
             .post-title
                   font-weight: 700;
                   padding: 20px 0 
-                  font-size: 3.5em
-                  line-height: 1.3em
+                  font-size: 3.4em
+                  line-height: 1em
+
+                  @media (max-width:540px)
+                        font-size: 2em       
 
             .post-description
-                  font-size: 1.6em      
+                  font-size: 1.4em      
+                  font-weight: 300
 
-               
+                  @media (max-width:540px)
+                        font-size: 1.2em 
+
+            .post-content
+
+                  p,
+                  h2,
+                  h3,
+                  h4,
+                  ul,
+                  ol,
+                  .tags,
+                  iframe,
+                  .button-post
+                        width: auto;
+                        max-width: 50rem;
+                        display: block;
+                        margin: 0 auto 1.875rem;
+                        padding: 0;
+                        font-weight: 300;
+                        font-style: normal;
+                        font-size: 1.125rem;
+                        line-height: 2;
+                        letter-spacing: .01rem;
+            
+                  h2
+                        color: nth($color-post, index($type-post, $type))
+                        font-size: 1.6em
+                        font-weight: 700
+                        margin-bottom: 30px
+
+
+                  a
+
+                        color: nth($color-post, index($type-post, $type))
+                        font-weight: 500
+                        position: relative
+
+                        &:after
+                              content: ''
+                              position: absolute
+                              width: 100%
+                              height: 2px
+                              background: nth($color-post, index($type-post, $type))
+                              bottom: 0
+                              left: 0
+                              +transition (ease-in-out, 0.2s, all) 
+
+                        &:hover
+                              &:after
+                                    height: 0
+                                    
+
+
+
+                  .highlight
+
+                        pre
+                              color: #fff
+                              background: #193549
+
+                              code
+                                    width: auto;
+                                    max-width: 50rem;
+                                    margin: auto;
+                                    background: #193549
+                                    padding: 40px 0
+                                    
+                                    
+                              .language-html
+                                    .nt
+                                          color: #9eeccb
+                                    .na
+                                          color: #ffb336
+                                          font-style: italic
+                                    .s
+                                          color: #86ff90
+
+                              .language-css
+                                    .nt
+                                          color: #7cffff
+                                    .nl
+                                          color: #9eeccb       
+                                    .nc
+                                          color: #ffb336 
+
+                              .language-js
+
+                                    .kr,
+                                    .s2
+                                          color: #ffb336       
+                                    .nx
+                                          color: #9eeccb  
+                                    .s1
+                                          color: #86ff90          
+                                    .kd
+                                          color: #db6283
+      
+
+            .comments
+                  margin: 40px auto 0 auto;
+                  width: auto;
+                  max-width: 50rem;
+                  padding: .75em;
