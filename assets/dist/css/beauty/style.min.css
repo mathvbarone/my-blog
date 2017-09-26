@@ -10189,6 +10189,10 @@ a.panel-block,label.panel-block {
     }
 }
 
+.title-main,.up-arrow,main {
+    display: block
+}
+
 .hero-foot,.hero-head {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -14088,7 +14092,6 @@ a {
 }
 
 .title-main {
-    display: block;
     color: #000;
     font-size: 3rem;
     font-weight: 600
@@ -14128,7 +14131,6 @@ a {
     right: 20px;
     bottom: -60px;
     background: #cd2b46;
-    display: block;
     width: 50px;
     line-height: 45px;
     height: 50px;
@@ -14186,12 +14188,6 @@ a {
     position: absolute;
     top: -5px;
     right: 0
-}
-
-.post-blog .post-content a:after,.post-css .post-content a:after,.post-front .post-content a:after,.post-html .post-content a:after,.post-js .post-content a:after,.post-misc .post-content a:after {
-    content: '';
-    bottom: 0;
-    left: 0
 }
 
 .card-date,.card-description {
@@ -14283,6 +14279,7 @@ a {
 }
 
 .post-blog .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -14296,6 +14293,8 @@ a {
 }
 
 .post-blog .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -14322,6 +14321,7 @@ a {
 
 .post-blog .post-content .button-post,.post-blog .post-content .tags,.post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content iframe,.post-blog .post-content ol,.post-blog .post-content p,.post-blog .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -14333,6 +14333,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-blog .post-content h2:before,.post-blog .post-content h3:before,.post-blog .post-content h4:before,.post-blog .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-blog .post-content h2 {
     color: #C35163;
     font-size: 1.6em;
@@ -14341,21 +14353,25 @@ a {
 }
 
 .post-blog .post-content a {
+    padding: 0 3px;
     color: #C35163;
     font-weight: 500;
     position: relative
 }
 
 .post-blog .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #C35163;
+    bottom: 0;
+    left: 0;
     transition: ease-in-out .2s all
 }
 
 .post-blog .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-blog .post-content .highlight pre {
@@ -14490,6 +14506,7 @@ a {
 }
 
 .post-html .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -14503,6 +14520,8 @@ a {
 }
 
 .post-html .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -14529,6 +14548,7 @@ a {
 
 .post-html .post-content .button-post,.post-html .post-content .tags,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content iframe,.post-html .post-content ol,.post-html .post-content p,.post-html .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -14540,6 +14560,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-html .post-content h2:before,.post-html .post-content h3:before,.post-html .post-content h4:before,.post-html .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-html .post-content h2 {
     color: #4986b1;
     font-size: 1.6em;
@@ -14548,21 +14580,25 @@ a {
 }
 
 .post-html .post-content a {
+    padding: 0 3px;
     color: #4986b1;
     font-weight: 500;
     position: relative
 }
 
 .post-html .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #4986b1;
+    bottom: 0;
+    left: 0;
     transition: ease-in-out .2s all
 }
 
 .post-html .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-html .post-content .highlight pre {
@@ -14708,6 +14744,7 @@ a {
 }
 
 .post-css .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -14721,6 +14758,8 @@ a {
 }
 
 .post-css .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -14747,6 +14786,7 @@ a {
 
 .post-css .post-content .button-post,.post-css .post-content .tags,.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content iframe,.post-css .post-content ol,.post-css .post-content p,.post-css .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -14758,6 +14798,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-css .post-content h2:before,.post-css .post-content h3:before,.post-css .post-content h4:before,.post-css .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-css .post-content h2 {
     color: #378574;
     font-size: 1.6em;
@@ -14766,21 +14818,25 @@ a {
 }
 
 .post-css .post-content a {
+    padding: 0 3px;
     color: #378574;
     font-weight: 500;
     position: relative
 }
 
 .post-css .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #378574;
+    bottom: 0;
+    left: 0;
     transition: ease-in-out .2s all
 }
 
 .post-css .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-css .post-content .highlight pre {
@@ -14913,6 +14969,7 @@ a {
 }
 
 .post-js .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -14926,6 +14983,8 @@ a {
 }
 
 .post-js .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -14952,6 +15011,7 @@ a {
 
 .post-js .post-content .button-post,.post-js .post-content .tags,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content iframe,.post-js .post-content ol,.post-js .post-content p,.post-js .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -14963,6 +15023,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-js .post-content h2:before,.post-js .post-content h3:before,.post-js .post-content h4:before,.post-js .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-js .post-content h2 {
     color: #f8c101;
     font-size: 1.6em;
@@ -14971,21 +15043,25 @@ a {
 }
 
 .post-js .post-content a {
+    padding: 0 3px;
     color: #f8c101;
     font-weight: 500;
     position: relative
 }
 
 .post-js .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #f8c101;
+    bottom: 0;
+    left: 0;
     transition: ease-in-out .2s all
 }
 
 .post-js .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-js .post-content .highlight pre {
@@ -15118,6 +15194,7 @@ a {
 }
 
 .post-misc .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -15131,6 +15208,8 @@ a {
 }
 
 .post-misc .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -15157,6 +15236,7 @@ a {
 
 .post-misc .post-content .button-post,.post-misc .post-content .tags,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content iframe,.post-misc .post-content ol,.post-misc .post-content p,.post-misc .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -15168,6 +15248,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-misc .post-content h2:before,.post-misc .post-content h3:before,.post-misc .post-content h4:before,.post-misc .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-misc .post-content h2 {
     color: #af1da2;
     font-size: 1.6em;
@@ -15176,21 +15268,25 @@ a {
 }
 
 .post-misc .post-content a {
+    padding: 0 3px;
     color: #af1da2;
     font-weight: 500;
     position: relative
 }
 
 .post-misc .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #af1da2;
+    bottom: 0;
+    left: 0;
     transition: ease-in-out .2s all
 }
 
 .post-misc .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-misc .post-content .highlight pre {
@@ -15328,6 +15424,7 @@ a {
 }
 
 .post-front .hero-posts-body {
+    width: 100%;
     margin: auto;
     max-width: 50rem;
     -webkit-box-pack: center;
@@ -15341,6 +15438,8 @@ a {
 }
 
 .post-front .post-title {
+    width: 100%;
+    max-width: 50rem;
     font-weight: 700;
     padding: 20px 0;
     font-size: 3.4em;
@@ -15367,6 +15466,7 @@ a {
 
 .post-front .post-content .button-post,.post-front .post-content .tags,.post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content iframe,.post-front .post-content ol,.post-front .post-content p,.post-front .post-content ul {
     width: auto;
+    width: 100%;
     max-width: 50rem;
     display: block;
     margin: 0 auto 1.875rem;
@@ -15378,6 +15478,18 @@ a {
     letter-spacing: .01rem
 }
 
+.post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content h5 {
+    padding: 0 .7em
+}
+
+.post-front .post-content h2:before,.post-front .post-content h3:before,.post-front .post-content h4:before,.post-front .post-content h5:before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 75px;
+    visibility: hidden
+}
+
 .post-front .post-content h2 {
     color: #65B149;
     font-size: 1.6em;
@@ -15386,23 +15498,27 @@ a {
 }
 
 .post-front .post-content a {
+    padding: 0 3px;
     color: #65B149;
     font-weight: 500;
     position: relative
 }
 
 .post-front .post-content a:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     background: #65B149;
+    bottom: 0;
+    left: 0;
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
 .post-front .post-content a:hover:after {
-    height: 0
+    width: 0
 }
 
 .post-front .post-content .highlight pre {

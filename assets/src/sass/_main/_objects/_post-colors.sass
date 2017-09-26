@@ -113,6 +113,7 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   
 
                   &-body
+                        width: 100%
                         margin: auto
                         max-width: 50rem;
                         justify-content: center
@@ -124,6 +125,9 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   color: #fff
 
             .post-title
+
+                  width: 100%
+                  max-width: 50rem;
                   font-weight: 700;
                   padding: 20px 0 
                   font-size: 3.4em
@@ -152,6 +156,7 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   iframe,
                   .button-post
                         width: auto;
+                        width: 100%
                         max-width: 50rem;
                         display: block;
                         margin: 0 auto 1.875rem;
@@ -161,6 +166,20 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                         font-size: 1.125rem;
                         line-height: 1.5em;
                         letter-spacing: .01rem;
+
+
+
+                  h2,
+                  h3,
+                  h4,
+                  h5
+                        padding: 0px 0.7em;
+                        &:before
+                              display: block;
+                              content: " ";
+                              margin-top: -60px;
+                              height: 75px;
+                              visibility: hidden;
             
                   h2
                         color: nth($color-post, index($type-post, $type))
@@ -170,7 +189,7 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
 
                   a
-
+                        padding: 0 3px
                         color: nth($color-post, index($type-post, $type))
                         font-weight: 500
                         position: relative
@@ -187,7 +206,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
                         &:hover
                               &:after
-                                    height: 0
+                                    width: 0px
+
                                     
 
 
