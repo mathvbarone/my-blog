@@ -9080,6 +9080,13 @@ a.tag:hover {
     color: #fff
 }
 
+.post-blog .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
+}
+
 .post-blog .breadcrumb li.is-active a {
     color: #C35163
 }
@@ -9296,6 +9303,13 @@ a.tag:hover {
 
 .post-html .card:hover .card-date,.post-html .card:hover .card-description,.post-html .card:hover .card-tags,.post-html .card:hover .card-title {
     color: #fff
+}
+
+.post-html .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
 }
 
 .post-html .breadcrumb li.is-active a {
@@ -9527,6 +9541,13 @@ a.tag:hover {
     color: #fff
 }
 
+.post-css .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
+}
+
 .post-css .breadcrumb li.is-active a {
     color: #378574
 }
@@ -9741,6 +9762,13 @@ a.tag:hover {
 
 .post-js .card:hover .card-date,.post-js .card:hover .card-description,.post-js .card:hover .card-tags,.post-js .card:hover .card-title {
     color: #fff
+}
+
+.post-js .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
 }
 
 .post-js .breadcrumb li.is-active a {
@@ -9959,6 +9987,13 @@ a.tag:hover {
     color: #fff
 }
 
+.post-misc .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
+}
+
 .post-misc .breadcrumb li.is-active a {
     color: #af1da2
 }
@@ -10173,6 +10208,13 @@ a.tag:hover {
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-tags,.post-front .card:hover .card-title {
     color: #fff
+}
+
+.post-front .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
 }
 
 .post-front .breadcrumb li.is-active a {
@@ -10397,6 +10439,10 @@ a.tag:hover {
     color: #cd2b46
 }
 
+.hero-default-body>.subtitle,.hero-default-body>.title,footer p {
+    color: #fff
+}
+
 .menu-link {
     font-size: 1em
 }
@@ -10452,10 +10498,6 @@ a.tag:hover {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center
-}
-
-.hero-default-body>.subtitle,.hero-default-body>.title {
-    color: #fff
 }
 
 .hero-default-body>.title {

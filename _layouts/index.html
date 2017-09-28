@@ -23,11 +23,19 @@ layout: compress
                {% include hero-index.html %}
                <!-- HERO -->
 
-               <!-- CONTENT -->
+               <!-- OFFSET -->
                <div class="offset index-offset">
+
+                    <!-- CONTENT -->     
                     {{ content }}
+                    <!-- /CONTENT -->
+
+                    <!-- FOOTER -->
+                    {% include footer.html %}
+                    <!-- /FOOTER -->
+
                </div>
-               <!-- /CONTENT -->
+               <!-- OFFSET -->
 
                <!-- ARROW -->
                <a href="#top" class="up-arrow">
@@ -35,8 +43,5 @@ layout: compress
                </a>
                <!-- ARROW -->
 
-               <!-- FOOTER -->
-               {% include footer.html %}
-               <!-- /FOOTER -->
           </section>
      </body>
