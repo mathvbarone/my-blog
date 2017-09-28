@@ -138,17 +138,6 @@ var postFilter = function(){
 
 
 
-
-
-// SCROLLIFY
-  var scrollify = function() {
-    $.scrollify({
-      section : ".panel",
-      scrollSpeed: 1100,
-    })
-  }
-
-
   var typeScript = function(){
     Typed.new('#typed', {
       stringsElement: document.getElementById('typed-strings'),
@@ -158,7 +147,6 @@ var postFilter = function(){
 
 
   //CALLBACKS
-  // scrollify();
   typeScript();
   $(window).on("scroll", scrollBanner );
   $(window).on("scroll", showHeader );

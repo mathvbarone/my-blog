@@ -9,6 +9,7 @@ var gulp           = require('gulp'),
 	rename        = require('gulp-rename'),
 	beautifycss   = require('gulp-cssbeautify'),
 	cssmin        = require('gulp-cssmin'),
+	gcmq  	    = require('gulp-group-css-media-queries');
 	cp            = require('child_process');
 
 
@@ -51,32 +52,13 @@ gulp.task('jekyll-build', function (done) {
 		.on('close', done);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
-// gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-// 	browserSync.reload();
-// });
 
-/**
- * Wait for jekyll-build, then launch the Server
- */
-// gulp.task('browser-sync', ['jekyll-build'], function() {
-// 	browserSync({
-// 		server: {
-// 			baseDir: '_site'
-// 		}
-// 	});
-// });
-
-/**
- * Stylus task
- */
 
 gulp.task('css', function() {
 	gulp.src(paths.src.sass)
 	    .pipe(plumber())
 	    .pipe(sass())
+	    .pipe(gcmq())
 	    .pipe(autoprefixer({
 		   browsers: ['last 30 versions'],
 		   cascade: false
@@ -97,7 +79,6 @@ gulp.task('css', function() {
 gulp.task('js', function() {
 	gulp.src(['assets/src/js/jquery-3.2.1.js',
 			'assets/src/js/wow.js',
-			'assets/src/js/scrollify.js',
 			'assets/src/js/typed.js',
 			'assets/src/js/main.js'])
 	    .pipe(plumber())
