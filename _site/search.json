@@ -4,7 +4,7 @@
       "title"    : "Criando Componentes React com Testes - Lyef-flag",
       "category" : "Front Dicas",
       "tags"     : "misc",
-      "url"      : "/post-misc",
+      "url"      : "/post-misc/",
       "date"     : "22 Sep 2017"
     } ,
   
@@ -12,7 +12,7 @@
       "title"    : "Post JS",
       "category" : "Front Dicas",
       "tags"     : "js",
-      "url"      : "/post-js",
+      "url"      : "/post-js/",
       "date"     : "22 Sep 2017"
     } ,
   
@@ -20,7 +20,7 @@
       "title"    : "Post HTML",
       "category" : "Front Dicas",
       "tags"     : "html",
-      "url"      : "/post-html",
+      "url"      : "/post-html/",
       "date"     : "22 Sep 2017"
     } ,
   
@@ -28,7 +28,7 @@
       "title"    : "Post FRONT",
       "category" : "Front Dicas",
       "tags"     : "front",
-      "url"      : "/post-front",
+      "url"      : "/post-front/",
       "date"     : "22 Sep 2017"
     } ,
   
@@ -36,7 +36,7 @@
       "title"    : "Post CSS",
       "category" : "Front Dicas",
       "tags"     : "css",
-      "url"      : "/post-css",
+      "url"      : "/post-css/",
       "date"     : "22 Sep 2017"
     } ,
   
@@ -44,7 +44,7 @@
       "title"    : "Post Blog",
       "category" : "Front Dicas",
       "tags"     : "blog",
-      "url"      : "/post-blog",
+      "url"      : "/post-blog/",
       "date"     : "22 Sep 2017"
     } 
   

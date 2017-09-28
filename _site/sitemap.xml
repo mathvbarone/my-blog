@@ -6,15 +6,15 @@
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/blog</loc>
+            <loc>http://localhost:4000/category/blog/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/blog</loc>
+            <loc>http://localhost:4000/blog/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/css</loc>
+            <loc>http://localhost:4000/category/css/</loc>
         </url>
     
         <url>
@@ -22,11 +22,11 @@
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/front</loc>
+            <loc>http://localhost:4000/category/front/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/html</loc>
+            <loc>http://localhost:4000/category/html/</loc>
         </url>
     
         <url>
@@ -34,11 +34,11 @@
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/js</loc>
+            <loc>http://localhost:4000/category/js/</loc>
         </url>
     
         <url>
-            <loc>http://localhost:4000/category/misc</loc>
+            <loc>http://localhost:4000/category/misc/</loc>
         </url>
     
         <url>
@@ -59,27 +59,27 @@
     
     
         <url>
-            <loc>http://localhost:4000/post-misc</loc>
+            <loc>http://localhost:4000/post-misc/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/post-js</loc>
+            <loc>http://localhost:4000/post-js/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/post-html</loc>
+            <loc>http://localhost:4000/post-html/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/post-front</loc>
+            <loc>http://localhost:4000/post-front/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/post-css</loc>
+            <loc>http://localhost:4000/post-css/</loc>
         </url>
   
         <url>
-            <loc>http://localhost:4000/post-blog</loc>
+            <loc>http://localhost:4000/post-blog/</loc>
         </url>
   
 </urlset>

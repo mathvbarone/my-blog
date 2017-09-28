@@ -1,28 +1,17 @@
 # Site settings
-title: Matheus Barone | Desenvolvedor Front End
+title: Matheus Barone - Desenvolvedor Front End
+email: matheusvbarone@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Um site que conta um pouco do meu trabalho como Desenvolvedor Front End.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "mathvbarone.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
-
-# User settings
-username: Matheus Barone
-user_description: Um site que conta um pouco do meu trabalho como Desenvolvedor Front End.
-user_title: Matheus Barone
-email: matheusvbarone@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://willianjusten.com.br" # the base hostname & protocol for your site
 twitter_username: matheusvbarone
 github_username:  mathvbarone
 
-
 # Build settings
 markdown: kramdown
-permalink: /:title
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
+highlighter: rouge
+permalink: /:title/
 
 # html minify
 compress_html:

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matheus Barone | Desenvolvedor Front End</title>
+    <title>Matheus Barone - Desenvolvedor Front End</title>
     <description>Um site que conta um pouco do meu trabalho como Desenvolvedor Front End.
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Sep 2017 17:05:56 -0300</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2017 17:05:56 -0300</lastBuildDate>
+    <pubDate>Thu, 28 Sep 2017 09:53:40 -0300</pubDate>
+    <lastBuildDate>Thu, 28 Sep 2017 09:53:40 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>Criando Componentes React com Testes - Lyef-flag</title>
         <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-misc</link>
-        <guid isPermaLink="true">http://localhost:4000/post-misc</guid>
+        <link>http://localhost:4000/post-misc/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-misc/</guid>
         
         <category>misc</category>
         
@@ -36,8 +36,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-js</link>
-        <guid isPermaLink="true">http://localhost:4000/post-js</guid>
+        <link>http://localhost:4000/post-js/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-js/</guid>
         
         <category>js</category>
         
@@ -58,8 +58,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-html</link>
-        <guid isPermaLink="true">http://localhost:4000/post-html</guid>
+        <link>http://localhost:4000/post-html/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-html/</guid>
         
         <category>html</category>
         
@@ -80,8 +80,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-front</link>
-        <guid isPermaLink="true">http://localhost:4000/post-front</guid>
+        <link>http://localhost:4000/post-front/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-front/</guid>
         
         <category>front</category>
         
@@ -102,8 +102,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-css</link>
-        <guid isPermaLink="true">http://localhost:4000/post-css</guid>
+        <link>http://localhost:4000/post-css/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-css/</guid>
         
         <category>css</category>
         
@@ -124,8 +124,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/post-blog</link>
-        <guid isPermaLink="true">http://localhost:4000/post-blog</guid>
+        <link>http://localhost:4000/post-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/post-blog/</guid>
         
         <category>blog</category>
         
