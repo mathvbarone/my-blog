@@ -13069,13 +13069,13 @@ footer {
     }
 
     .hero-index-body {
-        padding: 50px 20px 0
+        padding: 30px 20px 0
     }
 }
 
 @media (max-width:380px) {
     .hero-index-body {
-        padding-bottom: 60px
+        padding-bottom: 40px
     }
 }
 
