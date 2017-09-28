@@ -14,14 +14,6 @@ layout: index
 
         <!-- LISTA DE POSTS -->
 
-
-        {{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}
-        {{ "/assets/dist/images/site-image.jpg" | prepend: site.baseurl | prepend: site.url }}
-        {{ site.url }}{{page.image }}
-        {{ site.url }}
-        {{ site.baseurl }}
-
-
         <ul class="columns card-list is-multiline m-t-60 p-b-40">
             {% for post in site.posts offset: 0 limit: 6 %}
             <li class="column is-one-third wow slideInUp card-item" data-wow-duration="0.8s" data-wow-delay="0.2s">
