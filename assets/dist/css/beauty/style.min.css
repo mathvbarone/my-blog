@@ -12981,8 +12981,17 @@ footer {
 }
 
 @media (max-width:540px) {
+    .post-blog .hero-posts,.post-css .hero-posts,.post-front .hero-posts,.post-html .hero-posts,.post-js .hero-posts,.post-misc .hero-posts {
+        height: 60vh;
+        min-height: 60vh
+    }
+
     .button-hero {
         font-size: 1rem
+    }
+
+    .post-offset {
+        top: 60vh
     }
 
     .post-blog .post-title {

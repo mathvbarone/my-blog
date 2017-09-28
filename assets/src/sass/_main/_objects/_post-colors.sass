@@ -110,6 +110,10 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   height: 80vh
                   min-height: 80vh
                   background-color: nth($color-post, index($type-post, $type))
+
+                  @media (max-width:540px)
+                        height: 60vh                              
+                        min-height: 60vh
                   
 
                   &-body
