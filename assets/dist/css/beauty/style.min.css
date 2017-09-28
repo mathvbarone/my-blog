@@ -13177,6 +13177,10 @@ a.tag:hover {
     max-width: 51rem
 }
 
+.breadcrumb li:first-child a {
+    padding-left: 0
+}
+
 .breadcrumb li.is-category a {
     pointer-events: none
 }
@@ -13316,7 +13320,7 @@ footer {
 
 @media (max-width:380px) {
     .hero-index-body {
-        padding-bottom: 100px
+        padding-bottom: 60px
     }
 }
 
