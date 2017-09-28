@@ -14106,7 +14106,7 @@ a {
     top: 100vh
 }
 
-.post-offset {
+.default-offset,.post-offset {
     top: 80vh
 }
 
@@ -14431,6 +14431,10 @@ a {
     padding: .75em
 }
 
+.post-blog .hero-default {
+    background-color: #C35163
+}
+
 .post-html .card {
     min-height: 180px;
     border: 1px solid #dcdcdc;
@@ -14656,6 +14660,10 @@ a {
     width: auto;
     max-width: 50rem;
     padding: .75em
+}
+
+.post-html .hero-default {
+    background-color: #4986b1
 }
 
 .post-css .card {
@@ -14896,6 +14904,10 @@ a {
     padding: .75em
 }
 
+.post-css .hero-default {
+    background-color: #378574
+}
+
 .post-js .card {
     min-height: 180px;
     border: 1px solid #dcdcdc;
@@ -15119,6 +15131,10 @@ a {
     width: auto;
     max-width: 50rem;
     padding: .75em
+}
+
+.post-js .hero-default {
+    background-color: #f8c101
 }
 
 .post-misc .card {
@@ -15346,6 +15362,10 @@ a {
     padding: .75em
 }
 
+.post-misc .hero-default {
+    background-color: #af1da2
+}
+
 .post-front .card {
     min-height: 180px;
     border: 1px solid #dcdcdc;
@@ -15416,11 +15436,6 @@ a {
     height: 80vh;
     min-height: 80vh;
     background-color: #65B149
-}
-
-.hero,.hero-index {
-    min-height: 100vh;
-    height: 100vh
 }
 
 .post-front .hero-posts-body {
@@ -15517,6 +15532,11 @@ a {
     transition: ease-in-out .2s all
 }
 
+.hero,.mast-header {
+    position: fixed;
+    width: 100%
+}
+
 .post-front .post-content a:hover:after {
     width: 0
 }
@@ -15578,9 +15598,8 @@ a {
     padding: .75em
 }
 
-.hero,.mast-header {
-    position: fixed;
-    width: 100%
+.post-front .hero-default {
+    background-color: #65B149
 }
 
 .mast-header {
@@ -15665,6 +15684,8 @@ a {
 }
 
 .hero {
+    min-height: 100vh;
+    height: 100vh;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0)
 }
@@ -15688,7 +15709,41 @@ a {
     display: block
 }
 
+.hero-default {
+    height: 80vh;
+    min-height: 80vh;
+    background-color: #cd2b46
+}
+
+.hero-default-body {
+    width: 100%;
+    margin: auto;
+    max-width: 50rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.hero-default-body>.subtitle,.hero-default-body>.title {
+    color: #fff
+}
+
+.hero-default-body>.title {
+    font-weight: 700;
+    font-size: 3.4em;
+    line-height: 1.4em;
+    padding: 20px 0
+}
+
+.hero-default-body>.subtitle {
+    font-size: 1.4em;
+    font-weight: 300
+}
+
 .hero-index {
+    min-height: 100vh;
+    height: 100vh;
     background: url(../images/bg-header.jpg) center top no-repeat;
     -webkit-background-size: cover;
     background-size: cover

@@ -261,3 +261,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   width: auto;
                   max-width: 50rem;
                   padding: .75em;
+
+            .hero-default
+                  background-color: nth($color-post, index($type-post, $type))
+
+            

@@ -17,19 +17,40 @@ layout: compress
         {% include header-default.html %}
         <!-- /HEADER -->
         
-        <!-- CONTENT -->
-        <div class="container p-t-80">
-            {{ content }}  
-        </div>   
-        <!-- CONTENT -->
+        <!-- HERO -->
+        {% include hero-default.html %}
+        <!-- HERO -->
 
-        <!-- ARROW -->
-        <a href="#top" class="up-arrow">
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
-        </a>
-        <!-- ARROW -->
+        <div class="offset default-offset">
 
-        <!-- FOOTER -->
-        {% include footer.html %}
-        <!-- /FOOTER -->
+            <!-- CONTENT -->
+            <div class="container p-t-60">
+
+        <!-- BREADCRUMB -->
+            <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="{{site.baseurl}}/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>                    
+                    {% if page.category %}
+                    <li><a href="{{site.baseurl}}/{{page.category}}"><span class="icon is-small">{{ page.category-favicon }}</span><span>{{page.category}}</span></a></li>                                        
+                    {% endif %}
+                    <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small">{{ page.favicon }}</span><span>{{ page.title }}</span></a></li>
+                </ul>
+            </nav>
+            <!-- BREADCRUMB -->
+
+                {{ content }}  
+            </div>   
+            <!-- CONTENT -->
+
+            <!-- ARROW -->
+            <a href="#top" class="up-arrow">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </a>
+            <!-- ARROW -->
+
+            <!-- FOOTER -->
+            {% include footer.html %}
+            <!-- /FOOTER -->
+        </div>
+
     </body>
