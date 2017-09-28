@@ -13050,7 +13050,8 @@ footer {
 
     .hero-index-body .subtitle {
         padding-bottom: 20px;
-        font-size: 1.2rem
+        font-size: 1.2rem;
+        max-width: 200px
     }
 }
 
@@ -13075,7 +13076,7 @@ footer {
 
 @media (max-width:380px) {
     .hero-index-body {
-        padding-bottom: 40px
+        padding-bottom: 50px
     }
 }
 
