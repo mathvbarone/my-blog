@@ -14104,8 +14104,12 @@ a {
     top: 100vh
 }
 
-.default-offset,.post-offset {
+.post-offset {
     top: 80vh
+}
+
+.default-offset {
+    top: 60vh
 }
 
 .content-main {
@@ -15712,8 +15716,8 @@ a {
 }
 
 .hero-default {
-    height: 80vh;
-    min-height: 80vh;
+    height: 60vh;
+    min-height: 60vh;
     background-color: #cd2b46
 }
 
