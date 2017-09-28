@@ -107,40 +107,41 @@
 
 
 .learn-more
-  font-size: 1.3rem
-  padding: 20px
-  white-space: nowrap
-  z-index: 2
-  text-decoration: none
-  transition: color 0.2s ease-out
+    padding: 20px
+    white-space: nowrap
+    z-index: 2
+    text-decoration: none
+    transition: color 0.2s ease-out
+    
+    @media (max-width:380px)
+        margin-bottom: 50px
   
-  
-  span,
-  .fa
-    transition: linear 0.2s all
-  
-
-  span
-    display: block
-    color: #aaa9a9
-    font-weight: 300
-    text-align: center
-    font-size: 1.2rem; 
-  
-  .fa
-    animation-name: slideInDown;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-fill-mode: both;
-    color: #aaa9a9;
-    font-size: 20px;
-    padding-top: 10px;
-     
-  &:hover
     span,
     .fa
-      color: #fff;
+        transition: linear 0.2s all
+    
+
+    span
+        display: block
+        color: #aaa9a9
+        font-weight: 300
+        text-align: center
+        font-size: 1.2rem; 
+    
+    .fa
+        animation-name: slideInDown;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-fill-mode: both;
+        color: #aaa9a9;
+        font-size: 20px;
+        padding-top: 10px;
+        
+    &:hover
+        span,
+        .fa
+        color: #fff;
 
 @keyframes slideInDown 
   0% 

@@ -13383,13 +13383,18 @@ footer {
 }
 
 .learn-more {
-    font-size: 1.3rem;
     padding: 20px;
     white-space: nowrap;
     z-index: 2;
     -webkit-transition: color .2s ease-out;
     -o-transition: color .2s ease-out;
     transition: color .2s ease-out
+}
+
+@media (max-width:380px) {
+    .learn-more {
+        margin-bottom: 50px
+    }
 }
 
 .learn-more .fa,.learn-more span {
@@ -13419,7 +13424,7 @@ footer {
     padding-top: 10px
 }
 
-.learn-more:hover .fa,.learn-more:hover span {
+.learn-more:hover {
     color: #fff
 }
 
