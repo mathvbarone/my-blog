@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Sep 2017 11:42:40 -0300</pubDate>
-    <lastBuildDate>Thu, 28 Sep 2017 11:42:40 -0300</lastBuildDate>
+    <pubDate>Thu, 28 Sep 2017 12:04:24 -0300</pubDate>
+    <lastBuildDate>Thu, 28 Sep 2017 12:04:24 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -26,15 +26,7 @@
     
       <item>
         <title>Post JS</title>
-        <description>&lt;h1 id=&quot;como-escrever-um-post-de-js&quot;&gt;Como escrever um post de JS.&lt;/h1&gt;
-&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-js/</link>
         <guid isPermaLink="true">http://localhost:4000/post-js/</guid>
@@ -48,15 +40,7 @@
     
       <item>
         <title>Post HTML</title>
-        <description>&lt;h1 id=&quot;como-escrever-um-post-de-html&quot;&gt;Como escrever um post de HTML.&lt;/h1&gt;
-&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-html/</link>
         <guid isPermaLink="true">http://localhost:4000/post-html/</guid>
@@ -70,15 +54,7 @@
     
       <item>
         <title>Post FRONT</title>
-        <description>&lt;h1 id=&quot;como-escrever-um-post-de-front&quot;&gt;Como escrever um post de FRONT.&lt;/h1&gt;
-&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-front/</link>
         <guid isPermaLink="true">http://localhost:4000/post-front/</guid>
@@ -92,15 +68,7 @@
     
       <item>
         <title>Post CSS</title>
-        <description>&lt;h1 id=&quot;como-escrever-um-post-de-css&quot;&gt;Como escrever um post de CSS.&lt;/h1&gt;
-&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-css/</link>
         <guid isPermaLink="true">http://localhost:4000/post-css/</guid>
@@ -114,15 +82,7 @@
     
       <item>
         <title>Post Blog</title>
-        <description>&lt;h1 id=&quot;como-escrever-um-post-de-blog&quot;&gt;Como escrever um post de blog.&lt;/h1&gt;
-&lt;h2 id=&quot;subtitulo&quot;&gt;Subtitulo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-  &lt;li&gt;lista&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, esse será um post bem rapidinho, que eu achei que todo mundo deveria ver. A maioria de vocês já deve ter feito um site com um rodapé e em determinadas páginas o conteúdo era tão pequeno que o rodapé subia e ficava feio para caramba. Hoje eu vou mostrar para vocês algumas das técnicas para se evitar isso, criando um rodapé fixo de acordo com o conteúdo.&lt;/p&gt; &lt;p&gt;Esse post é uma adaptação/tradução de um post muito bom que vi no &lt;a href=&quot;https://css-tricks.com/couple-takes-sticky-footer/&quot;&gt;CSS Tricks&lt;/a&gt; e me deu vontade de guardar esse conteúdo no meu site, porque eu...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-blog/</link>
         <guid isPermaLink="true">http://localhost:4000/post-blog/</guid>

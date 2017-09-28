@@ -1,12 +1,8 @@
-.button,a {
-    cursor: pointer
-}
-
 a,code {
     color: #cd2b46
 }
 
-body,code,h1,h2,h3,h4,h5,h6 {
+body,code {
     font-weight: 400
 }
 
@@ -34,8 +30,16 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
+.button,.file,.is-unselectable {
+    -webkit-touch-callout: none
+}
+
 .button,body {
     line-height: 1.5
+}
+
+.button,a {
+    cursor: pointer
 }
 
 .button,.input,.textarea {
@@ -75,7 +79,8 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-size: 100%
+    font-size: 100%;
+    font-weight: 400
 }
 
 ul {
@@ -178,7 +183,7 @@ span {
     font-weight: inherit
 }
 
-.label,strong {
+strong {
     font-weight: 700
 }
 
@@ -208,10 +213,6 @@ table td,table th {
     clear: both;
     content: " ";
     display: table
-}
-
-.button.is-loading:after,.control.is-loading::after,.select.is-loading::after {
-    content: ""
 }
 
 .is-pulled-left {
@@ -1200,8 +1201,11 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     box-shadow: none!important
 }
 
+.box,.card {
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
+}
+
 .is-unselectable {
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1209,7 +1213,6 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .button,.file {
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none
@@ -1218,7 +1221,6 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     display: block;
@@ -2247,6 +2249,10 @@ a.box:active {
     background-color: #f5f5f5
 }
 
+.nav-toggle.is-active span:nth-child(2),.navbar-burger.is-active span:nth-child(2) {
+    opacity: 0
+}
+
 .button.is-fullwidth {
     display: flex;
     width: 100%
@@ -2265,6 +2271,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2465,6 +2472,10 @@ a.box:active {
     overflow: hidden
 }
 
+.breadcrumb,.file-cta,.file-name,.learn-more,.nav-left,.pagination-next,.pagination-previous,.tabs,.tag:not(body),a.dropdown-item {
+    white-space: nowrap
+}
+
 .content sub,.content sup {
     font-size: 75%
 }
@@ -2546,8 +2557,8 @@ a.box:active {
 .file-cta,.file-name,.select select {
     -webkit-box-align: center;
     -moz-appearance: none;
-    vertical-align: top;
-    line-height: 1.5
+    -webkit-appearance: none;
+    vertical-align: top
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -2769,7 +2780,6 @@ a.box:active {
 }
 
 .select select {
-    -webkit-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2783,6 +2793,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-left: -webkit-calc(.625em - 1px);
@@ -2969,6 +2980,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2981,7 +2993,7 @@ a.box:active {
     transform: none
 }
 
-.control,.file,.file-label {
+.file,.file-label {
     position: relative
 }
 
@@ -3425,7 +3437,6 @@ a.box:active {
 }
 
 .file-cta,.file-name {
-    -webkit-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3442,6 +3453,7 @@ a.box:active {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    line-height: 1.5;
     padding-bottom: -webkit-calc(.375em - 1px);
     padding-bottom: calc(.375em - 1px);
     padding-top: -webkit-calc(.375em - 1px);
@@ -3450,8 +3462,7 @@ a.box:active {
     border-radius: 3px;
     font-size: 1em;
     padding-left: 1em;
-    padding-right: 1em;
-    white-space: nowrap
+    padding-right: 1em
 }
 
 .file-icon,.icon {
@@ -3515,7 +3526,8 @@ a.box:active {
 
 .label {
     color: #363636;
-    font-size: 1rem
+    font-size: 1rem;
+    font-weight: 700
 }
 
 .label.is-small {
@@ -3810,6 +3822,7 @@ a.box:active {
 
 .control {
     font-size: 1rem;
+    position: relative;
     text-align: left
 }
 
@@ -3881,6 +3894,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -4404,8 +4418,7 @@ a.box:active {
     justify-content: center;
     line-height: 1.5;
     padding-left: .75em;
-    padding-right: .75em;
-    white-space: nowrap
+    padding-right: .75em
 }
 
 .tag:not(body) .delete {
@@ -4774,13 +4787,13 @@ a.box:active {
     align-items: stretch;
     display: flex;
     font-size: 1rem;
-    overflow-x: auto;
-    white-space: nowrap
+    overflow-x: auto
 }
 
 .modal-close,.pagination-ellipsis,.pagination-link,.pagination-next,.pagination-previous {
     -moz-appearance: none;
     -webkit-appearance: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-touch-callout: none;
@@ -4903,7 +4916,6 @@ a.box:active {
 
 .card {
     background-color: #fff;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
     color: #4a4a4a;
     max-width: 100%
@@ -5063,8 +5075,7 @@ a.box:active {
 }
 
 a.dropdown-item {
-    padding-right: 3rem;
-    white-space: nowrap
+    padding-right: 3rem
 }
 
 a.dropdown-item:hover {
@@ -5645,7 +5656,6 @@ a.dropdown-item.is-active {
 }
 
 .modal-close {
-    -webkit-user-select: none;
     user-select: none;
     border: none;
     -webkit-border-radius: 290486px;
@@ -5873,10 +5883,6 @@ a.dropdown-item.is-active {
     transform-origin: left top
 }
 
-.nav-toggle.is-active span:nth-child(2) {
-    opacity: 0
-}
-
 .nav-toggle.is-active span:nth-child(3) {
     margin-left: -5px;
     -webkit-transform: rotate(-45deg);
@@ -6016,8 +6022,7 @@ a.dropdown-item.is-active {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    white-space: nowrap
+    justify-content: flex-start
 }
 
 .nav-right {
@@ -6527,10 +6532,6 @@ a.dropdown-item.is-active {
     transform-origin: left top
 }
 
-.navbar-burger.is-active span:nth-child(2) {
-    opacity: 0
-}
-
 .navbar-burger.is-active span:nth-child(3) {
     margin-left: -5px;
     -webkit-transform: rotate(-45deg);
@@ -6907,7 +6908,6 @@ a.dropdown-item.is-active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    -webkit-user-select: none;
     user-select: none;
     font-size: 1em;
     padding-left: .5em;
@@ -6958,8 +6958,7 @@ a.dropdown-item.is-active {
 
 .pagination-next,.pagination-previous {
     padding-left: .75em;
-    padding-right: .75em;
-    white-space: nowrap
+    padding-right: .75em
 }
 
 .pagination-link.is-current {
@@ -7242,8 +7241,7 @@ a.panel-block,label.panel-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap
+    overflow-x: auto
 }
 
 .tabs:not(:last-child) {
@@ -15683,6 +15681,10 @@ a {
     max-width: 51rem
 }
 
+.breadcrumb li.is-category a {
+    pointer-events: none
+}
+
 .hero {
     min-height: 100vh;
     height: 100vh;
@@ -15884,7 +15886,6 @@ a {
 .learn-more {
     font-size: 1.3rem;
     padding: 20px;
-    white-space: nowrap;
     z-index: 2;
     text-decoration: none;
     -webkit-transition: color .2s ease-out;
