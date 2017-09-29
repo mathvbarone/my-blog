@@ -12,17 +12,17 @@
 
     .logo-hero
         width: 120px
-        transition: ease-in-out 0.2s all
+        +transition (ease-in-out, 0.2s, all) 
 
         
         .logo-hero-1 
-            transition: ease-in-out 0.2s all
+            +transition (ease-in-out, 0.2s, all) 
             stroke: #fff 
             stroke-miterlimit: 10
             stroke-width: 3px
             fill:#fff
         .logo-hero-2 
-            transition: ease-in-out 0.2s all
+            +transition (ease-in-out, 0.2s, all) 
             fill: #000
 
         &:hover
@@ -113,18 +113,18 @@
     white-space: nowrap
     z-index: 2
     text-decoration: none
-    transition: color 0.2s ease-out
+    +transition (ease-in-out, 0.2s, all) 
     
     span,
     .fa
-        transition: linear 0.2s all
+        +transition (ease-in-out, 0.2s, all) 
     
 
     span
-        display: block
+        @extend .is-block
         color: #aaa9a9
         font-weight: 300
-        text-align: center
+        @extend .has-text-centered
         font-size: 1.2rem; 
     
     .fa
@@ -156,5 +156,45 @@
 
 
 .jobs-list
-    padding: 40px 0;
-         
+    >li
+        position: relative
+        padding: 50px 0
+        &:not(:last-child)
+            &:after
+                position: absolute
+                left: 50%
+                margin-left: -45%
+                bottom: 0
+                content: ""
+                width: 90%
+                height: 1px
+                @extend .bg-grey
+    
+        .title,
+        .jobs-description,
+        .jobs-company,
+        .mobile-version
+            @extend .has-text-centered
+            @extend .has-text-left-tablet
+
+        .jobs-company
+            @extend .is-size-7
+            @extend .p-t-10  
+        
+        .button
+            @extend .is-info
+            @extend .is-medium
+            @extend .m-t-20
+        
+        .mobile-version
+            @extend .is-size-7
+            @extend .is-block
+            @extend .p-t-10 
+            .fa
+                margin-right: 5px
+        
+        .job-figure
+            +transition (ease-in-out, 0.2s, all) 
+            &:hover
+                opacity: 0.8
+

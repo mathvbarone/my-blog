@@ -2,7 +2,7 @@
     text-decoration: none
 }
 
-body,code {
+body,code,h1,h2,h3,h4,h5,h6 {
     font-weight: 400
 }
 
@@ -35,7 +35,8 @@ table td,table th,td,th {
 }
 
 .button,.input,.textarea {
-    -webkit-box-align: center
+    -webkit-box-align: center;
+    -webkit-appearance: none
 }
 
 .button,body {
@@ -46,17 +47,11 @@ table td,table th,td,th {
     cursor: pointer
 }
 
-.button,.delete,.file-cta,.file-name,.input,.select select,.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none
-}
-
 .select,.select select,.textarea,audio,embed,img,object,video {
     max-width: 100%
 }
 
-.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-body,.tile.is-vertical {
-    -webkit-box-orient: vertical;
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.tile.is-vertical {
     -webkit-box-direction: normal
 }
 
@@ -88,8 +83,7 @@ table td,table th,td,th {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-size: 100%;
-    font-weight: 400
+    font-size: 100%
 }
 
 ul {
@@ -266,11 +260,11 @@ pre code {
     font-size: 1rem!important
 }
 
-.is-size-7 {
+.is-size-7,.jobs-list>li .jobs-company,.jobs-list>li .mobile-version {
     font-size: .75rem!important
 }
 
-.has-text-centered {
+.has-text-centered,.jobs-list>li .jobs-company,.jobs-list>li .jobs-description,.jobs-list>li .mobile-version,.jobs-list>li .title,.learn-more span {
     text-align: center!important
 }
 
@@ -422,7 +416,7 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     font-weight: 700!important
 }
 
-.is-block {
+.is-block,.jobs-list>li .mobile-version,.learn-more span {
     display: block!important
 }
 
@@ -485,10 +479,6 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     -webkit-user-select: none
 }
 
-.button,.delete,.file {
-    -ms-user-select: none
-}
-
 .box {
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -513,6 +503,7 @@ a.box:active {
 }
 
 .button {
+    -moz-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -533,6 +524,7 @@ a.box:active {
     padding-top: calc(.375em - 1px);
     position: relative;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     color: #363636;
     -webkit-box-pack: center;
@@ -552,7 +544,8 @@ a.box:active {
 }
 
 .delete,.file {
-    -moz-user-select: none
+    -moz-user-select: none;
+    -ms-user-select: none
 }
 
 .button.is-active,.button.is-focused,.button:active,.button:focus {
@@ -563,7 +556,7 @@ a.box:active {
     color: inherit
 }
 
-.button .icon,.button .icon.is-large,.button .icon.is-medium,.button .icon.is-small {
+.button .icon,.button .icon.is-large,.button .icon.is-medium,.button .icon.is-small,.button .jobs-list>li .icon.button,.jobs-list>li .button .icon.button {
     height: 1.5em;
     width: 1.5em
 }
@@ -998,6 +991,10 @@ a.box:active {
     color: #f5f5f5
 }
 
+.button.is-static,.content blockquote,.content table tr:hover {
+    background-color: #f5f5f5
+}
+
 .button.is-dark.is-inverted.is-outlined:focus,.button.is-dark.is-inverted.is-outlined:hover {
     background-color: #f5f5f5;
     color: #363636
@@ -1110,51 +1107,51 @@ a.box:active {
     color: #fff
 }
 
-.button.is-info {
+.button.is-info,.jobs-list>li .button {
     background-color: #2ab7cd;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-hovered,.button.is-info:hover {
+.button.is-info.is-hovered,.button.is-info:hover,.jobs-list>li .button.is-hovered,.jobs-list>li .button:hover {
     background-color: #28aec2;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-focused,.button.is-info:focus {
+.button.is-info.is-focused,.button.is-info:focus,.jobs-list>li .button.is-focused,.jobs-list>li .button:focus {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-focused:not(:active),.button.is-info:focus:not(:active) {
+.button.is-info.is-focused:not(:active),.button.is-info:focus:not(:active),.jobs-list>li .button.is-focused:not(:active),.jobs-list>li .button:focus:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
 
-.button.is-info.is-active,.button.is-info:active {
+.button.is-info.is-active,.button.is-info:active,.jobs-list>li .button.is-active,.jobs-list>li .button:active {
     background-color: #26a4b8;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info[disabled] {
+.button.is-info[disabled],.jobs-list>li .button[disabled] {
     background-color: #2ab7cd;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-info.is-inverted {
+.button.is-info.is-inverted,.jobs-list>li .button.is-inverted {
     background-color: #fff;
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted:hover {
+.button.is-info.is-inverted:hover,.jobs-list>li .button.is-inverted:hover {
     background-color: #f2f2f2
 }
 
-.button.is-info.is-inverted[disabled] {
+.button.is-info.is-inverted[disabled],.jobs-list>li .button.is-inverted[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1162,27 +1159,27 @@ a.box:active {
     color: #2ab7cd
 }
 
-.button.is-info.is-loading:after {
+.button.is-info.is-loading:after,.jobs-list>li .button.is-loading:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-info.is-outlined {
+.button.is-info.is-outlined,.jobs-list>li .button.is-outlined {
     background-color: transparent;
     border-color: #2ab7cd;
     color: #2ab7cd
 }
 
-.button.is-info.is-outlined:focus,.button.is-info.is-outlined:hover {
+.button.is-info.is-outlined:focus,.button.is-info.is-outlined:hover,.jobs-list>li .button.is-outlined:focus,.jobs-list>li .button.is-outlined:hover {
     background-color: #2ab7cd;
     border-color: #2ab7cd;
     color: #fff
 }
 
-.button.is-info.is-outlined.is-loading:after {
+.button.is-info.is-outlined.is-loading:after,.jobs-list>li .button.is-outlined.is-loading:after {
     border-color: transparent transparent #2ab7cd #2ab7cd!important
 }
 
-.button.is-info.is-outlined[disabled] {
+.button.is-info.is-outlined[disabled],.jobs-list>li .button.is-outlined[disabled] {
     background-color: transparent;
     border-color: #2ab7cd;
     -webkit-box-shadow: none;
@@ -1190,18 +1187,18 @@ a.box:active {
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted.is-outlined {
+.button.is-info.is-inverted.is-outlined,.jobs-list>li .button.is-inverted.is-outlined {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-info.is-inverted.is-outlined:focus,.button.is-info.is-inverted.is-outlined:hover {
+.button.is-info.is-inverted.is-outlined:focus,.button.is-info.is-inverted.is-outlined:hover,.jobs-list>li .button.is-inverted.is-outlined:focus,.jobs-list>li .button.is-inverted.is-outlined:hover {
     background-color: #fff;
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted.is-outlined[disabled] {
+.button.is-info.is-inverted.is-outlined[disabled],.jobs-list>li .button.is-inverted.is-outlined[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1503,7 +1500,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.button.is-medium {
+.button.is-medium,.jobs-list>li .button {
     font-size: 1.25rem
 }
 
@@ -1518,10 +1515,6 @@ a.box:active {
     -webkit-box-shadow: none;
     box-shadow: none;
     opacity: .5
-}
-
-.button.is-static,.content blockquote,.content table tr:hover {
-    background-color: #f5f5f5
 }
 
 .button.is-fullwidth {
@@ -1551,6 +1544,10 @@ a.box:active {
     top: -webkit-calc(50% - (1em / 2));
     top: calc(50% - (1em / 2));
     position: absolute!important
+}
+
+.content table,.input,.select.is-fullwidth,.select.is-fullwidth select,.textarea {
+    width: 100%
 }
 
 .control.has-icon:not(.has-icon-right) .icon,.control.has-icons-left .icon.is-left,.file-input {
@@ -1705,10 +1702,6 @@ a.box:active {
     font-size: 75%
 }
 
-.content table {
-    width: 100%
-}
-
 .content table td,.content table th {
     border: 1px solid #dbdbdb;
     border-width: 0 0 1px;
@@ -1739,7 +1732,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.content.is-medium {
+.content.is-medium,.jobs-list>li .content.button {
     font-size: 1.25rem
 }
 
@@ -1748,6 +1741,7 @@ a.box:active {
 }
 
 .input,.textarea {
+    -moz-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1778,8 +1772,7 @@ a.box:active {
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
     box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
-    max-width: 100%;
-    width: 100%
+    max-width: 100%
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -1868,11 +1861,11 @@ a.box:active {
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.input.is-info,.textarea.is-info {
+.input.is-info,.jobs-list>li .input.button,.jobs-list>li .textarea.button,.textarea.is-info {
     border-color: #2ab7cd
 }
 
-.input.is-info.is-active,.input.is-info.is-focused,.input.is-info:active,.input.is-info:focus,.textarea.is-info.is-active,.textarea.is-info.is-focused,.textarea.is-info:active,.textarea.is-info:focus {
+.input.is-info.is-active,.input.is-info.is-focused,.input.is-info:active,.input.is-info:focus,.jobs-list>li .input.button:active,.jobs-list>li .input.button:focus,.jobs-list>li .input.is-active.button,.jobs-list>li .input.is-focused.button,.jobs-list>li .textarea.button:active,.jobs-list>li .textarea.button:focus,.jobs-list>li .textarea.is-active.button,.jobs-list>li .textarea.is-focused.button,.textarea.is-info.is-active,.textarea.is-info.is-focused,.textarea.is-info:active,.textarea.is-info:focus {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
@@ -1910,7 +1903,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.input.is-medium,.textarea.is-medium {
+.input.is-medium,.jobs-list>li .input.button,.jobs-list>li .textarea.button,.textarea.is-medium {
     font-size: 1.25rem
 }
 
@@ -1994,11 +1987,9 @@ a.box:active {
     z-index: 4
 }
 
-.control.is-loading::after,.delete:after,.delete:before,.loader,.select.is-loading::after {
-    content: ""
-}
-
 .select select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2137,11 +2128,11 @@ a.box:active {
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.select.is-info select {
+.jobs-list>li .select.button select,.select.is-info select {
     border-color: #2ab7cd
 }
 
-.select.is-info select.is-active,.select.is-info select.is-focused,.select.is-info select:active,.select.is-info select:focus {
+.jobs-list>li .select.button select.is-active,.jobs-list>li .select.button select.is-focused,.jobs-list>li .select.button select:active,.jobs-list>li .select.button select:focus,.select.is-info select.is-active,.select.is-info select.is-focused,.select.is-info select:active,.select.is-info select:focus {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
@@ -2179,7 +2170,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.select.is-medium {
+.jobs-list>li .select.button,.select.is-medium {
     font-size: 1.25rem
 }
 
@@ -2191,10 +2182,6 @@ a.box:active {
     border-color: #7a7a7a
 }
 
-.select.is-fullwidth,.select.is-fullwidth select {
-    width: 100%
-}
-
 .select.is-loading::after {
     -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
@@ -2203,6 +2190,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2227,7 +2215,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.select.is-loading.is-medium:after {
+.jobs-list>li .select.is-loading.button:after,.select.is-loading.is-medium:after {
     font-size: 1.25rem
 }
 
@@ -2298,8 +2286,11 @@ a.box:active {
     color: #fff
 }
 
+.file-cta,.file.is-light .file-cta,.tag:not(body) {
+    background-color: #f5f5f5
+}
+
 .file.is-light .file-cta {
-    background-color: #f5f5f5;
     border-color: transparent;
     color: #363636
 }
@@ -2373,26 +2364,26 @@ a.box:active {
     color: #fff
 }
 
-.file.is-info .file-cta {
+.file.is-info .file-cta,.jobs-list>li .file.button .file-cta {
     background-color: #2ab7cd;
     border-color: transparent;
     color: #fff
 }
 
-.file.is-info.is-hovered .file-cta,.file.is-info:hover .file-cta {
+.file.is-info.is-hovered .file-cta,.file.is-info:hover .file-cta,.jobs-list>li .file.button:hover .file-cta,.jobs-list>li .file.is-hovered.button .file-cta {
     background-color: #28aec2;
     border-color: transparent;
     color: #fff
 }
 
-.file.is-info.is-focused .file-cta,.file.is-info:focus .file-cta {
+.file.is-info.is-focused .file-cta,.file.is-info:focus .file-cta,.jobs-list>li .file.button:focus .file-cta,.jobs-list>li .file.is-focused.button .file-cta {
     border-color: transparent;
     -webkit-box-shadow: 0 0 .5em rgba(42,183,205,.25);
     box-shadow: 0 0 .5em rgba(42,183,205,.25);
     color: #fff
 }
 
-.file.is-info.is-active .file-cta,.file.is-info:active .file-cta {
+.file.is-info.is-active .file-cta,.file.is-info:active .file-cta,.jobs-list>li .file.button:active .file-cta,.jobs-list>li .file.is-active.button .file-cta {
     background-color: #26a4b8;
     border-color: transparent;
     color: #fff
@@ -2477,11 +2468,11 @@ a.box:active {
     font-size: .75rem
 }
 
-.file.is-medium {
+.file.is-medium,.jobs-list>li .file.button {
     font-size: 1.25rem
 }
 
-.file.is-medium .file-icon .fa {
+.file.is-medium .file-icon .fa,.jobs-list>li .file.button .file-icon .fa {
     font-size: 21px
 }
 
@@ -2522,12 +2513,14 @@ a.box:active {
 }
 
 .file.is-boxed .file-label {
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
 .file.is-boxed .file-cta {
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2552,7 +2545,7 @@ a.box:active {
     font-size: 14px
 }
 
-.file.is-boxed.is-medium .file-icon .fa {
+.file.is-boxed.is-medium .file-icon .fa,.jobs-list>li .file.is-boxed.button .file-icon .fa {
     font-size: 28px
 }
 
@@ -2628,10 +2621,6 @@ a.box:active {
     color: #363636
 }
 
-.file-cta,.tag:not(body) {
-    background-color: #f5f5f5
-}
-
 .file-label:active .file-name {
     border-color: #cfcfcf
 }
@@ -2645,6 +2634,8 @@ a.box:active {
 }
 
 .file-cta,.file-name {
+    -moz-appearance: none;
+    -webkit-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2744,7 +2735,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.label.is-medium {
+.jobs-list>li .label.button,.label.is-medium {
     font-size: 1.25rem
 }
 
@@ -2777,7 +2768,7 @@ a.box:active {
     color: #cd2b46
 }
 
-.help.is-info {
+.help.is-info,.jobs-list>li .help.button {
     color: #2ab7cd
 }
 
@@ -2966,7 +2957,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.control.has-icon .input.is-medium+.icon {
+.control.has-icon .input.is-medium+.icon,.control.has-icon .jobs-list>li .input.button+.icon,.jobs-list>li .control.has-icon .input.button+.icon {
     font-size: 1.25rem
 }
 
@@ -2978,7 +2969,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.control.has-icons-left .input.is-medium~.icon,.control.has-icons-left .select.is-medium~.icon,.control.has-icons-right .input.is-medium~.icon,.control.has-icons-right .select.is-medium~.icon {
+.control.has-icons-left .input.is-medium~.icon,.control.has-icons-left .jobs-list>li .input.button~.icon,.control.has-icons-left .jobs-list>li .select.button~.icon,.control.has-icons-left .select.is-medium~.icon,.control.has-icons-right .input.is-medium~.icon,.control.has-icons-right .jobs-list>li .input.button~.icon,.control.has-icons-right .jobs-list>li .select.button~.icon,.control.has-icons-right .select.is-medium~.icon,.jobs-list>li .control.has-icons-left .input.button~.icon,.jobs-list>li .control.has-icons-left .select.button~.icon,.jobs-list>li .control.has-icons-right .input.button~.icon,.jobs-list>li .control.has-icons-right .select.button~.icon {
     font-size: 1.25rem
 }
 
@@ -3004,6 +2995,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -3016,7 +3008,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.control.is-loading.is-medium:after {
+.control.is-loading.is-medium:after,.jobs-list>li .control.is-loading.button:after {
     font-size: 1.25rem
 }
 
@@ -3045,7 +3037,7 @@ a.box:active {
     width: 1rem
 }
 
-.icon.is-medium {
+.icon.is-medium,.jobs-list>li .icon.button {
     height: 2rem;
     width: 2rem
 }
@@ -3240,7 +3232,7 @@ a.box:active {
     color: #fff
 }
 
-.tag:not(body).is-info {
+.jobs-list>li .tag.button:not(body),.tag:not(body).is-info {
     background-color: #2ab7cd;
     color: #fff
 }
@@ -3260,7 +3252,7 @@ a.box:active {
     color: #fff
 }
 
-.tag:not(body).is-medium {
+.jobs-list>li .tag.button:not(body),.tag:not(body).is-medium {
     font-size: 1rem
 }
 
@@ -3420,6 +3412,8 @@ a.box:active {
 .delete {
     -webkit-user-select: none;
     user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background-color: rgba(10,10,10,.2);
     border: none;
     -webkit-border-radius: 290486px;
@@ -3446,6 +3440,7 @@ a.box:active {
 
 .delete:after,.delete:before {
     background-color: #fff;
+    content: "";
     display: block;
     left: 50%;
     position: absolute;
@@ -3489,7 +3484,7 @@ a.box:active {
     width: 16px
 }
 
-.delete.is-medium {
+.delete.is-medium,.jobs-list>li .delete.button {
     height: 24px;
     max-height: 24px;
     max-width: 24px;
@@ -3538,6 +3533,7 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em
@@ -3676,7 +3672,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.breadcrumb.is-medium {
+.breadcrumb.is-medium,.jobs-list>li .breadcrumb.button {
     font-size: 1.25rem
 }
 
@@ -4003,7 +3999,7 @@ a.box:active {
     text-align: left
 }
 
-.hero-body,.learn-more span,.ribbon,.up-arrow {
+.hero-body,.ribbon,.up-arrow {
     text-align: center
 }
 
@@ -4398,6 +4394,7 @@ a.box:active {
 }
 
 .tile.is-vertical {
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -4413,6 +4410,7 @@ a.box:active {
     -ms-flex-align: stretch;
     align-items: stretch;
     display: flex;
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4635,10 +4633,6 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(245,245,245,.2)
 }
 
-.hero.is-info .nav,.hero.is-primary .nav {
-    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2)
-}
-
 .hero.is-dark .nav-item a:not(.button),.hero.is-dark a.nav-item {
     color: rgba(245,245,245,.7)
 }
@@ -4694,6 +4688,7 @@ a.box:active {
 }
 
 .hero.is-primary .nav {
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2);
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
@@ -4730,59 +4725,60 @@ a.box:active {
     background-image: linear-gradient(141deg,#ad184a 0,#cd2b46 71%,#dc3636 100%)
 }
 
-.hero.is-info {
+.hero.is-info,.jobs-list>li .hero.button {
     background-color: #2ab7cd;
     color: #fff
 }
 
-.hero.is-info a:not(.button),.hero.is-info strong {
+.hero.is-info a:not(.button),.hero.is-info strong,.jobs-list>li .hero.button a:not(.button),.jobs-list>li .hero.button strong {
     color: inherit
 }
 
-.hero.is-info .title {
+.hero.is-info .title,.jobs-list>li .hero.button .title {
     color: #fff
 }
 
-.hero.is-info .subtitle {
+.hero.is-info .subtitle,.jobs-list>li .hero.button .subtitle {
     color: rgba(255,255,255,.9)
 }
 
-.hero.is-info .subtitle a:not(.button),.hero.is-info .subtitle strong {
+.hero.is-info .subtitle a:not(.button),.hero.is-info .subtitle strong,.jobs-list>li .hero.button .subtitle a:not(.button),.jobs-list>li .hero.button .subtitle strong {
     color: #fff
 }
 
-.hero.is-info .nav {
+.hero.is-info .nav,.jobs-list>li .hero.button .nav {
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2);
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.hero.is-info .nav-item a:not(.button),.hero.is-info a.nav-item {
+.hero.is-info .nav-item a:not(.button),.hero.is-info a.nav-item,.jobs-list>li .hero.button .nav-item a:not(.button),.jobs-list>li .hero.button a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.hero.is-info .nav-item a:not(.button).is-active,.hero.is-info .nav-item a:not(.button):hover,.hero.is-info .tabs.is-boxed a,.hero.is-info .tabs.is-toggle a,.hero.is-info a.nav-item.is-active,.hero.is-info a.nav-item:hover {
+.hero.is-info .nav-item a:not(.button).is-active,.hero.is-info .nav-item a:not(.button):hover,.hero.is-info .tabs.is-boxed a,.hero.is-info .tabs.is-toggle a,.hero.is-info a.nav-item.is-active,.hero.is-info a.nav-item:hover,.jobs-list>li .hero.button .nav-item a:not(.button).is-active,.jobs-list>li .hero.button .nav-item a:not(.button):hover,.jobs-list>li .hero.button .tabs.is-boxed a,.jobs-list>li .hero.button .tabs.is-toggle a,.jobs-list>li .hero.button a.nav-item.is-active,.jobs-list>li .hero.button a.nav-item:hover {
     color: #fff
 }
 
-.hero.is-info .tabs a {
+.hero.is-info .tabs a,.jobs-list>li .hero.button .tabs a {
     color: #fff;
     opacity: .9
 }
 
-.hero.is-info .tabs a:hover,.hero.is-info .tabs li.is-active a {
+.hero.is-info .tabs a:hover,.hero.is-info .tabs li.is-active a,.jobs-list>li .hero.button .tabs a:hover,.jobs-list>li .hero.button .tabs li.is-active a {
     opacity: 1
 }
 
-.hero.is-info .tabs.is-boxed a:hover,.hero.is-info .tabs.is-toggle a:hover {
+.hero.is-info .tabs.is-boxed a:hover,.hero.is-info .tabs.is-toggle a:hover,.jobs-list>li .hero.button .tabs.is-boxed a:hover,.jobs-list>li .hero.button .tabs.is-toggle a:hover {
     background-color: rgba(10,10,10,.1)
 }
 
-.hero.is-info .tabs.is-boxed li.is-active a,.hero.is-info .tabs.is-boxed li.is-active a:hover,.hero.is-info .tabs.is-toggle li.is-active a,.hero.is-info .tabs.is-toggle li.is-active a:hover {
+.hero.is-info .tabs.is-boxed li.is-active a,.hero.is-info .tabs.is-boxed li.is-active a:hover,.hero.is-info .tabs.is-toggle li.is-active a,.hero.is-info .tabs.is-toggle li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a:hover {
     background-color: #fff;
     border-color: #fff;
     color: #2ab7cd
 }
 
-.hero.is-info.is-bold {
+.hero.is-info.is-bold,.jobs-list>li .hero.is-bold.button {
     background-image: -webkit-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
     background-image: -o-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
     background-image: linear-gradient(141deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%)
@@ -8446,6 +8442,14 @@ a.tag:hover {
     background-color: #b8273f
 }
 
+.is-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+
 .main-container {
     padding-right: 20px;
     padding-left: 20px
@@ -9700,6 +9704,11 @@ a.tag:hover {
     margin: 10px 2px 0 0
 }
 
+.header-logo .logo-mb-1,.post-front .post-content a:after {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .post-front .card:hover {
     position: relative;
     z-index: 5;
@@ -9799,8 +9808,6 @@ a.tag:hover {
     background: #65B149;
     bottom: 0;
     left: 0;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -9886,7 +9893,7 @@ a.tag:hover {
     background-color: #4a4a4a
 }
 
-.bg-grey {
+.bg-grey,.jobs-list>li:not(:last-child):after {
     background-color: #7a7a7a
 }
 
@@ -9966,7 +9973,7 @@ a.tag:hover {
     margin-top: 10px
 }
 
-.p-t-10 {
+.jobs-list>li .jobs-company,.jobs-list>li .mobile-version,.p-t-10 {
     padding-top: 10px
 }
 
@@ -10026,7 +10033,7 @@ a.tag:hover {
     padding-right: 15px
 }
 
-.m-t-20 {
+.jobs-list>li .button,.m-t-20 {
     margin-top: 20px
 }
 
@@ -10422,11 +10429,6 @@ a.tag:hover {
     transition: linear .3s all
 }
 
-.header-logo .logo-mb-1,.header-logo .logo-mb-3 {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
-}
-
 .mast-header.is-active {
     top: 0
 }
@@ -10439,6 +10441,11 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.header-logo .logo-mb-3,.hero-index-body .logo-hero {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .header-logo .logo-mb-2 {
     fill: none
 }
@@ -10446,11 +10453,6 @@ a.tag:hover {
 .header-logo .logo-mb-3 {
     fill: #fff;
     transition: ease-in-out .2s all
-}
-
-.hero-index-body .logo-hero,.hero-index-body .logo-hero .logo-hero-1 {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
 }
 
 .header-logo:hover .logo-mb-1 {
@@ -10503,6 +10505,8 @@ a.tag:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -10571,6 +10575,8 @@ footer {
 }
 
 .hero-index-body .logo-hero .logo-hero-1 {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     stroke: #fff;
     stroke-miterlimit: 10;
@@ -10583,6 +10589,11 @@ footer {
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     fill: #000
+}
+
+.learn-more,.learn-more .fa,.learn-more span {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .hero-index-body .logo-hero:hover {
@@ -10651,19 +10662,14 @@ footer {
     padding: 20px;
     white-space: nowrap;
     z-index: 2;
-    -webkit-transition: color .2s ease-out;
-    -o-transition: color .2s ease-out;
-    transition: color .2s ease-out
+    transition: ease-in-out .2s all
 }
 
 .learn-more .fa,.learn-more span {
-    -webkit-transition: linear .2s all;
-    -o-transition: linear .2s all;
-    transition: linear .2s all
+    transition: ease-in-out .2s all
 }
 
 .learn-more span {
-    display: block;
     color: #aaa9a9;
     font-weight: 300;
     font-size: 1.2rem
@@ -10705,8 +10711,33 @@ footer {
     }
 }
 
-.jobs-list {
-    padding: 40px 0
+.jobs-list>li {
+    position: relative;
+    padding: 50px 0
+}
+
+.jobs-list>li:not(:last-child):after {
+    position: absolute;
+    left: 50%;
+    margin-left: -45%;
+    bottom: 0;
+    content: "";
+    width: 90%;
+    height: 1px
+}
+
+.jobs-list>li .mobile-version .fa {
+    margin-right: 5px
+}
+
+.jobs-list>li .job-figure {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    transition: ease-in-out .2s all
+}
+
+.jobs-list>li .job-figure:hover {
+    opacity: .8
 }
 
 .tags-list .tags-item {
@@ -10789,7 +10820,7 @@ footer {
         text-align: justify!important
     }
 
-    .has-text-left-tablet {
+    .has-text-left-tablet,.jobs-list>li .jobs-company,.jobs-list>li .jobs-description,.jobs-list>li .mobile-version,.jobs-list>li .title {
         text-align: left!important
     }
 
@@ -10868,7 +10899,7 @@ footer {
         padding-top: .375em
     }
 
-    .field-label.is-medium {
+    .field-label.is-medium,.jobs-list>li .field-label.button {
         font-size: 1.25rem;
         padding-top: .375em
     }
@@ -11249,7 +11280,7 @@ footer {
         width: 100%
     }
 
-    .hero.is-medium .hero-body {
+    .hero.is-medium .hero-body,.jobs-list>li .hero.button .hero-body {
         padding-bottom: 9rem;
         padding-top: 9rem
     }
@@ -11588,7 +11619,7 @@ footer {
         display: flex
     }
 
-    .section.is-medium {
+    .jobs-list>li .section.button,.section.is-medium {
         padding: 9rem 1.5rem
     }
 
@@ -12918,7 +12949,7 @@ footer {
         border-top-color: rgba(245,245,245,.2)
     }
 
-    .hero.is-info .nav-menu .nav-item,.hero.is-primary .nav-menu .nav-item,.hero.is-success .nav-menu .nav-item {
+    .hero.is-info .nav-menu .nav-item,.hero.is-primary .nav-menu .nav-item,.hero.is-success .nav-menu .nav-item,.jobs-list>li .hero.button .nav-menu .nav-item {
         border-top-color: rgba(255,255,255,.2)
     }
 
@@ -12944,25 +12975,25 @@ footer {
         background-color: #fff
     }
 
-    .hero.is-info .nav-menu {
+    .hero.is-info .nav-menu,.jobs-list>li .hero.button .nav-menu {
         background-color: #2ab7cd
     }
 
-    .hero.is-info.is-bold .nav-menu {
+    .hero.is-info.is-bold .nav-menu,.jobs-list>li .hero.is-bold.button .nav-menu {
         background-image: -webkit-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
         background-image: -o-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
         background-image: linear-gradient(141deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%)
     }
 
-    .hero.is-info .nav-toggle span {
+    .hero.is-info .nav-toggle span,.jobs-list>li .hero.button .nav-toggle span {
         background-color: #fff
     }
 
-    .hero.is-info .nav-toggle:hover {
+    .hero.is-info .nav-toggle:hover,.jobs-list>li .hero.button .nav-toggle:hover {
         background-color: rgba(10,10,10,.1)
     }
 
-    .hero.is-info .nav-toggle.is-active span {
+    .hero.is-info .nav-toggle.is-active span,.jobs-list>li .hero.button .nav-toggle.is-active span {
         background-color: #fff
     }
 
