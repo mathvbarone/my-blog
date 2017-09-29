@@ -10615,7 +10615,7 @@ footer {
 }
 
 .hero-index-body .title {
-    padding: 15px 0;
+    padding: 0 0 0 25px;
     font-size: 3.5rem
 }
 
@@ -13166,7 +13166,7 @@ footer {
     }
 
     .hero-index-body .title {
-        font-size: 1.9rem;
+        font-size: 2rem;
         line-height: 2.5rem
     }
 
