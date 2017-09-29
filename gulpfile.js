@@ -21,7 +21,7 @@ var paths = {
 	src: {
 		sass: ['assets/src/sass/**/*.sass'],
 		js: 'assets/src/js/**/*.js',
-		img: 'assets/src/img/**/*'
+		img: 'assets/src/images/**/*'
 	},
 	dest: {
 		sass: 'assets/dist/css',

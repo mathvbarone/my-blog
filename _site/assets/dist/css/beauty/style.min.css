@@ -10705,6 +10705,10 @@ footer {
     }
 }
 
+.jobs-list {
+    padding: 40px 0
+}
+
 .tags-list .tags-item {
     margin-right: .5rem
 }
