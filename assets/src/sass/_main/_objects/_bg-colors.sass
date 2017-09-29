@@ -1,0 +1,6 @@
+.bg
+     @each $color in $color-status
+          &-#{$color}
+               background-color: nth($color-default, index($color-status, $color))
+
+
