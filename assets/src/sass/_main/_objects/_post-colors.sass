@@ -41,6 +41,14 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
 
 //VARIABLE COLORS
 @each $type in $type-post 
+      .post-offset
+            .breadcrumb
+                  padding: 30px 0 10px 1.4em
+                  width: 100%
+                  max-width: 50rem
+                  margin: 0 auto
+
+
       .post-#{$type} 
             .card           
                   min-height: 180px           
@@ -58,6 +66,8 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                         a                              
                               color: nth($color-post, index($type-post, $type))
                               font-weight: 500
+                              width: 100%
+                              display: block
                               
                         
 
@@ -102,11 +112,6 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
             
             
             .breadcrumb
-                  padding: 30px 0 10px 1.4em
-                  width: 100%
-                  max-width: 50rem
-                  margin: 0 auto
-
                   li.is-active
                         a
                                color: nth($color-post, index($type-post, $type))
@@ -275,3 +280,5 @@ $color-post: $blog-color $html-color $css-color $js-color $misc-color $front-col
                   background-color: nth($color-post, index($type-post, $type))
 
             
+      
+      

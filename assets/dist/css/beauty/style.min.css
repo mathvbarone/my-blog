@@ -9031,7 +9031,9 @@ a.tag:hover {
 
 .post-blog .card .ribbon a {
     color: #C35163;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-blog .card .card-title {
@@ -9078,13 +9080,6 @@ a.tag:hover {
 
 .post-blog .card:hover .card-date,.post-blog .card:hover .card-description,.post-blog .card:hover .card-tags,.post-blog .card:hover .card-title {
     color: #fff
-}
-
-.post-blog .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-blog .breadcrumb li.is-active a {
@@ -9265,7 +9260,9 @@ a.tag:hover {
 
 .post-html .card .ribbon a {
     color: #4986b1;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-html .card .card-title {
@@ -9303,13 +9300,6 @@ a.tag:hover {
 
 .post-html .card:hover .card-date,.post-html .card:hover .card-description,.post-html .card:hover .card-tags,.post-html .card:hover .card-title {
     color: #fff
-}
-
-.post-html .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-html .breadcrumb li.is-active a {
@@ -9495,7 +9485,9 @@ a.tag:hover {
 
 .post-css .card .ribbon a {
     color: #378574;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-css .card .card-title {
@@ -9539,13 +9531,6 @@ a.tag:hover {
 
 .post-css .card:hover .card-date,.post-css .card:hover .card-description,.post-css .card:hover .card-tags,.post-css .card:hover .card-title {
     color: #fff
-}
-
-.post-css .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-css .breadcrumb li.is-active a {
@@ -9724,7 +9709,9 @@ a.tag:hover {
 
 .post-js .card .ribbon a {
     color: #f8c101;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-js .card .card-title {
@@ -9762,13 +9749,6 @@ a.tag:hover {
 
 .post-js .card:hover .card-date,.post-js .card:hover .card-description,.post-js .card:hover .card-tags,.post-js .card:hover .card-title {
     color: #fff
-}
-
-.post-js .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-js .breadcrumb li.is-active a {
@@ -9947,7 +9927,9 @@ a.tag:hover {
 
 .post-misc .card .ribbon a {
     color: #af1da2;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-misc .card .card-title {
@@ -9985,13 +9967,6 @@ a.tag:hover {
 
 .post-misc .card:hover .card-date,.post-misc .card:hover .card-description,.post-misc .card:hover .card-tags,.post-misc .card:hover .card-title {
     color: #fff
-}
-
-.post-misc .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-misc .breadcrumb li.is-active a {
@@ -10148,6 +10123,13 @@ a.tag:hover {
     background-color: #af1da2
 }
 
+.post-offset .breadcrumb {
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
+}
+
 .post-front .card {
     min-height: 180px;
     border: 1px solid #dcdcdc;
@@ -10172,7 +10154,9 @@ a.tag:hover {
 
 .post-front .card .ribbon a {
     color: #65B149;
-    font-weight: 500
+    font-weight: 500;
+    width: 100%;
+    display: block
 }
 
 .post-front .card .card-title {
@@ -10208,13 +10192,6 @@ a.tag:hover {
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-tags,.post-front .card:hover .card-title {
     color: #fff
-}
-
-.post-front .breadcrumb {
-    padding: 30px 0 10px 1.4em;
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
 }
 
 .post-front .breadcrumb li.is-active a {
