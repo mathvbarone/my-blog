@@ -8426,7 +8426,7 @@ a.box:active {
 }
 
 .content-main {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 40px;
     outline: 0
 }
@@ -9981,7 +9981,7 @@ a.tag:hover {
     margin-bottom: 10px
 }
 
-.p-b-10 {
+.jobs-list>li .mobile-version,.p-b-10 {
     padding-bottom: 10px
 }
 
@@ -10615,7 +10615,7 @@ footer {
 }
 
 .hero-index-body .title {
-    padding: 0 0 0 25px;
+    padding: 0 0 10px;
     font-size: 3.5rem
 }
 
@@ -10724,6 +10724,10 @@ footer {
     content: "";
     width: 90%;
     height: 1px
+}
+
+.jobs-list>li .title {
+    font-size: 1.8em
 }
 
 .jobs-list>li .mobile-version .fa {
