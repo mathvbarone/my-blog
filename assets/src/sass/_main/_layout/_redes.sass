@@ -1,0 +1,63 @@
+.content
+     .redes
+          margin: 0
+          display: flex
+          justify-content: center
+
+     .redes-item
+          margin: 0 2px
+
+      
+     
+     .redes-bg
+          +transition(ease-in-out, 0.2s, all)
+          width: 20px
+          height: 20px
+          display: block
+          margin: 0 0 0 0
+          padding: 0          
+          
+          &-fb,
+          &-tt
+               background: #fff
+               border-radius: 4px
+
+          &-fb
+               &:hover
+                    background: #3b5998
+
+          &-tt
+               &:hover
+                    background: #77AADB
+
+          &-github
+               background: #1D1C15
+               &:hover
+                    background: #fff
+           
+          
+
+     .icon-fb,
+     .icon-tt
+          +transition(ease-in-out, 0.2s, all)  
+          width: 20px
+          height: 20px
+          &:hover
+               fill: #fff  
+     
+     .icon-fb
+          fill: #3b5998
+
+     .icon-tt
+          fill: #77AADB
+
+     .icon-github 
+          +transition(ease-in-out, 0.2s, all)       
+          fill: #fff
+          width: 18px
+          height: 18px
+          margin-top: 1px
+          &:hover
+               fill: #1D1C15  
+
+
