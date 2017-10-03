@@ -264,7 +264,7 @@ pre code {
     font-size: .75rem!important
 }
 
-.has-text-centered,.jobs-list>li .jobs-company,.jobs-list>li .jobs-description,.jobs-list>li .mobile-version,.jobs-list>li .title,.learn-more span {
+.conhecimento-item,.has-text-centered,.jobs-list>li .jobs-company,.jobs-list>li .jobs-description,.jobs-list>li .mobile-version,.jobs-list>li .title,.learn-more span {
     text-align: center!important
 }
 
@@ -10038,7 +10038,7 @@ a.tag:hover {
     padding-top: 20px
 }
 
-.m-b-20 {
+.conhecimento-item>.subtitle,.m-b-20 {
     margin-bottom: 20px
 }
 
@@ -10106,7 +10106,7 @@ a.tag:hover {
     margin-bottom: 30px
 }
 
-.p-b-30 {
+.conhecimento-list,.p-b-30 {
     padding-bottom: 30px
 }
 
@@ -10440,14 +10440,17 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.content .redes-bg,.mast-header .logo-simple .logo-simple-3 {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .mast-header .logo-simple .logo-simple-2 {
     fill: none
 }
 
 .mast-header .logo-simple .logo-simple-3 {
     fill: #fff;
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -10528,13 +10531,6 @@ a.tag:hover {
     justify-content: center
 }
 
-.content .icon-fb,.content .icon-tt,.content .redes-bg {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    width: 20px;
-    height: 20px
-}
-
 .hero-default-body>.title {
     font-weight: 700;
     font-size: 3.4em;
@@ -10569,9 +10565,16 @@ a.tag:hover {
 
 .content .redes-bg {
     transition: ease-in-out .2s all;
+    width: 20px;
+    height: 20px;
     display: block;
     margin: 0;
     padding: 0
+}
+
+.content .icon-fb,.content .icon-github,.content .icon-tt {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .content .redes-bg-fb,.content .redes-bg-tt {
@@ -10597,12 +10600,9 @@ a.tag:hover {
 }
 
 .content .icon-fb,.content .icon-tt {
-    transition: ease-in-out .2s all
-}
-
-.content .icon-github,.hero-index-body .logo-full {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    width: 20px;
+    height: 20px
 }
 
 .content .icon-fb:hover,.content .icon-tt:hover {
@@ -10623,6 +10623,11 @@ a.tag:hover {
     width: 18px;
     height: 18px;
     margin-top: 1px
+}
+
+.hero-index-body .logo-full,.hero-index-body .logo-full .logo-full-1 {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .content .icon-github:hover {
@@ -10660,8 +10665,6 @@ footer p {
 }
 
 .hero-index-body .logo-full .logo-full-1 {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     stroke: #fff;
     stroke-miterlimit: 10;
@@ -10669,16 +10672,14 @@ footer p {
     fill: #fff
 }
 
-.hero-index-body .logo-full .logo-full-2 {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all;
-    fill: #000
-}
-
-.learn-more,.learn-more .fa,.learn-more span {
+.hero-index-body .logo-full .logo-full-2,.learn-more {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
+}
+
+.hero-index-body .logo-full .logo-full-2 {
+    transition: ease-in-out .2s all;
+    fill: #000
 }
 
 .hero-index-body .logo-full:hover {
@@ -10750,6 +10751,11 @@ footer p {
     transition: ease-in-out .2s all
 }
 
+.jobs-list>li .job-figure,.learn-more .fa,.learn-more span {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
+}
+
 .learn-more .fa,.learn-more span {
     transition: ease-in-out .2s all
 }
@@ -10772,6 +10778,10 @@ footer p {
     color: #aaa9a9;
     font-size: 20px;
     padding-top: 10px
+}
+
+.conhecimento-item>.subtitle,.jobs-list>li .title {
+    font-size: 1.8em
 }
 
 .learn-more:hover {
@@ -10811,22 +10821,48 @@ footer p {
     height: 1px
 }
 
-.jobs-list>li .title {
-    font-size: 1.8em
-}
-
 .jobs-list>li .mobile-version .fa {
     margin-right: 5px
 }
 
 .jobs-list>li .job-figure {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
 .jobs-list>li .job-figure:hover {
     opacity: .8
+}
+
+.conhecimento-item>p {
+    font-size: .9rem
+}
+
+.conhecimento-figure {
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto
+}
+
+.conhecimento-figure .conhecimento-icon {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    fill: #cd2b46;
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    transition: ease-in-out .2s all
+}
+
+.conhecimento-figure .icon-ideas:hover {
+    fill: #ffdd57
+}
+
+.conhecimento-figure .icon-uxui:hover {
+    fill: #2ab7cd
+}
+
+.conhecimento-figure .icon-code:hover {
+    fill: #149000
 }
 
 .tags-list .tags-item {

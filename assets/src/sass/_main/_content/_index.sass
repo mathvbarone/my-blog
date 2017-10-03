@@ -202,3 +202,42 @@
             &:hover
                 opacity: 0.8
 
+
+
+.conhecimento-list
+    @extend .p-b-30
+
+.conhecimento-item
+    @extend .has-text-centered
+
+    >.subtitle
+        font-size: 1.8em
+        @extend .m-b-20
+    >p
+        font-size: 0.9rem  
+
+.conhecimento-figure
+    width: 80px
+    height: 80px
+    margin: 1rem auto 
+
+    .conhecimento-icon
+        cursor: pointer
+        width: 80px
+        height: 80px
+        fill: $primary
+        +transition(ease-in-out, 0.2s, all)
+
+    .icon-ideas
+        &:hover
+            fill: $yellow 
+
+    .icon-uxui
+        &:hover
+            fill: $blue 
+
+    .icon-code
+        &:hover
+            fill: $green
+
+       
