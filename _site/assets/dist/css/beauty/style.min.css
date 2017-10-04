@@ -1,13 +1,5 @@
-.learn-more,a,a.tag:hover {
-    text-decoration: none
-}
-
 body,code,h1,h2,h3,h4,h5,h6 {
     font-weight: 400
-}
-
-.select,.select select,.textarea,audio,embed,img,object,video {
-    max-width: 100%
 }
 
 a:hover,strong,table th {
@@ -30,19 +22,16 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
-.content pre,pre code {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto
+table td,table th,td,th {
+    text-align: left
 }
 
 .button,.file,.is-unselectable {
-    -webkit-user-select: none;
     -webkit-touch-callout: none
 }
 
 .button,.input,.textarea {
-    -webkit-box-align: center;
-    vertical-align: top
+    -webkit-box-align: center
 }
 
 .button,body {
@@ -53,13 +42,18 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     cursor: pointer
 }
 
+.select,.select select,.textarea,audio,embed,img,object,video {
+    max-width: 100%
+}
+
 .button,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
     -moz-appearance: none;
     -webkit-appearance: none
 }
 
 .file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.modal-card,.tile.is-vertical {
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
 }
 
 @-webkit-keyframes spinAround {
@@ -135,8 +129,7 @@ table {
 }
 
 td,th {
-    padding: 0;
-    text-align: left
+    padding: 0
 }
 
 body,button,input,select,textarea {
@@ -159,6 +152,7 @@ code,pre,small {
 
 a {
     color: #2ab7cd;
+    text-decoration: none;
     -webkit-transition: linear .2s all;
     -o-transition: linear .2s all;
     transition: linear .2s all
@@ -188,6 +182,10 @@ input[type=checkbox],input[type=radio] {
     vertical-align: baseline
 }
 
+.button,.content table td,.content table th,.delete,.file-cta,.file-name,.input,.level img,.modal-close,.number,.select,.textarea,table td,table th {
+    vertical-align: top
+}
+
 span {
     font-style: inherit;
     font-weight: inherit
@@ -202,19 +200,16 @@ pre {
 }
 
 pre code {
+    -webkit-overflow-scrolling: touch;
     background: 0 0;
     color: inherit;
     font-size: 1em;
+    overflow-x: auto;
     padding: 1.25rem 1.5rem
 }
 
 .box,.button {
     background-color: #fff
-}
-
-table td,table th {
-    text-align: left;
-    vertical-align: top
 }
 
 .is-clearfix:after {
@@ -476,16 +471,14 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .is-unselectable {
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
 }
 
 .button,.file {
-    -moz-user-select: none
-}
-
-.breadcrumb,.button,.delete,.file {
+    -webkit-user-select: none;
     -ms-user-select: none
 }
 
@@ -532,6 +525,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    -moz-user-select: none;
     user-select: none;
     color: #363636;
     -webkit-box-pack: center;
@@ -548,6 +542,10 @@ a.box:active {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox
+}
+
+.breadcrumb,.delete,.file {
+    -moz-user-select: none
 }
 
 .button.is-active,.button.is-focused,.button:active,.button:focus {
@@ -1548,10 +1546,6 @@ a.box:active {
     position: absolute!important
 }
 
-.control.is-loading::after,.loader,.select.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear
-}
-
 .button.is-static {
     border-color: #dbdbdb;
     color: #7a7a7a;
@@ -1686,6 +1680,8 @@ a.box:active {
 }
 
 .content pre {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
     padding: 1.25em 1.5em;
     white-space: pre
 }
@@ -1705,8 +1701,7 @@ a.box:active {
 .content table td,.content table th {
     border: 1px solid #dbdbdb;
     border-width: 0 0 1px;
-    padding: .5em .75em;
-    vertical-align: top
+    padding: .5em .75em
 }
 
 .content table th {
@@ -1964,10 +1959,6 @@ a.box:active {
     cursor: not-allowed
 }
 
-.select {
-    vertical-align: top
-}
-
 .select:not(.is-multiple) {
     height: 2.25em
 }
@@ -1989,6 +1980,11 @@ a.box:active {
     right: 1.125em;
     top: 50%;
     z-index: 4
+}
+
+.control.is-loading::after,.select.is-loading::after {
+    content: "";
+    -webkit-animation: spinAround .5s infinite linear
 }
 
 .select select {
@@ -2196,7 +2192,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -2244,7 +2239,8 @@ a.box:active {
 
 .breadcrumb,.delete {
     -webkit-user-select: none;
-    -moz-user-select: none
+    -ms-user-select: none;
+    -webkit-touch-callout: none
 }
 
 .file.is-white .file-cta {
@@ -2521,14 +2517,12 @@ a.box:active {
 }
 
 .file.is-boxed .file-label {
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
 .file.is-boxed .file-cta {
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2630,8 +2624,7 @@ a.box:active {
 }
 
 .file-cta,.tag:not(body) {
-    background-color: #f5f5f5;
-    color: #4a4a4a
+    background-color: #f5f5f5
 }
 
 .file-label:active .file-name {
@@ -2671,7 +2664,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
     border-radius: 3px;
     font-size: 1em;
     padding-left: 1em;
@@ -2697,6 +2689,10 @@ a.box:active {
 
 .file-cta[disabled],.file-name[disabled] {
     cursor: not-allowed
+}
+
+.file-cta {
+    color: #4a4a4a
 }
 
 .file-name {
@@ -3010,7 +3006,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em;
@@ -3211,6 +3206,7 @@ a.box:active {
     align-items: center;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    color: #4a4a4a;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3337,10 +3333,6 @@ a.box:active {
     vertical-align: middle
 }
 
-.delete,.level img,.modal-close,.number {
-    vertical-align: top
-}
-
 .title {
     color: #363636;
     font-size: 2rem;
@@ -3417,7 +3409,7 @@ a.box:active {
     font-size: 1.5rem
 }
 
-.number,.subtitle.is-5 {
+.subtitle.is-5 {
     font-size: 1.25rem
 }
 
@@ -3430,7 +3422,6 @@ a.box:active {
 }
 
 .delete {
-    -webkit-touch-callout: none;
     user-select: none;
     background-color: rgba(10,10,10,.2);
     border: none;
@@ -3539,6 +3530,7 @@ a.box:active {
 }
 
 .loader {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -3563,6 +3555,7 @@ a.box:active {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    font-size: 1.25rem;
     height: 2em;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3581,7 +3574,6 @@ a.box:active {
 }
 
 .breadcrumb {
-    -webkit-touch-callout: none;
     user-select: none;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -4154,7 +4146,6 @@ a.box:active {
 
 .modal-card {
     display: flex;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -4618,7 +4609,6 @@ a.box:active {
 }
 
 .tile.is-vertical {
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -4634,7 +4624,6 @@ a.box:active {
     -ms-flex-align: stretch;
     align-items: stretch;
     display: flex;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5197,7 +5186,7 @@ a.box:active {
     display: flex
 }
 
-.title-main,.up-arrow,main {
+.checkmark,.title-main,.up-arrow,main {
     display: block
 }
 
@@ -8620,6 +8609,11 @@ a.box:active {
     font-size: 1.4rem
 }
 
+.checkmark,.is-loading-img {
+    width: 56px;
+    margin: 10% auto
+}
+
 .button:hover {
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
@@ -8660,10 +8654,131 @@ a.box:active {
 }
 
 a.tag:hover {
+    text-decoration: none;
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08);
     background-color: #b8273f
+}
+
+.is-loading-img {
+    position: relative;
+    z-index: 20
+}
+
+.checkmark {
+    height: 56px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    -webkit-animation: fill .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both;
+    animation: fill .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both
+}
+
+.checkmark-success {
+    -webkit-box-shadow: inset 0 0 0 #149000;
+    box-shadow: inset 0 0 0 #149000;
+    -webkit-animation: fill-success .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both;
+    animation: fill-success .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both
+}
+
+.checkmark-success .checkmark-circle {
+    stroke: #149000
+}
+
+.checkmark-error {
+    -webkit-animation: fill-error .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both;
+    animation: fill-error .4s ease-in-out .4s forwards,scale .3s ease-in-out .9s both
+}
+
+.checkmark-error .checkmark-circle {
+    stroke: #cd2b46
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    fill: none;
+    -webkit-animation: stroke .6s cubic-bezier(.65,0,.45,1) forwards;
+    animation: stroke .6s cubic-bezier(.65,0,.45,1) forwards
+}
+
+.checkmark-check {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    -webkit-animation: stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards;
+    animation: stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards
+}
+
+@-webkit-keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@-webkit-keyframes scale {
+    0%,100% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.1,1.1,1);
+        transform: scale3d(1.1,1.1,1)
+    }
+}
+
+@keyframes scale {
+    0%,100% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.1,1.1,1);
+        transform: scale3d(1.1,1.1,1)
+    }
+}
+
+@-webkit-keyframes fill-success {
+    100% {
+        -webkit-box-shadow: inset 0 0 0 30px #149000;
+        box-shadow: inset 0 0 0 30px #149000
+    }
+}
+
+@keyframes fill-success {
+    100% {
+        -webkit-box-shadow: inset 0 0 0 30px #149000;
+        box-shadow: inset 0 0 0 30px #149000
+    }
+}
+
+@-webkit-keyframes fill-error {
+    100% {
+        -webkit-box-shadow: inset 0 0 0 30px #cd2b46;
+        box-shadow: inset 0 0 0 30px #cd2b46
+    }
+}
+
+@keyframes fill-error {
+    100% {
+        -webkit-box-shadow: inset 0 0 0 30px #cd2b46;
+        box-shadow: inset 0 0 0 30px #cd2b46
+    }
 }
 
 .is-reverse {
@@ -10972,6 +11087,7 @@ footer p {
     padding: 20px;
     white-space: nowrap;
     z-index: 2;
+    text-decoration: none;
     transition: ease-in-out .2s all
 }
 

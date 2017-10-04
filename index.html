@@ -195,17 +195,20 @@ img-src: "assets/dist/images/"
         <!-- /TITULO -->
 
         <div class="container">
-            <form id="contact-form" action="https://formspree.io/matheusvbarone@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="_replyto" placeholder="Email" required>
-                <textarea name="message" cols="30" rows="6" placeholder="Message" required></textarea>
-                <!-- CONFIG -->
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="hidden" name="_subject" value="Subject">
-                <input type="hidden" name="_cc" value="email@cc.com">
-                <!-- /CONFIG -->
-                <input class="button-submit" type="submit" value="Send">
-            </form>
+            <div class="contact-box">
+                <form id="contact-form" action="https://formspree.io/matheusvbarone@gmail.com" method="POST">
+                    <input type="text" class="valid" name="name" placeholder="Name" required>
+                    <input type="email" class="valid" name="_replyto" placeholder="Email" required>
+                    <textarea name="message" class="valid" cols="30" rows="6" placeholder="Message" required></textarea>
+                    <!-- CONFIG -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    <input type="hidden" name="_subject" value="Subject">
+                    <input type="hidden" name="_cc" value="email@cc.com">
+                    <!-- /CONFIG -->
+                    <input class="button-submit" type="submit" value="Send">
+                </form>
+            </div>
+
         </div>
     </section>
 

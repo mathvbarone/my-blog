@@ -10527,59 +10527,65 @@ var postFilter = function(){
 
 
 
-$(function() {
-  var $contactForm = $('#contact-form');
+  var contactForm = $('#contact-form');
+  var contact = $(".contact-box");
 
-
-	$contactForm.on('submit', function(e) {
+  var sendForm = function(e){
     e.preventDefault();
+    
+    
+        var showMessage = function(message){
+          
+          if(message == "loading"){
+            var messageText = '<figure class="is-loading-img"><svg width="56px"  height="56px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-dual-ring" style="background: none;"><circle cx="50" cy="50" ng-attr-r="{{config.radius}}" ng-attr-stroke-width="{{config.width}}" ng-attr-stroke="{{config.c1}}" ng-attr-stroke-dasharray="{{config.dasharray}}" fill="none" stroke-linecap="round" r="40" stroke-width="5" stroke="#cd2b46" stroke-dasharray="62.83185307179586 62.83185307179586" transform="rotate(258 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></circle><circle cx="50" cy="50" ng-attr-r="{{config.radius2}}" ng-attr-stroke-width="{{config.width}}" ng-attr-stroke="{{config.c2}}" ng-attr-stroke-dasharray="{{config.dasharray2}}" ng-attr-stroke-dashoffset="{{config.dashoffset2}}" fill="none" stroke-linecap="round" r="34" stroke-width="5" stroke="#2ab7cd" stroke-dasharray="53.40707511102649 53.40707511102649" stroke-dashoffset="53.40707511102649" transform="rotate(-258 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;-360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></circle></svg><figure>';
+            var ajaxStatus = "loading";
+          }
+          
+          if(message == "success"){
+            var messageText = '<div class="success-box"><svg class="checkmark checkmark-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><strong>Sua mensagem foi enviada!</strong><button  type="button" title="retornar" class="form-return button">Retornar</a></div>';
+            var ajaxStatus = "success";
+          }
+          if(message == "error"){
+            var messageText = '<div class="error-box"><svg class="checkmark  checkmark-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M16 16 36 36 M36 16 16 36"/></svg><strong>Ocorreu um erro :/</strong><button type="button" title="retornar" class="form-return button">Retornar</a></div>';
+            varajaxStatus = "error";
+          }
+    
+          var messageBox = '<div class="message-alert"><div class="is-'+ajaxStatus+'">'+messageText+'</div></div></div>'
+          
+          contact.append(messageBox);
+      
+        }
+
 
     
-    var msgLoad = '<div class="alert is-loading">Is loading</div>';
+        $.ajax({
+          url: '//formspree.io/geovanna.barone@gmail.com',
+          method: 'POST',
+          data: $(this).serialize(),
+          dataType: 'json',
+          beforeSend: function() {
+            contactForm.hide();
+            showMessage("loading");
+          }
+        }).done(function(data) {          
+          showMessage("success");          
+        }).fail(function() {
+          showMessage("error");
+        }).always(function() {
+          contact.find('.is-loading').hide();  
+
+          $(".form-return").on("click", function(e){
+            e.preventDefault();
+            $('.message-alert').hide();
+            contactForm.show();
+            $(".valid").val("");
+            
+          })    
+
+        });
 
 
-    var showMessage = function(message){
-      
-      if(message == "success"){
-        var modalText = 'Mensagem enviada!';
-        var ajaxStatus = "success";
-      }
-      if(message == "error"){
-        var modalText = 'Ocorreu um erro :/';
-        varajaxStatus = "error";
-      }
-
-      var modalBox = '<div class="modal alert is-'+ajaxStatus+' is-active"><div class="modal-background"></div><div class="modal-content"><div class="box">'+modalText+'</div></div><div class="modal-close is-large" aria-label="close"></div></div>'
-      
-      $contactForm.append(modalBox);
-    }
-
-
-		$.ajax({
-			url: 'https://formspree.io/matheusvbarone@gmail.com',
-			method: 'POST',
-			data: $(this).serialize(),
-			dataType: 'json',
-			beforeSend: function() {
-				$contactForm.append(msgLoad);
-			}
-		}).done(function(data) {
-      showMessage("success");
-        $(".modal-close, .modal-background").on("click", function(){
-          $(".modal").removeClass("is-active");
-        }) 
-		}).fail(function() {
-			showMessage("error");
-		}).always(function() {
-			$contactForm.find('.is-loading').hide();
-    });
-
-  });
-
-
-
-});
-
+  }
 
 
 
@@ -10652,6 +10658,7 @@ $(function() {
   $(window).on("scroll", showArrow );
   $(".searchField").on("keyup", postFilter );
   $(".cleanButton").on("click", cleanField);
+	contactForm.on('submit', sendForm);
 });
 
 
