@@ -8390,7 +8390,7 @@ a.box:active {
     padding: 0
 }
 
-.button-hero {
+.button-custom {
     padding: 10px 30px;
     margin-bottom: 20px;
     font-size: 1.4rem
@@ -13210,7 +13210,7 @@ footer p {
 }
 
 @media (max-width:768px) {
-    .button-hero {
+    .button-custom {
         font-size: 1.2rem
     }
 }
@@ -13221,7 +13221,7 @@ footer p {
         min-height: 60vh
     }
 
-    .button-hero {
+    .button-custom {
         font-size: 1rem
     }
 

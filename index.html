@@ -51,7 +51,7 @@ img-src: "assets/dist/images/"
         <!-- BUTTON VER MAIS -->
         <div class="columns is-mobile is-centered wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
             <div class="column is-narrow">
-                <a href="/blog" title="Todos os posts" class="button button-hero has-text-centered is-primary">Todos os posts</a>
+                <a href="/blog" title="Todos os posts" class="button button-custom has-text-centered is-primary">Todos os posts</a>
             </div>
         </div>
         <!-- /BUTTON VER MAIS -->
@@ -161,7 +161,7 @@ img-src: "assets/dist/images/"
                         </svg>                             
                     </figure>
                     <h3 class="subtitle">Usabilidade</h3>
-                    <p>Eu planejo os projetos focando em uma estrutura concisa e intuitiva, utilizando conhecimentos de UX e UI. Como um bom minimalista, acredito que, muitas vezes, menos é mais.</p>
+                    <p>Planejo os projetos focando em uma estrutura concisa e intuitiva, utilizando conhecimentos de UX e UI. Como um bom minimalista, acredito que, muitas vezes, menos é mais.</p>
                 </li>
                 <li class="column conhecimento-item wow zoomIn animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <figure class="conhecimento-figure">
@@ -169,7 +169,7 @@ img-src: "assets/dist/images/"
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"></use>
                         </svg>                             
                     </figure>
-                    <h3 class="subtitle">Ideias</h3>
+                    <h3 class="subtitle">Código</h3>
                     <p>Através da trindade HTML, CSS e JAVASCRIPT, faço com que simples ideias e layouts se tornem realidade. Não importa a tecnologia que estou usando, o que me move são os desafios. Tenha certeza que, se eu ainda não sei o que você precisa, é só uma questão de tempo até eu aprender.</p>
                 </li>
             </ul>
@@ -178,13 +178,36 @@ img-src: "assets/dist/images/"
             <!-- BUTTON VER MAIS -->
             <div class="columns is-mobile is-centered">
                 <div class="column is-narrow wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
-                    <a href="/about" title="Saiba Mais" class="button button-hero has-text-centered is-primary">Saiba Mais</a>
+                    <a href="/about" title="Saiba Mais" class="button button-custom has-text-centered is-primary">Saiba Mais</a>
                 </div>
             </div>
             <!-- /BUTTON VER MAIS -->
 
         </div>
 
+    </section>
+
+
+
+    <section id="contact">
+        <!-- TITULO -->
+        <h2 class="title is-2 has-text-centered has-text-weight-bold wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Entre em contato</h2>
+        <!-- /TITULO -->
+
+        <div class="container">
+            <form id="contact-form" action="https://formspree.io/matheusvbarone@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="_replyto" placeholder="Email" required>
+                <textarea name="message" cols="30" rows="6" placeholder="Message" required></textarea>
+                <!-- CONFIG -->
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="hidden" name="_subject" value="Subject">
+                <input type="hidden" name="_cc" value="email@cc.com">
+                <!-- /CONFIG -->
+                <input class="submit" type="submit" value="Send">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+            </form>
+        </div>
     </section>
 
 
