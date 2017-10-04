@@ -4,7 +4,8 @@ img-src: "assets/dist/images/"
 ---
 
 <!-- MAIN -->
-<main class="panel" id="main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog" data-section-name="content">
+<main class="panel" id="main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog"
+    data-section-name="content">
 
 
     <!-- LAST POSTS -->
@@ -37,7 +38,7 @@ img-src: "assets/dist/images/"
                                 </a>
                                 <div>
                                     {% for tag in post.tags %}
-                                    <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}" title="{{ tag }}">#{{ tag }}</a> {% endfor %}
+                                    <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}" title="{{ tag }}">#{{ tag }}</a>                                    {% endfor %}
                                 </div>
                             </div>
                         </article>
@@ -143,34 +144,39 @@ img-src: "assets/dist/images/"
 
         <div class="container">
 
-        <!-- LISTA CONHECIMENTO -->
+            <!-- LISTA CONHECIMENTO -->
             <ul class="columns conhecimento-list">
                 <li class="column conhecimento-item wow zoomIn animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <figure class="conhecimento-figure">
                         <svg class="icon-ideas conhecimento-icon">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ideas"></use>
-                        </svg>                             
+                        </svg>
                     </figure>
                     <h3 class="subtitle">Ideias</h3>
-                    <p>Tenho em mente que um site é - no final das contas - uma boa ideia colocada em prática. Sendo assim, tento sempre colaborar para fazer com que o projeto atinja o máximo de seu potencial, do rascunho, ao resultado final.</p>
+                    <p>Tenho em mente que um site é - no final das contas - uma boa ideia colocada em prática. Sendo assim,
+                        tento sempre colaborar para fazer com que o projeto atinja o máximo de seu potencial, do rascunho,
+                        ao resultado final.</p>
                 </li>
                 <li class="column conhecimento-item wow zoomIn animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <figure class="conhecimento-figure">
                         <svg class="icon-uxui conhecimento-icon">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-uxui"></use>
-                        </svg>                             
+                        </svg>
                     </figure>
                     <h3 class="subtitle">Usabilidade</h3>
-                    <p>Planejo os projetos focando em uma estrutura concisa e intuitiva, utilizando conhecimentos de UX e UI. Como um bom minimalista, acredito que, muitas vezes, menos é mais.</p>
+                    <p>Planejo os projetos focando em uma estrutura concisa e intuitiva, utilizando conhecimentos de UX e UI.
+                        Como um bom minimalista, acredito que, muitas vezes, menos é mais.</p>
                 </li>
                 <li class="column conhecimento-item wow zoomIn animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <figure class="conhecimento-figure">
                         <svg class="icon-code conhecimento-icon">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-code"></use>
-                        </svg>                             
+                        </svg>
                     </figure>
                     <h3 class="subtitle">Código</h3>
-                    <p>Através da trindade HTML, CSS e JAVASCRIPT, faço com que simples ideias e layouts se tornem realidade. Não importa a tecnologia que estou usando, o que me move são os desafios. Tenha certeza que, se eu ainda não sei o que você precisa, é só uma questão de tempo até eu aprender.</p>
+                    <p>Através da trindade HTML, CSS e JAVASCRIPT, faço com que simples ideias e layouts se tornem realidade.
+                        Não importa a tecnologia que estou usando, o que me move são os desafios. Tenha certeza que, se eu
+                        ainda não sei o que você precisa, é só uma questão de tempo até eu aprender.</p>
                 </li>
             </ul>
             <!-- LISTA CONHECIMENTO -->
@@ -189,7 +195,7 @@ img-src: "assets/dist/images/"
 
 
 
-    <section id="contact">
+    <section id="contact" class="contact">
         <!-- TITULO -->
         <h2 class="title is-2 has-text-centered has-text-weight-bold wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Entre em contato</h2>
         <!-- /TITULO -->
@@ -197,15 +203,47 @@ img-src: "assets/dist/images/"
         <div class="container">
             <div class="contact-box">
                 <form id="contact-form" action="https://formspree.io/matheusvbarone@gmail.com" method="POST">
-                    <input type="text" class="valid" name="name" placeholder="Name" required>
-                    <input type="email" class="valid" name="_replyto" placeholder="Email" required>
-                    <textarea name="message" class="valid" cols="30" rows="6" placeholder="Message" required></textarea>
-                    <!-- CONFIG -->
-                    <input type="text" name="_gotcha" style="display:none">
-                    <input type="hidden" name="_subject" value="Subject">
-                    <input type="hidden" name="_cc" value="email@cc.com">
-                    <!-- /CONFIG -->
-                    <input class="button-submit" type="submit" value="Send">
+
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left">
+                                    <input type="text" class="input valid" name="name" placeholder="Name" required>
+                                    <span class="icon is-large is-left">
+                                    <i class="fa fa-user"></i>
+                                  </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control is-expanded has-icons-left has-icons-right">
+                                    <input type="email" class="input valid" name="_replyto" placeholder="Email" required>
+                                    <span class="icon is-large is-left">
+                                    <i class="fa fa-envelope"></i>
+                                  </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea name="message" class="textarea valid" cols="30" rows="6" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-right">
+                        <p class="control">
+                            <input class="button-submit button" type="submit" value="Send">
+                        </p>
+
+                    </div>
+
+
+
                 </form>
             </div>
 
@@ -220,5 +258,3 @@ img-src: "assets/dist/images/"
 
 </main>
 <!-- MAIN -->
-
-

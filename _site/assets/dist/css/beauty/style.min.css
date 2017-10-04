@@ -8694,7 +8694,7 @@ a.tag:hover {
 }
 
 .checkmark-error .checkmark-circle {
-    stroke: #cd2b46
+    stroke: #0a0a0a
 }
 
 .checkmark-circle {
@@ -8769,15 +8769,15 @@ a.tag:hover {
 
 @-webkit-keyframes fill-error {
     100% {
-        -webkit-box-shadow: inset 0 0 0 30px #cd2b46;
-        box-shadow: inset 0 0 0 30px #cd2b46
+        -webkit-box-shadow: inset 0 0 0 30px #0a0a0a;
+        box-shadow: inset 0 0 0 30px #0a0a0a
     }
 }
 
 @keyframes fill-error {
     100% {
-        -webkit-box-shadow: inset 0 0 0 30px #cd2b46;
-        box-shadow: inset 0 0 0 30px #cd2b46
+        -webkit-box-shadow: inset 0 0 0 30px #0a0a0a;
+        box-shadow: inset 0 0 0 30px #0a0a0a
     }
 }
 
@@ -10269,7 +10269,7 @@ a.tag:hover {
     background-color: #b86bff
 }
 
-.bg-red {
+.bg-red,.contact {
     background-color: #cd2b46
 }
 
@@ -11204,6 +11204,48 @@ footer p {
 
 .conhecimento-figure .icon-code:hover {
     fill: #149000
+}
+
+.contact {
+    min-height: 100vh;
+    padding: 60px 0
+}
+
+.contact .title {
+    padding-bottom: 60px;
+    color: #FFF
+}
+
+.contact .valid {
+    background-color: #cd2b46;
+    color: #fff;
+    border: 2px solid #fff
+}
+
+.contact .valid::-moz-placeholder {
+    color: #fff
+}
+
+.contact .valid::-webkit-input-placeholder {
+    color: #fff
+}
+
+.contact .valid:-moz-placeholder {
+    color: #fff
+}
+
+.contact .valid:-ms-input-placeholder {
+    color: #fff
+}
+
+.contact .control.has-icons-left .input {
+    height: 3.4em;
+    padding-left: 3em
+}
+
+.contact .control.has-icons-left .icon {
+    color: #4f000d;
+    font-size: 1.45rem
 }
 
 .tags-list .tags-item {
