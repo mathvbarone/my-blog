@@ -6,6 +6,10 @@ body,code,h1,h2,h3,h4,h5,h6 {
     font-weight: 400
 }
 
+.select,.select select,.textarea,audio,embed,img,object,video {
+    max-width: 100%
+}
+
 a:hover,strong,table th {
     color: #363636
 }
@@ -26,17 +30,19 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     display: block
 }
 
-table td,table th,td,th {
-    text-align: left
+.content pre,pre code {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto
 }
 
-.breadcrumb,.button,.delete,.file,.is-unselectable {
+.button,.file,.is-unselectable {
+    -webkit-user-select: none;
     -webkit-touch-callout: none
 }
 
 .button,.input,.textarea {
     -webkit-box-align: center;
-    -webkit-appearance: none
+    vertical-align: top
 }
 
 .button,body {
@@ -47,12 +53,13 @@ table td,table th,td,th {
     cursor: pointer
 }
 
-.select,.select select,.textarea,audio,embed,img,object,video {
-    max-width: 100%
+.button,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none
 }
 
-.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.tile.is-vertical {
-    -webkit-box-direction: normal
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.modal-card,.tile.is-vertical {
+    -webkit-box-orient: vertical
 }
 
 @-webkit-keyframes spinAround {
@@ -128,7 +135,8 @@ table {
 }
 
 td,th {
-    padding: 0
+    padding: 0;
+    text-align: left
 }
 
 body,button,input,select,textarea {
@@ -180,10 +188,6 @@ input[type=checkbox],input[type=radio] {
     vertical-align: baseline
 }
 
-.button,.file-cta,.file-name,.input,.select,.select select,.textarea,table td,table th {
-    vertical-align: top
-}
-
 span {
     font-style: inherit;
     font-weight: inherit
@@ -198,16 +202,19 @@ pre {
 }
 
 pre code {
-    -webkit-overflow-scrolling: touch;
     background: 0 0;
     color: inherit;
     font-size: 1em;
-    overflow-x: auto;
     padding: 1.25rem 1.5rem
 }
 
 .box,.button {
     background-color: #fff
+}
+
+table td,table th {
+    text-align: left;
+    vertical-align: top
 }
 
 .is-clearfix:after {
@@ -469,14 +476,17 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .is-unselectable {
-    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
 }
 
 .button,.file {
-    -webkit-user-select: none
+    -moz-user-select: none
+}
+
+.breadcrumb,.button,.delete,.file {
+    -ms-user-select: none
 }
 
 .box {
@@ -503,7 +513,6 @@ a.box:active {
 }
 
 .button {
-    -moz-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -523,8 +532,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     color: #363636;
     -webkit-box-pack: center;
@@ -541,11 +548,6 @@ a.box:active {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox
-}
-
-.delete,.file {
-    -moz-user-select: none;
-    -ms-user-select: none
 }
 
 .button.is-active,.button.is-focused,.button:active,.button:focus {
@@ -989,10 +991,6 @@ a.box:active {
     background-color: transparent;
     border-color: #f5f5f5;
     color: #f5f5f5
-}
-
-.button.is-static,.content blockquote,.content table tr:hover {
-    background-color: #f5f5f5
 }
 
 .button.is-dark.is-inverted.is-outlined:focus,.button.is-dark.is-inverted.is-outlined:hover {
@@ -1517,6 +1515,10 @@ a.box:active {
     opacity: .5
 }
 
+.button.is-static,.content blockquote,.content table tr:hover {
+    background-color: #f5f5f5
+}
+
 .button.is-fullwidth {
     display: flex;
     width: 100%
@@ -1546,12 +1548,8 @@ a.box:active {
     position: absolute!important
 }
 
-.content table,.input,.select.is-fullwidth,.select.is-fullwidth select,.textarea {
-    width: 100%
-}
-
-.control.has-icon:not(.has-icon-right) .icon,.control.has-icons-left .icon.is-left,.file-input {
-    left: 0
+.control.is-loading::after,.loader,.select.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear
 }
 
 .button.is-static {
@@ -1688,8 +1686,6 @@ a.box:active {
 }
 
 .content pre {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
     padding: 1.25em 1.5em;
     white-space: pre
 }
@@ -1700,6 +1696,10 @@ a.box:active {
 
 .content sub,.content sup {
     font-size: 75%
+}
+
+.content table {
+    width: 100%
 }
 
 .content table td,.content table th {
@@ -1741,7 +1741,6 @@ a.box:active {
 }
 
 .input,.textarea {
-    -moz-appearance: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1772,7 +1771,8 @@ a.box:active {
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
     box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
-    max-width: 100%
+    max-width: 100%;
+    width: 100%
 }
 
 .input.is-hovered,.input:hover,.textarea.is-hovered,.textarea:hover {
@@ -1964,6 +1964,10 @@ a.box:active {
     cursor: not-allowed
 }
 
+.select {
+    vertical-align: top
+}
+
 .select:not(.is-multiple) {
     height: 2.25em
 }
@@ -1988,8 +1992,6 @@ a.box:active {
 }
 
 .select select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2014,6 +2016,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    vertical-align: top;
     background-color: #fff;
     color: #363636;
     cursor: pointer;
@@ -2182,8 +2185,11 @@ a.box:active {
     border-color: #7a7a7a
 }
 
+.select.is-fullwidth,.select.is-fullwidth select {
+    width: 100%
+}
+
 .select.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -2236,6 +2242,11 @@ a.box:active {
     justify-content: flex-start
 }
 
+.breadcrumb,.delete {
+    -webkit-user-select: none;
+    -moz-user-select: none
+}
+
 .file.is-white .file-cta {
     background-color: #fff;
     border-color: transparent;
@@ -2286,11 +2297,8 @@ a.box:active {
     color: #fff
 }
 
-.file-cta,.file.is-light .file-cta,.tag:not(body) {
-    background-color: #f5f5f5
-}
-
 .file.is-light .file-cta {
+    background-color: #f5f5f5;
     border-color: transparent;
     color: #363636
 }
@@ -2513,14 +2521,14 @@ a.box:active {
 }
 
 .file.is-boxed .file-label {
-    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
 }
 
 .file.is-boxed .file-cta {
-    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2621,12 +2629,18 @@ a.box:active {
     color: #363636
 }
 
+.file-cta,.tag:not(body) {
+    background-color: #f5f5f5;
+    color: #4a4a4a
+}
+
 .file-label:active .file-name {
     border-color: #cfcfcf
 }
 
 .file-input {
     height: .01em;
+    left: 0;
     outline: 0;
     position: absolute;
     top: 0;
@@ -2634,8 +2648,6 @@ a.box:active {
 }
 
 .file-cta,.file-name {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2659,11 +2671,16 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    vertical-align: top;
     border-radius: 3px;
     font-size: 1em;
     padding-left: 1em;
     padding-right: 1em;
     white-space: nowrap
+}
+
+.file-icon,.icon {
+    -webkit-box-align: center
 }
 
 .control.has-icon:not(.has-icon-right) .input,.control.has-icons-left .input,.control.has-icons-left .select select {
@@ -2680,10 +2697,6 @@ a.box:active {
 
 .file-cta[disabled],.file-name[disabled] {
     cursor: not-allowed
-}
-
-.file-cta {
-    color: #4a4a4a
 }
 
 .file-name {
@@ -2704,7 +2717,6 @@ a.box:active {
 }
 
 .file-icon {
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2914,15 +2926,11 @@ a.box:active {
     flex-wrap: wrap
 }
 
-.icon,.tags {
-    -webkit-box-align: center
-}
-
 .field.is-grouped.is-grouped-multiline>.control:last-child,.field.is-grouped.is-grouped-multiline>.control:not(:last-child) {
     margin-bottom: .75rem
 }
 
-.field.is-grouped.is-grouped-multiline:last-child {
+.columns:last-child,.field.is-grouped.is-grouped-multiline:last-child {
     margin-bottom: -.75rem
 }
 
@@ -2965,6 +2973,10 @@ a.box:active {
     font-size: 1.5rem
 }
 
+.control.has-icon:not(.has-icon-right) .icon {
+    left: 0
+}
+
 .control.has-icons-left .input.is-small~.icon,.control.has-icons-left .select.is-small~.icon,.control.has-icons-right .input.is-small~.icon,.control.has-icons-right .select.is-small~.icon {
     font-size: .75rem
 }
@@ -2987,8 +2999,11 @@ a.box:active {
     z-index: 4
 }
 
+.control.has-icons-left .icon.is-left {
+    left: 0
+}
+
 .control.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -3032,6 +3047,10 @@ a.box:active {
     width: 1.5rem
 }
 
+.tag:not(body),.tags {
+    -webkit-box-align: center
+}
+
 .icon.is-small {
     height: 1rem;
     width: 1rem
@@ -3066,6 +3085,14 @@ a.box:active {
     top: 0;
     height: 100%;
     width: 100%
+}
+
+.delete:after,.delete:before,.tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    content: ""
 }
 
 .image.is-1by1,.image.is-square {
@@ -3179,13 +3206,11 @@ a.box:active {
 }
 
 .tag:not(body) {
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    color: #4a4a4a;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3269,13 +3294,8 @@ a.box:active {
 
 .tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
     background-color: currentColor;
-    content: "";
     display: block;
-    left: 50%;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3317,7 +3337,7 @@ a.box:active {
     vertical-align: middle
 }
 
-.delete,.level img,.number {
+.delete,.level img,.modal-close,.number {
     vertical-align: top
 }
 
@@ -3410,10 +3430,8 @@ a.box:active {
 }
 
 .delete {
-    -webkit-user-select: none;
+    -webkit-touch-callout: none;
     user-select: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     background-color: rgba(10,10,10,.2);
     border: none;
     -webkit-border-radius: 290486px;
@@ -3440,13 +3458,8 @@ a.box:active {
 
 .delete:after,.delete:before {
     background-color: #fff;
-    content: "";
     display: block;
-    left: 50%;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3526,7 +3539,6 @@ a.box:active {
 }
 
 .loader {
-    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -3569,9 +3581,7 @@ a.box:active {
 }
 
 .breadcrumb {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    -webkit-touch-callout: none;
     user-select: none;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -4003,6 +4013,224 @@ a.box:active {
     text-align: center
 }
 
+.modal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 20
+}
+
+.modal-card,.modal.is-active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox
+}
+
+.modal.is-active {
+    display: flex
+}
+
+.modal-background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(10,10,10,.86)
+}
+
+.modal-card,.modal-content {
+    margin: 0 20px;
+    max-height: -webkit-calc(100vh - 160px);
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    position: relative;
+    width: 100%
+}
+
+.modal-close {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+    -webkit-border-radius: 290486px;
+    border-radius: 290486px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 1rem;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: 0;
+    background: 0 0;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px
+}
+
+.modal-close:after,.modal-close:before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center
+}
+
+.modal-close:before {
+    height: 2px;
+    width: 50%
+}
+
+.modal-close:after {
+    height: 50%;
+    width: 2px
+}
+
+.modal-close:focus,.modal-close:hover {
+    background-color: rgba(10,10,10,.3)
+}
+
+.modal-close:active {
+    background-color: rgba(10,10,10,.4)
+}
+
+.modal-close.is-small {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px
+}
+
+.jobs-list>li .modal-close.button,.modal-close.is-medium {
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px
+}
+
+.modal-close.is-large {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px
+}
+
+.modal-card {
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: -webkit-calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
+    overflow: hidden
+}
+
+.modal-card-foot,.modal-card-head {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative
+}
+
+.modal-card-head {
+    border-bottom: 1px solid #dbdbdb;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px
+}
+
+.modal-card-title {
+    color: #363636;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    line-height: 1
+}
+
+.modal-card-foot {
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #dbdbdb
+}
+
+.modal-card-foot .button:not(:last-child) {
+    margin-right: 10px
+}
+
+.modal-card-body {
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    padding: 20px
+}
+
 .column {
     display: block;
     -webkit-flex-basis: 0;
@@ -4249,10 +4477,6 @@ a.box:active {
     margin-top: -.75rem
 }
 
-.columns:last-child {
-    margin-bottom: -.75rem
-}
-
 .columns:not(:last-child) {
     margin-bottom: -webkit-calc(1.5rem - .75rem);
     margin-bottom: calc(1.5rem - .75rem)
@@ -4394,7 +4618,7 @@ a.box:active {
 }
 
 .tile.is-vertical {
-    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -4410,7 +4634,7 @@ a.box:active {
     -ms-flex-align: stretch;
     align-items: stretch;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -11082,6 +11306,13 @@ footer p {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex
+    }
+
+    .modal-card,.modal-content {
+        margin: 0 auto;
+        max-height: -webkit-calc(100vh - 40px);
+        max-height: calc(100vh - 40px);
+        width: 640px
     }
 
     .column.is-narrow,.column.is-narrow-tablet {

@@ -85,6 +85,66 @@ var postFilter = function(){
 
 
 
+
+
+$(function() {
+  var $contactForm = $('#contact-form');
+
+
+	$contactForm.on('submit', function(e) {
+    e.preventDefault();
+
+    
+    var msgLoad = '<div class="alert is-loading">Is loading</div>';
+    var msgSuccess = showMessage(success);
+    var msgError = showMessage(error);
+
+
+    var showMessage = function(message){
+      var modalBox = '<div class="modal alert is-'+ajaxStatus+' is-active"><div class="modal-background"></div><div class="modal-content"><div class="box">'+modalText+'</div></div><div class="modal-close is-large" aria-label="close"></div></div>'
+      
+      if(message == success){
+        modalText = 'Mensagem enviada!';
+        ajaxStatus = success;
+      }
+      if(message == error){
+        modalText = 'Ocorreu um erro :/';
+        ajaxStatus = error;
+      }
+
+      return modalBox;
+    }
+
+
+		$.ajax({
+			url: 'https://formspree.io/matheusvbarone@gmail.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$contactForm.append(msgLoad);
+			}
+		}).done(function(data) {
+      $contactForm.append(msgSuccess);
+        $(".modal-close, .modal-background").on("click", function(){
+          $(".modal").removeClass("is-active");
+        }) 
+		}).fail(function() {
+			$contactForm.append(msgError);
+		}).always(function() {
+			$contactForm.find('.is-loading').hide();
+    });
+
+  });
+
+
+
+});
+
+
+
+
+
   // BOTÃO QUE LIMPA O INPUT
   var cleanField = function(e){
     e.preventDefault();
@@ -151,7 +211,7 @@ var postFilter = function(){
   $(window).on("scroll", scrollBanner );
   $(window).on("scroll", showHeader );
   $(window).on("scroll", showArrow );
-  $(".form").on("keyup", postFilter );
+  $(".searchField").on("keyup", postFilter );
   $(".cleanButton").on("click", cleanField);
 });
 
