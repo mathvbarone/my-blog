@@ -96,23 +96,22 @@ $(function() {
 
     
     var msgLoad = '<div class="alert is-loading">Is loading</div>';
-    var msgSuccess = showMessage(success);
-    var msgError = showMessage(error);
 
 
     var showMessage = function(message){
-      var modalBox = '<div class="modal alert is-'+ajaxStatus+' is-active"><div class="modal-background"></div><div class="modal-content"><div class="box">'+modalText+'</div></div><div class="modal-close is-large" aria-label="close"></div></div>'
       
-      if(message == success){
-        modalText = 'Mensagem enviada!';
-        ajaxStatus = success;
+      if(message == "success"){
+        var modalText = 'Mensagem enviada!';
+        var ajaxStatus = "success";
       }
-      if(message == error){
-        modalText = 'Ocorreu um erro :/';
-        ajaxStatus = error;
+      if(message == "error"){
+        var modalText = 'Ocorreu um erro :/';
+        varajaxStatus = "error";
       }
 
-      return modalBox;
+      var modalBox = '<div class="modal alert is-'+ajaxStatus+' is-active"><div class="modal-background"></div><div class="modal-content"><div class="box">'+modalText+'</div></div><div class="modal-close is-large" aria-label="close"></div></div>'
+      
+      $contactForm.append(modalBox);
     }
 
 
@@ -125,12 +124,12 @@ $(function() {
 				$contactForm.append(msgLoad);
 			}
 		}).done(function(data) {
-      $contactForm.append(msgSuccess);
+      showMessage("success");
         $(".modal-close, .modal-background").on("click", function(){
           $(".modal").removeClass("is-active");
         }) 
 		}).fail(function() {
-			$contactForm.append(msgError);
+			showMessage("error");
 		}).always(function() {
 			$contactForm.find('.is-loading').hide();
     });
