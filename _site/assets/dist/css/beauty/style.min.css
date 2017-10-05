@@ -11276,6 +11276,10 @@ footer p {
     color: #fff
 }
 
+.contact .textarea {
+    padding-left: 1em
+}
+
 .contact .control.has-icons-left .input {
     height: 3.4em;
     padding-left: 3em
