@@ -102,11 +102,11 @@ var postFilter = function(){
           }
           
           if(message == "success"){
-            var messageText = '<div class="success-box"><svg class="checkmark checkmark-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><strong>Sua mensagem foi enviada!</strong><div class="column is-narrow has-text-centered"><button type="button" title="retornar" class="button button-custom has-text-centered is-success form-return">Retornar</button></div>';
+            var messageText = '<div class="success-box"><svg class="checkmark checkmark-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg><strong>Sua mensagem foi enviada!</strong><div class="column is-narrow has-text-centered"><button type="button" title="retornar" class="button button-custom has-text-centered is-info form-return">Retornar</button></div>';
             var ajaxStatus = "success";
           }
           if(message == "error"){
-            var messageText = '<div class="error-box"><svg class="checkmark  checkmark-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M16 16 36 36 M36 16 16 36"/></svg><strong>Ocorreu um erro :/</strong><div class="column is-narrow has-text-centered"><button type="button" title="retornar" class="button button-custom has-text-centered is-success form-return">Retornar</button></div>';
+            var messageText = '<div class="error-box"><svg class="checkmark  checkmark-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M16 16 36 36 M36 16 16 36"/></svg><strong>Ocorreu um erro :( <br/> Tente novamente mais tarde</strong><div class="column is-narrow has-text-centered"><button type="button" title="retornar" class="button button-custom has-text-centered is-info form-return">Retornar</button></div>';
             
             varajaxStatus = "error";
           }
