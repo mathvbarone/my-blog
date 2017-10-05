@@ -120,7 +120,7 @@ var postFilter = function(){
 
     
         $.ajax({
-          url: '//formspree.io/matheusvbarone@gmail.com',
+          url: '//formspree.io/gg',
           method: 'POST',
           data: $(this).serialize(),
           dataType: 'json',
