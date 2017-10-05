@@ -50,10 +50,8 @@ img-src: "assets/dist/images/"
         <!-- LISTA DE POSTS -->
 
         <!-- BUTTON VER MAIS -->
-        <div class="columns is-mobile is-centered wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
-            <div class="column is-narrow">
-                <a href="/blog" title="Todos os posts" class="button button-custom has-text-centered is-primary">Todos os posts</a>
-            </div>
+        <div class="column is-narrow has-text-centered wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
+            <a href="/blog" title="Todos os posts" class="button button-custom has-text-centered is-primary">Todos os posts</a>
         </div>
         <!-- /BUTTON VER MAIS -->
     </section>
@@ -182,11 +180,11 @@ img-src: "assets/dist/images/"
             <!-- LISTA CONHECIMENTO -->
 
             <!-- BUTTON VER MAIS -->
-            <div class="columns is-mobile is-centered">
-                <div class="column is-narrow wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
+
+                <div class="column is-narrow has-text-centered wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <a href="/about" title="Saiba Mais" class="button button-custom has-text-centered is-primary">Saiba Mais</a>
                 </div>
-            </div>
+
             <!-- /BUTTON VER MAIS -->
 
         </div>
@@ -195,20 +193,23 @@ img-src: "assets/dist/images/"
 
 
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact main-container">
         <!-- TITULO -->
-        <h2 class="title is-2 has-text-centered has-text-weight-bold wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Entre em contato</h2>
+        <h2 class="title is-2 has-text-centered has-text-weight-bold wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Vamos trabalhar juntos?</h2>
         <!-- /TITULO -->
+
+        <p class="contact-text wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Tenho certeza que podemos formar uma ótima equipe. Preencha esse pequeno formulário e entre em contato comigo. Será um prazer te conhecer.</p>
+
 
         <div class="container">
             <div class="contact-box">
                 <form id="contact-form" action="https://formspree.io/matheusvbarone@gmail.com" method="POST">
 
-                    <div class="field is-horizontal">
+                    <div class="field is-horizontal wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">
                         <div class="field-body">
                             <div class="field">
                                 <p class="control is-expanded has-icons-left">
-                                    <input type="text" class="input valid" name="name" placeholder="Name" required>
+                                    <input type="text" class="input valid" name="name" placeholder="Nome (ex. Jon Snow)" required>
                                     <span class="icon is-large is-left">
                                     <i class="fa fa-user"></i>
                                   </span>
@@ -216,7 +217,7 @@ img-src: "assets/dist/images/"
                             </div>
                             <div class="field">
                                 <p class="control is-expanded has-icons-left has-icons-right">
-                                    <input type="email" class="input valid" name="_replyto" placeholder="Email" required>
+                                    <input type="email" class="input valid" name="_replyto" placeholder="Email (ex. jonsnow@winterfell.com)" required>
                                     <span class="icon is-large is-left">
                                     <i class="fa fa-envelope"></i>
                                   </span>
@@ -229,20 +230,15 @@ img-src: "assets/dist/images/"
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
-                                    <textarea name="message" class="textarea valid" cols="30" rows="6" placeholder="Message" required></textarea>
+                                    <textarea name="message" class="textarea valid" cols="30" rows="6" placeholder="Mensagem" required></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="field is-right">
-                        <p class="control">
-                            <input class="button-submit button" type="submit" value="Send">
-                        </p>
-
+                    <div class="has-text-right">
+                        <button class="button-submit is-success button button-custom" type="submit" >Enviar</button>
                     </div>
-
-
 
                 </form>
             </div>
