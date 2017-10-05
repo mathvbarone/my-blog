@@ -26,15 +26,20 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     right: 0
 }
 
-.file,.is-unselectable {
+.button,.button-submit,.file,.is-unselectable {
     -webkit-touch-callout: none
+}
+
+.button,.button-submit,.input,.textarea {
+    -webkit-box-align: center;
+    vertical-align: top
 }
 
 .select,.select select,.textarea,audio,embed,img,object,video {
     max-width: 100%
 }
 
-.button,.contact .message-alert,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
+.button,.button-submit,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
     -moz-appearance: none;
     -webkit-appearance: none
 }
@@ -147,6 +152,10 @@ a {
     -webkit-transition: linear .2s all;
     -o-transition: linear .2s all;
     transition: linear .2s all
+}
+
+.button,.button-submit,.card-item {
+    -webkit-transition: ease-in-out .2s all
 }
 
 a strong {
@@ -469,7 +478,7 @@ a.has-text-danger:focus,a.has-text-danger:hover {
     user-select: none
 }
 
-.button,.contact .message-alert,.file {
+.button,.button-submit,.file {
     -webkit-user-select: none;
     -ms-user-select: none
 }
@@ -498,8 +507,7 @@ a.box:active {
     box-shadow: inset 0 1px 2px rgba(10,10,10,.2),0 0 0 1px #2ab7cd
 }
 
-.button,.contact .message-alert {
-    -webkit-box-align: center;
+.button,.button-submit {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -520,8 +528,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
-    -webkit-touch-callout: none;
     -moz-user-select: none;
     user-select: none;
     background-color: #fff;
@@ -535,136 +541,141 @@ a.box:active {
     padding-right: 1em;
     text-align: center;
     white-space: nowrap;
-    -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
+}
+
+.button.is-fullwidth,.file,.is-fullwidth.button-submit {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox
 }
 
 .breadcrumb,.delete,.file {
     -moz-user-select: none
 }
 
-.button.is-active,.button.is-focused,.button:active,.button:focus,.contact .is-active.message-alert,.contact .is-focused.message-alert,.contact .message-alert:active,.contact .message-alert:focus {
+.button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
     outline: 0
 }
 
-.button strong,.contact .message-alert strong {
+.button strong,.button-submit strong {
     color: inherit
 }
 
-.button .contact .jobs-list>li .icon.message-alert,.button .icon,.button .icon.is-large,.button .icon.is-medium,.button .icon.is-small,.button .jobs-list>li .contact .icon.message-alert,.button .jobs-list>li .icon.button,.contact .jobs-list>li .button .icon.message-alert,.contact .jobs-list>li .message-alert .icon.message-alert,.contact .message-alert .icon,.contact .message-alert .icon.is-large,.contact .message-alert .icon.is-medium,.contact .message-alert .icon.is-small,.contact .message-alert .jobs-list>li .icon.button,.contact .message-alert .jobs-list>li .icon.message-alert,.jobs-list>li .button .icon.button,.jobs-list>li .contact .button .icon.message-alert,.jobs-list>li .contact .message-alert .icon.button,.jobs-list>li .contact .message-alert .icon.message-alert {
+.button .icon,.button .icon.is-large,.button .icon.is-medium,.button .icon.is-small,.button .jobs-list>li .icon.button,.button .jobs-list>li .icon.button-submit,.button-submit .icon,.button-submit .icon.is-large,.button-submit .icon.is-medium,.button-submit .icon.is-small,.button-submit .jobs-list>li .icon.button,.button-submit .jobs-list>li .icon.button-submit,.jobs-list>li .button .icon.button,.jobs-list>li .button .icon.button-submit,.jobs-list>li .button-submit .icon.button,.jobs-list>li .button-submit .icon.button-submit {
     height: 1.5em;
     width: 1.5em
 }
 
-.button .icon:first-child:not(:last-child),.contact .message-alert .icon:first-child:not(:last-child) {
+.button .icon:first-child:not(:last-child),.button-submit .icon:first-child:not(:last-child) {
     margin-left: -webkit-calc(-.375em - 1px);
     margin-left: calc(-.375em - 1px);
     margin-right: .1875em
 }
 
-.button .icon:last-child:not(:first-child),.contact .message-alert .icon:last-child:not(:first-child) {
+.button .icon:last-child:not(:first-child),.button-submit .icon:last-child:not(:first-child) {
     margin-left: .1875em;
     margin-right: -webkit-calc(-.375em - 1px);
     margin-right: calc(-.375em - 1px)
 }
 
-.button .icon:first-child:last-child,.contact .message-alert .icon:first-child:last-child {
+.button .icon:first-child:last-child,.button-submit .icon:first-child:last-child {
     margin-left: -webkit-calc(-.375em - 1px);
     margin-left: calc(-.375em - 1px);
     margin-right: -webkit-calc(-.375em - 1px);
     margin-right: calc(-.375em - 1px)
 }
 
-.button.is-hovered,.button:hover,.contact .is-hovered.message-alert,.contact .message-alert:hover {
+.button-submit:hover,.button.is-hovered,.button:hover,.is-hovered.button-submit {
     border-color: #b5b5b5;
     color: #363636
 }
 
-.button.is-focused,.button:focus,.contact .is-focused.message-alert,.contact .message-alert:focus {
+.button-submit:focus,.button.is-focused,.button:focus,.is-focused.button-submit {
     border-color: #cd2b46;
     color: #363636
 }
 
-.button.is-focused:not(:active),.button:focus:not(:active),.contact .is-focused.message-alert:not(:active),.contact .message-alert:focus:not(:active) {
+.button-submit:focus:not(:active),.button.is-focused:not(:active),.button:focus:not(:active),.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
 
-.button.is-active,.button:active,.contact .is-active.message-alert,.contact .message-alert:active {
+.button-submit:active,.button.is-active,.button:active,.is-active.button-submit {
     border-color: #4a4a4a;
     color: #363636
 }
 
-.button.is-link,.contact .is-link.message-alert {
+.button.is-link,.is-link.button-submit {
     background-color: transparent;
     border-color: transparent;
     color: #4a4a4a;
     text-decoration: underline
 }
 
-.button.is-link.is-focused,.button.is-link.is-hovered,.button.is-link:focus,.button.is-link:hover,.contact .is-link.is-focused.message-alert,.contact .is-link.is-hovered.message-alert,.contact .is-link.message-alert:focus,.contact .is-link.message-alert:hover {
+.button.is-link.is-focused,.button.is-link.is-hovered,.button.is-link:focus,.button.is-link:hover,.is-link.button-submit:focus,.is-link.button-submit:hover,.is-link.is-focused.button-submit,.is-link.is-hovered.button-submit {
     background-color: #f5f5f5;
     color: #363636
 }
 
-.button.is-link.is-active,.button.is-link:active,.contact .is-link.is-active.message-alert,.contact .is-link.message-alert:active {
+.button.is-link.is-active,.button.is-link:active,.is-link.button-submit:active,.is-link.is-active.button-submit {
     background-color: #e8e8e8;
     color: #363636
 }
 
-.button.is-link[disabled],.contact .is-link[disabled].message-alert {
+.button.is-link[disabled],.is-link[disabled].button-submit {
     background-color: transparent;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-white,.contact .is-white.message-alert {
+.button.is-white,.is-white.button-submit {
     background-color: #fff;
     border-color: transparent;
     color: #0a0a0a
 }
 
-.button.is-white.is-hovered,.button.is-white:hover,.contact .is-white.is-hovered.message-alert,.contact .is-white.message-alert:hover {
+.button.is-white.is-hovered,.button.is-white:hover,.is-white.button-submit:hover,.is-white.is-hovered.button-submit {
     background-color: #f9f9f9;
     border-color: transparent;
     color: #0a0a0a
 }
 
-.button.is-white.is-focused,.button.is-white:focus,.contact .is-white.is-focused.message-alert,.contact .is-white.message-alert:focus {
+.button.is-white.is-focused,.button.is-white:focus,.is-white.button-submit:focus,.is-white.is-focused.button-submit {
     border-color: transparent;
     color: #0a0a0a
 }
 
-.button.is-white.is-focused:not(:active),.button.is-white:focus:not(:active),.contact .is-white.is-focused.message-alert:not(:active),.contact .is-white.message-alert:focus:not(:active) {
+.button.is-white.is-focused:not(:active),.button.is-white:focus:not(:active),.is-white.button-submit:focus:not(:active),.is-white.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(255,255,255,.25);
     box-shadow: 0 0 0 .125em rgba(255,255,255,.25)
 }
 
-.button.is-white.is-active,.button.is-white:active,.contact .is-white.is-active.message-alert,.contact .is-white.message-alert:active {
+.button.is-white.is-active,.button.is-white:active,.is-white.button-submit:active,.is-white.is-active.button-submit {
     background-color: #f2f2f2;
     border-color: transparent;
     color: #0a0a0a
 }
 
-.button.is-white[disabled],.contact .is-white[disabled].message-alert {
+.button.is-white[disabled],.is-white[disabled].button-submit {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-white.is-inverted,.contact .is-white.is-inverted.message-alert {
+.button.is-white.is-inverted,.is-white.is-inverted.button-submit {
     background-color: #0a0a0a;
     color: #fff
 }
 
-.button.is-white.is-inverted:hover,.contact .is-white.is-inverted.message-alert:hover {
+.button.is-white.is-inverted:hover,.is-white.is-inverted.button-submit:hover {
     background-color: #000
 }
 
-.button.is-white.is-inverted[disabled],.contact .is-white.is-inverted[disabled].message-alert {
+.button.is-white.is-inverted[disabled],.is-white.is-inverted[disabled].button-submit {
     background-color: #0a0a0a;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -672,27 +683,27 @@ a.box:active {
     color: #fff
 }
 
-.button.is-white.is-loading:after,.contact .is-white.is-loading.message-alert:after {
+.button.is-white.is-loading:after,.is-white.is-loading.button-submit:after {
     border-color: transparent transparent #0a0a0a #0a0a0a!important
 }
 
-.button.is-white.is-outlined,.contact .is-white.is-outlined.message-alert {
+.button.is-white.is-outlined,.is-white.is-outlined.button-submit {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-white.is-outlined:focus,.button.is-white.is-outlined:hover,.contact .is-white.is-outlined.message-alert:focus,.contact .is-white.is-outlined.message-alert:hover {
+.button.is-white.is-outlined:focus,.button.is-white.is-outlined:hover,.is-white.is-outlined.button-submit:focus,.is-white.is-outlined.button-submit:hover {
     background-color: #fff;
     border-color: #fff;
     color: #0a0a0a
 }
 
-.button.is-white.is-outlined.is-loading:after,.contact .is-white.is-outlined.is-loading.message-alert:after {
+.button.is-white.is-outlined.is-loading:after,.is-white.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-white.is-outlined[disabled],.contact .is-white.is-outlined[disabled].message-alert {
+.button.is-white.is-outlined[disabled],.is-white.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -700,18 +711,18 @@ a.box:active {
     color: #fff
 }
 
-.button.is-white.is-inverted.is-outlined,.contact .is-white.is-inverted.is-outlined.message-alert {
+.button.is-white.is-inverted.is-outlined,.is-white.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #0a0a0a;
     color: #0a0a0a
 }
 
-.button.is-white.is-inverted.is-outlined:focus,.button.is-white.is-inverted.is-outlined:hover,.contact .is-white.is-inverted.is-outlined.message-alert:focus,.contact .is-white.is-inverted.is-outlined.message-alert:hover {
+.button.is-white.is-inverted.is-outlined:focus,.button.is-white.is-inverted.is-outlined:hover,.is-white.is-inverted.is-outlined.button-submit:focus,.is-white.is-inverted.is-outlined.button-submit:hover {
     background-color: #0a0a0a;
     color: #fff
 }
 
-.button.is-white.is-inverted.is-outlined[disabled],.contact .is-white.is-inverted.is-outlined[disabled].message-alert {
+.button.is-white.is-inverted.is-outlined[disabled],.is-white.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #0a0a0a;
     -webkit-box-shadow: none;
@@ -719,51 +730,51 @@ a.box:active {
     color: #0a0a0a
 }
 
-.button.is-black,.contact .is-black.message-alert {
+.button.is-black,.is-black.button-submit {
     background-color: #0a0a0a;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-black.is-hovered,.button.is-black:hover,.contact .is-black.is-hovered.message-alert,.contact .is-black.message-alert:hover {
+.button.is-black.is-hovered,.button.is-black:hover,.is-black.button-submit:hover,.is-black.is-hovered.button-submit {
     background-color: #040404;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-black.is-focused,.button.is-black:focus,.contact .is-black.is-focused.message-alert,.contact .is-black.message-alert:focus {
+.button.is-black.is-focused,.button.is-black:focus,.is-black.button-submit:focus,.is-black.is-focused.button-submit {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-black.is-focused:not(:active),.button.is-black:focus:not(:active),.contact .is-black.is-focused.message-alert:not(:active),.contact .is-black.message-alert:focus:not(:active) {
+.button.is-black.is-focused:not(:active),.button.is-black:focus:not(:active),.is-black.button-submit:focus:not(:active),.is-black.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(10,10,10,.25);
     box-shadow: 0 0 0 .125em rgba(10,10,10,.25)
 }
 
-.button.is-black.is-active,.button.is-black:active,.contact .is-black.is-active.message-alert,.contact .is-black.message-alert:active {
+.button.is-black.is-active,.button.is-black:active,.is-black.button-submit:active,.is-black.is-active.button-submit {
     background-color: #000;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-black[disabled],.contact .is-black[disabled].message-alert {
+.button.is-black[disabled],.is-black[disabled].button-submit {
     background-color: #0a0a0a;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-black.is-inverted,.contact .is-black.is-inverted.message-alert {
+.button.is-black.is-inverted,.is-black.is-inverted.button-submit {
     background-color: #fff;
     color: #0a0a0a
 }
 
-.button.is-black.is-inverted:hover,.contact .is-black.is-inverted.message-alert:hover {
+.button.is-black.is-inverted:hover,.is-black.is-inverted.button-submit:hover {
     background-color: #f2f2f2
 }
 
-.button.is-black.is-inverted[disabled],.contact .is-black.is-inverted[disabled].message-alert {
+.button.is-black.is-inverted[disabled],.is-black.is-inverted[disabled].button-submit {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -771,27 +782,27 @@ a.box:active {
     color: #0a0a0a
 }
 
-.button.is-black.is-loading:after,.contact .is-black.is-loading.message-alert:after {
+.button.is-black.is-loading:after,.is-black.is-loading.button-submit:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-black.is-outlined,.contact .is-black.is-outlined.message-alert {
+.button.is-black.is-outlined,.is-black.is-outlined.button-submit {
     background-color: transparent;
     border-color: #0a0a0a;
     color: #0a0a0a
 }
 
-.button.is-black.is-outlined:focus,.button.is-black.is-outlined:hover,.contact .is-black.is-outlined.message-alert:focus,.contact .is-black.is-outlined.message-alert:hover {
+.button.is-black.is-outlined:focus,.button.is-black.is-outlined:hover,.is-black.is-outlined.button-submit:focus,.is-black.is-outlined.button-submit:hover {
     background-color: #0a0a0a;
     border-color: #0a0a0a;
     color: #fff
 }
 
-.button.is-black.is-outlined.is-loading:after,.contact .is-black.is-outlined.is-loading.message-alert:after {
+.button.is-black.is-outlined.is-loading:after,.is-black.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #0a0a0a #0a0a0a!important
 }
 
-.button.is-black.is-outlined[disabled],.contact .is-black.is-outlined[disabled].message-alert {
+.button.is-black.is-outlined[disabled],.is-black.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #0a0a0a;
     -webkit-box-shadow: none;
@@ -799,18 +810,18 @@ a.box:active {
     color: #0a0a0a
 }
 
-.button.is-black.is-inverted.is-outlined,.contact .is-black.is-inverted.is-outlined.message-alert {
+.button.is-black.is-inverted.is-outlined,.is-black.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-black.is-inverted.is-outlined:focus,.button.is-black.is-inverted.is-outlined:hover,.contact .is-black.is-inverted.is-outlined.message-alert:focus,.contact .is-black.is-inverted.is-outlined.message-alert:hover {
+.button.is-black.is-inverted.is-outlined:focus,.button.is-black.is-inverted.is-outlined:hover,.is-black.is-inverted.is-outlined.button-submit:focus,.is-black.is-inverted.is-outlined.button-submit:hover {
     background-color: #fff;
     color: #0a0a0a
 }
 
-.button.is-black.is-inverted.is-outlined[disabled],.contact .is-black.is-inverted.is-outlined[disabled].message-alert {
+.button.is-black.is-inverted.is-outlined[disabled],.is-black.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -818,51 +829,51 @@ a.box:active {
     color: #fff
 }
 
-.button.is-light,.contact .is-light.message-alert {
+.button.is-light,.is-light.button-submit {
     background-color: #f5f5f5;
     border-color: transparent;
     color: #363636
 }
 
-.button.is-light.is-hovered,.button.is-light:hover,.contact .is-light.is-hovered.message-alert,.contact .is-light.message-alert:hover {
+.button.is-light.is-hovered,.button.is-light:hover,.is-light.button-submit:hover,.is-light.is-hovered.button-submit {
     background-color: #eee;
     border-color: transparent;
     color: #363636
 }
 
-.button.is-light.is-focused,.button.is-light:focus,.contact .is-light.is-focused.message-alert,.contact .is-light.message-alert:focus {
+.button.is-light.is-focused,.button.is-light:focus,.is-light.button-submit:focus,.is-light.is-focused.button-submit {
     border-color: transparent;
     color: #363636
 }
 
-.button.is-light.is-focused:not(:active),.button.is-light:focus:not(:active),.contact .is-light.is-focused.message-alert:not(:active),.contact .is-light.message-alert:focus:not(:active) {
+.button.is-light.is-focused:not(:active),.button.is-light:focus:not(:active),.is-light.button-submit:focus:not(:active),.is-light.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(245,245,245,.25);
     box-shadow: 0 0 0 .125em rgba(245,245,245,.25)
 }
 
-.button.is-light.is-active,.button.is-light:active,.contact .is-light.is-active.message-alert,.contact .is-light.message-alert:active {
+.button.is-light.is-active,.button.is-light:active,.is-light.button-submit:active,.is-light.is-active.button-submit {
     background-color: #e8e8e8;
     border-color: transparent;
     color: #363636
 }
 
-.button.is-light[disabled],.contact .is-light[disabled].message-alert {
+.button.is-light[disabled],.is-light[disabled].button-submit {
     background-color: #f5f5f5;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-light.is-inverted,.contact .is-light.is-inverted.message-alert {
+.button.is-light.is-inverted,.is-light.is-inverted.button-submit {
     background-color: #363636;
     color: #f5f5f5
 }
 
-.button.is-light.is-inverted:hover,.contact .is-light.is-inverted.message-alert:hover {
+.button.is-light.is-inverted:hover,.is-light.is-inverted.button-submit:hover {
     background-color: #292929
 }
 
-.button.is-light.is-inverted[disabled],.contact .is-light.is-inverted[disabled].message-alert {
+.button.is-light.is-inverted[disabled],.is-light.is-inverted[disabled].button-submit {
     background-color: #363636;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -870,27 +881,27 @@ a.box:active {
     color: #f5f5f5
 }
 
-.button.is-light.is-loading:after,.contact .is-light.is-loading.message-alert:after {
+.button.is-light.is-loading:after,.is-light.is-loading.button-submit:after {
     border-color: transparent transparent #363636 #363636!important
 }
 
-.button.is-light.is-outlined,.contact .is-light.is-outlined.message-alert {
+.button.is-light.is-outlined,.is-light.is-outlined.button-submit {
     background-color: transparent;
     border-color: #f5f5f5;
     color: #f5f5f5
 }
 
-.button.is-light.is-outlined:focus,.button.is-light.is-outlined:hover,.contact .is-light.is-outlined.message-alert:focus,.contact .is-light.is-outlined.message-alert:hover {
+.button.is-light.is-outlined:focus,.button.is-light.is-outlined:hover,.is-light.is-outlined.button-submit:focus,.is-light.is-outlined.button-submit:hover {
     background-color: #f5f5f5;
     border-color: #f5f5f5;
     color: #363636
 }
 
-.button.is-light.is-outlined.is-loading:after,.contact .is-light.is-outlined.is-loading.message-alert:after {
+.button.is-light.is-outlined.is-loading:after,.is-light.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #f5f5f5 #f5f5f5!important
 }
 
-.button.is-light.is-outlined[disabled],.contact .is-light.is-outlined[disabled].message-alert {
+.button.is-light.is-outlined[disabled],.is-light.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #f5f5f5;
     -webkit-box-shadow: none;
@@ -898,18 +909,18 @@ a.box:active {
     color: #f5f5f5
 }
 
-.button.is-light.is-inverted.is-outlined,.contact .is-light.is-inverted.is-outlined.message-alert {
+.button.is-light.is-inverted.is-outlined,.is-light.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #363636;
     color: #363636
 }
 
-.button.is-light.is-inverted.is-outlined:focus,.button.is-light.is-inverted.is-outlined:hover,.contact .is-light.is-inverted.is-outlined.message-alert:focus,.contact .is-light.is-inverted.is-outlined.message-alert:hover {
+.button.is-light.is-inverted.is-outlined:focus,.button.is-light.is-inverted.is-outlined:hover,.is-light.is-inverted.is-outlined.button-submit:focus,.is-light.is-inverted.is-outlined.button-submit:hover {
     background-color: #363636;
     color: #f5f5f5
 }
 
-.button.is-light.is-inverted.is-outlined[disabled],.contact .is-light.is-inverted.is-outlined[disabled].message-alert {
+.button.is-light.is-inverted.is-outlined[disabled],.is-light.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #363636;
     -webkit-box-shadow: none;
@@ -917,51 +928,51 @@ a.box:active {
     color: #363636
 }
 
-.button.is-dark,.contact .is-dark.message-alert {
+.button.is-dark,.is-dark.button-submit {
     background-color: #363636;
     border-color: transparent;
     color: #f5f5f5
 }
 
-.button.is-dark.is-hovered,.button.is-dark:hover,.contact .is-dark.is-hovered.message-alert,.contact .is-dark.message-alert:hover {
+.button.is-dark.is-hovered,.button.is-dark:hover,.is-dark.button-submit:hover,.is-dark.is-hovered.button-submit {
     background-color: #2f2f2f;
     border-color: transparent;
     color: #f5f5f5
 }
 
-.button.is-dark.is-focused,.button.is-dark:focus,.contact .is-dark.is-focused.message-alert,.contact .is-dark.message-alert:focus {
+.button.is-dark.is-focused,.button.is-dark:focus,.is-dark.button-submit:focus,.is-dark.is-focused.button-submit {
     border-color: transparent;
     color: #f5f5f5
 }
 
-.button.is-dark.is-focused:not(:active),.button.is-dark:focus:not(:active),.contact .is-dark.is-focused.message-alert:not(:active),.contact .is-dark.message-alert:focus:not(:active) {
+.button.is-dark.is-focused:not(:active),.button.is-dark:focus:not(:active),.is-dark.button-submit:focus:not(:active),.is-dark.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(54,54,54,.25);
     box-shadow: 0 0 0 .125em rgba(54,54,54,.25)
 }
 
-.button.is-dark.is-active,.button.is-dark:active,.contact .is-dark.is-active.message-alert,.contact .is-dark.message-alert:active {
+.button.is-dark.is-active,.button.is-dark:active,.is-dark.button-submit:active,.is-dark.is-active.button-submit {
     background-color: #292929;
     border-color: transparent;
     color: #f5f5f5
 }
 
-.button.is-dark[disabled],.contact .is-dark[disabled].message-alert {
+.button.is-dark[disabled],.is-dark[disabled].button-submit {
     background-color: #363636;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-dark.is-inverted,.contact .is-dark.is-inverted.message-alert {
+.button.is-dark.is-inverted,.is-dark.is-inverted.button-submit {
     background-color: #f5f5f5;
     color: #363636
 }
 
-.button.is-dark.is-inverted:hover,.contact .is-dark.is-inverted.message-alert:hover {
+.button.is-dark.is-inverted:hover,.is-dark.is-inverted.button-submit:hover {
     background-color: #e8e8e8
 }
 
-.button.is-dark.is-inverted[disabled],.contact .is-dark.is-inverted[disabled].message-alert {
+.button.is-dark.is-inverted[disabled],.is-dark.is-inverted[disabled].button-submit {
     background-color: #f5f5f5;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -969,27 +980,27 @@ a.box:active {
     color: #363636
 }
 
-.button.is-dark.is-loading:after,.contact .is-dark.is-loading.message-alert:after {
+.button.is-dark.is-loading:after,.is-dark.is-loading.button-submit:after {
     border-color: transparent transparent #f5f5f5 #f5f5f5!important
 }
 
-.button.is-dark.is-outlined,.contact .is-dark.is-outlined.message-alert {
+.button.is-dark.is-outlined,.is-dark.is-outlined.button-submit {
     background-color: transparent;
     border-color: #363636;
     color: #363636
 }
 
-.button.is-dark.is-outlined:focus,.button.is-dark.is-outlined:hover,.contact .is-dark.is-outlined.message-alert:focus,.contact .is-dark.is-outlined.message-alert:hover {
+.button.is-dark.is-outlined:focus,.button.is-dark.is-outlined:hover,.is-dark.is-outlined.button-submit:focus,.is-dark.is-outlined.button-submit:hover {
     background-color: #363636;
     border-color: #363636;
     color: #f5f5f5
 }
 
-.button.is-dark.is-outlined.is-loading:after,.contact .is-dark.is-outlined.is-loading.message-alert:after {
+.button.is-dark.is-outlined.is-loading:after,.is-dark.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #363636 #363636!important
 }
 
-.button.is-dark.is-outlined[disabled],.contact .is-dark.is-outlined[disabled].message-alert {
+.button.is-dark.is-outlined[disabled],.is-dark.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #363636;
     -webkit-box-shadow: none;
@@ -997,18 +1008,18 @@ a.box:active {
     color: #363636
 }
 
-.button.is-dark.is-inverted.is-outlined,.contact .is-dark.is-inverted.is-outlined.message-alert {
+.button.is-dark.is-inverted.is-outlined,.is-dark.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #f5f5f5;
     color: #f5f5f5
 }
 
-.button.is-dark.is-inverted.is-outlined:focus,.button.is-dark.is-inverted.is-outlined:hover,.contact .is-dark.is-inverted.is-outlined.message-alert:focus,.contact .is-dark.is-inverted.is-outlined.message-alert:hover {
+.button.is-dark.is-inverted.is-outlined:focus,.button.is-dark.is-inverted.is-outlined:hover,.is-dark.is-inverted.is-outlined.button-submit:focus,.is-dark.is-inverted.is-outlined.button-submit:hover {
     background-color: #f5f5f5;
     color: #363636
 }
 
-.button.is-dark.is-inverted.is-outlined[disabled],.contact .is-dark.is-inverted.is-outlined[disabled].message-alert {
+.button.is-dark.is-inverted.is-outlined[disabled],.is-dark.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #f5f5f5;
     -webkit-box-shadow: none;
@@ -1016,51 +1027,51 @@ a.box:active {
     color: #f5f5f5
 }
 
-.button.is-primary,.contact .is-primary.message-alert {
+.button.is-primary,.is-primary.button-submit {
     background-color: #cd2b46;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-primary.is-hovered,.button.is-primary:hover,.contact .is-primary.is-hovered.message-alert,.contact .is-primary.message-alert:hover {
+.button.is-primary.is-hovered,.button.is-primary:hover,.is-primary.button-submit:hover,.is-primary.is-hovered.button-submit {
     background-color: #c22942;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-primary.is-focused,.button.is-primary:focus,.contact .is-primary.is-focused.message-alert,.contact .is-primary.message-alert:focus {
+.button.is-primary.is-focused,.button.is-primary:focus,.is-primary.button-submit:focus,.is-primary.is-focused.button-submit {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-primary.is-focused:not(:active),.button.is-primary:focus:not(:active),.contact .is-primary.is-focused.message-alert:not(:active),.contact .is-primary.message-alert:focus:not(:active) {
+.button.is-primary.is-focused:not(:active),.button.is-primary:focus:not(:active),.is-primary.button-submit:focus:not(:active),.is-primary.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(205,43,70,.25);
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.button.is-primary.is-active,.button.is-primary:active,.contact .is-primary.is-active.message-alert,.contact .is-primary.message-alert:active {
+.button.is-primary.is-active,.button.is-primary:active,.is-primary.button-submit:active,.is-primary.is-active.button-submit {
     background-color: #b8273f;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-primary[disabled],.contact .is-primary[disabled].message-alert {
+.button.is-primary[disabled],.is-primary[disabled].button-submit {
     background-color: #cd2b46;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-primary.is-inverted,.contact .is-primary.is-inverted.message-alert {
+.button.is-primary.is-inverted,.is-primary.is-inverted.button-submit {
     background-color: #fff;
     color: #cd2b46
 }
 
-.button.is-primary.is-inverted:hover,.contact .is-primary.is-inverted.message-alert:hover {
+.button.is-primary.is-inverted:hover,.is-primary.is-inverted.button-submit:hover {
     background-color: #f2f2f2
 }
 
-.button.is-primary.is-inverted[disabled],.contact .is-primary.is-inverted[disabled].message-alert {
+.button.is-primary.is-inverted[disabled],.is-primary.is-inverted[disabled].button-submit {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1068,27 +1079,27 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-primary.is-loading:after,.contact .is-primary.is-loading.message-alert:after {
+.button.is-primary.is-loading:after,.is-primary.is-loading.button-submit:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-primary.is-outlined,.contact .is-primary.is-outlined.message-alert {
+.button.is-primary.is-outlined,.is-primary.is-outlined.button-submit {
     background-color: transparent;
     border-color: #cd2b46;
     color: #cd2b46
 }
 
-.button.is-primary.is-outlined:focus,.button.is-primary.is-outlined:hover,.contact .is-primary.is-outlined.message-alert:focus,.contact .is-primary.is-outlined.message-alert:hover {
+.button.is-primary.is-outlined:focus,.button.is-primary.is-outlined:hover,.is-primary.is-outlined.button-submit:focus,.is-primary.is-outlined.button-submit:hover {
     background-color: #cd2b46;
     border-color: #cd2b46;
     color: #fff
 }
 
-.button.is-primary.is-outlined.is-loading:after,.contact .is-primary.is-outlined.is-loading.message-alert:after {
+.button.is-primary.is-outlined.is-loading:after,.is-primary.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #cd2b46 #cd2b46!important
 }
 
-.button.is-primary.is-outlined[disabled],.contact .is-primary.is-outlined[disabled].message-alert {
+.button.is-primary.is-outlined[disabled],.is-primary.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #cd2b46;
     -webkit-box-shadow: none;
@@ -1096,18 +1107,18 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-primary.is-inverted.is-outlined,.contact .is-primary.is-inverted.is-outlined.message-alert {
+.button.is-primary.is-inverted.is-outlined,.is-primary.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-primary.is-inverted.is-outlined:focus,.button.is-primary.is-inverted.is-outlined:hover,.contact .is-primary.is-inverted.is-outlined.message-alert:focus,.contact .is-primary.is-inverted.is-outlined.message-alert:hover {
+.button.is-primary.is-inverted.is-outlined:focus,.button.is-primary.is-inverted.is-outlined:hover,.is-primary.is-inverted.is-outlined.button-submit:focus,.is-primary.is-inverted.is-outlined.button-submit:hover {
     background-color: #fff;
     color: #cd2b46
 }
 
-.button.is-primary.is-inverted.is-outlined[disabled],.contact .is-primary.is-inverted.is-outlined[disabled].message-alert {
+.button.is-primary.is-inverted.is-outlined[disabled],.is-primary.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1115,51 +1126,51 @@ a.box:active {
     color: #fff
 }
 
-.button.is-info,.contact .jobs-list>li .message-alert,.contact .message-alert,.jobs-list>li .button,.jobs-list>li .contact .message-alert {
+.button-submit,.button.is-info,.jobs-list>li .button,.jobs-list>li .button-submit {
     background-color: #2ab7cd;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-hovered,.button.is-info:hover,.contact .is-hovered.message-alert,.contact .message-alert:hover,.jobs-list>li .button.is-hovered,.jobs-list>li .button:hover {
+.button-submit:hover,.button.is-info.is-hovered,.button.is-info:hover,.is-hovered.button-submit,.jobs-list>li .button-submit:hover,.jobs-list>li .button.is-hovered,.jobs-list>li .button:hover,.jobs-list>li .is-hovered.button-submit {
     background-color: #28aec2;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-focused,.button.is-info:focus,.contact .is-focused.message-alert,.contact .message-alert:focus,.jobs-list>li .button.is-focused,.jobs-list>li .button:focus {
+.button-submit:focus,.button.is-info.is-focused,.button.is-info:focus,.is-focused.button-submit,.jobs-list>li .button-submit:focus,.jobs-list>li .button.is-focused,.jobs-list>li .button:focus,.jobs-list>li .is-focused.button-submit {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info.is-focused:not(:active),.button.is-info:focus:not(:active),.contact .is-focused.message-alert:not(:active),.contact .message-alert:focus:not(:active),.jobs-list>li .button.is-focused:not(:active),.jobs-list>li .button:focus:not(:active) {
+.button-submit:focus:not(:active),.button.is-info.is-focused:not(:active),.button.is-info:focus:not(:active),.is-focused.button-submit:not(:active),.jobs-list>li .button.is-focused:not(:active),.jobs-list>li .button:focus:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
 
-.button.is-info.is-active,.button.is-info:active,.contact .is-active.message-alert,.contact .message-alert:active,.jobs-list>li .button.is-active,.jobs-list>li .button:active {
+.button-submit:active,.button.is-info.is-active,.button.is-info:active,.is-active.button-submit,.jobs-list>li .button-submit:active,.jobs-list>li .button.is-active,.jobs-list>li .button:active,.jobs-list>li .is-active.button-submit {
     background-color: #26a4b8;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-info[disabled],.contact [disabled].message-alert,.jobs-list>li .button[disabled] {
+.button.is-info[disabled],.jobs-list>li .button[disabled],.jobs-list>li [disabled].button-submit,[disabled].button-submit {
     background-color: #2ab7cd;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-info.is-inverted,.contact .is-inverted.message-alert,.jobs-list>li .button.is-inverted {
+.button.is-info.is-inverted,.is-inverted.button-submit,.jobs-list>li .button.is-inverted,.jobs-list>li .is-inverted.button-submit {
     background-color: #fff;
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted:hover,.contact .is-inverted.message-alert:hover,.jobs-list>li .button.is-inverted:hover {
+.button.is-info.is-inverted:hover,.is-inverted.button-submit:hover,.jobs-list>li .button.is-inverted:hover {
     background-color: #f2f2f2
 }
 
-.button.is-info.is-inverted[disabled],.contact .is-inverted[disabled].message-alert,.jobs-list>li .button.is-inverted[disabled] {
+.button.is-info.is-inverted[disabled],.is-inverted[disabled].button-submit,.jobs-list>li .button.is-inverted[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1167,27 +1178,27 @@ a.box:active {
     color: #2ab7cd
 }
 
-.button.is-info.is-loading:after,.contact .is-loading.message-alert:after,.jobs-list>li .button.is-loading:after {
+.button.is-info.is-loading:after,.is-loading.button-submit:after,.jobs-list>li .button.is-loading:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-info.is-outlined,.contact .is-outlined.message-alert,.jobs-list>li .button.is-outlined {
+.button.is-info.is-outlined,.is-outlined.button-submit,.jobs-list>li .button.is-outlined,.jobs-list>li .is-outlined.button-submit {
     background-color: transparent;
     border-color: #2ab7cd;
     color: #2ab7cd
 }
 
-.button.is-info.is-outlined:focus,.button.is-info.is-outlined:hover,.contact .is-outlined.message-alert:focus,.contact .is-outlined.message-alert:hover,.jobs-list>li .button.is-outlined:focus,.jobs-list>li .button.is-outlined:hover {
+.button.is-info.is-outlined:focus,.button.is-info.is-outlined:hover,.is-outlined.button-submit:focus,.is-outlined.button-submit:hover,.jobs-list>li .button.is-outlined:focus,.jobs-list>li .button.is-outlined:hover {
     background-color: #2ab7cd;
     border-color: #2ab7cd;
     color: #fff
 }
 
-.button.is-info.is-outlined.is-loading:after,.contact .is-outlined.is-loading.message-alert:after,.jobs-list>li .button.is-outlined.is-loading:after {
+.button.is-info.is-outlined.is-loading:after,.is-outlined.is-loading.button-submit:after,.jobs-list>li .button.is-outlined.is-loading:after {
     border-color: transparent transparent #2ab7cd #2ab7cd!important
 }
 
-.button.is-info.is-outlined[disabled],.contact .is-outlined[disabled].message-alert,.jobs-list>li .button.is-outlined[disabled] {
+.button.is-info.is-outlined[disabled],.is-outlined[disabled].button-submit,.jobs-list>li .button.is-outlined[disabled] {
     background-color: transparent;
     border-color: #2ab7cd;
     -webkit-box-shadow: none;
@@ -1195,18 +1206,18 @@ a.box:active {
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted.is-outlined,.contact .is-inverted.is-outlined.message-alert,.jobs-list>li .button.is-inverted.is-outlined {
+.button.is-info.is-inverted.is-outlined,.is-inverted.is-outlined.button-submit,.jobs-list>li .button.is-inverted.is-outlined {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-info.is-inverted.is-outlined:focus,.button.is-info.is-inverted.is-outlined:hover,.contact .is-inverted.is-outlined.message-alert:focus,.contact .is-inverted.is-outlined.message-alert:hover,.jobs-list>li .button.is-inverted.is-outlined:focus,.jobs-list>li .button.is-inverted.is-outlined:hover {
+.button.is-info.is-inverted.is-outlined:focus,.button.is-info.is-inverted.is-outlined:hover,.is-inverted.is-outlined.button-submit:focus,.is-inverted.is-outlined.button-submit:hover,.jobs-list>li .button.is-inverted.is-outlined:focus,.jobs-list>li .button.is-inverted.is-outlined:hover {
     background-color: #fff;
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted.is-outlined[disabled],.contact .is-inverted.is-outlined[disabled].message-alert,.jobs-list>li .button.is-inverted.is-outlined[disabled] {
+.button.is-info.is-inverted.is-outlined[disabled],.is-inverted.is-outlined[disabled].button-submit,.jobs-list>li .button.is-inverted.is-outlined[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1214,51 +1225,51 @@ a.box:active {
     color: #fff
 }
 
-.button.is-success,.contact .is-success.message-alert {
+.button.is-success,.is-success.button-submit {
     background-color: #149000;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-success.is-hovered,.button.is-success:hover,.contact .is-success.is-hovered.message-alert,.contact .is-success.message-alert:hover {
+.button.is-success.is-hovered,.button.is-success:hover,.is-success.button-submit:hover,.is-success.is-hovered.button-submit {
     background-color: #128300;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-success.is-focused,.button.is-success:focus,.contact .is-success.is-focused.message-alert,.contact .is-success.message-alert:focus {
+.button.is-success.is-focused,.button.is-success:focus,.is-success.button-submit:focus,.is-success.is-focused.button-submit {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-success.is-focused:not(:active),.button.is-success:focus:not(:active),.contact .is-success.is-focused.message-alert:not(:active),.contact .is-success.message-alert:focus:not(:active) {
+.button.is-success.is-focused:not(:active),.button.is-success:focus:not(:active),.is-success.button-submit:focus:not(:active),.is-success.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(20,144,0,.25);
     box-shadow: 0 0 0 .125em rgba(20,144,0,.25)
 }
 
-.button.is-success.is-active,.button.is-success:active,.contact .is-success.is-active.message-alert,.contact .is-success.message-alert:active {
+.button.is-success.is-active,.button.is-success:active,.is-success.button-submit:active,.is-success.is-active.button-submit {
     background-color: #107700;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-success[disabled],.contact .is-success[disabled].message-alert {
+.button.is-success[disabled],.is-success[disabled].button-submit {
     background-color: #149000;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-success.is-inverted,.contact .is-success.is-inverted.message-alert {
+.button.is-success.is-inverted,.is-success.is-inverted.button-submit {
     background-color: #fff;
     color: #149000
 }
 
-.button.is-success.is-inverted:hover,.contact .is-success.is-inverted.message-alert:hover {
+.button.is-success.is-inverted:hover,.is-success.is-inverted.button-submit:hover {
     background-color: #f2f2f2
 }
 
-.button.is-success.is-inverted[disabled],.contact .is-success.is-inverted[disabled].message-alert {
+.button.is-success.is-inverted[disabled],.is-success.is-inverted[disabled].button-submit {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1266,27 +1277,27 @@ a.box:active {
     color: #149000
 }
 
-.button.is-success.is-loading:after,.contact .is-success.is-loading.message-alert:after {
+.button.is-success.is-loading:after,.is-success.is-loading.button-submit:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-success.is-outlined,.contact .is-success.is-outlined.message-alert {
+.button.is-success.is-outlined,.is-success.is-outlined.button-submit {
     background-color: transparent;
     border-color: #149000;
     color: #149000
 }
 
-.button.is-success.is-outlined:focus,.button.is-success.is-outlined:hover,.contact .is-success.is-outlined.message-alert:focus,.contact .is-success.is-outlined.message-alert:hover {
+.button.is-success.is-outlined:focus,.button.is-success.is-outlined:hover,.is-success.is-outlined.button-submit:focus,.is-success.is-outlined.button-submit:hover {
     background-color: #149000;
     border-color: #149000;
     color: #fff
 }
 
-.button.is-success.is-outlined.is-loading:after,.contact .is-success.is-outlined.is-loading.message-alert:after {
+.button.is-success.is-outlined.is-loading:after,.is-success.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #149000 #149000!important
 }
 
-.button.is-success.is-outlined[disabled],.contact .is-success.is-outlined[disabled].message-alert {
+.button.is-success.is-outlined[disabled],.is-success.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #149000;
     -webkit-box-shadow: none;
@@ -1294,18 +1305,18 @@ a.box:active {
     color: #149000
 }
 
-.button.is-success.is-inverted.is-outlined,.contact .is-success.is-inverted.is-outlined.message-alert {
+.button.is-success.is-inverted.is-outlined,.is-success.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-success.is-inverted.is-outlined:focus,.button.is-success.is-inverted.is-outlined:hover,.contact .is-success.is-inverted.is-outlined.message-alert:focus,.contact .is-success.is-inverted.is-outlined.message-alert:hover {
+.button.is-success.is-inverted.is-outlined:focus,.button.is-success.is-inverted.is-outlined:hover,.is-success.is-inverted.is-outlined.button-submit:focus,.is-success.is-inverted.is-outlined.button-submit:hover {
     background-color: #fff;
     color: #149000
 }
 
-.button.is-success.is-inverted.is-outlined[disabled],.contact .is-success.is-inverted.is-outlined[disabled].message-alert {
+.button.is-success.is-inverted.is-outlined[disabled],.is-success.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1313,51 +1324,51 @@ a.box:active {
     color: #fff
 }
 
-.button.is-warning,.contact .is-warning.message-alert {
+.button.is-warning,.is-warning.button-submit {
     background-color: #ffdd57;
     border-color: transparent;
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-hovered,.button.is-warning:hover,.contact .is-warning.is-hovered.message-alert,.contact .is-warning.message-alert:hover {
+.button.is-warning.is-hovered,.button.is-warning:hover,.is-warning.button-submit:hover,.is-warning.is-hovered.button-submit {
     background-color: #ffdb4a;
     border-color: transparent;
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-focused,.button.is-warning:focus,.contact .is-warning.is-focused.message-alert,.contact .is-warning.message-alert:focus {
+.button.is-warning.is-focused,.button.is-warning:focus,.is-warning.button-submit:focus,.is-warning.is-focused.button-submit {
     border-color: transparent;
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-focused:not(:active),.button.is-warning:focus:not(:active),.contact .is-warning.is-focused.message-alert:not(:active),.contact .is-warning.message-alert:focus:not(:active) {
+.button.is-warning.is-focused:not(:active),.button.is-warning:focus:not(:active),.is-warning.button-submit:focus:not(:active),.is-warning.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(255,221,87,.25);
     box-shadow: 0 0 0 .125em rgba(255,221,87,.25)
 }
 
-.button.is-warning.is-active,.button.is-warning:active,.contact .is-warning.is-active.message-alert,.contact .is-warning.message-alert:active {
+.button.is-warning.is-active,.button.is-warning:active,.is-warning.button-submit:active,.is-warning.is-active.button-submit {
     background-color: #ffd83d;
     border-color: transparent;
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning[disabled],.contact .is-warning[disabled].message-alert {
+.button.is-warning[disabled],.is-warning[disabled].button-submit {
     background-color: #ffdd57;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-warning.is-inverted,.contact .is-warning.is-inverted.message-alert {
+.button.is-warning.is-inverted,.is-warning.is-inverted.button-submit {
     background-color: rgba(0,0,0,.7);
     color: #ffdd57
 }
 
-.button.is-warning.is-inverted:hover,.contact .is-warning.is-inverted.message-alert:hover {
+.button.is-warning.is-inverted:hover,.is-warning.is-inverted.button-submit:hover {
     background-color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-inverted[disabled],.contact .is-warning.is-inverted[disabled].message-alert {
+.button.is-warning.is-inverted[disabled],.is-warning.is-inverted[disabled].button-submit {
     background-color: rgba(0,0,0,.7);
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1365,27 +1376,27 @@ a.box:active {
     color: #ffdd57
 }
 
-.button.is-warning.is-loading:after,.contact .is-warning.is-loading.message-alert:after {
+.button.is-warning.is-loading:after,.is-warning.is-loading.button-submit:after {
     border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7)!important
 }
 
-.button.is-warning.is-outlined,.contact .is-warning.is-outlined.message-alert {
+.button.is-warning.is-outlined,.is-warning.is-outlined.button-submit {
     background-color: transparent;
     border-color: #ffdd57;
     color: #ffdd57
 }
 
-.button.is-warning.is-outlined:focus,.button.is-warning.is-outlined:hover,.contact .is-warning.is-outlined.message-alert:focus,.contact .is-warning.is-outlined.message-alert:hover {
+.button.is-warning.is-outlined:focus,.button.is-warning.is-outlined:hover,.is-warning.is-outlined.button-submit:focus,.is-warning.is-outlined.button-submit:hover {
     background-color: #ffdd57;
     border-color: #ffdd57;
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-outlined.is-loading:after,.contact .is-warning.is-outlined.is-loading.message-alert:after {
+.button.is-warning.is-outlined.is-loading:after,.is-warning.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #ffdd57 #ffdd57!important
 }
 
-.button.is-warning.is-outlined[disabled],.contact .is-warning.is-outlined[disabled].message-alert {
+.button.is-warning.is-outlined[disabled],.is-warning.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #ffdd57;
     -webkit-box-shadow: none;
@@ -1393,18 +1404,18 @@ a.box:active {
     color: #ffdd57
 }
 
-.button.is-warning.is-inverted.is-outlined,.contact .is-warning.is-inverted.is-outlined.message-alert {
+.button.is-warning.is-inverted.is-outlined,.is-warning.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: rgba(0,0,0,.7);
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-inverted.is-outlined:focus,.button.is-warning.is-inverted.is-outlined:hover,.contact .is-warning.is-inverted.is-outlined.message-alert:focus,.contact .is-warning.is-inverted.is-outlined.message-alert:hover {
+.button.is-warning.is-inverted.is-outlined:focus,.button.is-warning.is-inverted.is-outlined:hover,.is-warning.is-inverted.is-outlined.button-submit:focus,.is-warning.is-inverted.is-outlined.button-submit:hover {
     background-color: rgba(0,0,0,.7);
     color: #ffdd57
 }
 
-.button.is-warning.is-inverted.is-outlined[disabled],.contact .is-warning.is-inverted.is-outlined[disabled].message-alert {
+.button.is-warning.is-inverted.is-outlined[disabled],.is-warning.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: rgba(0,0,0,.7);
     -webkit-box-shadow: none;
@@ -1412,51 +1423,51 @@ a.box:active {
     color: rgba(0,0,0,.7)
 }
 
-.button.is-danger,.contact .is-danger.message-alert {
+.button.is-danger,.is-danger.button-submit {
     background-color: #cd2b46;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-danger.is-hovered,.button.is-danger:hover,.contact .is-danger.is-hovered.message-alert,.contact .is-danger.message-alert:hover {
+.button.is-danger.is-hovered,.button.is-danger:hover,.is-danger.button-submit:hover,.is-danger.is-hovered.button-submit {
     background-color: #c22942;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-danger.is-focused,.button.is-danger:focus,.contact .is-danger.is-focused.message-alert,.contact .is-danger.message-alert:focus {
+.button.is-danger.is-focused,.button.is-danger:focus,.is-danger.button-submit:focus,.is-danger.is-focused.button-submit {
     border-color: transparent;
     color: #fff
 }
 
-.button.is-danger.is-focused:not(:active),.button.is-danger:focus:not(:active),.contact .is-danger.is-focused.message-alert:not(:active),.contact .is-danger.message-alert:focus:not(:active) {
+.button.is-danger.is-focused:not(:active),.button.is-danger:focus:not(:active),.is-danger.button-submit:focus:not(:active),.is-danger.is-focused.button-submit:not(:active) {
     -webkit-box-shadow: 0 0 0 .125em rgba(205,43,70,.25);
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.button.is-danger.is-active,.button.is-danger:active,.contact .is-danger.is-active.message-alert,.contact .is-danger.message-alert:active {
+.button.is-danger.is-active,.button.is-danger:active,.is-danger.button-submit:active,.is-danger.is-active.button-submit {
     background-color: #b8273f;
     border-color: transparent;
     color: #fff
 }
 
-.button.is-danger[disabled],.contact .is-danger[disabled].message-alert {
+.button.is-danger[disabled],.is-danger[disabled].button-submit {
     background-color: #cd2b46;
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none
 }
 
-.button.is-danger.is-inverted,.contact .is-danger.is-inverted.message-alert {
+.button.is-danger.is-inverted,.is-danger.is-inverted.button-submit {
     background-color: #fff;
     color: #cd2b46
 }
 
-.button.is-danger.is-inverted:hover,.contact .is-danger.is-inverted.message-alert:hover {
+.button.is-danger.is-inverted:hover,.is-danger.is-inverted.button-submit:hover {
     background-color: #f2f2f2
 }
 
-.button.is-danger.is-inverted[disabled],.contact .is-danger.is-inverted[disabled].message-alert {
+.button.is-danger.is-inverted[disabled],.is-danger.is-inverted[disabled].button-submit {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1464,27 +1475,27 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-danger.is-loading:after,.contact .is-danger.is-loading.message-alert:after {
+.button.is-danger.is-loading:after,.is-danger.is-loading.button-submit:after {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-danger.is-outlined,.contact .is-danger.is-outlined.message-alert {
+.button.is-danger.is-outlined,.is-danger.is-outlined.button-submit {
     background-color: transparent;
     border-color: #cd2b46;
     color: #cd2b46
 }
 
-.button.is-danger.is-outlined:focus,.button.is-danger.is-outlined:hover,.contact .is-danger.is-outlined.message-alert:focus,.contact .is-danger.is-outlined.message-alert:hover {
+.button.is-danger.is-outlined:focus,.button.is-danger.is-outlined:hover,.is-danger.is-outlined.button-submit:focus,.is-danger.is-outlined.button-submit:hover {
     background-color: #cd2b46;
     border-color: #cd2b46;
     color: #fff
 }
 
-.button.is-danger.is-outlined.is-loading:after,.contact .is-danger.is-outlined.is-loading.message-alert:after {
+.button.is-danger.is-outlined.is-loading:after,.is-danger.is-outlined.is-loading.button-submit:after {
     border-color: transparent transparent #cd2b46 #cd2b46!important
 }
 
-.button.is-danger.is-outlined[disabled],.contact .is-danger.is-outlined[disabled].message-alert {
+.button.is-danger.is-outlined[disabled],.is-danger.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #cd2b46;
     -webkit-box-shadow: none;
@@ -1492,18 +1503,18 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-danger.is-inverted.is-outlined,.contact .is-danger.is-inverted.is-outlined.message-alert {
+.button.is-danger.is-inverted.is-outlined,.is-danger.is-inverted.is-outlined.button-submit {
     background-color: transparent;
     border-color: #fff;
     color: #fff
 }
 
-.button.is-danger.is-inverted.is-outlined:focus,.button.is-danger.is-inverted.is-outlined:hover,.contact .is-danger.is-inverted.is-outlined.message-alert:focus,.contact .is-danger.is-inverted.is-outlined.message-alert:hover {
+.button.is-danger.is-inverted.is-outlined:focus,.button.is-danger.is-inverted.is-outlined:hover,.is-danger.is-inverted.is-outlined.button-submit:focus,.is-danger.is-inverted.is-outlined.button-submit:hover {
     background-color: #fff;
     color: #cd2b46
 }
 
-.button.is-danger.is-inverted.is-outlined[disabled],.contact .is-danger.is-inverted.is-outlined[disabled].message-alert {
+.button.is-danger.is-inverted.is-outlined[disabled],.is-danger.is-inverted.is-outlined[disabled].button-submit {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1511,21 +1522,21 @@ a.box:active {
     color: #fff
 }
 
-.button.is-small,.contact .is-small.message-alert {
+.button.is-small,.is-small.button-submit {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     font-size: .75rem
 }
 
-.button.is-medium,.contact .is-medium.message-alert,.contact .jobs-list>li .message-alert,.jobs-list>li .button,.jobs-list>li .contact .message-alert {
+.button.is-medium,.is-medium.button-submit,.jobs-list>li .button,.jobs-list>li .button-submit {
     font-size: 1.25rem
 }
 
-.button.is-large,.contact .is-large.message-alert {
+.button.is-large,.is-large.button-submit {
     font-size: 1.5rem
 }
 
-.button[disabled],.contact [disabled].message-alert {
+.button[disabled],[disabled].button-submit {
     cursor: not-allowed;
     background-color: #fff;
     border-color: #dbdbdb;
@@ -1538,20 +1549,17 @@ a.box:active {
     background-color: #f5f5f5
 }
 
-.button.is-fullwidth,.contact .is-fullwidth.message-alert {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+.button.is-fullwidth,.is-fullwidth.button-submit {
     display: flex;
     width: 100%
 }
 
-.button.is-loading,.contact .is-loading.message-alert {
+.button.is-loading,.is-loading.button-submit {
     color: transparent!important;
     pointer-events: none
 }
 
-.button.is-loading:after,.contact .is-loading.message-alert:after {
+.button.is-loading:after,.is-loading.button-submit:after {
     -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
@@ -1570,7 +1578,7 @@ a.box:active {
     position: absolute!important
 }
 
-.button.is-static,.contact .is-static.message-alert {
+.button.is-static,.is-static.button-submit {
     background-color: #f5f5f5;
     border-color: #dbdbdb;
     color: #7a7a7a;
@@ -1753,7 +1761,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .content.message-alert,.content.is-medium,.jobs-list>li .contact .content.message-alert,.jobs-list>li .content.button {
+.content.is-medium,.jobs-list>li .content.button,.jobs-list>li .content.button-submit {
     font-size: 1.25rem
 }
 
@@ -1762,7 +1770,6 @@ a.box:active {
 }
 
 .input,.textarea {
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1789,7 +1796,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
     background-color: #fff;
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
@@ -1884,11 +1890,11 @@ a.box:active {
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.contact .input.message-alert,.contact .textarea.message-alert,.input.is-info,.jobs-list>li .input.button,.jobs-list>li .textarea.button,.textarea.is-info {
+.input.button-submit,.input.is-info,.jobs-list>li .input.button,.jobs-list>li .input.button-submit,.jobs-list>li .textarea.button,.jobs-list>li .textarea.button-submit,.textarea.button-submit,.textarea.is-info {
     border-color: #2ab7cd
 }
 
-.contact .input.is-active.message-alert,.contact .input.is-focused.message-alert,.contact .input.message-alert:active,.contact .input.message-alert:focus,.contact .textarea.is-active.message-alert,.contact .textarea.is-focused.message-alert,.contact .textarea.message-alert:active,.contact .textarea.message-alert:focus,.input.is-info.is-active,.input.is-info.is-focused,.input.is-info:active,.input.is-info:focus,.jobs-list>li .input.button:active,.jobs-list>li .input.button:focus,.jobs-list>li .input.is-active.button,.jobs-list>li .input.is-focused.button,.jobs-list>li .textarea.button:active,.jobs-list>li .textarea.button:focus,.jobs-list>li .textarea.is-active.button,.jobs-list>li .textarea.is-focused.button,.textarea.is-info.is-active,.textarea.is-info.is-focused,.textarea.is-info:active,.textarea.is-info:focus {
+.input.button-submit:active,.input.button-submit:focus,.input.is-active.button-submit,.input.is-focused.button-submit,.input.is-info.is-active,.input.is-info.is-focused,.input.is-info:active,.input.is-info:focus,.jobs-list>li .input.button:active,.jobs-list>li .input.button:focus,.jobs-list>li .input.is-active.button,.jobs-list>li .input.is-focused.button,.jobs-list>li .textarea.button:active,.jobs-list>li .textarea.button:focus,.jobs-list>li .textarea.is-active.button,.jobs-list>li .textarea.is-focused.button,.textarea.button-submit:active,.textarea.button-submit:focus,.textarea.is-active.button-submit,.textarea.is-focused.button-submit,.textarea.is-info.is-active,.textarea.is-info.is-focused,.textarea.is-info:active,.textarea.is-info:focus {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
@@ -1926,7 +1932,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .input.message-alert,.contact .jobs-list>li .textarea.message-alert,.input.is-medium,.jobs-list>li .contact .input.message-alert,.jobs-list>li .contact .textarea.message-alert,.jobs-list>li .input.button,.jobs-list>li .textarea.button,.textarea.is-medium {
+.input.is-medium,.jobs-list>li .input.button,.jobs-list>li .input.button-submit,.jobs-list>li .textarea.button,.jobs-list>li .textarea.button-submit,.textarea.is-medium {
     font-size: 1.25rem
 }
 
@@ -2159,11 +2165,11 @@ a.box:active {
     box-shadow: 0 0 0 .125em rgba(205,43,70,.25)
 }
 
-.contact .select.message-alert select,.jobs-list>li .select.button select,.select.is-info select {
+.jobs-list>li .select.button select,.select.button-submit select,.select.is-info select {
     border-color: #2ab7cd
 }
 
-.contact .select.message-alert select.is-active,.contact .select.message-alert select.is-focused,.contact .select.message-alert select:active,.contact .select.message-alert select:focus,.jobs-list>li .select.button select.is-active,.jobs-list>li .select.button select.is-focused,.jobs-list>li .select.button select:active,.jobs-list>li .select.button select:focus,.select.is-info select.is-active,.select.is-info select.is-focused,.select.is-info select:active,.select.is-info select:focus {
+.jobs-list>li .select.button select.is-active,.jobs-list>li .select.button select.is-focused,.jobs-list>li .select.button select:active,.jobs-list>li .select.button select:focus,.select.button-submit select.is-active,.select.button-submit select.is-focused,.select.button-submit select:active,.select.button-submit select:focus,.select.is-info select.is-active,.select.is-info select.is-focused,.select.is-info select:active,.select.is-info select:focus {
     -webkit-box-shadow: 0 0 0 .125em rgba(42,183,205,.25);
     box-shadow: 0 0 0 .125em rgba(42,183,205,.25)
 }
@@ -2201,7 +2207,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .select.message-alert,.jobs-list>li .contact .select.message-alert,.jobs-list>li .select.button,.select.is-medium {
+.jobs-list>li .select.button,.jobs-list>li .select.button-submit,.select.is-medium {
     font-size: 1.25rem
 }
 
@@ -2244,7 +2250,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .select.is-loading.message-alert:after,.jobs-list>li .contact .select.is-loading.message-alert:after,.jobs-list>li .select.is-loading.button:after,.select.is-loading.is-medium:after {
+.jobs-list>li .select.is-loading.button-submit:after,.jobs-list>li .select.is-loading.button:after,.select.is-loading.is-medium:after {
     font-size: 1.25rem
 }
 
@@ -2258,9 +2264,6 @@ a.box:active {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -2399,26 +2402,26 @@ a.box:active {
     color: #fff
 }
 
-.contact .file.message-alert .file-cta,.file.is-info .file-cta,.jobs-list>li .file.button .file-cta {
+.file.button-submit .file-cta,.file.is-info .file-cta,.jobs-list>li .file.button .file-cta {
     background-color: #2ab7cd;
     border-color: transparent;
     color: #fff
 }
 
-.contact .file.is-hovered.message-alert .file-cta,.contact .file.message-alert:hover .file-cta,.file.is-info.is-hovered .file-cta,.file.is-info:hover .file-cta,.jobs-list>li .file.button:hover .file-cta,.jobs-list>li .file.is-hovered.button .file-cta {
+.file.button-submit:hover .file-cta,.file.is-hovered.button-submit .file-cta,.file.is-info.is-hovered .file-cta,.file.is-info:hover .file-cta,.jobs-list>li .file.button:hover .file-cta,.jobs-list>li .file.is-hovered.button .file-cta {
     background-color: #28aec2;
     border-color: transparent;
     color: #fff
 }
 
-.contact .file.is-focused.message-alert .file-cta,.contact .file.message-alert:focus .file-cta,.file.is-info.is-focused .file-cta,.file.is-info:focus .file-cta,.jobs-list>li .file.button:focus .file-cta,.jobs-list>li .file.is-focused.button .file-cta {
+.file.button-submit:focus .file-cta,.file.is-focused.button-submit .file-cta,.file.is-info.is-focused .file-cta,.file.is-info:focus .file-cta,.jobs-list>li .file.button:focus .file-cta,.jobs-list>li .file.is-focused.button .file-cta {
     border-color: transparent;
     -webkit-box-shadow: 0 0 .5em rgba(42,183,205,.25);
     box-shadow: 0 0 .5em rgba(42,183,205,.25);
     color: #fff
 }
 
-.contact .file.is-active.message-alert .file-cta,.contact .file.message-alert:active .file-cta,.file.is-info.is-active .file-cta,.file.is-info:active .file-cta,.jobs-list>li .file.button:active .file-cta,.jobs-list>li .file.is-active.button .file-cta {
+.file.button-submit:active .file-cta,.file.is-active.button-submit .file-cta,.file.is-info.is-active .file-cta,.file.is-info:active .file-cta,.jobs-list>li .file.button:active .file-cta,.jobs-list>li .file.is-active.button .file-cta {
     background-color: #26a4b8;
     border-color: transparent;
     color: #fff
@@ -2503,11 +2506,11 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .file.message-alert,.file.is-medium,.jobs-list>li .contact .file.message-alert,.jobs-list>li .file.button {
+.file.is-medium,.jobs-list>li .file.button,.jobs-list>li .file.button-submit {
     font-size: 1.25rem
 }
 
-.contact .jobs-list>li .file.message-alert .file-icon .fa,.file.is-medium .file-icon .fa,.jobs-list>li .contact .file.message-alert .file-icon .fa,.jobs-list>li .file.button .file-icon .fa {
+.file.is-medium .file-icon .fa,.jobs-list>li .file.button .file-icon .fa,.jobs-list>li .file.button-submit .file-icon .fa {
     font-size: 21px
 }
 
@@ -2578,7 +2581,7 @@ a.box:active {
     font-size: 14px
 }
 
-.contact .jobs-list>li .file.is-boxed.message-alert .file-icon .fa,.file.is-boxed.is-medium .file-icon .fa,.jobs-list>li .contact .file.is-boxed.message-alert .file-icon .fa,.jobs-list>li .file.is-boxed.button .file-icon .fa {
+.file.is-boxed.is-medium .file-icon .fa,.jobs-list>li .file.is-boxed.button .file-icon .fa,.jobs-list>li .file.is-boxed.button-submit .file-icon .fa {
     font-size: 28px
 }
 
@@ -2772,7 +2775,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .label.message-alert,.jobs-list>li .contact .label.message-alert,.jobs-list>li .label.button,.label.is-medium {
+.jobs-list>li .label.button,.jobs-list>li .label.button-submit,.label.is-medium {
     font-size: 1.25rem
 }
 
@@ -2805,7 +2808,7 @@ a.box:active {
     color: #cd2b46
 }
 
-.contact .help.message-alert,.help.is-info,.jobs-list>li .help.button {
+.help.button-submit,.help.is-info,.jobs-list>li .help.button,.jobs-list>li .help.button-submit {
     color: #2ab7cd
 }
 
@@ -2837,34 +2840,34 @@ a.box:active {
     margin-right: -1px
 }
 
-.contact .field.has-addons .control:first-child .message-alert,.field.has-addons .control:first-child .button,.field.has-addons .control:first-child .contact .message-alert,.field.has-addons .control:first-child .input,.field.has-addons .control:first-child .select select {
+.field.has-addons .control:first-child .button,.field.has-addons .control:first-child .button-submit,.field.has-addons .control:first-child .input,.field.has-addons .control:first-child .select select {
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
     -webkit-border-top-left-radius: 3px;
     border-top-left-radius: 3px
 }
 
-.contact .field.has-addons .control:last-child .message-alert,.field.has-addons .control:last-child .button,.field.has-addons .control:last-child .contact .message-alert,.field.has-addons .control:last-child .input,.field.has-addons .control:last-child .select select {
+.field.has-addons .control:last-child .button,.field.has-addons .control:last-child .button-submit,.field.has-addons .control:last-child .input,.field.has-addons .control:last-child .select select {
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
     -webkit-border-top-right-radius: 3px;
     border-top-right-radius: 3px
 }
 
-.contact .field.has-addons .control .message-alert,.field.has-addons .control .button,.field.has-addons .control .contact .message-alert,.field.has-addons .control .input,.field.has-addons .control .select select {
+.field.has-addons .control .button,.field.has-addons .control .button-submit,.field.has-addons .control .input,.field.has-addons .control .select select {
     -webkit-border-radius: 0;
     border-radius: 0
 }
 
-.contact .field.has-addons .control .is-hovered.message-alert,.contact .field.has-addons .control .message-alert:hover,.field.has-addons .control .button.is-hovered,.field.has-addons .control .button:hover,.field.has-addons .control .contact .is-hovered.message-alert,.field.has-addons .control .contact .message-alert:hover,.field.has-addons .control .input.is-hovered,.field.has-addons .control .input:hover,.field.has-addons .control .select select.is-hovered,.field.has-addons .control .select select:hover {
+.field.has-addons .control .button-submit:hover,.field.has-addons .control .button.is-hovered,.field.has-addons .control .button:hover,.field.has-addons .control .input.is-hovered,.field.has-addons .control .input:hover,.field.has-addons .control .is-hovered.button-submit,.field.has-addons .control .select select.is-hovered,.field.has-addons .control .select select:hover {
     z-index: 2
 }
 
-.contact .field.has-addons .control .is-active.message-alert,.contact .field.has-addons .control .is-focused.message-alert,.contact .field.has-addons .control .message-alert:active,.contact .field.has-addons .control .message-alert:focus,.field.has-addons .control .button.is-active,.field.has-addons .control .button.is-focused,.field.has-addons .control .button:active,.field.has-addons .control .button:focus,.field.has-addons .control .contact .is-active.message-alert,.field.has-addons .control .contact .is-focused.message-alert,.field.has-addons .control .contact .message-alert:active,.field.has-addons .control .contact .message-alert:focus,.field.has-addons .control .input.is-active,.field.has-addons .control .input.is-focused,.field.has-addons .control .input:active,.field.has-addons .control .input:focus,.field.has-addons .control .select select.is-active,.field.has-addons .control .select select.is-focused,.field.has-addons .control .select select:active,.field.has-addons .control .select select:focus {
+.field.has-addons .control .button-submit:active,.field.has-addons .control .button-submit:focus,.field.has-addons .control .button.is-active,.field.has-addons .control .button.is-focused,.field.has-addons .control .button:active,.field.has-addons .control .button:focus,.field.has-addons .control .input.is-active,.field.has-addons .control .input.is-focused,.field.has-addons .control .input:active,.field.has-addons .control .input:focus,.field.has-addons .control .is-active.button-submit,.field.has-addons .control .is-focused.button-submit,.field.has-addons .control .select select.is-active,.field.has-addons .control .select select.is-focused,.field.has-addons .control .select select:active,.field.has-addons .control .select select:focus {
     z-index: 3
 }
 
-.contact .field.has-addons .control .is-active.message-alert:hover,.contact .field.has-addons .control .is-focused.message-alert:hover,.contact .field.has-addons .control .message-alert:active:hover,.contact .field.has-addons .control .message-alert:focus:hover,.field.has-addons .control .button.is-active:hover,.field.has-addons .control .button.is-focused:hover,.field.has-addons .control .button:active:hover,.field.has-addons .control .button:focus:hover,.field.has-addons .control .contact .is-active.message-alert:hover,.field.has-addons .control .contact .is-focused.message-alert:hover,.field.has-addons .control .contact .message-alert:active:hover,.field.has-addons .control .contact .message-alert:focus:hover,.field.has-addons .control .input.is-active:hover,.field.has-addons .control .input.is-focused:hover,.field.has-addons .control .input:active:hover,.field.has-addons .control .input:focus:hover,.field.has-addons .control .select select.is-active:hover,.field.has-addons .control .select select.is-focused:hover,.field.has-addons .control .select select:active:hover,.field.has-addons .control .select select:focus:hover {
+.field.has-addons .control .button-submit:active:hover,.field.has-addons .control .button-submit:focus:hover,.field.has-addons .control .button.is-active:hover,.field.has-addons .control .button.is-focused:hover,.field.has-addons .control .button:active:hover,.field.has-addons .control .button:focus:hover,.field.has-addons .control .input.is-active:hover,.field.has-addons .control .input.is-focused:hover,.field.has-addons .control .input:active:hover,.field.has-addons .control .input:focus:hover,.field.has-addons .control .is-active.button-submit:hover,.field.has-addons .control .is-focused.button-submit:hover,.field.has-addons .control .select select.is-active:hover,.field.has-addons .control .select select.is-focused:hover,.field.has-addons .control .select select:active:hover,.field.has-addons .control .select select:focus:hover {
     z-index: 4
 }
 
@@ -2990,7 +2993,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .control.has-icon .input.message-alert+.icon,.control.has-icon .contact .jobs-list>li .input.message-alert+.icon,.control.has-icon .input.is-medium+.icon,.control.has-icon .jobs-list>li .contact .input.message-alert+.icon,.control.has-icon .jobs-list>li .input.button+.icon,.jobs-list>li .contact .control.has-icon .input.message-alert+.icon,.jobs-list>li .control.has-icon .input.button+.icon {
+.control.has-icon .input.is-medium+.icon,.control.has-icon .jobs-list>li .input.button+.icon,.control.has-icon .jobs-list>li .input.button-submit+.icon,.jobs-list>li .control.has-icon .input.button+.icon,.jobs-list>li .control.has-icon .input.button-submit+.icon {
     font-size: 1.25rem
 }
 
@@ -3006,7 +3009,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .control.has-icons-left .input.message-alert~.icon,.contact .jobs-list>li .control.has-icons-left .select.message-alert~.icon,.contact .jobs-list>li .control.has-icons-right .input.message-alert~.icon,.contact .jobs-list>li .control.has-icons-right .select.message-alert~.icon,.control.has-icons-left .contact .jobs-list>li .input.message-alert~.icon,.control.has-icons-left .contact .jobs-list>li .select.message-alert~.icon,.control.has-icons-left .input.is-medium~.icon,.control.has-icons-left .jobs-list>li .contact .input.message-alert~.icon,.control.has-icons-left .jobs-list>li .contact .select.message-alert~.icon,.control.has-icons-left .jobs-list>li .input.button~.icon,.control.has-icons-left .jobs-list>li .select.button~.icon,.control.has-icons-left .select.is-medium~.icon,.control.has-icons-right .contact .jobs-list>li .input.message-alert~.icon,.control.has-icons-right .contact .jobs-list>li .select.message-alert~.icon,.control.has-icons-right .input.is-medium~.icon,.control.has-icons-right .jobs-list>li .contact .input.message-alert~.icon,.control.has-icons-right .jobs-list>li .contact .select.message-alert~.icon,.control.has-icons-right .jobs-list>li .input.button~.icon,.control.has-icons-right .jobs-list>li .select.button~.icon,.control.has-icons-right .select.is-medium~.icon,.jobs-list>li .contact .control.has-icons-left .input.message-alert~.icon,.jobs-list>li .contact .control.has-icons-left .select.message-alert~.icon,.jobs-list>li .contact .control.has-icons-right .input.message-alert~.icon,.jobs-list>li .contact .control.has-icons-right .select.message-alert~.icon,.jobs-list>li .control.has-icons-left .input.button~.icon,.jobs-list>li .control.has-icons-left .select.button~.icon,.jobs-list>li .control.has-icons-right .input.button~.icon,.jobs-list>li .control.has-icons-right .select.button~.icon {
+.control.has-icons-left .input.is-medium~.icon,.control.has-icons-left .jobs-list>li .input.button-submit~.icon,.control.has-icons-left .jobs-list>li .input.button~.icon,.control.has-icons-left .jobs-list>li .select.button-submit~.icon,.control.has-icons-left .jobs-list>li .select.button~.icon,.control.has-icons-left .select.is-medium~.icon,.control.has-icons-right .input.is-medium~.icon,.control.has-icons-right .jobs-list>li .input.button-submit~.icon,.control.has-icons-right .jobs-list>li .input.button~.icon,.control.has-icons-right .jobs-list>li .select.button-submit~.icon,.control.has-icons-right .jobs-list>li .select.button~.icon,.control.has-icons-right .select.is-medium~.icon,.jobs-list>li .control.has-icons-left .input.button-submit~.icon,.jobs-list>li .control.has-icons-left .input.button~.icon,.jobs-list>li .control.has-icons-left .select.button-submit~.icon,.jobs-list>li .control.has-icons-left .select.button~.icon,.jobs-list>li .control.has-icons-right .input.button-submit~.icon,.jobs-list>li .control.has-icons-right .input.button~.icon,.jobs-list>li .control.has-icons-right .select.button-submit~.icon,.jobs-list>li .control.has-icons-right .select.button~.icon {
     font-size: 1.25rem
 }
 
@@ -3047,7 +3050,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.contact .jobs-list>li .control.is-loading.message-alert:after,.control.is-loading.is-medium:after,.jobs-list>li .contact .control.is-loading.message-alert:after,.jobs-list>li .control.is-loading.button:after {
+.control.is-loading.is-medium:after,.jobs-list>li .control.is-loading.button-submit:after,.jobs-list>li .control.is-loading.button:after {
     font-size: 1.25rem
 }
 
@@ -3080,7 +3083,7 @@ a.box:active {
     width: 1rem
 }
 
-.contact .jobs-list>li .icon.message-alert,.icon.is-medium,.jobs-list>li .contact .icon.message-alert,.jobs-list>li .icon.button {
+.icon.is-medium,.jobs-list>li .icon.button,.jobs-list>li .icon.button-submit {
     height: 2rem;
     width: 2rem
 }
@@ -3281,7 +3284,7 @@ a.box:active {
     color: #fff
 }
 
-.contact .tag.message-alert:not(body),.jobs-list>li .tag.button:not(body),.tag:not(body).is-info {
+.jobs-list>li .tag.button:not(body),.tag.button-submit:not(body),.tag:not(body).is-info {
     background-color: #2ab7cd;
     color: #fff
 }
@@ -3301,7 +3304,7 @@ a.box:active {
     color: #fff
 }
 
-.contact .jobs-list>li .tag.message-alert:not(body),.jobs-list>li .contact .tag.message-alert:not(body),.jobs-list>li .tag.button:not(body),.tag:not(body).is-medium {
+.jobs-list>li .tag.button-submit:not(body),.jobs-list>li .tag.button:not(body),.tag:not(body).is-medium {
     font-size: 1rem
 }
 
@@ -3527,7 +3530,7 @@ a.box:active {
     width: 16px
 }
 
-.contact .jobs-list>li .delete.message-alert,.delete.is-medium,.jobs-list>li .contact .delete.message-alert,.jobs-list>li .delete.button {
+.delete.is-medium,.jobs-list>li .delete.button,.jobs-list>li .delete.button-submit {
     height: 24px;
     max-height: 24px;
     max-width: 24px;
@@ -3713,7 +3716,7 @@ a.box:active {
     font-size: .75rem
 }
 
-.breadcrumb.is-medium,.contact .jobs-list>li .breadcrumb.message-alert,.jobs-list>li .breadcrumb.button,.jobs-list>li .contact .breadcrumb.message-alert {
+.breadcrumb.is-medium,.jobs-list>li .breadcrumb.button,.jobs-list>li .breadcrumb.button-submit {
     font-size: 1.25rem
 }
 
@@ -4040,7 +4043,7 @@ a.box:active {
     text-align: left
 }
 
-.contact .contact-text,.hero-body,.ribbon,.up-arrow {
+.hero-body,.message-alert strong,.ribbon,.up-arrow {
     text-align: center
 }
 
@@ -4157,7 +4160,7 @@ a.box:active {
     width: 16px
 }
 
-.contact .jobs-list>li .modal-close.message-alert,.jobs-list>li .contact .modal-close.message-alert,.jobs-list>li .modal-close.button,.modal-close.is-medium {
+.jobs-list>li .modal-close.button,.jobs-list>li .modal-close.button-submit,.modal-close.is-medium {
     height: 24px;
     max-height: 24px;
     max-width: 24px;
@@ -4235,7 +4238,7 @@ a.box:active {
     border-top: 1px solid #dbdbdb
 }
 
-.contact .modal-card-foot .message-alert:not(:last-child),.modal-card-foot .button:not(:last-child),.modal-card-foot .contact .message-alert:not(:last-child) {
+.modal-card-foot .button-submit:not(:last-child),.modal-card-foot .button:not(:last-child) {
     margin-right: 10px
 }
 
@@ -4679,7 +4682,7 @@ a.box:active {
     color: #0a0a0a
 }
 
-.hero.is-white a:not(.button):not(.contact .message-alert),.hero.is-white strong {
+.hero.is-white a:not(.button):not(.button-submit),.hero.is-white strong {
     color: inherit
 }
 
@@ -4691,7 +4694,7 @@ a.box:active {
     color: rgba(10,10,10,.9)
 }
 
-.hero.is-white .subtitle a:not(.button):not(.contact .message-alert),.hero.is-white .subtitle strong {
+.hero.is-white .subtitle a:not(.button):not(.button-submit),.hero.is-white .subtitle strong {
     color: #0a0a0a
 }
 
@@ -4700,11 +4703,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(10,10,10,.2)
 }
 
-.hero.is-white .nav-item a:not(.button):not(.contact .message-alert),.hero.is-white a.nav-item {
+.hero.is-white .nav-item a:not(.button):not(.button-submit),.hero.is-white a.nav-item {
     color: rgba(10,10,10,.7)
 }
 
-.hero.is-white .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-white .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-white .tabs.is-boxed a,.hero.is-white .tabs.is-toggle a,.hero.is-white a.nav-item.is-active,.hero.is-white a.nav-item:hover {
+.hero.is-white .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-white .nav-item a:not(.button):not(.button-submit):hover,.hero.is-white .tabs.is-boxed a,.hero.is-white .tabs.is-toggle a,.hero.is-white a.nav-item.is-active,.hero.is-white a.nav-item:hover {
     color: #0a0a0a
 }
 
@@ -4738,7 +4741,7 @@ a.box:active {
     color: #fff
 }
 
-.hero.is-black a:not(.button):not(.contact .message-alert),.hero.is-black strong {
+.hero.is-black a:not(.button):not(.button-submit),.hero.is-black strong {
     color: inherit
 }
 
@@ -4750,7 +4753,7 @@ a.box:active {
     color: rgba(255,255,255,.9)
 }
 
-.hero.is-black .subtitle a:not(.button):not(.contact .message-alert),.hero.is-black .subtitle strong {
+.hero.is-black .subtitle a:not(.button):not(.button-submit),.hero.is-black .subtitle strong {
     color: #fff
 }
 
@@ -4759,11 +4762,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.hero.is-black .nav-item a:not(.button):not(.contact .message-alert),.hero.is-black a.nav-item {
+.hero.is-black .nav-item a:not(.button):not(.button-submit),.hero.is-black a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.hero.is-black .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-black .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-black .tabs.is-boxed a,.hero.is-black .tabs.is-toggle a,.hero.is-black a.nav-item.is-active,.hero.is-black a.nav-item:hover {
+.hero.is-black .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-black .nav-item a:not(.button):not(.button-submit):hover,.hero.is-black .tabs.is-boxed a,.hero.is-black .tabs.is-toggle a,.hero.is-black a.nav-item.is-active,.hero.is-black a.nav-item:hover {
     color: #fff
 }
 
@@ -4797,7 +4800,7 @@ a.box:active {
     color: #363636
 }
 
-.hero.is-light a:not(.button):not(.contact .message-alert),.hero.is-light strong {
+.hero.is-light a:not(.button):not(.button-submit),.hero.is-light strong {
     color: inherit
 }
 
@@ -4809,7 +4812,7 @@ a.box:active {
     color: rgba(54,54,54,.9)
 }
 
-.hero.is-light .subtitle a:not(.button):not(.contact .message-alert),.hero.is-light .subtitle strong {
+.hero.is-light .subtitle a:not(.button):not(.button-submit),.hero.is-light .subtitle strong {
     color: #363636
 }
 
@@ -4818,11 +4821,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(54,54,54,.2)
 }
 
-.hero.is-light .nav-item a:not(.button):not(.contact .message-alert),.hero.is-light a.nav-item {
+.hero.is-light .nav-item a:not(.button):not(.button-submit),.hero.is-light a.nav-item {
     color: rgba(54,54,54,.7)
 }
 
-.hero.is-light .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-light .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-light .tabs.is-boxed a,.hero.is-light .tabs.is-toggle a,.hero.is-light a.nav-item.is-active,.hero.is-light a.nav-item:hover {
+.hero.is-light .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-light .nav-item a:not(.button):not(.button-submit):hover,.hero.is-light .tabs.is-boxed a,.hero.is-light .tabs.is-toggle a,.hero.is-light a.nav-item.is-active,.hero.is-light a.nav-item:hover {
     color: #363636
 }
 
@@ -4856,7 +4859,7 @@ a.box:active {
     color: #f5f5f5
 }
 
-.hero.is-dark a:not(.button):not(.contact .message-alert),.hero.is-dark strong {
+.hero.is-dark a:not(.button):not(.button-submit),.hero.is-dark strong {
     color: inherit
 }
 
@@ -4868,7 +4871,7 @@ a.box:active {
     color: rgba(245,245,245,.9)
 }
 
-.hero.is-dark .subtitle a:not(.button):not(.contact .message-alert),.hero.is-dark .subtitle strong {
+.hero.is-dark .subtitle a:not(.button):not(.button-submit),.hero.is-dark .subtitle strong {
     color: #f5f5f5
 }
 
@@ -4877,11 +4880,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(245,245,245,.2)
 }
 
-.hero.is-dark .nav-item a:not(.button):not(.contact .message-alert),.hero.is-dark a.nav-item {
+.hero.is-dark .nav-item a:not(.button):not(.button-submit),.hero.is-dark a.nav-item {
     color: rgba(245,245,245,.7)
 }
 
-.hero.is-dark .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-dark .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-dark .tabs.is-boxed a,.hero.is-dark .tabs.is-toggle a,.hero.is-dark a.nav-item.is-active,.hero.is-dark a.nav-item:hover {
+.hero.is-dark .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-dark .nav-item a:not(.button):not(.button-submit):hover,.hero.is-dark .tabs.is-boxed a,.hero.is-dark .tabs.is-toggle a,.hero.is-dark a.nav-item.is-active,.hero.is-dark a.nav-item:hover {
     color: #f5f5f5
 }
 
@@ -4915,7 +4918,7 @@ a.box:active {
     color: #fff
 }
 
-.hero.is-primary a:not(.button):not(.contact .message-alert),.hero.is-primary strong {
+.hero.is-primary a:not(.button):not(.button-submit),.hero.is-primary strong {
     color: inherit
 }
 
@@ -4927,7 +4930,7 @@ a.box:active {
     color: rgba(255,255,255,.9)
 }
 
-.hero.is-primary .subtitle a:not(.button):not(.contact .message-alert),.hero.is-primary .subtitle strong {
+.hero.is-primary .subtitle a:not(.button):not(.button-submit),.hero.is-primary .subtitle strong {
     color: #fff
 }
 
@@ -4936,11 +4939,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.hero.is-primary .nav-item a:not(.button):not(.contact .message-alert),.hero.is-primary a.nav-item {
+.hero.is-primary .nav-item a:not(.button):not(.button-submit),.hero.is-primary a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.hero.is-primary .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-primary .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-primary .tabs.is-boxed a,.hero.is-primary .tabs.is-toggle a,.hero.is-primary a.nav-item.is-active,.hero.is-primary a.nav-item:hover {
+.hero.is-primary .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-primary .nav-item a:not(.button):not(.button-submit):hover,.hero.is-primary .tabs.is-boxed a,.hero.is-primary .tabs.is-toggle a,.hero.is-primary a.nav-item.is-active,.hero.is-primary a.nav-item:hover {
     color: #fff
 }
 
@@ -4969,60 +4972,60 @@ a.box:active {
     background-image: linear-gradient(141deg,#ad184a 0,#cd2b46 71%,#dc3636 100%)
 }
 
-.contact .hero.message-alert,.hero.is-info,.jobs-list>li .hero.button {
+.hero.button-submit,.hero.is-info,.jobs-list>li .hero.button,.jobs-list>li .hero.button-submit {
     background-color: #2ab7cd;
     color: #fff
 }
 
-.contact .hero.message-alert a:not(.button):not(.contact .message-alert),.contact .hero.message-alert strong,.hero.is-info a:not(.button):not(.contact .message-alert),.hero.is-info strong,.jobs-list>li .hero.button a:not(.button):not(.contact .message-alert),.jobs-list>li .hero.button strong {
+.hero.button-submit a:not(.button):not(.button-submit),.hero.button-submit strong,.hero.is-info a:not(.button):not(.button-submit),.hero.is-info strong,.jobs-list>li .hero.button a:not(.button):not(.button-submit),.jobs-list>li .hero.button strong {
     color: inherit
 }
 
-.contact .hero.message-alert .title,.hero.is-info .title,.jobs-list>li .hero.button .title {
+.hero.button-submit .title,.hero.is-info .title,.jobs-list>li .hero.button .title {
     color: #fff
 }
 
-.contact .hero.message-alert .subtitle,.hero.is-info .subtitle,.jobs-list>li .hero.button .subtitle {
+.hero.button-submit .subtitle,.hero.is-info .subtitle,.jobs-list>li .hero.button .subtitle {
     color: rgba(255,255,255,.9)
 }
 
-.contact .hero.message-alert .subtitle a:not(.button):not(.contact .message-alert),.contact .hero.message-alert .subtitle strong,.hero.is-info .subtitle a:not(.button):not(.contact .message-alert),.hero.is-info .subtitle strong,.jobs-list>li .hero.button .subtitle a:not(.button):not(.contact .message-alert),.jobs-list>li .hero.button .subtitle strong {
+.hero.button-submit .subtitle a:not(.button):not(.button-submit),.hero.button-submit .subtitle strong,.hero.is-info .subtitle a:not(.button):not(.button-submit),.hero.is-info .subtitle strong,.jobs-list>li .hero.button .subtitle a:not(.button):not(.button-submit),.jobs-list>li .hero.button .subtitle strong {
     color: #fff
 }
 
-.contact .hero.message-alert .nav,.hero.is-info .nav,.jobs-list>li .hero.button .nav {
+.hero.button-submit .nav,.hero.is-info .nav,.jobs-list>li .hero.button .nav {
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2);
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.contact .hero.message-alert .nav-item a:not(.button):not(.contact .message-alert),.contact .hero.message-alert a.nav-item,.hero.is-info .nav-item a:not(.button):not(.contact .message-alert),.hero.is-info a.nav-item,.jobs-list>li .hero.button .nav-item a:not(.button):not(.contact .message-alert),.jobs-list>li .hero.button a.nav-item {
+.hero.button-submit .nav-item a:not(.button):not(.button-submit),.hero.button-submit a.nav-item,.hero.is-info .nav-item a:not(.button):not(.button-submit),.hero.is-info a.nav-item,.jobs-list>li .hero.button .nav-item a:not(.button):not(.button-submit),.jobs-list>li .hero.button a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.contact .hero.message-alert .nav-item a:not(.button):not(.contact .message-alert).is-active,.contact .hero.message-alert .nav-item a:not(.button):not(.contact .message-alert):hover,.contact .hero.message-alert .tabs.is-boxed a,.contact .hero.message-alert .tabs.is-toggle a,.contact .hero.message-alert a.nav-item.is-active,.contact .hero.message-alert a.nav-item:hover,.hero.is-info .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-info .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-info .tabs.is-boxed a,.hero.is-info .tabs.is-toggle a,.hero.is-info a.nav-item.is-active,.hero.is-info a.nav-item:hover,.jobs-list>li .hero.button .nav-item a:not(.button):not(.contact .message-alert).is-active,.jobs-list>li .hero.button .nav-item a:not(.button):not(.contact .message-alert):hover,.jobs-list>li .hero.button .tabs.is-boxed a,.jobs-list>li .hero.button .tabs.is-toggle a,.jobs-list>li .hero.button a.nav-item.is-active,.jobs-list>li .hero.button a.nav-item:hover {
+.hero.button-submit .nav-item a:not(.button):not(.button-submit).is-active,.hero.button-submit .nav-item a:not(.button):not(.button-submit):hover,.hero.button-submit .tabs.is-boxed a,.hero.button-submit .tabs.is-toggle a,.hero.button-submit a.nav-item.is-active,.hero.button-submit a.nav-item:hover,.hero.is-info .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-info .nav-item a:not(.button):not(.button-submit):hover,.hero.is-info .tabs.is-boxed a,.hero.is-info .tabs.is-toggle a,.hero.is-info a.nav-item.is-active,.hero.is-info a.nav-item:hover,.jobs-list>li .hero.button .nav-item a:not(.button):not(.button-submit).is-active,.jobs-list>li .hero.button .nav-item a:not(.button):not(.button-submit):hover,.jobs-list>li .hero.button .tabs.is-boxed a,.jobs-list>li .hero.button .tabs.is-toggle a,.jobs-list>li .hero.button a.nav-item.is-active,.jobs-list>li .hero.button a.nav-item:hover {
     color: #fff
 }
 
-.contact .hero.message-alert .tabs a,.hero.is-info .tabs a,.jobs-list>li .hero.button .tabs a {
+.hero.button-submit .tabs a,.hero.is-info .tabs a,.jobs-list>li .hero.button .tabs a {
     color: #fff;
     opacity: .9
 }
 
-.contact .hero.message-alert .tabs a:hover,.contact .hero.message-alert .tabs li.is-active a,.hero.is-info .tabs a:hover,.hero.is-info .tabs li.is-active a,.jobs-list>li .hero.button .tabs a:hover,.jobs-list>li .hero.button .tabs li.is-active a {
+.hero.button-submit .tabs a:hover,.hero.button-submit .tabs li.is-active a,.hero.is-info .tabs a:hover,.hero.is-info .tabs li.is-active a,.jobs-list>li .hero.button .tabs a:hover,.jobs-list>li .hero.button .tabs li.is-active a {
     opacity: 1
 }
 
-.contact .hero.message-alert .tabs.is-boxed a:hover,.contact .hero.message-alert .tabs.is-toggle a:hover,.hero.is-info .tabs.is-boxed a:hover,.hero.is-info .tabs.is-toggle a:hover,.jobs-list>li .hero.button .tabs.is-boxed a:hover,.jobs-list>li .hero.button .tabs.is-toggle a:hover {
+.hero.button-submit .tabs.is-boxed a:hover,.hero.button-submit .tabs.is-toggle a:hover,.hero.is-info .tabs.is-boxed a:hover,.hero.is-info .tabs.is-toggle a:hover,.jobs-list>li .hero.button .tabs.is-boxed a:hover,.jobs-list>li .hero.button .tabs.is-toggle a:hover {
     background-color: rgba(10,10,10,.1)
 }
 
-.contact .hero.message-alert .tabs.is-boxed li.is-active a,.contact .hero.message-alert .tabs.is-boxed li.is-active a:hover,.contact .hero.message-alert .tabs.is-toggle li.is-active a,.contact .hero.message-alert .tabs.is-toggle li.is-active a:hover,.hero.is-info .tabs.is-boxed li.is-active a,.hero.is-info .tabs.is-boxed li.is-active a:hover,.hero.is-info .tabs.is-toggle li.is-active a,.hero.is-info .tabs.is-toggle li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a:hover {
+.hero.button-submit .tabs.is-boxed li.is-active a,.hero.button-submit .tabs.is-boxed li.is-active a:hover,.hero.button-submit .tabs.is-toggle li.is-active a,.hero.button-submit .tabs.is-toggle li.is-active a:hover,.hero.is-info .tabs.is-boxed li.is-active a,.hero.is-info .tabs.is-boxed li.is-active a:hover,.hero.is-info .tabs.is-toggle li.is-active a,.hero.is-info .tabs.is-toggle li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a,.jobs-list>li .hero.button .tabs.is-boxed li.is-active a:hover,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a,.jobs-list>li .hero.button .tabs.is-toggle li.is-active a:hover {
     background-color: #fff;
     border-color: #fff;
     color: #2ab7cd
 }
 
-.contact .hero.is-bold.message-alert,.hero.is-info.is-bold,.jobs-list>li .hero.is-bold.button {
+.hero.is-bold.button-submit,.hero.is-info.is-bold,.jobs-list>li .hero.is-bold.button {
     background-image: -webkit-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
     background-image: -o-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
     background-image: linear-gradient(141deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%)
@@ -5033,7 +5036,7 @@ a.box:active {
     color: #fff
 }
 
-.hero.is-success a:not(.button):not(.contact .message-alert),.hero.is-success strong {
+.hero.is-success a:not(.button):not(.button-submit),.hero.is-success strong {
     color: inherit
 }
 
@@ -5045,7 +5048,7 @@ a.box:active {
     color: rgba(255,255,255,.9)
 }
 
-.hero.is-success .subtitle a:not(.button):not(.contact .message-alert),.hero.is-success .subtitle strong {
+.hero.is-success .subtitle a:not(.button):not(.button-submit),.hero.is-success .subtitle strong {
     color: #fff
 }
 
@@ -5054,11 +5057,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.hero.is-success .nav-item a:not(.button):not(.contact .message-alert),.hero.is-success a.nav-item {
+.hero.is-success .nav-item a:not(.button):not(.button-submit),.hero.is-success a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.hero.is-success .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-success .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-success .tabs.is-boxed a,.hero.is-success .tabs.is-toggle a,.hero.is-success a.nav-item.is-active,.hero.is-success a.nav-item:hover {
+.hero.is-success .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-success .nav-item a:not(.button):not(.button-submit):hover,.hero.is-success .tabs.is-boxed a,.hero.is-success .tabs.is-toggle a,.hero.is-success a.nav-item.is-active,.hero.is-success a.nav-item:hover {
     color: #fff
 }
 
@@ -5092,7 +5095,7 @@ a.box:active {
     color: rgba(0,0,0,.7)
 }
 
-.hero.is-warning a:not(.button):not(.contact .message-alert),.hero.is-warning strong {
+.hero.is-warning a:not(.button):not(.button-submit),.hero.is-warning strong {
     color: inherit
 }
 
@@ -5104,7 +5107,7 @@ a.box:active {
     color: rgba(0,0,0,.9)
 }
 
-.hero.is-warning .nav-item a:not(.button):not(.contact .message-alert),.hero.is-warning .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-warning .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-warning .subtitle a:not(.button):not(.contact .message-alert),.hero.is-warning .subtitle strong,.hero.is-warning .tabs.is-boxed a,.hero.is-warning .tabs.is-toggle a,.hero.is-warning a.nav-item,.hero.is-warning a.nav-item.is-active,.hero.is-warning a.nav-item:hover {
+.hero.is-warning .nav-item a:not(.button):not(.button-submit),.hero.is-warning .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-warning .nav-item a:not(.button):not(.button-submit):hover,.hero.is-warning .subtitle a:not(.button):not(.button-submit),.hero.is-warning .subtitle strong,.hero.is-warning .tabs.is-boxed a,.hero.is-warning .tabs.is-toggle a,.hero.is-warning a.nav-item,.hero.is-warning a.nav-item.is-active,.hero.is-warning a.nav-item:hover {
     color: rgba(0,0,0,.7)
 }
 
@@ -5143,7 +5146,7 @@ a.box:active {
     color: #fff
 }
 
-.hero.is-danger a:not(.button):not(.contact .message-alert),.hero.is-danger strong {
+.hero.is-danger a:not(.button):not(.button-submit),.hero.is-danger strong {
     color: inherit
 }
 
@@ -5155,7 +5158,7 @@ a.box:active {
     color: rgba(255,255,255,.9)
 }
 
-.hero.is-danger .subtitle a:not(.button):not(.contact .message-alert),.hero.is-danger .subtitle strong {
+.hero.is-danger .subtitle a:not(.button):not(.button-submit),.hero.is-danger .subtitle strong {
     color: #fff
 }
 
@@ -5164,11 +5167,11 @@ a.box:active {
     box-shadow: 0 1px 0 rgba(255,255,255,.2)
 }
 
-.hero.is-danger .nav-item a:not(.button):not(.contact .message-alert),.hero.is-danger a.nav-item {
+.hero.is-danger .nav-item a:not(.button):not(.button-submit),.hero.is-danger a.nav-item {
     color: rgba(255,255,255,.7)
 }
 
-.hero.is-danger .nav-item a:not(.button):not(.contact .message-alert).is-active,.hero.is-danger .nav-item a:not(.button):not(.contact .message-alert):hover,.hero.is-danger .tabs.is-boxed a,.hero.is-danger .tabs.is-toggle a,.hero.is-danger a.nav-item.is-active,.hero.is-danger a.nav-item:hover {
+.hero.is-danger .nav-item a:not(.button):not(.button-submit).is-active,.hero.is-danger .nav-item a:not(.button):not(.button-submit):hover,.hero.is-danger .tabs.is-boxed a,.hero.is-danger .tabs.is-toggle a,.hero.is-danger a.nav-item.is-active,.hero.is-danger a.nav-item:hover {
     color: #fff
 }
 
@@ -8649,14 +8652,14 @@ input:-webkit-autofill {
     -webkit-animation-fill-mode: both
 }
 
-.button-custom,.contact .message-alert {
+.button-custom,.button-submit {
     padding: 10px 30px;
     margin-bottom: 20px;
     font-size: 1.4rem;
     line-height: 10px
 }
 
-.button:hover,.contact .message-alert:hover {
+.button-submit:hover,.button:hover {
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08)
@@ -8869,7 +8872,6 @@ a.tag:hover {
 }
 
 .card-item {
-    -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
@@ -10412,7 +10414,7 @@ a.tag:hover {
     padding-right: 15px
 }
 
-.contact .jobs-list>li .message-alert,.jobs-list>li .button,.jobs-list>li .contact .message-alert,.m-t-20 {
+.jobs-list>li .button,.jobs-list>li .button-submit,.m-t-20 {
     margin-top: 20px
 }
 
@@ -10842,12 +10844,12 @@ a.tag:hover {
     fill: #000
 }
 
-.menu-link:not(.button):not(.contact .message-alert):not(.contact .message-alert) {
+.menu-link:not(.button):not(.button-submit):not(.button-submit) {
     margin-right: 10px;
     color: #000
 }
 
-.menu-link:not(.button):not(.contact .message-alert):hover {
+.menu-link:not(.button):not(.button-submit):hover {
     color: #cd2b46
 }
 
@@ -11266,7 +11268,8 @@ footer p {
     display: block;
     padding: 0 1em 5em;
     font-weight: 300;
-    margin: 0 auto
+    margin: 0 auto;
+    text-align: center
 }
 
 .contact .valid {
@@ -11313,15 +11316,14 @@ footer p {
     color: #2ab7cd
 }
 
-.contact .message-alert {
-    padding: 10px 70px
-}
-
-.contact .message-alert strong {
-    text-align: center;
+.message-alert strong {
     display: block;
     color: #FFF;
     font-size: 1.7em
+}
+
+.button-submit {
+    padding: 10px 70px
 }
 
 .tags-list .tags-item {
@@ -11483,7 +11485,7 @@ footer p {
         padding-top: .375em
     }
 
-    .contact .jobs-list>li .field-label.message-alert,.field-label.is-medium,.jobs-list>li .contact .field-label.message-alert,.jobs-list>li .field-label.button {
+    .field-label.is-medium,.jobs-list>li .field-label.button,.jobs-list>li .field-label.button-submit {
         font-size: 1.25rem;
         padding-top: .375em
     }
@@ -11871,7 +11873,7 @@ footer p {
         width: 100%
     }
 
-    .contact .jobs-list>li .hero.message-alert .hero-body,.hero.is-medium .hero-body,.jobs-list>li .contact .hero.message-alert .hero-body,.jobs-list>li .hero.button .hero-body {
+    .hero.is-medium .hero-body,.jobs-list>li .hero.button .hero-body,.jobs-list>li .hero.button-submit .hero-body {
         padding-bottom: 9rem;
         padding-top: 9rem
     }
@@ -11892,7 +11894,7 @@ footer p {
         justify-content: center
     }
 
-    .contact .hero-buttons .message-alert:not(:last-child),.hero-buttons .button:not(:last-child),.hero-buttons .contact .message-alert:not(:last-child) {
+    .hero-buttons .button-submit:not(:last-child),.hero-buttons .button:not(:last-child) {
         margin-right: 1.5rem
     }
 }
@@ -12210,7 +12212,7 @@ footer p {
         display: flex
     }
 
-    .contact .jobs-list>li .section.message-alert,.jobs-list>li .contact .section.message-alert,.jobs-list>li .section.button,.section.is-medium {
+    .jobs-list>li .section.button,.jobs-list>li .section.button-submit,.section.is-medium {
         padding: 9rem 1.5rem
     }
 
@@ -13217,7 +13219,7 @@ footer p {
         margin-bottom: .5rem
     }
 
-    .contact .hero-buttons .message-alert:not(:last-child),.hero-buttons .button:not(:last-child),.hero-buttons .contact .message-alert:not(:last-child),.level-item:not(:last-child) {
+    .hero-buttons .button-submit:not(:last-child),.hero-buttons .button:not(:last-child),.level-item:not(:last-child) {
         margin-bottom: .75rem
     }
 
@@ -13540,7 +13542,7 @@ footer p {
         border-top-color: rgba(245,245,245,.2)
     }
 
-    .contact .hero.message-alert .nav-menu .nav-item,.hero.is-info .nav-menu .nav-item,.hero.is-primary .nav-menu .nav-item,.hero.is-success .nav-menu .nav-item,.jobs-list>li .hero.button .nav-menu .nav-item {
+    .hero.button-submit .nav-menu .nav-item,.hero.is-info .nav-menu .nav-item,.hero.is-primary .nav-menu .nav-item,.hero.is-success .nav-menu .nav-item,.jobs-list>li .hero.button .nav-menu .nav-item {
         border-top-color: rgba(255,255,255,.2)
     }
 
@@ -13566,25 +13568,25 @@ footer p {
         background-color: #fff
     }
 
-    .contact .hero.message-alert .nav-menu,.hero.is-info .nav-menu,.jobs-list>li .hero.button .nav-menu {
+    .hero.button-submit .nav-menu,.hero.is-info .nav-menu,.jobs-list>li .hero.button .nav-menu {
         background-color: #2ab7cd
     }
 
-    .contact .hero.is-bold.message-alert .nav-menu,.hero.is-info.is-bold .nav-menu,.jobs-list>li .hero.is-bold.button .nav-menu {
+    .hero.is-bold.button-submit .nav-menu,.hero.is-info.is-bold .nav-menu,.jobs-list>li .hero.is-bold.button .nav-menu {
         background-image: -webkit-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
         background-image: -o-linear-gradient(309deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%);
         background-image: linear-gradient(141deg,#18aca8 0,#2ab7cd 71%,#34aadd 100%)
     }
 
-    .contact .hero.message-alert .nav-toggle span,.hero.is-info .nav-toggle span,.jobs-list>li .hero.button .nav-toggle span {
+    .hero.button-submit .nav-toggle span,.hero.is-info .nav-toggle span,.jobs-list>li .hero.button .nav-toggle span {
         background-color: #fff
     }
 
-    .contact .hero.message-alert .nav-toggle:hover,.hero.is-info .nav-toggle:hover,.jobs-list>li .hero.button .nav-toggle:hover {
+    .hero.button-submit .nav-toggle:hover,.hero.is-info .nav-toggle:hover,.jobs-list>li .hero.button .nav-toggle:hover {
         background-color: rgba(10,10,10,.1)
     }
 
-    .contact .hero.message-alert .nav-toggle.is-active span,.hero.is-info .nav-toggle.is-active span,.jobs-list>li .hero.button .nav-toggle.is-active span {
+    .hero.button-submit .nav-toggle.is-active span,.hero.is-info .nav-toggle.is-active span,.jobs-list>li .hero.button .nav-toggle.is-active span {
         background-color: #fff
     }
 
@@ -13666,7 +13668,7 @@ footer p {
         display: none
     }
 
-    .contact .hero-buttons .message-alert,.hero-buttons .button,.hero-buttons .contact .message-alert {
+    .hero-buttons .button,.hero-buttons .button-submit {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -13675,7 +13677,7 @@ footer p {
 }
 
 @media (max-width:768px) {
-    .button-custom,.contact .message-alert {
+    .button-custom,.button-submit {
         font-size: 1.2rem
     }
 }
@@ -13686,7 +13688,7 @@ footer p {
         min-height: 60vh
     }
 
-    .button-custom,.contact .message-alert {
+    .button-custom,.button-submit {
         font-size: 1rem
     }
 
@@ -13748,7 +13750,7 @@ footer p {
         font-size: 1.2em
     }
 
-    .menu-link:not(.button):not(.contact .message-alert):not(.contact .message-alert) {
+    .menu-link:not(.button):not(.button-submit):not(.button-submit) {
         margin-right: 8px
     }
 
