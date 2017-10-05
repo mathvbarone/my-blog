@@ -173,7 +173,6 @@ var postFilter = function(){
       });
       wow.init();
     });
-    console.log("not-android")
  }
 
 

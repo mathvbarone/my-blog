@@ -11308,6 +11308,9 @@ footer p {
 }
 
 .contact .control.has-icons-left .icon {
+    -webkit-transition: ease-in-out .3s all;
+    -o-transition: ease-in-out .3s all;
+    transition: ease-in-out .3s all;
     color: #fff;
     font-size: 1.45rem
 }
