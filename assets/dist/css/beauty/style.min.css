@@ -11298,7 +11298,8 @@ footer p {
 }
 
 .contact .textarea {
-    padding-left: 1em
+    padding-left: 1em;
+    min-height: 14rem
 }
 
 .contact .control.has-icons-left .input {
