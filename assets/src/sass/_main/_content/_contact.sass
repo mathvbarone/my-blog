@@ -1,15 +1,15 @@
 .contact
-     @extend .bg-red
-     min-height: 100vh
-     padding-top: 60px
-     padding-bottom: 60px 
+    @extend .bg-red
+    min-height: 100vh
+    padding-top: 60px
+    padding-bottom: 60px 
 
-     .title
-          padding-top: 30px
-          padding-bottom: 20px
-          color: #FFF
+    .title
+        padding-top: 30px
+        padding-bottom: 20px
+        color: #FFF
 
-     .contact-text
+    .contact-text
         color: white;
         font-size: 1.125rem; 
         font-weight: 300
@@ -21,38 +21,45 @@
         margin: 0 auto
         text-align: center
 
-     .valid
-          background-color: $primary
-          color: #fff
-          border: 2px solid #fff
-          +placeholder
-               color: #fff
+    .valid
+        background-color: $primary
+        color: #fff
+        border: 2px solid #fff
+        +placeholder
+            color: #fff
 
-     .textarea
+    .textarea
         padding-left: 1em
         min-height: 14rem
 
-             
+            
 
-     .control.has-icons-left
-          .input
-               height: 3.4em
-               padding-left: 3em
+    .control.has-icons-left
+        .icon
+            +transition (ease-in-out, 0.2s, all) 
+            color: #fff
+            font-size: 1.45rem
 
-          .icon
-               +transition(ease-in-out, 0.3s, all)
-               color: #fff
-               font-size: 1.45rem
+        .input
+            height: 3.4em
+            padding-left: 3em
 
-.message-alert
-    strong
-        text-align: center;
-        display: block;
-        color: #FFF;
-        font-size: 1.7em;
+            &:focus
+                ~.icon
+                    color: $blue
 
-.button-submit
-    @extend .is-info
-    @extend .button
-    @extend .button-custom  
-    padding: 10px 70px;      
+
+
+
+    .message-alert
+        strong
+            text-align: center;
+            display: block;
+            color: #FFF;
+            font-size: 1.7em;   
+
+        .button-submit
+        @extend .is-info
+        @extend .button
+        @extend .button-custom  
+        padding: 10px 70px;      
