@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+
+var notAndroid = !/Android/i.test(navigator.userAgent);
+
+
+
   //FUNÇÃO DE SCROLL
   $(function() {
     // SELECIONA TODOS OS LINKS COM HASHTAG
@@ -160,12 +165,17 @@ var postFilter = function(){
 
 
   //FUNÇAO DE CHAMADA DO ANIMATION
-  $(function() {
-    wow = new WOW({
-      mobile: true
+
+  if(notAndroid) { 
+    $(function() {
+      wow = new WOW({
+        mobile: true
+      });
+      wow.init();
     });
-    wow.init();
-  });
+    console.log("not-android")
+ }
+
 
 
   //EFEITO DE PARALLAX NO CONTEUDO DO HEADER
