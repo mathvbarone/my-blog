@@ -34,7 +34,7 @@ category-favicon: <i class="fa fa-th-large" aria-hidden="true"></i>
                                             </a>
                                             <div>
                                                 {% for tag in post.tags %}
-                                                <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>                                   
+                                                <a class="card-tags" href="{{ site.baseurl }}/tags/#{{tag | slugify }}">#{{ tag }}</a>                                   
                                                 {% endfor %}
                                             </div>
                                     </div>

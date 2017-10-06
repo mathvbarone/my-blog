@@ -9053,11 +9053,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-blog .post-content h2 {
+.post-blog .post-content h2,.post-blog .post-content h3 {
     color: #C35163;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-blog .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-blog .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-blog .post-content a {
@@ -9273,11 +9280,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-html .post-content h2 {
+.post-html .post-content h2,.post-html .post-content h3 {
     color: #4986b1;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-html .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-html .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-html .post-content a {
@@ -9504,11 +9518,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-css .post-content h2 {
+.post-css .post-content h2,.post-css .post-content h3 {
     color: #378574;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-css .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-css .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-css .post-content a {
@@ -9722,11 +9743,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-js .post-content h2 {
+.post-js .post-content h2,.post-js .post-content h3 {
     color: #f8c101;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-js .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-js .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-js .post-content a {
@@ -9940,11 +9968,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-misc .post-content h2 {
+.post-misc .post-content h2,.post-misc .post-content h3 {
     color: #af1da2;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-misc .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-misc .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-misc .post-content a {
@@ -10165,11 +10200,18 @@ a.tag:hover {
     visibility: hidden
 }
 
-.post-front .post-content h2 {
+.post-front .post-content h2,.post-front .post-content h3 {
     color: #65B149;
-    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 30px
+}
+
+.post-front .post-content h2 {
+    font-size: 1.6em
+}
+
+.post-front .post-content h3 {
+    font-size: 1.3em
 }
 
 .post-front .post-content a {
@@ -11255,7 +11297,7 @@ footer p {
 }
 
 .contact .title {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 20px;
     color: #FFF
 }
@@ -11266,7 +11308,7 @@ footer p {
     width: 100%;
     max-width: 50rem;
     display: block;
-    padding: 0 1em 5em;
+    padding: 0 1em 4em;
     font-weight: 300;
     margin: 0 auto;
     text-align: center
