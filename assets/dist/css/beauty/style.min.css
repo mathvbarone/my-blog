@@ -10482,7 +10482,7 @@ a.tag:hover {
     margin-top: 30px
 }
 
-.p-t-30 {
+.conhecimento-list,.p-t-30 {
     padding-top: 30px
 }
 
@@ -11160,7 +11160,7 @@ footer p {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     color: #aaa9a9;
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 10px
 }
 
