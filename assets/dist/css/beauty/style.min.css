@@ -10845,11 +10845,15 @@ a.tag:hover {
     -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.12);
     box-shadow: 0 3px 5px rgba(0,0,0,.12);
     padding: 5px 10px;
-    top: -46px;
+    top: 0;
     background: #fff;
     -webkit-transition: linear .3s all;
     -o-transition: linear .3s all;
     transition: linear .3s all
+}
+
+.mast-header.is-index {
+    top: -46px
 }
 
 .mast-header.is-active {

@@ -194,10 +194,10 @@ var postFilter = function(){
  
   var showHeader = function() {
       if($(window).scrollTop() > 40){
-        $(".index-header").addClass("is-active");
+        $(".is-index").addClass("is-active");
       }
       else{
-        $(".index-header").removeClass("is-active");
+        $(".is-index").removeClass("is-active");
       }
   }
 
