@@ -1,49 +1,49 @@
 [
   
     {
-      "title"    : "Como escrever um post de MISC",
-      "category" : "Front Dicas",
-      "tags"     : "misc",
+      "title"    : "Post MISC",
+      "category" : "",
+      "tags"     : "misc, web, and blog",
       "url"      : "/post-misc/",
       "date"     : "22 Sep 2017"
     } ,
   
     {
       "title"    : "Post JS",
-      "category" : "Front Dicas",
-      "tags"     : "js",
+      "category" : "",
+      "tags"     : "js, web, and blog",
       "url"      : "/post-js/",
       "date"     : "22 Sep 2017"
     } ,
   
     {
       "title"    : "Post HTML",
-      "category" : "Front Dicas",
-      "tags"     : "html",
+      "category" : "",
+      "tags"     : "html, web, and blog",
       "url"      : "/post-html/",
       "date"     : "22 Sep 2017"
     } ,
   
     {
       "title"    : "Post FRONT",
-      "category" : "Front Dicas",
-      "tags"     : "front",
+      "category" : "",
+      "tags"     : "front, web, and blog",
       "url"      : "/post-front/",
       "date"     : "22 Sep 2017"
     } ,
   
     {
       "title"    : "Post CSS",
-      "category" : "Front Dicas",
-      "tags"     : "css",
+      "category" : "",
+      "tags"     : "css, web, and blog",
       "url"      : "/post-css/",
       "date"     : "22 Sep 2017"
     } ,
   
     {
       "title"    : "Post Blog",
-      "category" : "Front Dicas",
-      "tags"     : "blog",
+      "category" : "",
+      "tags"     : "web and blog",
       "url"      : "/post-blog/",
       "date"     : "22 Sep 2017"
     } 

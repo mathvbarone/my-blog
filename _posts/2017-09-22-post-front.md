@@ -8,8 +8,8 @@ main-class: 'front'
 color: '#2dbf80'
 tags:
 - front
-categories:
-- Front Dicas
+- web
+- blog
 twitter_text: "Como escrever um post de FRONT."
 introduction: "Como escrever um post de FRONT."
 ---

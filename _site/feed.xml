@@ -6,12 +6,12 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Oct 2017 14:28:39 -0300</pubDate>
-    <lastBuildDate>Fri, 06 Oct 2017 14:28:39 -0300</lastBuildDate>
+    <pubDate>Fri, 06 Oct 2017 16:44:52 -0300</pubDate>
+    <lastBuildDate>Fri, 06 Oct 2017 16:44:52 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>Como escrever um post de MISC</title>
+        <title>Post MISC</title>
         <description>&lt;h2 id=&quot;título&quot;&gt;Título&lt;/h2&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non cursus erat. Nullam ultricies metus eu ipsum aliquam tincidunt. Suspendisse mollis mattis dui, nec molestie tortor sagittis porta. Aliquam eu semper felis.&lt;/p&gt; &lt;h3 id=&quot;subtítulo&quot;&gt;Subtítulo&lt;/h3&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non cursus erat. Nullam ultricies metus eu ipsum aliquam tincidunt. Suspendisse mollis mattis dui, nec molestie tortor sagittis porta. Aliquam eu semper felis.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content-inside&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; content &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/footer&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Lorem ipsum...</description>
         <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
         <link>http://localhost:4000/post-misc/</link>
@@ -19,8 +19,10 @@
         
         <category>misc</category>
         
+        <category>web</category>
         
-        <category>Front Dicas</category>
+        <category>blog</category>
+        
         
       </item>
     
@@ -33,8 +35,10 @@
         
         <category>js</category>
         
+        <category>web</category>
         
-        <category>Front Dicas</category>
+        <category>blog</category>
+        
         
       </item>
     
@@ -47,8 +51,10 @@
         
         <category>html</category>
         
+        <category>web</category>
         
-        <category>Front Dicas</category>
+        <category>blog</category>
+        
         
       </item>
     
@@ -61,8 +67,10 @@
         
         <category>front</category>
         
+        <category>web</category>
         
-        <category>Front Dicas</category>
+        <category>blog</category>
+        
         
       </item>
     
@@ -75,8 +83,10 @@
         
         <category>css</category>
         
+        <category>web</category>
         
-        <category>Front Dicas</category>
+        <category>blog</category>
+        
         
       </item>
     
@@ -87,10 +97,10 @@
         <link>http://localhost:4000/post-blog/</link>
         <guid isPermaLink="true">http://localhost:4000/post-blog/</guid>
         
+        <category>web</category>
+        
         <category>blog</category>
         
-        
-        <category>Front Dicas</category>
         
       </item>
     
