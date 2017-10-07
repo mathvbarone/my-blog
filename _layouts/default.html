@@ -28,7 +28,7 @@ layout: compress
             <div class="container p-t-30 main-container">
 
                 <!-- BREADCRUMB -->
-                <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+                <nav class="breadcrumb is-small  {% if page.about %}{{ page.about }}{% endif %}" aria-label="breadcrumbs">
                     <ul>
                         <li><a href="{{site.baseurl}}/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>                    
                         {% if page.category %}
