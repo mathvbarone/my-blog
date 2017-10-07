@@ -18,7 +18,8 @@
           padding: 0          
           
           &-fb,
-          &-tt
+          &-tt,
+          &-linkedin
                background: #fff
                border-radius: 4px
 
@@ -30,6 +31,10 @@
                &:hover
                     background: #77AADB
 
+          &-linkedin
+               &:hover
+                    background: #0065A0
+
           &-github
                background: #1D1C15
                &:hover
@@ -38,7 +43,8 @@
           
 
      .icon-fb,
-     .icon-tt
+     .icon-tt,
+     .icon-linkedin
           +transition(ease-in-out, 0.2s, all)  
           width: 20px
           height: 20px
@@ -50,6 +56,9 @@
 
      .icon-tt
           fill: #77AADB
+
+     .icon-linkedin
+          fill: #0065A0
 
      .icon-github 
           +transition(ease-in-out, 0.2s, all)       

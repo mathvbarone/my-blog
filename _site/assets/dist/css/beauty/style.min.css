@@ -10899,10 +10899,6 @@ a.tag:hover {
     color: #cd2b46
 }
 
-.hero-default-body>.subtitle,.hero-default-body>.title,footer p,footer p strong {
-    color: #fff
-}
-
 .menu-link {
     font-size: .95em
 }
@@ -10958,11 +10954,15 @@ a.tag:hover {
     justify-content: center
 }
 
-.content .icon-fb,.content .icon-tt,.content .redes-bg {
+.content .icon-fb,.content .icon-linkedin,.content .icon-tt,.content .redes-bg {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     width: 20px;
     height: 20px
+}
+
+.hero-default-body>.subtitle,.hero-default-body>.title {
+    color: #fff
 }
 
 .hero-default-body>.title {
@@ -10989,7 +10989,7 @@ a.tag:hover {
     justify-content: center
 }
 
-.hero-index-body .subtitle,.hero-index-body .title,.hero-index-body .title span,footer p strong {
+.content .redes-bg,.hero-index-body .subtitle,.hero-index-body .title,.hero-index-body .title span {
     display: block
 }
 
@@ -10999,12 +10999,11 @@ a.tag:hover {
 
 .content .redes-bg {
     transition: ease-in-out .2s all;
-    display: block;
     margin: 0;
     padding: 0
 }
 
-.content .redes-bg-fb,.content .redes-bg-tt {
+.content .redes-bg-fb,.content .redes-bg-linkedin,.content .redes-bg-tt {
     background: #fff;
     -webkit-border-radius: 4px;
     border-radius: 4px
@@ -11018,6 +11017,10 @@ a.tag:hover {
     background: #77AADB
 }
 
+.content .redes-bg-linkedin:hover {
+    background: #0065A0
+}
+
 .content .redes-bg-github {
     background: #1D1C15
 }
@@ -11026,7 +11029,7 @@ a.tag:hover {
     background: #fff
 }
 
-.content .icon-fb,.content .icon-tt {
+.content .icon-fb,.content .icon-linkedin,.content .icon-tt {
     transition: ease-in-out .2s all
 }
 
@@ -11035,7 +11038,7 @@ a.tag:hover {
     -o-transition: ease-in-out .2s all
 }
 
-.content .icon-fb:hover,.content .icon-tt:hover {
+.content .icon-fb:hover,.content .icon-linkedin:hover,.content .icon-tt:hover {
     fill: #fff
 }
 
@@ -11045,6 +11048,10 @@ a.tag:hover {
 
 .content .icon-tt {
     fill: #77AADB
+}
+
+.content .icon-linkedin {
+    fill: #0065A0
 }
 
 .content .icon-github {
@@ -11064,8 +11071,17 @@ footer {
     padding: 40px 0
 }
 
-footer p {
-    padding: 0 20px
+footer .footer-infos,footer .footer-phone {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #fff;
+    display: block
+}
+
+footer .footer-phone .fa {
+    color: #2ab7cd;
+    font-size: 1.2em;
+    padding-right: .4em
 }
 
 .hero-index {
