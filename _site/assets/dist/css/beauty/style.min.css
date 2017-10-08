@@ -11312,8 +11312,8 @@ footer .footer-phone .fa {
 
 .contact .contact-text,.is-about {
     width: 100%;
-    margin: 0 auto;
-    max-width: 50rem
+    max-width: 50rem;
+    margin: 0 auto
 }
 
 .conhecimento-figure .icon-ideas:hover {
@@ -11414,6 +11414,7 @@ footer .footer-phone .fa {
 .perfil-photo {
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    max-width: 16em;
     -webkit-box-shadow: 5px 5px 0 #cd2b46;
     box-shadow: 5px 5px 0 #cd2b46
 }
