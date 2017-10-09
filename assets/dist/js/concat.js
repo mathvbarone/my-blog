@@ -10656,7 +10656,8 @@ var postFilter = function(){
   var typeScript = function(){
     Typed.new('#typed', {
       stringsElement: document.getElementById('typed-strings'),
-      loop:true
+      loop:true,
+      typeSpeed: 60
     });
   }
 
