@@ -243,6 +243,5 @@ var postFilter = function(){
       links[i].className += ' externalLink';
     }
   }
-  console.log(window.location.hostname);
 })();
 
