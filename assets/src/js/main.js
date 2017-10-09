@@ -238,8 +238,8 @@ var postFilter = function(){
 (function() {
   var links = document.links;
   for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+    console.log(links[i].hostname, window.location.hostname);
     if (links[i].hostname != window.location.hostname) {
-      console.log(links[i].hostname);
       links[i].target = '_blank';
       links[i].className += ' externalLink';
     }
