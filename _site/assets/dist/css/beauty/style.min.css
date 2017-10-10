@@ -11402,7 +11402,7 @@ footer .footer-phone .fa {
     font-size: 1.7em
 }
 
-.about a,.is-about li.is-active a {
+.about a,.about h2,.about h3,.about h4,.is-about li.is-active a {
     color: #cd2b46
 }
 
@@ -11431,23 +11431,14 @@ footer .footer-phone .fa {
     width: 100%;
     max-width: 50rem;
     display: block;
-    margin: 0 auto 1.875rem;
-    padding: 0 1em;
     font-weight: 300;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 1.5em;
+    line-height: 1.4em;
     letter-spacing: .01rem
 }
 
-.about h2,.about h3 {
-    padding: 0 .7em;
-    color: #cd2b46;
-    font-weight: 700;
-    margin-bottom: 30px
-}
-
-.about h2:before,.about h3:before {
+.about h2:before,.about h3:before,.about h4:before {
     display: block;
     content: " ";
     margin-top: -60px;
@@ -11456,11 +11447,32 @@ footer .footer-phone .fa {
 }
 
 .about h2 {
-    font-size: 1.6em
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 1.8em
 }
 
 .about h3 {
-    font-size: 1.3em
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: 1.2em
+}
+
+.about h4 {
+    margin-bottom: 0;
+    font-size: 1em
+}
+
+.about ul {
+    padding: 0;
+    margin: 0
+}
+
+.about ul li {
+    list-style-type: disc;
+    padding: 0;
+    line-height: 9.9em;
+    margin-left: 1em
 }
 
 .about a {
