@@ -11473,11 +11473,15 @@ footer .footer-phone .fa {
     padding: 0
 }
 
-.about ul li {
+.about ul>li {
     list-style-type: disc;
     padding: 0;
     line-height: 9.9em;
     margin-left: 2.1em
+}
+
+.about ul>li>p {
+    padding-left: .6em
 }
 
 .about a {
