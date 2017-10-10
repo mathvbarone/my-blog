@@ -13861,6 +13861,10 @@ footer .footer-phone .fa {
     .button-custom,.button-submit {
         font-size: 1.2rem
     }
+
+    .about h2,.about h3,.about h4 {
+        padding-left: 0
+    }
 }
 
 @media (max-width:540px) {
