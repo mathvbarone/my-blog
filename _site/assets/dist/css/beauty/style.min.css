@@ -11313,12 +11313,6 @@ footer .footer-phone .fa {
     transition: ease-in-out .2s all
 }
 
-.contact .contact-text,.is-about {
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto
-}
-
 .conhecimento-figure .icon-ideas:hover {
     fill: #ffdd57
 }
@@ -11346,9 +11340,12 @@ footer .footer-phone .fa {
 .contact .contact-text {
     color: #fff;
     font-size: 1.125rem;
+    width: 100%;
+    max-width: 50rem;
     display: block;
     padding: 0 1em 4em;
     font-weight: 300;
+    margin: 0 auto;
     text-align: center
 }
 
@@ -11402,7 +11399,7 @@ footer .footer-phone .fa {
     font-size: 1.7em
 }
 
-.about a,.about h2,.about h3,.about h4,.is-about li.is-active a {
+.about a,.is-about li.is-active a {
     color: #cd2b46
 }
 
@@ -11411,7 +11408,10 @@ footer .footer-phone .fa {
 }
 
 .is-about {
-    padding: 30px 0 10px 1.4em
+    padding: 30px 0 10px 1.4em;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto
 }
 
 .perfil-photo {
@@ -11427,7 +11427,7 @@ footer .footer-phone .fa {
 }
 
 .about h2,.about h3,.about h4,.about p,.about ul {
-    width: auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 50rem;
     display: block;
@@ -11435,7 +11435,13 @@ footer .footer-phone .fa {
     font-style: normal;
     font-size: 1.125rem;
     line-height: 1.4em;
-    letter-spacing: .01rem
+    letter-spacing: .01rem;
+    padding-left: 1em
+}
+
+.about h2,.about h3,.about h4 {
+    padding-left: .7em;
+    color: #cd2b46
 }
 
 .about h2:before,.about h3:before,.about h4:before {
@@ -11464,8 +11470,7 @@ footer .footer-phone .fa {
 }
 
 .about ul {
-    padding: 0;
-    margin: 0
+    padding: 0
 }
 
 .about ul li {
