@@ -58,28 +58,4 @@
         </url>
     
     
-        <url>
-            <loc>http://localhost:4000/post-misc/</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/post-js/</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/post-html/</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/post-front/</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/post-css/</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/post-blog/</loc>
-        </url>
-  
 </urlset>

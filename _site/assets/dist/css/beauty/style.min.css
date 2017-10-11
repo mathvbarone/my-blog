@@ -8917,7 +8917,7 @@ a.tag:hover {
 }
 
 .post-blog .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9153,7 +9153,7 @@ a.tag:hover {
 }
 
 .post-html .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9380,7 +9380,7 @@ a.tag:hover {
 }
 
 .post-css .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9618,7 +9618,7 @@ a.tag:hover {
 }
 
 .post-js .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -9843,7 +9843,7 @@ a.tag:hover {
 }
 
 .post-misc .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10075,7 +10075,7 @@ a.tag:hover {
 }
 
 .post-front .card {
-    min-height: 180px;
+    min-height: 210px;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;

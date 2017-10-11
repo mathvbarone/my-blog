@@ -8,6 +8,7 @@ index: is-index
 <main class="panel" id="main" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog"
     data-section-name="content">
 
+    {% if site.posts.size > 0 %}
     <!-- LAST POSTS -->
     <section id="last-posts" class="container main-container content-main">
         <!-- TITULO -->
@@ -56,6 +57,7 @@ index: is-index
         <!-- /BUTTON VER MAIS -->
     </section>
     <!-- /LAST POSTS -->
+    {% endif %}
 
 
     <section id="trabalhos" class="bg-grey-lighter">

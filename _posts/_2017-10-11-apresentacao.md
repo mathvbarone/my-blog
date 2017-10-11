@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "Post Blog"
+title: "De professor de violão a desenvolvedor Front-end"
 date: 2017-09-22 10:25:00
-image: '/assets/img/'
-description: "Como escrever um post de blog."
-main-class: 'blog'
-color: '#e80000'
+image: '/assets/dist/images/posts/apresentacao.jpg'
+description: "Um pouco da Minha história trabalhando com tecnologia."
+main-class: 'front'
+color: '#cd2b46'
 tags:
-- web
-- blog
-twitter_text: "Como escrever um post de blog."
-introduction: "Descrição de um post de blog."
----
+- front-end
+- apresentacao
+- historia
 
+twitter_text: "De professor de violão a desenvolvedor Front-end"
+introduction: "Um pouco da Minha história trabalhando com tecnologia."
+---
 
 ## Título
 
