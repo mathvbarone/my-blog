@@ -1,16 +1,17 @@
-var gulp           = require('gulp'),
-	plumber       = require('gulp-plumber'),
-	sass          = require('gulp-sass'),
-	autoprefixer  = require('gulp-autoprefixer'),
-	browserSync   = require('browser-sync'),
-	uglify        = require('gulp-uglify'),
-	concat        = require('gulp-concat'),
-	imagemin      = require('gulp-imagemin'),
-	rename        = require('gulp-rename'),
-	beautifycss   = require('gulp-cssbeautify'),
-	cssmin        = require('gulp-cssmin'),
-	gcmq  	    = require('gulp-group-css-media-queries');
-	cp            = require('child_process');
+const     gulp           = require('gulp'),
+		plumber       = require('gulp-plumber'),
+		sass          = require('gulp-sass'),
+		autoprefixer  = require('gulp-autoprefixer'),
+		browserSync   = require('browser-sync'),
+		uglify        = require('gulp-uglify'),
+		concat        = require('gulp-concat'),
+		imagemin      = require('gulp-imagemin'),
+		rename        = require('gulp-rename'),
+		beautifycss   = require('gulp-cssbeautify'),
+		cssmin        = require('gulp-cssmin'),
+		gcmq  	    = require('gulp-group-css-media-queries'),
+		babel	    = require('gulp-babel'),
+		cp            = require('child_process');
 
 
 /**
@@ -32,8 +33,6 @@ var paths = {
 		}
 	}
 }
-
-
 
 
 
@@ -77,11 +76,14 @@ gulp.task('css', function() {
  * Javascript Task
  */
 gulp.task('js', function() {
-	gulp.src(['assets/src/js/jquery-3.2.1.js',
-			'assets/src/js/wow.js',
-			'assets/src/js/typed.js',
+	gulp.src(['assets/src/js/jquery.js',
+			'assets/src/js/libs/**.js',
+			'assets/src/js/custom/**.js',
 			'assets/src/js/main.js'])
 	    .pipe(plumber())
+	    .pipe(babel({
+			presets: ['env']
+	 	}))
 	    .pipe(concat('concat.js'))
 	    .pipe(gulp.dest(paths.dest.js))
 	    .pipe(rename('main.min.js'))
