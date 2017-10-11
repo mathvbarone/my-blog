@@ -11510,6 +11510,11 @@ footer .footer-phone .fa {
     width: 0
 }
 
+.about p {
+    position: relative;
+    z-index: 1
+}
+
 .tags-list .tags-item {
     margin-right: .5rem
 }
