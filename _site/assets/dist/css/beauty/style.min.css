@@ -11399,7 +11399,7 @@ footer .footer-phone .fa {
     font-size: 1.7em
 }
 
-.about a,.is-about li.is-active a {
+.about a,.breadcrumb.is-about li.is-active a {
     color: #cd2b46
 }
 
@@ -11407,7 +11407,11 @@ footer .footer-phone .fa {
     padding: 10px 70px
 }
 
-.is-about {
+.offset.is-about {
+    background: url(../images/about/img-matheus.jpg) left 140px no-repeat #ececec
+}
+
+.breadcrumb.is-about {
     padding: 30px 0 10px 1.4em;
     width: 100%;
     max-width: 50rem;
@@ -11417,7 +11421,6 @@ footer .footer-phone .fa {
 .perfil-photo {
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    max-width: 14em;
     -webkit-box-shadow: 5px 5px 0 #cd2b46;
     box-shadow: 5px 5px 0 #cd2b46
 }
@@ -13023,6 +13026,10 @@ footer .footer-phone .fa {
 
     .hero-index-body .subtitle {
         font-size: 1.5rem
+    }
+
+    .offset.is-about {
+        background: #ececec
     }
 }
 
