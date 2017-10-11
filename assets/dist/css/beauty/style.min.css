@@ -13874,7 +13874,7 @@ footer .footer-phone .fa {
         font-size: 1.2rem
     }
 
-    .about h2,.about h3,.about h4 {
+    .about h2,.about h3,.about h4,.about ul>li>p {
         padding-left: 0
     }
 }
