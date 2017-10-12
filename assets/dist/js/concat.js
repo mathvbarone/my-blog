@@ -9924,60 +9924,79 @@ var teste = function teste() {
 };
 
 teste();
-'use strict';
+"use strict";
 
 var start = {
-  //EVENTS
+	//EVENTS
 
-  events: {
-    init: function init() {
-      console.log("1");
-    }
-  },
+	functions: {
 
-  //PLUGINS
+		//SMOOTHSCROLL
+		smoothScroll: function smoothScroll(e) {
+			console.log(e);
+		},
 
-  plugins: {
-    init: function init() {
-      $(function () {
+		//SHOW NAVIGATION
+		showNav: function showNav() {
 
-        //WOW
-        var notAndroid = !/Android/i.test(navigator.userAgent);
-        if (notAndroid) {
-          var wow = new WOW({
-            mobile: true
-          });
-          wow.init();
-        }
+			$(window).scrollTop() > 40 ? ($(".up-arrow").addClass("is-active"), $(".is-index").addClass("is-active")) : ($(".up-arrow").removeClass("is-active"), $(".is-index").removeClass("is-active"));
+		}
 
-        //TYPESCRIPT
-        var typeScript = function () {
-          Typed.new('#typed', {
-            stringsElement: document.getElementById('typed-strings'),
-            loop: true,
-            typeSpeed: 60
-          });
-        }();
-      });
-    }
-  },
+	},
 
-  //FORMS
-  forms: {
-    init: function init() {
-      console.log("3");
-    }
-  },
+	events: {
+		init: function init() {
+			var startFunctions = start.functions;
 
-  //INIT OBJECT
+			//SMOOTHSCROLL INIT
+			$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(startFunctions.smoothScroll);
 
-  init: function init() {
-    start.events.init();
+			//SHOW NAVIGATION INIT
+			$(window).on("scroll", startFunctions.showNav);
+		}
+	},
 
-    start.plugins.init();
+	//PLUGINS
 
-    start.forms.init();
-  }
+	plugins: {
+		init: function init() {
+			$(function () {
+
+				//WOW
+				var notAndroid = !/Android/i.test(navigator.userAgent);
+				if (notAndroid) {
+					var wow = new WOW({
+						mobile: true
+					});
+					wow.init();
+				}
+
+				//TYPESCRIPT
+				var typeScript = function () {
+					Typed.new('#typed', {
+						stringsElement: document.getElementById('typed-strings'),
+						loop: true,
+						typeSpeed: 60
+					});
+				}();
+			});
+		}
+	},
+
+	//FORMS
+	forms: {
+		init: function init() {}
+	},
+
+	//INIT OBJECT
+
+	init: function init() {
+		start.events.init();
+
+		start.plugins.init();
+
+		start.forms.init();
+	}
 };
 
 // /START
