@@ -9931,28 +9931,51 @@ var start = {
 
 	functions: {
 
-		//SMOOTHSCROLL
-		smoothScroll: function smoothScroll(e) {
-			console.log(e);
-		},
-
 		//SHOW NAVIGATION
 		showNav: function showNav() {
 
 			$(window).scrollTop() > 40 ? ($(".up-arrow").addClass("is-active"), $(".is-index").addClass("is-active")) : ($(".up-arrow").removeClass("is-active"), $(".is-index").removeClass("is-active"));
+		},
+
+		//SMOOTHSCROLL
+		smoothScroll: function smoothScroll(e) {
+			if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+				if (target.length) {
+					e.preventDefault();
+
+					$("html, body").animate({
+						scrollTop: target.offset().top
+					}, 600, function () {
+						var $target = $(target);
+						$target.focus();
+						if ($target.is(":focus")) {
+							return false;
+						} else {
+							$target.attr("tabindex", "-1");
+							$target.focus();
+						}
+					});
+				}
+			}
 		}
 
 	},
 
 	events: {
 		init: function init() {
-			var startFunctions = start.functions;
 
-			//SMOOTHSCROLL INIT
-			$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(startFunctions.smoothScroll);
+			$(function () {
+				var starting = start.functions;
+				var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
 
-			//SHOW NAVIGATION INIT
-			$(window).on("scroll", startFunctions.showNav);
+				//SHOW NAVIGATION INIT
+				$(window).on("scroll", starting.showNav);
+
+				//SMOOTHSCROLL INIT
+				allowedLiks.on("click", starting.smoothScroll);
+			});
 		}
 	},
 
@@ -9998,8 +10021,6 @@ var start = {
 		start.forms.init();
 	}
 };
-
-// /START
 
 //INIT OBJECTS
 
