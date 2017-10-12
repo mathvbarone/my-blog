@@ -13,60 +13,23 @@ const start = {
 					$(".up-arrow").removeClass("is-active"),
 					$(".is-index").removeClass("is-active")
 				);
-
 		},
 
-		//SMOOTHSCROLL
-		smoothScroll: function (e) {
-			if (
-				location.pathname.replace(/^\//, "") ==
-				this.pathname.replace(/^\//, "") &&
-				location.hostname == this.hostname
-			) {
-				let target = $(this.hash);
-				target = target.length
-					? target
-					: $(`[name=${this.hash.slice(1)}]`);
-				if (target.length) {
-					e.preventDefault();
-
-					$("html, body").animate(
-						{
-							scrollTop: target.offset().top
-						},
-						600,
-						 () => {
-							let $target = $(target);
-							$target.focus();
-							if ($target.is(":focus")) {
-								return false;
-							} else {
-								$target.attr("tabindex", "-1"); 
-								$target.focus(); 
-							}
-						}
-					);
-				}
-			}
-		},
 
 
 	},
 
 
-
+	//EVENTS
 	events: {
 		init: () => {
 
 			$(() => {
-				const starting = start.functions;
-				const allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+				const startFunctions = start.functions;
 
 				//SHOW NAVIGATION INIT
-				$(window).on("scroll", starting.showNav);
+				$(window).on("scroll", startFunctions.showNav);
 
-				//SMOOTHSCROLL INIT
-				allowedLiks.on("click", starting.smoothScroll);
 
 			});
 
@@ -105,12 +68,6 @@ const start = {
 		}
 	},
 
-	//FORMS
-	forms: {
-		init: () => {
-
-		}
-	},
 
 	//INIT OBJECT
 
@@ -119,7 +76,6 @@ const start = {
 
 		start.plugins.init();
 
-		start.forms.init();
 	}
 };
 

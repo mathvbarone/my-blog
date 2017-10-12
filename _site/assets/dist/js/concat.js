@@ -9910,6 +9910,78 @@ var teste = function teste() {
 };
 
 teste();
+"use strict";
+
+var startFilter = {
+	//EVENTS
+
+	functions: {
+
+		//PREVENT ENTER
+
+		preventEnter: function preventEnter() {
+			$(window).keydown(function (e) {
+				if (e.keyCode == 13) {
+					event.preventDefault();
+					return false;
+				}
+			});
+		},
+
+		//FILTER
+		filter: function filter() {
+			var input = $("#input"),
+			    filter = input.val().toUpperCase(),
+			    ul = $(".card-list"),
+			    li = $(".card-item");
+
+			for (var i = 0; i < li.length; i++) {
+				var inner = li[i].getElementsByClassName("card-inner")[0];
+
+				if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					li[i].classList.remove("is-hidden");
+				} else {
+					li[i].classList.add("is-hidden");
+				}
+			}
+
+			startFilter.functions.preventEnter();
+		},
+
+		cleanField: function cleanField(e) {
+			e.preventDefault();
+			$(".card-item").removeClass("is-hidden");
+			$(".searchInput").val("");
+		}
+
+	},
+
+	//EVENTS
+	events: {
+		init: function init() {
+
+			$(function () {
+				var startFunctions = startFilter.functions;
+
+				//FILTER
+				$(".searchField").on("keyup", startFunctions.filter);
+
+				//CLEANFIELD
+				$(".cleanButton").on("click", startFunctions.cleanField);
+			});
+		}
+	},
+
+	//INIT OBJECT
+
+	init: function init() {
+		startFilter.events.init();
+	}
+};
+
+//INIT OBJECTS
+
+startFilter.init();
 'use strict';
 
 var teste = function teste() {
@@ -9919,11 +9991,34 @@ var teste = function teste() {
 teste();
 'use strict';
 
-var teste = function teste() {
-     console.log('e');
-};
+$(function () {
 
-teste();
+    //SMOOTHSCROLL 
+    var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+
+    allowedLiks.on("click", function (e) {
+        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                e.preventDefault();
+
+                $("html, body").animate({
+                    scrollTop: target.offset().top
+                }, 600, function () {
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) {
+                        return false;
+                    } else {
+                        $target.attr("tabindex", "-1");
+                        $target.focus();
+                    }
+                });
+            }
+        }
+    });
+});
 "use strict";
 
 var start = {
@@ -9935,46 +10030,19 @@ var start = {
 		showNav: function showNav() {
 
 			$(window).scrollTop() > 40 ? ($(".up-arrow").addClass("is-active"), $(".is-index").addClass("is-active")) : ($(".up-arrow").removeClass("is-active"), $(".is-index").removeClass("is-active"));
-		},
-
-		//SMOOTHSCROLL
-		smoothScroll: function smoothScroll(e) {
-			if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-				if (target.length) {
-					e.preventDefault();
-
-					$("html, body").animate({
-						scrollTop: target.offset().top
-					}, 600, function () {
-						var $target = $(target);
-						$target.focus();
-						if ($target.is(":focus")) {
-							return false;
-						} else {
-							$target.attr("tabindex", "-1");
-							$target.focus();
-						}
-					});
-				}
-			}
 		}
 
 	},
 
+	//EVENTS
 	events: {
 		init: function init() {
 
 			$(function () {
-				var starting = start.functions;
-				var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+				var startFunctions = start.functions;
 
 				//SHOW NAVIGATION INIT
-				$(window).on("scroll", starting.showNav);
-
-				//SMOOTHSCROLL INIT
-				allowedLiks.on("click", starting.smoothScroll);
+				$(window).on("scroll", startFunctions.showNav);
 			});
 		}
 	},
@@ -10006,19 +10074,12 @@ var start = {
 		}
 	},
 
-	//FORMS
-	forms: {
-		init: function init() {}
-	},
-
 	//INIT OBJECT
 
 	init: function init() {
 		start.events.init();
 
 		start.plugins.init();
-
-		start.forms.init();
 	}
 };
 
