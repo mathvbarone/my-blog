@@ -52,8 +52,6 @@ const startFilter = {
 
 			$(() => {
 				const startFunctions = startFilter.functions;
-
-
 				//FILTER
 				$(".searchField").on("keyup", startFunctions.filter);
 
@@ -66,19 +64,9 @@ const startFilter = {
 
 		}
 	},
-
-
-
-	//INIT OBJECT
-
-	init: () => {
-		startFilter.events.init();
-
-
-	}
 };
 
 
 //INIT OBJECTS
 
-startFilter.init();
+startFilter.events.init();

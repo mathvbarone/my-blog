@@ -9962,7 +9962,6 @@ var startFilter = {
 
 			$(function () {
 				var startFunctions = startFilter.functions;
-
 				//FILTER
 				$(".searchField").on("keyup", startFunctions.filter);
 
@@ -9970,18 +9969,12 @@ var startFilter = {
 				$(".cleanButton").on("click", startFunctions.cleanField);
 			});
 		}
-	},
-
-	//INIT OBJECT
-
-	init: function init() {
-		startFilter.events.init();
 	}
 };
 
 //INIT OBJECTS
 
-startFilter.init();
+startFilter.events.init();
 'use strict';
 
 var teste = function teste() {
@@ -9989,36 +9982,60 @@ var teste = function teste() {
 };
 
 teste();
-'use strict';
+"use strict";
 
-$(function () {
+var startScroll = {
+  //FUNCTIONS
 
-    //SMOOTHSCROLL 
-    var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+  functions: {
 
-    allowedLiks.on("click", function (e) {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                e.preventDefault();
+    //SMOOTHSCROLL
+    smoothScroll: function smoothScroll(e) {
 
-                $("html, body").animate({
-                    scrollTop: target.offset().top
-                }, 600, function () {
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) {
-                        return false;
-                    } else {
-                        $target.attr("tabindex", "-1");
-                        $target.focus();
-                    }
-                });
-            }
+      var locationPath = location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname;
+      var target = $(this.hash);
+
+      var scrollAnimation = function scrollAnimation() {
+        $("html, body").animate({
+          scrollTop: target.offset().top
+        }, 600, function () {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr("tabindex", "-1");
+            $target.focus();
+          }
+        });
+      };
+
+      if (locationPath) {
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+
+        if (target.length) {
+          e.preventDefault();
+          scrollAnimation();
         }
-    });
-});
+      }
+    }
+
+  },
+
+  //EVENTS
+  events: {
+    init: function init() {
+      $(function () {
+        var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+        allowedLiks.on("click", startScroll.functions.smoothScroll);
+      });
+    }
+  }
+};
+
+//INIT OBJECTS
+
+startScroll.events.init();
 "use strict";
 
 var start = {
