@@ -51,7 +51,7 @@ var notAndroid = !/Android/i.test(navigator.userAgent);
   });
 
 
-  //PREVENT ENTER
+ //PREVENT ENTER
 var preventEnter = function(){
   $(window).keydown(function(e){
     if(e.keyCode == 13) {
@@ -113,7 +113,7 @@ var postFilter = function(){
           if(message == "error"){
             var messageText = '<div class="error-box"><svg class="checkmark  checkmark-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M16 16 36 36 M36 16 16 36"/></svg><strong>Ocorreu um erro :( <br/> Tente novamente mais tarde</strong><div class="column is-narrow has-text-centered"><button type="button" title="retornar" class="button button-custom has-text-centered is-info form-return">Retornar</button></div>';
             
-            varajaxStatus = "error";
+            var ajaxStatus = "error";
           }
     
           var messageBox = '<div class="message-alert"><div class="is-'+ajaxStatus+'">'+messageText+'</div></div></div>'

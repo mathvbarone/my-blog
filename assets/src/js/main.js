@@ -15,10 +15,7 @@ const start = {
 				);
 		},
 
-
-
 	},
-
 
 	//EVENTS
 	events: {
