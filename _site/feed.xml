@@ -6,25 +6,9 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Oct 2017 17:16:39 -0200</pubDate>
-    <lastBuildDate>Sun, 15 Oct 2017 17:16:39 -0200</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2017 17:20:47 -0200</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2017 17:20:47 -0200</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
-    
-      <item>
-        <title>De professor de violão a desenvolvedor Front-end</title>
-        <description>&lt;h2 id=&quot;título&quot;&gt;Título&lt;/h2&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non cursus erat. Nullam ultricies metus eu ipsum aliquam tincidunt. Suspendisse mollis mattis dui, nec molestie tortor sagittis porta. Aliquam eu semper felis.&lt;/p&gt; &lt;h3 id=&quot;subtítulo&quot;&gt;Subtítulo&lt;/h3&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non cursus erat. Nullam ultricies metus eu ipsum aliquam tincidunt. Suspendisse mollis mattis dui, nec molestie tortor sagittis porta. Aliquam eu semper felis.&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content-inside&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; content &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/footer&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Lorem ipsum...</description>
-        <pubDate>Fri, 22 Sep 2017 07:25:00 -0300</pubDate>
-        <link>http://localhost:4000/apresentacao/</link>
-        <guid isPermaLink="true">http://localhost:4000/apresentacao/</guid>
-        
-        <category>front-end</category>
-        
-        <category>apresentacao</category>
-        
-        <category>historia</category>
-        
-        
-      </item>
     
   </channel>
 </rss>
