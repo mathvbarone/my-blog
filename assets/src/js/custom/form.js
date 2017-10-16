@@ -65,38 +65,30 @@ const startForm = {
 	$(".valid").val("");
     },
 
-    getMsg: function () {
-	const contact = $(".contact-box");
-	const contactForm = $("#contact-form");
-
-      $.ajax({
-        url: "//formspree.io/matheusvbarone@gmail.com",
-        method: "POST",
-        data: $(this).serialize(),
-        dataType: "json",
-        beforeSend: function() {
-          contactForm.hide();
-          startForm.functions.formMsg("loading");
-        }
-      })
-        .done(function(data) {
-          startForm.functions.formMsg("success");
-        })
-        .fail(function() {
-          startForm.functions.formMsg("error");
-        })
-        .always(function() {
-		contact.find(".is-loading").hide();
-		$(".form-return").on("click", startForm.functions.afterMsg);
-        });
-    },
-
-
 
     //SEND FORM
-    sendform: e => {
+    sendform: function(e) {
       e.preventDefault();
-      startForm.functions.getMsg();
+	 const contact = $(".contact-box");
+	 const contactForm = $("#contact-form");
+
+	 $.ajax({
+		 url: '//formspree.io/matheusvbarone@gmail.com',
+		 method: 'POST',
+		 data: $(this).serialize(),
+		 dataType: 'json',
+		 beforeSend: function() {
+		 contactForm.hide();
+		 startForm.functions.formMsg("loading");
+		 }
+	 }).done(function(data) {          
+		 startForm.functions.formMsg("success");          
+	 }).fail(function() {
+		 startForm.functions.formMsg("error");
+	 }).always(function() {
+		 contact.find(".is-loading").hide();
+		 $(".form-return").on("click", startForm.functions.afterMsg);  
+	 });
     }
   },
 
