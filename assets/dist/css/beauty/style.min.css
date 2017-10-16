@@ -9076,6 +9076,10 @@ a.tag:hover {
     position: relative
 }
 
+.post-blog .post-content a>img {
+    width: 100%
+}
+
 .post-blog .post-content a:after {
     content: '';
     position: absolute;
@@ -9322,6 +9326,10 @@ a.tag:hover {
     color: #4986b1;
     font-weight: 500;
     position: relative
+}
+
+.post-html .post-content a>img {
+    width: 100%
 }
 
 .post-html .post-content a:after {
@@ -9574,6 +9582,10 @@ a.tag:hover {
     position: relative
 }
 
+.post-css .post-content a>img {
+    width: 100%
+}
+
 .post-css .post-content a:after {
     content: '';
     position: absolute;
@@ -9818,6 +9830,10 @@ a.tag:hover {
     position: relative
 }
 
+.post-js .post-content a>img {
+    width: 100%
+}
+
 .post-js .post-content a:after {
     content: '';
     position: absolute;
@@ -10060,6 +10076,10 @@ a.tag:hover {
     color: #af1da2;
     font-weight: 500;
     position: relative
+}
+
+.post-misc .post-content a>img {
+    width: 100%
 }
 
 .post-misc .post-content a:after {
@@ -10309,6 +10329,10 @@ a.tag:hover {
     color: #65B149;
     font-weight: 500;
     position: relative
+}
+
+.post-front .post-content a>img {
+    width: 100%
 }
 
 .post-front .post-content a:after {

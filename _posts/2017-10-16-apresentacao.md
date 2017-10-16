@@ -75,6 +75,10 @@ A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de
 
 Além do mais, é incrível você conseguir transformar uma página em branco, em um site, um produto. É literalmente transformar sonho, em realidade!
 
+Vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele aborda um pouco mais do que eu falei, de uma forma bem engraçada e dinâmica.
+
+[![O poder esta no front](/assets/dist/images/posts/apresentacao/illustracao-poder-front.jpg)](https://www.youtube.com/watch?v=cmT3clnhbiQ "O poder esta no front")
+
 Bom pessoal, acho que é isso, o post acabou ficando mais longo do que eu pretendia hahaha.
 
 No próximo vou falar um pouco sobre como tive a ideia de criar o site, e quais tecnologias utilizei.
