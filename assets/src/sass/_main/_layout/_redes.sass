@@ -5,68 +5,30 @@
           justify-content: center
 
      .redes-item
-          margin: 0 3px
+          margin: 0 0.3em
 
-      
-     
-     .redes-bg
-          +transition(ease-in-out, 0.2s, all)
-          width: 20px
-          height: 20px
+     .redes-link
+          width: 1.5em
+          height: 1.5em
           display: block
-          margin: 0 0 0 0
-          padding: 0          
-          
-          &-fb,
-          &-tt,
-          &-linkedin
+          color: #fff;
+          border-radius: 2px
+          font-size: 1.2em
+
+          .fa
+               +transition (ease-in-out, 0.2s, all)  
+
+          &:hover
                background: #fff
-               border-radius: 4px
-
-          &-fb
-               &:hover
-                    background: #3b5998
-
-          &-tt
-               &:hover
-                    background: #77AADB
-
-          &-linkedin
-               &:hover
-                    background: #0065A0
-
-          &-github
-               background: #1D1C15
-               &:hover
-                    background: #fff
-           
-          
-
-     .icon-fb,
-     .icon-tt,
-     .icon-linkedin
-          +transition(ease-in-out, 0.2s, all)  
-          width: 20px
-          height: 20px
-          &:hover
-               fill: #fff  
+               .fa-facebook
+                    color: #4267b2; 
+               .fa-github
+                    color: #24292e; 
+               .fa-twitter
+                    color: #1da1f2; 
+               .fa-linkedin
+                    color: #0077b5; 
      
-     .icon-fb
-          fill: #3b5998
 
-     .icon-tt
-          fill: #77AADB
-
-     .icon-linkedin
-          fill: #0065A0
-
-     .icon-github 
-          +transition(ease-in-out, 0.2s, all)       
-          fill: #fff
-          width: 18px
-          height: 18px
-          margin-top: 1px
-          &:hover
-               fill: #1D1C15  
 
 

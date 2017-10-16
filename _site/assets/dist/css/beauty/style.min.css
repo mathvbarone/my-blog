@@ -10872,7 +10872,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.content .redes-bg,.mast-header .logo-simple .logo-simple-3 {
+.content .redes-link .fa,.mast-header .logo-simple .logo-simple-3 {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all
 }
@@ -10987,80 +10987,25 @@ a.tag:hover {
     justify-content: center
 }
 
-.content .redes-bg,.hero-index-body .subtitle,.hero-index-body .title,.hero-index-body .title span {
+.content .redes-link,.hero-index-body .subtitle,.hero-index-body .title,.hero-index-body .title span {
     display: block
 }
 
 .content .redes-item {
-    margin: 0 3px
+    margin: 0 .3em
 }
 
-.content .redes-bg {
-    transition: ease-in-out .2s all;
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    padding: 0
+.content .redes-link {
+    width: 1.5em;
+    height: 1.5em;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 1.2em
 }
 
-.content .redes-bg-fb,.content .redes-bg-linkedin,.content .redes-bg-tt {
-    background: #fff;
-    -webkit-border-radius: 4px;
-    border-radius: 4px
-}
-
-.content .redes-bg-fb:hover {
-    background: #3b5998
-}
-
-.content .redes-bg-tt:hover {
-    background: #77AADB
-}
-
-.content .redes-bg-linkedin:hover {
-    background: #0065A0
-}
-
-.content .redes-bg-github {
-    background: #1D1C15
-}
-
-.content .redes-bg-github:hover {
-    background: #fff
-}
-
-.content .icon-fb,.content .icon-linkedin,.content .icon-tt {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all;
-    width: 20px;
-    height: 20px
-}
-
-.content .icon-fb:hover,.content .icon-linkedin:hover,.content .icon-tt:hover {
-    fill: #fff
-}
-
-.content .icon-fb {
-    fill: #3b5998
-}
-
-.content .icon-tt {
-    fill: #77AADB
-}
-
-.content .icon-linkedin {
-    fill: #0065A0
-}
-
-.content .icon-github {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all;
-    fill: #fff;
-    width: 18px;
-    height: 18px;
-    margin-top: 1px
+.content .redes-link .fa {
+    transition: ease-in-out .2s all
 }
 
 .hero-index-body .logo-full,.hero-index-body .logo-full .logo-full-1 {
@@ -11068,8 +11013,24 @@ a.tag:hover {
     -o-transition: ease-in-out .2s all
 }
 
-.content .icon-github:hover {
-    fill: #1D1C15
+.content .redes-link:hover {
+    background: #fff
+}
+
+.content .redes-link:hover .fa-facebook {
+    color: #4267b2
+}
+
+.content .redes-link:hover .fa-github {
+    color: #24292e
+}
+
+.content .redes-link:hover .fa-twitter {
+    color: #1da1f2
+}
+
+.content .redes-link:hover .fa-linkedin {
+    color: #0077b5
 }
 
 footer {
@@ -11081,7 +11042,7 @@ footer .footer-infos,footer .footer-phone {
     margin: 0;
     color: #fff;
     display: block;
-    font-size: .8em
+    font-size: .9em
 }
 
 footer .footer-infos {
@@ -11093,8 +11054,7 @@ footer .footer-phone {
 }
 
 footer .footer-phone .fa {
-    color: #2ab7cd;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding-right: .4em
 }
 
