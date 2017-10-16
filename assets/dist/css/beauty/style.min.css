@@ -8850,11 +8850,11 @@ a.tag:hover {
     position: fixed;
     right: 20px;
     bottom: -60px;
-    background: #cd2b46;
+    background: #2ab7cd;
     width: 50px;
     line-height: 45px;
     height: 50px;
-    border: 2px solid #cd2b46
+    border: 2px solid #2ab7cd
 }
 
 .ribbon,.up-arrow:hover {
@@ -8870,7 +8870,7 @@ a.tag:hover {
 }
 
 .up-arrow:hover .fa {
-    color: #cd2b46
+    color: #2ab7cd
 }
 
 .card-item {
