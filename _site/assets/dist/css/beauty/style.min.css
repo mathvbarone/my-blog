@@ -11049,6 +11049,10 @@ footer .footer-infos {
     padding: 0 2em
 }
 
+footer .footer-infos span {
+    font-size: .8em
+}
+
 footer .footer-phone {
     padding: 1em 0
 }
