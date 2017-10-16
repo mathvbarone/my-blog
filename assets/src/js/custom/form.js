@@ -2,6 +2,7 @@ const startForm = {
   //EVENTS
   functions: {
 	  
+	//FORM MSG
     formMsg: message => {
       const contact = $(".contact-box");
       let messageBox;
@@ -58,11 +59,12 @@ const startForm = {
       return contact.append(messageBox);
     },
 
+    //AFTER MSG
     afterMsg: e => {
-	e.preventDefault();
-	$('.message-alert').hide();
-	$("#contact-form").show();
-	$(".valid").val("");
+		e.preventDefault();
+		$('.message-alert').hide();
+		$("#contact-form").show();
+		$(".valid").val("");
     },
 
 
@@ -104,6 +106,5 @@ const startForm = {
 };
 
 //INIT OBJECTS
-
 startForm.events.init();
 

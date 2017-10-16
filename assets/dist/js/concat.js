@@ -9981,6 +9981,7 @@ var startForm = {
 	//EVENTS
 	functions: {
 
+		//FORM MSG
 		formMsg: function formMsg(message) {
 			var contact = $(".contact-box");
 			var messageBox = void 0;
@@ -10007,6 +10008,7 @@ var startForm = {
 			return contact.append(messageBox);
 		},
 
+		//AFTER MSG
 		afterMsg: function afterMsg(e) {
 			e.preventDefault();
 			$('.message-alert').hide();
@@ -10052,7 +10054,6 @@ var startForm = {
 };
 
 //INIT OBJECTS
-
 startForm.events.init();
 "use strict";
 
