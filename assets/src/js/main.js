@@ -4,15 +4,17 @@ const start = {
 	functions: {
 
 		//SHOW NAVIGATION
-		showNav: () => {
-
+		showNavConstructor: element => {
 			($(window).scrollTop() > 40) ? (
-				$(".up-arrow").addClass("is-active"),
-				$(".is-index").addClass("is-active")
+				element.addClass("is-active")
 			) : (
-					$(".up-arrow").removeClass("is-active"),
-					$(".is-index").removeClass("is-active")
-				);
+				element.removeClass("is-active")
+			);
+		},
+
+		showNavigation: () => {
+			start.functions.showNavConstructor($(".up-arrow"));
+			start.functions.showNavConstructor($(".is-index"));
 		},
 
 		//HERO SCROLL
@@ -40,7 +42,7 @@ const start = {
 				const startFunctions = start.functions;
 
 				//SHOW NAVIGATION INIT
-				$(window).on("scroll", startFunctions.showNav);
+				$(window).on("scroll", startFunctions.showNavigation);
 
 				//HERO SCROLL
 				$(window).on("scroll", startFunctions.heroScroll );
