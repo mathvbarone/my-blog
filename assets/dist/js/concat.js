@@ -10021,7 +10021,7 @@ var startForm = {
       $.ajax({
         url: "//formspree.io/matheusvbarone@gmail.com",
         method: "POST",
-        data: $(undefined).serialize(),
+        data: $(this).serialize(),
         dataType: "json",
         beforeSend: function beforeSend() {
           contactForm.hide();

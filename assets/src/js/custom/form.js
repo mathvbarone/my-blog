@@ -65,7 +65,7 @@ const startForm = {
 	$(".valid").val("");
     },
 
-    getMsg: () => {
+    getMsg: function () {
 	const contact = $(".contact-box");
 	const contactForm = $("#contact-form");
 
