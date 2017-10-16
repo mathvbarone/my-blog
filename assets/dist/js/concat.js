@@ -9905,11 +9905,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 }(window, document, window.jQuery);
 'use strict';
 
-var teste = function teste() {
-     console.log('d');
-};
-
-teste();
+//TARGET BLANK
+(function () {
+  var links = document.links;
+  for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+    if (links[i].hostname != window.location.hostname) {
+      links[i].target = '_blank';
+      links[i].className += ' externalLink';
+    }
+  }
+})();
 "use strict";
 
 var startFilter = {
@@ -10120,6 +10125,18 @@ var start = {
 		showNav: function showNav() {
 
 			$(window).scrollTop() > 40 ? ($(".up-arrow").addClass("is-active"), $(".is-index").addClass("is-active")) : ($(".up-arrow").removeClass("is-active"), $(".is-index").removeClass("is-active"));
+		},
+
+		//HERO SCROLL
+		heroScroll: function heroScroll() {
+			var headerContent = $(".hero-body");
+			var headerContentHeight = headerContent.height();
+			var scrollPos = window.scrollY;
+
+			if (scrollPos <= headerContentHeight) {
+				headerContent.css("transform", "translateY(" + -scrollPos / 2 + "px" + ")");
+				headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
+			}
 		}
 
 	},
@@ -10133,6 +10150,9 @@ var start = {
 
 				//SHOW NAVIGATION INIT
 				$(window).on("scroll", startFunctions.showNav);
+
+				//HERO SCROLL
+				$(window).on("scroll", startFunctions.heroScroll);
 			});
 		}
 	},

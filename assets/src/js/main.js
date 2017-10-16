@@ -15,6 +15,21 @@ const start = {
 				);
 		},
 
+		//HERO SCROLL
+		heroScroll: () => {
+			const headerContent = $(".hero-body");
+			const headerContentHeight = headerContent.height();
+			const scrollPos = window.scrollY;
+		 
+			if (scrollPos <= headerContentHeight) {
+			  headerContent.css(
+			    "transform",
+			    "translateY(" + -scrollPos / 2 + "px" + ")"
+			  );
+			  headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
+			}
+		}
+
 	},
 
 	//EVENTS
@@ -27,7 +42,8 @@ const start = {
 				//SHOW NAVIGATION INIT
 				$(window).on("scroll", startFunctions.showNav);
 
-
+				//HERO SCROLL
+				$(window).on("scroll", startFunctions.heroScroll );
 			});
 
 
