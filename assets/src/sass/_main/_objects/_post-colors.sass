@@ -162,6 +162,8 @@
                   h4,
                   ul,
                   ol,
+                  blockquote,
+                  figure,
                   .tags,
                   iframe,
                   .button-post
@@ -227,8 +229,25 @@
                               &:after
                                     width: 0px
 
-                                    
 
+                  strong
+                        color: nth($color-post, index($type-post, $type))
+                        font-size: 1.19rem
+
+                  figure
+                        img
+                              vertical-align: top;
+                        figcaption
+                              background: #f2f2f2;
+                              font-size: 0.6em;
+                              text-align: center
+
+                  blockquote
+                        border-left-color: nth($color-post, index($type-post, $type))  
+                        border-left-width: 0.40em
+                        border-left-style: solid 
+                        
+                              
 
 
                   .highlight

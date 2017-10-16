@@ -30,21 +30,16 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     -webkit-touch-callout: none
 }
 
-.button,.button-submit,.input,.textarea {
-    -webkit-box-align: center;
-    vertical-align: top
+.button,.button-submit,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none
 }
 
 .select,.select select,.textarea,audio,embed,img,object,video {
     max-width: 100%
 }
 
-.button,.button-submit,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
-    -moz-appearance: none;
-    -webkit-appearance: none
-}
-
-.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.modal-card,.tile.is-vertical {
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-body,.modal-card,.tile.is-vertical {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal
 }
@@ -508,6 +503,7 @@ a.box:active {
 }
 
 .button,.button-submit {
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -528,6 +524,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    vertical-align: top;
     -moz-user-select: none;
     user-select: none;
     background-color: #fff;
@@ -553,6 +550,10 @@ a.box:active {
 
 .breadcrumb,.delete,.file {
     -moz-user-select: none
+}
+
+.card-item,.ribbon {
+    -o-transition: ease-in-out .2s all
 }
 
 .button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
@@ -1578,6 +1579,10 @@ a.box:active {
     position: absolute!important
 }
 
+.control.has-icon:not(.has-icon-right) .icon,.control.has-icons-left .icon.is-left,.file-input {
+    left: 0
+}
+
 .button.is-static,.is-static.button-submit {
     background-color: #f5f5f5;
     border-color: #dbdbdb;
@@ -1770,6 +1775,7 @@ a.box:active {
 }
 
 .input,.textarea {
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1796,6 +1802,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    vertical-align: top;
     background-color: #fff;
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
@@ -2020,8 +2027,7 @@ a.box:active {
     z-index: 4
 }
 
-.control.is-loading::after,.select.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear;
+.control.is-loading::after,.delete:after,.delete:before,.loader,.select.is-loading::after {
     content: ""
 }
 
@@ -2224,6 +2230,7 @@ a.box:active {
 }
 
 .select.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -2658,8 +2665,7 @@ a.box:active {
 }
 
 .file-cta,.tag:not(body) {
-    background-color: #f5f5f5;
-    color: #4a4a4a
+    background-color: #f5f5f5
 }
 
 .file-label:active .file-name {
@@ -2668,7 +2674,6 @@ a.box:active {
 
 .file-input {
     height: .01em;
-    left: 0;
     outline: 0;
     position: absolute;
     top: 0;
@@ -2725,6 +2730,10 @@ a.box:active {
 
 .file-cta[disabled],.file-name[disabled] {
     cursor: not-allowed
+}
+
+.file-cta {
+    color: #4a4a4a
 }
 
 .file-name {
@@ -3001,10 +3010,6 @@ a.box:active {
     font-size: 1.5rem
 }
 
-.control.has-icon:not(.has-icon-right) .icon {
-    left: 0
-}
-
 .control.has-icons-left .input.is-small~.icon,.control.has-icons-left .select.is-small~.icon,.control.has-icons-right .input.is-small~.icon,.control.has-icons-right .select.is-small~.icon {
     font-size: .75rem
 }
@@ -3027,11 +3032,8 @@ a.box:active {
     z-index: 4
 }
 
-.control.has-icons-left .icon.is-left {
-    left: 0
-}
-
 .control.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -3112,14 +3114,6 @@ a.box:active {
     top: 0;
     height: 100%;
     width: 100%
-}
-
-.delete:after,.delete:before,.tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    content: ""
 }
 
 .image.is-1by1,.image.is-square {
@@ -3238,6 +3232,7 @@ a.box:active {
     align-items: center;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    color: #4a4a4a;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3321,12 +3316,22 @@ a.box:active {
 
 .tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
     background-color: currentColor;
+    content: "";
     display: block;
+    left: 50%;
     position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center
+}
+
+.delete:after,.delete:before,.modal-close:after,.modal-close:before {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
 }
 
 .tag:not(body).is-delete:before {
@@ -3364,7 +3369,7 @@ a.box:active {
     vertical-align: middle
 }
 
-.delete,.level img,.modal-close,.number {
+.delete,.level img,.modal-close,.number,.post-css .post-content figure img,.post-front .post-content figure img,.post-html .post-content figure img,.post-js .post-content figure img,.post-misc .post-content figure img {
     vertical-align: top
 }
 
@@ -3485,7 +3490,9 @@ a.box:active {
 .delete:after,.delete:before {
     background-color: #fff;
     display: block;
+    left: 50%;
     position: absolute;
+    top: 50%;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3578,7 +3585,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em
@@ -4043,10 +4049,6 @@ a.box:active {
     text-align: left
 }
 
-.hero-body,.message-alert strong,.ribbon,.up-arrow {
-    text-align: center
-}
-
 .modal {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -4125,8 +4127,6 @@ a.box:active {
     left: 50%;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -8850,11 +8850,12 @@ a.tag:hover {
     position: fixed;
     right: 20px;
     bottom: -60px;
-    background: #2ab7cd;
+    background: #cd2b46;
+    text-align: center;
     width: 50px;
     line-height: 45px;
     height: 50px;
-    border: 2px solid #2ab7cd
+    border: 2px solid #cd2b46
 }
 
 .ribbon,.up-arrow:hover {
@@ -8870,11 +8871,10 @@ a.tag:hover {
 }
 
 .up-arrow:hover .fa {
-    color: #2ab7cd
+    color: #cd2b46
 }
 
 .card-item {
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -8883,10 +8883,10 @@ a.tag:hover {
     right: -8px;
     top: 15px;
     width: 110px;
+    text-align: center;
     padding: 2px 0;
     border: 1px solid #fff;
     -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     font-size: .9rem
 }
@@ -9029,7 +9029,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-blog .post-content .button-post,.post-blog .post-content .tags,.post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content iframe,.post-blog .post-content ol,.post-blog .post-content p,.post-blog .post-content ul {
+.post-blog .post-content .button-post,.post-blog .post-content .tags,.post-blog .post-content blockquote,.post-blog .post-content figure,.post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content iframe,.post-blog .post-content ol,.post-blog .post-content p,.post-blog .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -9089,6 +9089,27 @@ a.tag:hover {
 
 .post-blog .post-content a:hover:after {
     width: 0
+}
+
+.post-blog .post-content strong {
+    color: #C35163;
+    font-size: 1.19rem
+}
+
+.post-blog .post-content figure img {
+    vertical-align: top
+}
+
+.post-blog .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-blog .post-content blockquote {
+    border-left-color: #C35163;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-blog .post-content .highlight pre {
@@ -9256,7 +9277,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-html .post-content .button-post,.post-html .post-content .tags,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content iframe,.post-html .post-content ol,.post-html .post-content p,.post-html .post-content ul {
+.post-html .post-content .button-post,.post-html .post-content .tags,.post-html .post-content blockquote,.post-html .post-content figure,.post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content iframe,.post-html .post-content ol,.post-html .post-content p,.post-html .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -9316,6 +9337,23 @@ a.tag:hover {
 
 .post-html .post-content a:hover:after {
     width: 0
+}
+
+.post-html .post-content strong {
+    color: #4986b1;
+    font-size: 1.19rem
+}
+
+.post-html .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-html .post-content blockquote {
+    border-left-color: #4986b1;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-html .post-content .highlight pre {
@@ -9386,11 +9424,6 @@ a.tag:hover {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
-}
-
-.post-js .card,.post-misc .card {
-    -webkit-box-shadow: none;
-    cursor: pointer
 }
 
 .post-css .card .card-tags,.post-css .card .card-title {
@@ -9494,7 +9527,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-css .post-content .button-post,.post-css .post-content .tags,.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content iframe,.post-css .post-content ol,.post-css .post-content p,.post-css .post-content ul {
+.post-css .post-content .button-post,.post-css .post-content .tags,.post-css .post-content blockquote,.post-css .post-content figure,.post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content iframe,.post-css .post-content ol,.post-css .post-content p,.post-css .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -9554,6 +9587,23 @@ a.tag:hover {
 
 .post-css .post-content a:hover:after {
     width: 0
+}
+
+.post-css .post-content strong {
+    color: #378574;
+    font-size: 1.19rem
+}
+
+.post-css .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-css .post-content blockquote {
+    border-left-color: #378574;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-css .post-content .highlight pre {
@@ -9620,7 +9670,9 @@ a.tag:hover {
 .post-js .card {
     min-height: 210px;
     border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -9719,7 +9771,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-js .post-content .button-post,.post-js .post-content .tags,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content iframe,.post-js .post-content ol,.post-js .post-content p,.post-js .post-content ul {
+.post-js .post-content .button-post,.post-js .post-content .tags,.post-js .post-content blockquote,.post-js .post-content figure,.post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content iframe,.post-js .post-content ol,.post-js .post-content p,.post-js .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -9779,6 +9831,23 @@ a.tag:hover {
 
 .post-js .post-content a:hover:after {
     width: 0
+}
+
+.post-js .post-content strong {
+    color: #f8c101;
+    font-size: 1.19rem
+}
+
+.post-js .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-js .post-content blockquote {
+    border-left-color: #f8c101;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-js .post-content .highlight pre {
@@ -9845,7 +9914,9 @@ a.tag:hover {
 .post-misc .card {
     min-height: 210px;
     border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -9944,7 +10015,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-misc .post-content .button-post,.post-misc .post-content .tags,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content iframe,.post-misc .post-content ol,.post-misc .post-content p,.post-misc .post-content ul {
+.post-misc .post-content .button-post,.post-misc .post-content .tags,.post-misc .post-content blockquote,.post-misc .post-content figure,.post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content iframe,.post-misc .post-content ol,.post-misc .post-content p,.post-misc .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -10004,6 +10075,23 @@ a.tag:hover {
 
 .post-misc .post-content a:hover:after {
     width: 0
+}
+
+.post-misc .post-content strong {
+    color: #af1da2;
+    font-size: 1.19rem
+}
+
+.post-misc .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-misc .post-content blockquote {
+    border-left-color: #af1da2;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-misc .post-content .highlight pre {
@@ -10176,7 +10264,7 @@ a.tag:hover {
     font-weight: 300
 }
 
-.post-front .post-content .button-post,.post-front .post-content .tags,.post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content iframe,.post-front .post-content ol,.post-front .post-content p,.post-front .post-content ul {
+.post-front .post-content .button-post,.post-front .post-content .tags,.post-front .post-content blockquote,.post-front .post-content figure,.post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content iframe,.post-front .post-content ol,.post-front .post-content p,.post-front .post-content ul {
     width: auto;
     width: 100%;
     max-width: 50rem;
@@ -10243,6 +10331,23 @@ a.tag:hover {
 
 .post-front .post-content a:hover:after {
     width: 0
+}
+
+.post-front .post-content strong {
+    color: #65B149;
+    font-size: 1.19rem
+}
+
+.post-front .post-content figure figcaption {
+    background: #f2f2f2;
+    font-size: .6em;
+    text-align: center
+}
+
+.post-front .post-content blockquote {
+    border-left-color: #65B149;
+    border-left-width: .4em;
+    border-left-style: solid
 }
 
 .post-front .post-content .highlight pre {
@@ -10928,12 +11033,11 @@ a.tag:hover {
 }
 
 .hero-body {
+    text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -11358,6 +11462,7 @@ footer .footer-phone .fa {
 }
 
 .message-alert strong {
+    text-align: center;
     display: block;
     color: #FFF;
     font-size: 1.7em
