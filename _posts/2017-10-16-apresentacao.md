@@ -77,7 +77,7 @@ Além do mais, é incrível você conseguir transformar uma página em branco, e
 
 Bom pessoal, acho que é isso, o post acabou ficando mais longo do que eu pretendia hahaha.
 
-No próximo post vou falar um pouco sobre como tive a ideia de criar o site, e quais tecnologias utilizei.
+No próximo vou falar um pouco sobre como tive a ideia de criar o site, e quais tecnologias utilizei.
 
 Críticas, e sugestões são sempre bem-vindas.
 
