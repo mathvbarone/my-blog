@@ -8681,7 +8681,7 @@ input:-webkit-autofill {
 }
 
 .post-offset {
-    top: 80vh
+    top: 70vh
 }
 
 .default-offset {
@@ -8996,8 +8996,8 @@ a.tag:hover {
 }
 
 .post-blog .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #C35163
 }
 
@@ -9248,8 +9248,8 @@ a.tag:hover {
 }
 
 .post-html .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #4986b1
 }
 
@@ -9502,8 +9502,8 @@ a.tag:hover {
 }
 
 .post-css .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #378574
 }
 
@@ -9750,8 +9750,8 @@ a.tag:hover {
 }
 
 .post-js .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #f8c101
 }
 
@@ -9998,8 +9998,8 @@ a.tag:hover {
 }
 
 .post-misc .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #af1da2
 }
 
@@ -10251,8 +10251,8 @@ a.tag:hover {
 }
 
 .post-front .hero-posts {
-    height: 80vh;
-    min-height: 80vh;
+    height: 70vh;
+    min-height: 70vh;
     background-color: #65B149
 }
 

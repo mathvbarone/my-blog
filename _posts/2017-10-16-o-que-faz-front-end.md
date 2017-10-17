@@ -2,7 +2,7 @@
 layout: post
 title: "Afinal, o que faz um desenvolvedor Front-end?"
 date: 2017-10-16 16:12:00
-image: '/assets/dist/images/posts/apresentacao/apresentacao.jpg'
+image: '/assets/dist/images/posts/front-end/front-end-post.jpg'
 description: "Se você se interessa pela área, comece por aqui."
 main-class: 'front'
 color: '#65B149'
@@ -26,7 +26,7 @@ Isso é um pouco chato, porque o termo "Web-designer" é algo muito genérico, e
 ## Mas afinal, o que faz um Desenvolvedor Front-end?
 
 <figure>
-  <img src="/assets/dist/images/posts/apresentacao/front-end-illustration.jpg" alt="A gente faz arte, com código."/>
+  <img src="/assets/dist/images/posts/front-end/front-end-illustration.jpg" alt="A gente faz arte, com código."/>
   <figcaption>A gente faz arte, com código.</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ Porém, desde que os smartphones se popularizaram, ocorreu uma grande mudança d
 Uma galera focou apenas em manipular as informações do lado do servidor, os chamados "Back"-end, enquando que uma outra galera foi cuidar da parte do cliente, os chamados "Front"-end.
 
 <figure>
-  <img src="/assets/dist/images/posts/apresentacao/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' desde 2004 até 2017"/>
+  <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' desde 2004 até 2017"/>
   <figcaption>Busca pelo termo "Front-end developer" desde 2004 até 2017</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de
 
 Vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele aborda um pouco mais do que eu falei, de uma forma bem engraçada e dinâmica.
 
-[![O poder esta no front](/assets/dist/images/posts/apresentacao/illustracao-poder-front.jpg)](https://www.youtube.com/watch?v=cmT3clnhbiQ "O poder esta no front")
+[![O poder esta no front](/assets/dist/images/posts/front-end/illustracao-poder-front.jpg)](https://www.youtube.com/watch?v=cmT3clnhbiQ "O poder esta no front")
 
 Bom pessoal, acho que é isso, o post acabou ficando mais longo do que eu pretendia hahaha.
 
