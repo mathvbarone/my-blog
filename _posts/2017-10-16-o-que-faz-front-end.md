@@ -25,9 +25,9 @@ Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida 
 
 Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.
 
-Então, se você passa pelo mesmo problema que eu, ou caiu aqui de para-quedas, seja bem-vindo.
+Então, se você passa pelo mesmo problema que eu, ou, caiu aqui de paraquedas, seja bem-vindo!
 
-Pega uma pipoca e vem comigo.
+Pega uma pipoca, um refrigerante, e vem comigo.
 
 
 ## Tá, mas, o que exatamente você faz?
