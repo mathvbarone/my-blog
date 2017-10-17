@@ -3,7 +3,7 @@ const start = {
 
 	functions: {
 
-		//SHOW NAVIGATION
+		//SHOW NAVIGATION CONSTRUCTOR
 		showNavConstructor: element => {
 			($(window).scrollTop() > 40) ? (
 				element.addClass("is-active")
@@ -12,9 +12,15 @@ const start = {
 			);
 		},
 
+		//SHOW NAVIGATION
 		showNavigation: () => {
 			start.functions.showNavConstructor($(".up-arrow"));
 			start.functions.showNavConstructor($(".is-index"));
+		},
+
+		//EDIT IMAGE INSIDE LINKS ON POST
+		imgInsideLinkPost: () => {	
+			$(".post a img").parent().addClass("is-image-inside");								
 		},
 
 		//HERO SCROLL
@@ -46,6 +52,9 @@ const start = {
 
 				//HERO SCROLL
 				$(window).on("scroll", startFunctions.heroScroll );
+
+				//EDIT IMAGE INSIDE LINKS ON POST
+				$(window).on("load", startFunctions.imgInsideLinkPost );
 			});
 
 

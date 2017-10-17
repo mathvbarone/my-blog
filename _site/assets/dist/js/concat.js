@@ -10121,14 +10121,20 @@ var start = {
 
 	functions: {
 
-		//SHOW NAVIGATION
+		//SHOW NAVIGATION CONSTRUCTOR
 		showNavConstructor: function showNavConstructor(element) {
 			$(window).scrollTop() > 40 ? element.addClass("is-active") : element.removeClass("is-active");
 		},
 
+		//SHOW NAVIGATION
 		showNavigation: function showNavigation() {
 			start.functions.showNavConstructor($(".up-arrow"));
 			start.functions.showNavConstructor($(".is-index"));
+		},
+
+		//EDIT IMAGE INSIDE LINKS ON POST
+		imgInsideLinkPost: function imgInsideLinkPost() {
+			$(".post a img").parent().addClass("is-image-inside");
 		},
 
 		//HERO SCROLL
@@ -10157,6 +10163,9 @@ var start = {
 
 				//HERO SCROLL
 				$(window).on("scroll", startFunctions.heroScroll);
+
+				//EDIT IMAGE INSIDE LINKS ON POST
+				$(window).on("load", startFunctions.imgInsideLinkPost);
 			});
 		}
 	},

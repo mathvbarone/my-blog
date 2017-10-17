@@ -9091,7 +9091,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-blog .post-content a:hover:after {
+.post-blog .post-content a.is-image-inside:after,.post-blog .post-content a:hover:after {
     width: 0
 }
 
@@ -9343,7 +9343,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-html .post-content a:hover:after {
+.post-html .post-content a.is-image-inside:after,.post-html .post-content a:hover:after {
     width: 0
 }
 
@@ -9597,7 +9597,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-css .post-content a:hover:after {
+.post-css .post-content a.is-image-inside:after,.post-css .post-content a:hover:after {
     width: 0
 }
 
@@ -9845,7 +9845,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-js .post-content a:hover:after {
+.post-js .post-content a.is-image-inside:after,.post-js .post-content a:hover:after {
     width: 0
 }
 
@@ -10093,7 +10093,7 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-misc .post-content a:hover:after {
+.post-misc .post-content a.is-image-inside:after,.post-misc .post-content a:hover:after {
     width: 0
 }
 
@@ -10353,7 +10353,7 @@ a.tag:hover {
     width: 100%
 }
 
-.post-front .post-content a:hover:after {
+.post-front .post-content a.is-image-inside:after,.post-front .post-content a:hover:after {
     width: 0
 }
 

@@ -1,53 +1,36 @@
 ---
 layout: post
-title: "Como me tornei um desenvolvedor Front-end"
+title: "Afinal, o que faz um desenvolvedor Front-end?"
 date: 2017-10-16 16:12:00
 image: '/assets/dist/images/posts/apresentacao/apresentacao.jpg'
-description: "Um pouco da minha história trabalhando com tecnologia."
+description: "Se você se interessa pela área, comece por aqui."
 main-class: 'front'
 color: '#65B149'
 tags:
 - front-end
-- apresentacao
-- historia
+- web
+- introducao
 
-twitter_text: "Como me tornei um desenvolvedor Front-end"
-introduction: "Um pouco da minha história trabalhando com tecnologia."
+twitter_text: "Afinal, o que faz um desenvolvedor Front-end?"
+introduction: "Se você se interessa pela área, comece por aqui."
 ---
 
-## Apresentação
-
 Eae pessoal, beleza?
+
 Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na [UOL](https://www.uol.com.br/).
 
-<figure>
-  <img src="/assets/dist/images/posts/apresentacao/start-illustration.jpg" alt="O começo de uma longa jornada."/>
-  <figcaption>O começo de uma longa jornada.</figcaption>
-</figure>
+Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por "Web-designer", que é o termo mais conhecido pelo público em geral. Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificílmente vão saber do que se trata.
 
+Isso é um pouco chato, porque o termo "Web-designer" é algo muito genérico, e eu gostaría que as pessoas tivessem um conhecimento mais aprofundado sobre a minha profissão.
 
-## História
-
-Comecei a trabalhar com tecnologia de uma forma totalmente aleatória. Em 2011 eu já havia tentado cursar um semestre de Análise de Sistemas e, por incrível que pareça, não continuei o curso pois odiei trabalhar com programação! Hahahaha
-
-Na época eu trabalhava dando aula de violão e guitarra. Durante uma das minhas aulas, o celular toca e era um amigo. Ele queria saber se eu toparia participar de um processo seletivo para trabalhar como front-end na IBM, onde ele trabalhava.
-
-Por mais que eu não tivesse noção nenhuma de HTML, CSS e Javascript, ele me tranquilizou falando que o foco da vaga era achar alguém que falasse inglês, e que a parte técnica ele me ajudaria.
-
-Topei o desafio, passei um final de semana estudando, fiz o teste, mas infelizmente não fui aprovado. No entanto, a moça do RH me aconselhou a continuar estudando, pois essas vagas abriam com frequência. Eu havia gostado, então decidi investir.
-
-Me matriculei na [Universidade Santa Cecília](http://www.unisanta.br/), para o curso de [Produção Multimídia](http://cursos.unisanta.br/producaomultimidia/). Esse curso aborda, além de web, design gráfico e fotografia. Isso me deu uma visão ampla da área, e logo no primeiro semestre já havia conseguido um estágio.
-
-Desde então, tenho na bagagem a passagem por agências digitais, agência de publicidade, além de morar um ano nos Estados Unidos.
-
-## Mas o que faz um Desenvolvedor Front-end?
+## Mas afinal, o que faz um Desenvolvedor Front-end?
 
 <figure>
   <img src="/assets/dist/images/posts/apresentacao/front-end-illustration.jpg" alt="A gente faz arte, com código."/>
   <figcaption>A gente faz arte, com código.</figcaption>
 </figure>
 
-Bom, primeiro é importante saber que o termo desenvolvedor "Front" ou "Back" - end, é o nome dado para programadores voltados para a web.
+Bom, primeiro é importante saber que o termo desenvolvedor "Front" ou "Back" - end, é o nome dado para programadores voltados para a Web (Por isso acabo utilizando "Web-designer" como resposta para a minha profissão).
 
 A web nada mais é do que a possibilidade de você, no conforto da sua casa, acessar informações armazenadas em computadores do outro lado do mundo. Esses computadores são chamados de servidores.
 
@@ -72,8 +55,6 @@ Essa divisão foi necessária porque hoje em dia existe um infinito número de t
 Além disso, também tem a parte de rankeamento dos sites de busca, como o Google. Para que seu site apareça entre as primeiras opções, é necessário que ele siga uma série de regras, o chamado [SEO (Search Engine Optimization)](https://www.seomarketing.com.br/seo-o-que-e.php), e também é função do front fazer com que o seu site tenha o melhor SEO possível.
 
 A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de ser uma profissão nova, que está em constante evolução. Isso faz com que você seja obrigado a estar sempre atento, estudando, se não, em pouco tempo tudo o que você sabe se torna obsoleto.
-
-Além do mais, é incrível você conseguir transformar uma página em branco, em um site, um produto. É literalmente transformar sonho, em realidade!
 
 Vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele aborda um pouco mais do que eu falei, de uma forma bem engraçada e dinâmica.
 
