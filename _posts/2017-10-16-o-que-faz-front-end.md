@@ -76,13 +76,9 @@ Por outro lado, se olharmos o gráfico de buscas pelo termo "Front-end developer
 
 Para ilustrar um pouco mais tudo o que esta sendo abordado no post, vou deixar aqui essa [palestra do Shankar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=cmT3clnhbiQ) no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma leve e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais. 
 
-Eu também [escrevi um post no medium <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228) que acredito que vá te ajudar nesse início, caso você tenha se interessado pela área, e queira saber por onde começar.
+Se você se interessou pela área, eu [escrevi um post no medium <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228) que pode te ajudar a começar.
 
-Além disso, me coloco à disposição caso tenha alguma dúvida. Você encontra meus contatos aqui embaixo, no rodapé do site.
-
-Bom pessoal, acho que é isso. Se gostarem do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts.
-
-Críticas, e sugestões são sempre bem-vindas.
+Bom pessoal, acho que é isso. Se gostarem do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts. Críticas, e sugestões são sempre bem-vindas.
 
 Valeu!
 
