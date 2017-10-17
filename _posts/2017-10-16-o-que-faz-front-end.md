@@ -15,7 +15,7 @@ twitter_text: "Afinal, o que faz um desenvolvedor Front-end?"
 introduction: "Se você se interessa pela área, comece por aqui."
 ---
 
-## Eu trabalho como Desenvolvedor Front-end!
+## Introdução
 
 Fala pessoal, beleza?
 
@@ -25,9 +25,9 @@ Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida 
 
 Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.
 
-Portanto quando você, desenvolvedor, tiver que explicar sua profissão, fiz esse texto para poupar o seu trabalho.
+Então, se você passa pelo mesmo problema que eu, ou caiu aqui de para-quedas, seja bem-vindo.
 
-Já para você, que caiu aqui de para-quedas, seja bem-vindo!
+Pega uma pipoca e vem comigo.
 
 
 ## Tá, mas, o que exatamente você faz?
@@ -65,18 +65,20 @@ Em resumo:
 
 A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de ser uma profissão nova, que está em constante evolução. Isso faz com que você seja obrigado a estar sempre atento, estudando, se não, em pouco tempo tudo o que você sabe se torna obsoleto.
 
-Se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como ela vem crescendo com o decorrer dos anos.
+Se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como ela vem crescendo com o decorrer dos anos, e a tendência para os próximos anos é continuar crescendo.
 
 <figure>
   <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' de 2004 até 2017"/>
   <figcaption>Busca pelo termo "Front-end developer" de 2004 até 2017.</figcaption>
 </figure>
 
-Para ilustrar um pouco mais tudo o que abordei no post, vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma ludica e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais.
+Para ilustrar um pouco mais tudo o que esta sendo abordado no post, vou deixar aqui um [vídeo <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=cmT3clnhbiQ)  do [Shankar](https://www.linkedin.com/in/shankarcabus/) no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma ludica e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais. 
 
-[![O poder esta no front](/assets/dist/images/posts/front-end/illustracao-poder-front.jpg)](https://www.youtube.com/watch?v=cmT3clnhbiQ "O poder esta no front")
+Se você se interessou pela área, e quer saber por onde começar, [eu escrevi um post no medium <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228) que acredito que vá te ajudar nesse início.
 
-Bom pessoal, acho que é isso. Se gostaram do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts.
+Além disso, me coloco à disposição caso tenha alguma dúvida. Você encontra meus contatos aqui embaixo, no rodapé do site.
+
+Bom pessoal, acho que é isso. Se gostarem do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts.
 
 Críticas, e sugestões são sempre bem-vindas.
 
