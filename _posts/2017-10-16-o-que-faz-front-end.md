@@ -36,7 +36,6 @@ A web nada mais é do que a possibilidade de você, no conforto da sua casa, ace
 
 Quando você acessa um site, seu navegador (Chrome, IE, Firefox) se conecta ao servidor onde ele está hospedado, e faz o download de informações como textos, imagens e vídeos. Em seguida, essas informações são interpretadas e renderizadas na tela para que você possa interagir com elas.
 
-
 Até um tempo atrás, essa interação era limitada, uma vez que o usuário acessava as informações apenas na tela do computador. Tanto que, a mesma pessoa que as manipulava do lado do servidor, também cuidava delas do lado do cliente.
 
 Porém, desde que os smartphones se popularizaram, ocorreu uma grande mudança de paradigmas no desenvolvimento web, obrigando as empresas a especificarem as funções.
