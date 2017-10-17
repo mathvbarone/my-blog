@@ -46,9 +46,10 @@ Porém, desde que os smartphones se popularizaram, ocorreu uma grande mudança d
 
 Uma galera focou apenas em manipular as informações do lado do servidor, os chamados "Back"-end, enquando que uma outra galera foi cuidar da parte do cliente, os chamados "Front"-end.
 
+
 <figure>
-  <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' desde 2004 até 2017"/>
-  <figcaption>Busca pelo termo "Front-end developer" desde 2004 até 2017.</figcaption>
+  <img src="/assets/dist/images/posts/front-end/frontend-backend-illustration.jpg" alt="Illustração - Front-end vs Back-end."/>
+  <figcaption>Illustração - Front-end vs Back-end.</figcaption>
 </figure>
 
 Essa divisão foi necessária porque hoje em dia existe um infinito número de telas e dispositivos capazes de acessar essas informações. Fora que é muito importante que essas páginas sejam otimizadas para serem acessadas em conexões lentas, como o 3g.
@@ -59,13 +60,18 @@ Além disso, também tem a parte de rankeamento dos sites de busca, como o Googl
 
 A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de ser uma profissão nova, que está em constante evolução. Isso faz com que você seja obrigado a estar sempre atento, estudando, se não, em pouco tempo tudo o que você sabe se torna obsoleto.
 
-Vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele aborda um pouco mais do que eu falei, de uma forma bem engraçada e dinâmica.
+Se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como essa profissão vem crescendo com o decorrer dos anos.
+
+<figure>
+  <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' de 2004 até 2017"/>
+  <figcaption>Busca pelo termo "Front-end developer" de 2004 até 2017.</figcaption>
+</figure>
+
+Para ilustrar um pouco mais tudo o que abordei no post, vou deixar aqui um vídeo do Shankar no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma ludica e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais.
 
 [![O poder esta no front](/assets/dist/images/posts/front-end/illustracao-poder-front.jpg)](https://www.youtube.com/watch?v=cmT3clnhbiQ "O poder esta no front")
 
-Bom pessoal, acho que é isso, o post acabou ficando mais longo do que eu pretendia hahaha.
-
-No próximo vou falar um pouco sobre como tive a ideia de criar o site, e quais tecnologias utilizei.
+Bom pessoal, acho que é isso. Se gostaram do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts.
 
 Críticas, e sugestões são sempre bem-vindas.
 
