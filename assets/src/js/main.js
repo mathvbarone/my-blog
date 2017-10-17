@@ -20,7 +20,7 @@ const start = {
 
 		//EDIT IMAGE INSIDE LINKS ON POST
 		imgInsideLinkPost: () => {	
-			$(".post a img").parent().addClass("is-image-inside");								
+			$(".post img").closest("a").addClass("is-image-inside");								
 		},
 
 		//HERO SCROLL

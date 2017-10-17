@@ -15,7 +15,9 @@ twitter_text: "Afinal, o que faz um desenvolvedor Front-end?"
 introduction: "Se você se interessa pela área, comece por aqui."
 ---
 
-Eae pessoal, beleza?
+## Eu trabalho como Desenvolvedor Front-end!
+
+Fala pessoal, beleza?
 
 Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na [UOL](https://www.uol.com.br/).
 
@@ -27,7 +29,8 @@ Portanto quando você, desenvolvedor, tiver que explicar sua profissão, fiz ess
 
 Já para você, que caiu aqui de para-quedas, seja bem-vindo!
 
-## Mas afinal, o que faz um Desenvolvedor Front-end?
+
+## Tá, mas, o que exatamente você faz?
 
 <figure>
   <img src="/assets/dist/images/posts/front-end/front-end-illustration.jpg" alt="A gente faz arte, com código."/>
@@ -44,7 +47,7 @@ Até um tempo atrás, essa interação era limitada, uma vez que o usuário aces
 
 Porém, desde que os smartphones se popularizaram, ocorreu uma grande mudança de paradigmas no desenvolvimento web, obrigando as empresas a especificarem as funções.
 
-Uma galera focou apenas em manipular as informações do lado do servidor, os chamados "Back"-end, enquando que uma outra galera foi cuidar da parte do cliente, os chamados "Front"-end.
+Uma galera focou apenas em manipular as informações do lado do servidor, os chamados "Back"-end, enquando que uma outra galera foi cuidar do lado do usuário, os chamados "Front"-end.
 
 
 <figure>
@@ -54,13 +57,15 @@ Uma galera focou apenas em manipular as informações do lado do servidor, os ch
 
 Essa divisão foi necessária porque hoje em dia existe um infinito número de telas e dispositivos capazes de acessar essas informações. Fora que é muito importante que essas páginas sejam otimizadas para serem acessadas em conexões lentas, como o 3g.
 
->**Em resumo, o Desenvolvedor Front-end é responsável pela manipulação das informações enviadas pelo servidor, cuidando para que o usuário consiga acessá-las da forma mais rápida e intuitiva possível.**
+Isso sem levar em conta a parte de rankeamento do site, que eu vou deixar para abordar em outro post.
 
-Além disso, também tem a parte de rankeamento dos sites de busca, como o Google. Para que seu site apareça entre as primeiras opções, é necessário que ele siga uma série de regras, o chamado [SEO (Search Engine Optimization)](https://www.seomarketing.com.br/seo-o-que-e.php), e também é função do front fazer com que o seu site tenha o melhor SEO possível.
+Em resumo:
+
+>**O Desenvolvedor Front-end é responsável pela manipulação das informações enviadas para o navegador pelo servidor. O objetivo é fazer com que o usuário consiga acessar essas informações da forma mais rápida e intuitiva possível.**
 
 A missão é difícil, complexa, mas recompensadora. Eu acho excitante o fato de ser uma profissão nova, que está em constante evolução. Isso faz com que você seja obrigado a estar sempre atento, estudando, se não, em pouco tempo tudo o que você sabe se torna obsoleto.
 
-Se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como essa profissão vem crescendo com o decorrer dos anos.
+Se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como ela vem crescendo com o decorrer dos anos.
 
 <figure>
   <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' de 2004 até 2017"/>
