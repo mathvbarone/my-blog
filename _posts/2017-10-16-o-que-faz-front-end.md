@@ -19,9 +19,13 @@ Eae pessoal, beleza?
 
 Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na [UOL](https://www.uol.com.br/).
 
-Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por "Web-designer", que é o termo mais conhecido pelo público em geral. Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificílmente vão saber do que se trata.
+Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por "Web-designer", que é o termo mais conhecido pelo público em geral.
 
-Isso é um pouco chato, porque o termo "Web-designer" é algo muito genérico, e eu gostaría que as pessoas tivessem um conhecimento mais aprofundado sobre a minha profissão.
+Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.
+
+Portanto quando você, desenvolvedor, tiver que explicar sua profissão, fiz esse texto para poupar o seu trabalho.
+
+Já para você, que caiu aqui de para-quedas, seja bem-vindo!
 
 ## Mas afinal, o que faz um Desenvolvedor Front-end?
 
