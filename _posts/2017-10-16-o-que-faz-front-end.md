@@ -3,7 +3,7 @@ layout: post
 title: "Afinal, o que faz um desenvolvedor Front-end?"
 date: 2017-10-16 16:12:00
 image: '/assets/dist/images/posts/front-end/front-end-post.jpg'
-description: "Se você se interessa pela área, comece por aqui."
+description: "Se você se interessa pela área, comece por aqui"
 main-class: 'front'
 color: '#65B149'
 tags:
