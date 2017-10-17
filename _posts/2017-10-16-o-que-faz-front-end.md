@@ -65,7 +65,7 @@ Em resumo:
 
 >**O Desenvolvedor Front-end é responsável pela manipulação das informações enviadas para o navegador pelo servidor. O objetivo é fazer com que o usuário consiga acessar essas informações da forma mais rápida e intuitiva possível.**
 
-A missão é difícil e complexa. O fato de ser uma profissão nova, faz com que ela esteja em constante evolução. Isso obriga o profissional a estar sempre atento, estudando, se não em pouco tempo tudo o que você estudou se torna obsoleto. 
+A missão é difícil e complexa. O fato de ser uma profissão nova, faz com que ela esteja em constante evolução. Isso obriga o profissional a estar sempre atento, estudando, se não em pouco tempo tudo o que você sabe se torna obsoleto. 
 
 Por outro lado, se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como a necessidade por esse profissional vem crescendo com o decorrer dos anos, e a tendência é essa curva continuar aumentando.
 
