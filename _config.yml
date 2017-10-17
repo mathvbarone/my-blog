@@ -1,5 +1,5 @@
 # Site settings
-title: Matheus Barone | Desenvolvedor Front End
+title: Matheus Barone | Desenvolvedor Front-end
 email: matheusvbarone@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Um site que conta um pouco do meu trabalho como Desenvolvedor Front End.
@@ -28,7 +28,7 @@ links:
   - title: Tags
     url: /tags
   - title: Sobre mim
-    url: /sobre
+    url: /about
 
 
 # exclude my node related stuff
