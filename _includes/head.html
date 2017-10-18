@@ -70,7 +70,12 @@
   <!-- FONTAWESOME -->
   <script src="https://use.fontawesome.com/f46f00c11e.js"></script>
 
-  <!-- STYLESHEET -->
+<!-- STYLESHEET -->
+<link rel="stylesheet" href="{{ "/assets/dist/css/style.min.css" | prepend: site.baseurl }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<!-- STYLESHEET -->
+
   {% include criticalCss.html %}
 
 <!-- Facebook Pixel Code -->
