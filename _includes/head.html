@@ -67,26 +67,24 @@
   <!-- Android Lolipop Theme Color -->
   <meta name="theme-color" content="#cd2b46">
 
-  <!-- FONTAWESOME -->
-  <script src="https://use.fontawesome.com/f46f00c11e.js"></script>
 
-<!-- STYLESHEET -->
-<link rel="stylesheet" href="{{ "/assets/dist/css/style.min.css" | prepend: site.baseurl }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-<!-- STYLESHEET -->
-
+<!-- POST LAYOUT CRITICAL CSS -->
 {% if page.head-class == "post" %}
-  {% include criticalcss/post.html %}  
+  {% include criticalcss/post.html %}
 {% endif %}
+<!-- POST LAYOUT CRITICAL CSS -->
 
+<!-- INDEX LAYOUT CRITICAL CSS -->
 {% if page.head-class == "index" %}
-  {% include criticalcss/index.html %}  
+  {% include criticalcss/index.html %}
 {% endif %}
+<!-- INDEX LAYOUT CRITICAL CSS -->
 
+<!-- DEFAULT LAYOUT CRITICAL CSS -->
 {% if page.head-class == "default" %}
-  {% include criticalcss/default.html %}  
+  {% include criticalcss/default.html %}
 {% endif %}
+<!-- DEFAULT LAYOUT CRITICAL CSS -->
 
 
 <!-- Facebook Pixel Code -->

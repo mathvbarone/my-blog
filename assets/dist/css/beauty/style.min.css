@@ -11501,7 +11501,7 @@ footer .footer-phone .fa {
 }
 
 .offset.is-about {
-    background: #ececec
+    background: #fff
 }
 
 .breadcrumb.is-about {
@@ -13124,10 +13124,6 @@ footer .footer-phone .fa {
 
     .hero-index-body .subtitle {
         font-size: 1.5rem
-    }
-
-    .offset.is-about {
-        background: #ececec
     }
 }
 
