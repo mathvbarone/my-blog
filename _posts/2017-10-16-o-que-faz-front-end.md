@@ -5,6 +5,7 @@ date: 2017-10-16 16:12:00
 image: '/assets/dist/images/posts/front-end/front-end-post.jpg'
 description: "Se você se interessa pela área, comece por aqui"
 main-class: 'front'
+head-class: post
 color: '#65B149'
 tags:
 - front-end

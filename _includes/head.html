@@ -76,7 +76,18 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 <!-- STYLESHEET -->
 
-  {% include criticalCss.html %}
+{% if page.head-class == "post" %}
+  {% include criticalcss/post.html %}  
+{% endif %}
+
+{% if page.head-class == "index" %}
+  {% include criticalcss/index.html %}  
+{% endif %}
+
+{% if page.head-class == "default" %}
+  {% include criticalcss/default.html %}  
+{% endif %}
+
 
 <!-- Facebook Pixel Code -->
 <script>
