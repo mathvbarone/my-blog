@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Como entrar, ou voltar, para o mercado de trabalho"
-date: 2017-10-26 18:00:00
-image: '/assets/dist/images/posts/front-end/front-end-post.jpg'
-description: "Esteja além dos 'Requisitos Mínimos'"
+title: "Como aumentar suas chances de conseguir um emprego"
+date: 2017-10-27 12:00:00
+image: '/assets/dist/images/posts/dicas-emprego/dicas-emprego-post.jpg'
+description: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos'"
 main-class: 'misc'
 head-class: post
 color: '#af1da2'
@@ -11,8 +11,8 @@ tags:
 - mercado-de-trabalho
 - dicas
 
-twitter_text: "Como entrar, ou voltar, para o mercado de trabalho"
-introduction: "Esteja além dos 'Requisitos Mínimos'."
+twitter_text: "Como aumentar suas chances de conseguir um emprego"
+introduction: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos.'"
 ---
 
 ## Introdução
@@ -23,9 +23,9 @@ A parte mais difícil da carreira de qualquer profissional é o momento de coloc
 
 É uma situação complicada que obriga a pessoa a avaliar sua vida profissional e, em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.
 
-Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é, através de algumas dicas, jogar uma luz para aqueles que tem força de vontade, porém, não sabem o que fazer para aumentar as suas chances de conseguir um emprego.
+Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é, através de algumas dicas, jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.
 
-### Mas como você chegou nessas dicas?
+### Como você chegou nessas dicas?
 
 No início de 2017, eu retornava dos Estados Unidos após 1 ano procurando novas oportunidades. Durante esse período deixei de atuar na minha área e, ao retornar, estava totalmente desatualizado.
 
@@ -38,55 +38,54 @@ Portanto, se você se encontra em uma situação semelhante à minha, siga essas
 ## 1- Avalie se você está na profissão certa
 
 <figure>
-  <img src="/assets/dist/images/posts/front-end/front-end-illustration.jpg" alt="A gente faz arte, com código."/>
-  <figcaption>A gente faz arte, com código.</figcaption>
+  <img src="/assets/dist/images/posts/dicas-emprego/i-love-my-job.jpg" alt="Você ama sua profissão? - ilustração"/>
+  <figcaption>Você ama sua profissão?</figcaption>
 </figure>
 
-São nos momentos de crise que as melhores oportunidades aparecem. Nessas horas abrimos nossa mente a respeito de novas oportunidades. Se você esta passando por isso, aproveite esse momento para refletir e encontrar o caminho que quer seguir, mesmo que seja fora da sua área. Não tenha medo de recomeçar, você pode ter que fazer isso em vários momentos da sua vida.
+O requisito mais importante para quem quer ser bem-sucedido em sua busca por oportunidades, é estar disposto a passar horas e mais horas por dia estudando a respeito da sua profissão.
 
-Confúcio, um pensador chinês, diz:
+Eu não acredito que exista trabalho perfeito, mesmo para quem trabalha com aquilo que gosta. Por outro lado, é essencial saber avaliar se você não consegue um emprego, pelo simples fato de estar procurando na profissão errada.
 
->**Escolha um trabalho que você ame, e você nunca terá que trabalhar um dia em sua vida.**
+Agora pare para refletir: O que você sente quando pensa na sua profissão?
 
-Eu não acredito que exista trabalho perfeito, mesmo se você estiver fazendo aquilo que gosta. Por outro lado, é essencial saber avaliar se o motivo pelo qual você não consegue um emprego, seja pelo simples fato de estar procurando na profissão errada.
+O sentimento deveria ser um misto de expectativa, curiosidade, busca por novidades, e vontade de conhecer outras pessoas que tenham esse interesse em comum.
 
-O ser humano tende a focar apenas em coisas que trazem uma sensação de recompensa ou diversão. Dentre estudar, assistir TV, jogar videogame, ou dormir, nem preciso dizer o que fica por último na lista de prioridades. Para a maioria das pessoas, estudar é massante, tedioso, e sinônimo de chatice.
+Nesse ponto muitas pessoas irão pensar: "Ah, mas eu gosto da minha profissão, mas quando estou em casa acabo me distraindo com coisas mais divertidas como assistir TV, jogar video game, ou passar horas vendo besteiras no Facebook".
 
-Mas, afinal, o que é estudar?
+E nesse momento eu te pergunto: "Mas, afinal, o que é estudar?"
 
 >**Estudar é pesquisar a fundo um determinado assunto, seja lendo, assistindo vídeos, ouvindo podcasts, ou simplesmente compartilhando conhecimento com outras pessoas.**
 
-Agora pare e reflita por um momento. Quando você pensa na sua profissão, o que você sente?
-
-O sentimento deveria ser um misto de expectativa, curiosidade, busca por novidades, e vontade de conhecer outras pessoas que compartilhem dessa profissão.
-
 Entendeu onde eu quero chegar?
 
-Se você realmente gosta do que faz, estudar vai acabar sendo um processo divertido. É apenas uma questão de focar a sua atenção nas coisas que, de forma natural, já te despertam interesse.
+Se para você, estudar é algo chato, das duas uma:
 
-O primeiro passo é se imaginar passando horas e horas lendo, ouvindo, e falando sobre a sua profissão. Se isso te trouxe um sentimento negativo, então talvez seja a hora de repensar sua carreira. 
+Ou você está estudando da maneira errada, ou está na profissão errada.
 
-Puxe da sua cabeça quais assuntos te despertam interesse, inclusive nas horas da diversão. Quais são seus hobbies? O que te entretém?
+Caso se dê conta que está na profissão errada, puxe da sua cabeça quais assuntos te despertam interesse, inclusive nas horas da diversão. Quais são seus hobbies? O que te entretém?
 
-Falando assim, pode até parecer estranho porque geralmente conectamos hobbie com diversão, e profissão com obrigação.
+As vezes você já faz aquilo que ama, sem perceber que consegue transformar isso numa profissão. Falando assim, pode até parecer estranho porque geralmente conectamos hobbie com diversão, e profissão com obrigação.
 
 Não precisa ser assim.
 
-Encontre a interseção dessas duas coisas, e a citação de Confúcio vai começar a fazer sentido.
+Encontre a interseção dessas duas coisas, e a sua TV vai passar um bom tempo desligada.
 
-## 2- Otimize o seu tempo de estudo
 
-Bom, uma vez entendido que você está na profissão correta, é hora de achar formas de estudar.
+## 2- Alinhe seus estudos de acordo com a sua rotina
 
-Quando me encontrava nesse período da busca por um emprego, logo percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado. Foi aí que passei a valorizar o meu tempo e aproveitar todas as oportunidades que tinha para absorver conteúdo.
+Bom, uma vez entendido que você está na profissão correta, é hora de melhoras os seus métodos de estudo.
 
-Aos poucos fui aprendendo a gerenciar a minha rotina. Criei uma pequena tabela em que dividia meu dia de acordo com as meus horários e obrigações. 
+Em pouco tempo percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado. Foi aí que passei a valorizar o meu tempo e aproveitar todas as oportunidades que tinha para absorver conteúdo.
 
-Como haviam muitos momentos em que não conseguiria estudar, encontrei um formato de conteúdo que se encaixou perfeitamente na minha forma de aprendizado, o podcast.
+Aos poucos fui aprendendo a gerenciar a minha rotina. Criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações.
 
-Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, não requer 100% da sua atenção. Isso permite continuar estudando, mesmo em momentos que seriam desperdiçados, como o tempo gasto no ônibus, por exemplo.. 
+Como haviam muitos momentos em que não conseguiria estudar, encontrei um formato de conteúdo que se encaixou perfeitamente com a minha necessidade, o podcast.
 
-Comecei a ouvir podcasts relacionados à área de tecnologia, como “Hipsters.tech”, “Dev na estrada” e “Podprogramar”. Todos são excelentes e serviram para agregar muito conhecimento.
+Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar absorvendo conteúdo não importa a hora ou lugar. Pode ser enquanto está no onibus, na fila do banco, lavando a louça...
+
+Como trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/). Todos são excelentes e serviram para agregar muito conhecimento.
+
+Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
 
 Em seguida, utilizei essa mesma lógica para outras coisas. Por exemplo, todos os dias na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados ao que eu estava estudando O mesmo vale para as outras coisas que fazia durante o meu dia, eu sempre procurava achar formas de continuar absorvendo conteúdo.
 
@@ -133,7 +132,7 @@ Já o twitter é perfeito para se colocar a par das novidades da área. Siga pes
 
 (Se você trabalha como front, siga @frontendbrvagas e @frontendbr).
 
-No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o Linkedin. Para quem não conhece, é uma rede social voltada para profissionais.  
+No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o Linkedin. Para quem não conhece, é uma rede social voltada para profissionais.
 
 Ao criar um perfil, você basicamente gera um curriculum online. Nele é possível colocar informações relevantes como sua experiência profissional, formação acadêmica, trabalhos voluntários, competências, recomendações, e muito mais.
 
@@ -145,9 +144,9 @@ Tente descrever seu lado profissional de forma clara e sucinta. Siga empresas, a
 
 Ah! Aproveita e me adiciona! :D
 
-## 5- Não se contente com os requisitos mínimos 
+## 5- Não se contente com os requisitos mínimos
 
-Até um tempo atrás, se uma pessoa tinha no currículo uma formação acadêmica e um segundo idioma, já era considerado um diferencial. Hoje em dia, dependendo da profissão, ter um diploma e saber falar inglês é requisito mínimo. 
+Até um tempo atrás, se uma pessoa tinha no currículo uma formação acadêmica e um segundo idioma, já era considerado um diferencial. Hoje em dia, dependendo da profissão, ter um diploma e saber falar inglês é requisito mínimo.
 
 Ou seja, se você quer ter uma relevância perante as empresas, é necessário encontrar novas formas de se destacar.
 
@@ -167,7 +166,7 @@ Como vocês podem ver, existem inúmeras formas de se preparar melhor para as op
 
 Não existe crise para quem não tem medo de mudar. Quanto mais persistente e criativo você for, mais fácil será se adaptar às dificuldades.
 
-Se prepare, foque no seu objetivo, e é só uma questão de tempo até as coisas melhorarem. 
+Se prepare, foque no seu objetivo, e é só uma questão de tempo até as coisas melhorarem.
 
 Se puder, coloque nos comentários outras dicas, para tentarmos ajudar o máximo de pessoas possíveis.
 
