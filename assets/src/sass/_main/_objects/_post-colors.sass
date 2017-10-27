@@ -179,6 +179,11 @@
                         line-height: 1.5em;
                         letter-spacing: .01rem;
 
+                        &::selection
+                              background: nth($color-post, index($type-post, $type))
+                              color: #fff
+
+
 
 
                   h2,
@@ -213,7 +218,7 @@
                         padding: 0 3px
                         color: nth($color-post, index($type-post, $type))
                         font-weight: 500
-                        transition: background-position 0.15s linear 0.1s;
+                        +transition (ease-in-out, 0.2s, all)
                         background-image: linear-gradient(to bottom, nth($color-post, index($type-post, $type)) 0%, nth($color-post, index($type-post, $type)) 100%);
                         background-size: 100%;
                         background-repeat: no-repeat;
@@ -221,6 +226,9 @@
                         overflow: hidden;
                         &:after
                               background: none;
+                        &::selection
+                              background: nth($color-post, index($type-post, $type))
+                              color: #fff
 
                         >img
                               width: 100%
@@ -231,7 +239,6 @@
                               color: #fff
                               background-image: linear-gradient(to bottom, nth($color-post, index($type-post, $type)) 0%, nth($color-post, index($type-post, $type)) 100%);
                               background-position: 0 0em;
-                              transition: background-position 0.1s linear 0s;
                         &.is-image-inside
                               background: none
 
@@ -274,6 +281,17 @@
                                     right: 0
                                     bottom: -0.2em
                                     content: "\201D"
+
+                  ul
+                        padding-left: 2em;
+                        li
+                              list-style-type: square;
+                              padding-bottom: 0.4em;
+                              &::selection
+                                    background: nth($color-post, index($type-post, $type))
+                                    color: #fff
+
+
 
 
 

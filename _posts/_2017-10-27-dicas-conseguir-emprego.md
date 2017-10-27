@@ -48,11 +48,11 @@ Eu não acredito que exista trabalho perfeito, mesmo para quem trabalha com aqui
 
 Agora pare para refletir: O que você sente quando pensa na sua profissão?
 
-O sentimento deveria ser um misto de expectativa, curiosidade, busca por novidades, e vontade de conhecer outras pessoas que tenham esse interesse em comum.
+O sentimento deve ser um misto de expectativa, curiosidade, busca por novidades, e vontade de conhecer outras pessoas que tenham esse interesse em comum.
 
-Nesse ponto muitas pessoas irão pensar: "Ah, mas eu gosto da minha profissão, mas quando estou em casa acabo me distraindo com coisas mais divertidas como assistir TV, jogar video game, ou passar horas vendo besteiras no Facebook".
+Nesse ponto muitas pessoas irão pensar: "Ah, eu gosto da minha profissão, mas quando estou em casa acabo me distraindo com coisas mais divertidas como assistir TV, jogar video game, ou passar horas vendo besteiras no Facebook".
 
-E nesse momento eu te pergunto: "Mas, afinal, o que é estudar?"
+Nesse momento eu te pergunto: "Mas, afinal, o que é estudar?"
 
 >**Estudar é pesquisar a fundo um determinado assunto, seja lendo, assistindo vídeos, ouvindo podcasts, ou simplesmente compartilhando conhecimento com outras pessoas.**
 
@@ -73,46 +73,56 @@ Encontre a interseção dessas duas coisas, e a sua TV vai passar um bom tempo d
 
 ## 2- Alinhe seus estudos de acordo com a sua rotina
 
-Bom, uma vez entendido que você está na profissão correta, é hora de melhoras os seus métodos de estudo.
+<figure>
+  <img src="/assets/dist/images/posts/dicas-emprego/studying.jpg" alt="Alinhe seus estudos de acordo com a sua rotina - ilustração"/>
+  <figcaption>Keep studying, all day long.</figcaption>
+</figure>
 
-Em pouco tempo percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado. Foi aí que passei a valorizar o meu tempo e aproveitar todas as oportunidades que tinha para absorver conteúdo.
+Bom, uma vez entendido que você está na profissão correta, é hora de melhorar os seus métodos de estudo.
 
-Aos poucos fui aprendendo a gerenciar a minha rotina. Criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações.
+Sempre fui uma pessoa hiperativa, então passar horas lendo textos e mais textos não seria uma boa opção. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado. Então criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações.
 
-Como haviam muitos momentos em que não conseguiria estudar, encontrei um formato de conteúdo que se encaixou perfeitamente com a minha necessidade, o podcast.
+Como haviam muitos momentos em que não conseguiria sentar para estudar, encontrei um formato de conteúdo que se encaixou perfeitamente com a minha necessidade, o podcast.
 
 Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar absorvendo conteúdo não importa a hora ou lugar. Pode ser enquanto está no onibus, na fila do banco, lavando a louça...
 
-Como trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/). Todos são excelentes e serviram para agregar muito conhecimento.
+Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/).
 
-Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
+Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
 
-Em seguida, utilizei essa mesma lógica para outras coisas. Por exemplo, todos os dias na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados ao que eu estava estudando O mesmo vale para as outras coisas que fazia durante o meu dia, eu sempre procurava achar formas de continuar absorvendo conteúdo.
+Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
 
-Ou seja, com um pouco de disciplina e organização, consegui encontrar formas de estudar várias horas por dia, sem mudar radicalmente a minha rotina.
+Em seguida, comecei a procurar formas de absorver conteúdo em todos os momentos do meu dia. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto de que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
+
+Isso serve pra mostrar que, quando estamos realmente engajados e apaixonados pelo que fazemos, estudo vira literalmente sinônimo de diversão.
+
+Com um pouco de disciplina e organização, consegui encontrar formas de estudar várias horas por dia, sem mudar radicalmente a minha rotina.
 
 
 ## 3- Utilize os algoritmos das redes sociais a seu favor
 
-Hoje em dia passamos a maior parte do nosso tempo nas redes sociais. Seja ela o Facebook, Twitter, Instagram, entre outras.
+<figure>
+  <img src="/assets/dist/images/posts/dicas-emprego/social-media-algorithms.jpg" alt="Utilize os algoritmos das redes sociais a seu favor - ilustração"/>
+  <figcaption>Saiba utilizá-los de forma inteligente.</figcaption>
+</figure>
 
-Assim como a Internet em si, as redes sociais não passam de ferramentas que, se utilizadas da forma errada, acabam se tornando um grande problema.
+Hoje em dia passamos a maior parte do nosso tempo nas redes sociais. Assim como a Internet em si, elas não passam de ferramentas que, se utilizadas da forma errada, acabam se tornando um grande problema.
 
-Sendo assim, você tem duas opções: Ou se afasta totalmente, ou utiliza a seu favor.
+Sendo assim, você tem duas opções: Ou se afasta totalmente, ou as utiliza a seu favor.
 
-Se escolheu escolher a seu favor, é importante entender que cada rede social tem o seu propósito, mas uma coisa elas têm em comum: A utilização de algoritmos para selecionar o conteúdo mostrado de acordo com os seus interesses.
+Se escolheu usá-las a seu favor, é importante entender que cada rede social tem o seu propósito, mas uma coisa elas têm em comum: A utilização de algoritmos para selecionar o conteúdo mostrado de acordo com os seus interesses.
 
 Falando nessa questão de algoritmos, existe um lado ruim nisso. Eles acabam criando uma bolha social, limitando as pessoas a verem apenas aquilo que gostam. Mas isso é papo para outro post.
 
 O importante aqui, é entender que se usados de forma inteligente eles irão trabalhar para sempre te oferecer conteúdos relevantes.
 
-Faça o teste, passe dias curtindo coisas relevantes de acordo com a sua profissão. Em pouco tempo você vai perceber que esse assunto começará a aparecer com mais frequência na sua timeline.
+Faça o teste, passe dias curtindo coisas relacionadas à sua profissão. Em pouco tempo você vai perceber que esse assunto começará a aparecer com mais frequência na sua timeline.
 
-Isso serve para o Youtube também. Quando mudei o perfil das minhas buscas, de assuntos bestas para assuntos relevantes, ele passou a me sugerir um conteúdo muito mais interessante.
+A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, de assuntos bestas para assuntos relevantes, ele passou a me sugerir um conteúdo muito mais interessante.
 
-Isso é excelente, pois acaba criando um loop de conhecimento, em que, quanto mais você procurar por bom conteúdo, mais fácil ele chegará até você.
+Isso é excelente, pois acaba criando um loop de conhecimento, em que, quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
 
-Para entender melhor como funcionam esses algoritmos, o Felipe Castanhari fez um vídeo bastante interessante abordando esse assunto.
+Para entender melhor como funcionam esses algoritmos, (principalmente a questão da bolha social) o Felipe Castanhari fez [um vídeo <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=COgkI7GhFR0) bastante interessante abordando esse assunto.
 
 ## 4- Crie uma rede de contatos (Networking)
 

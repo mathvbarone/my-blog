@@ -30,11 +30,17 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     -webkit-touch-callout: none
 }
 
+.button,.button-submit,.input,.textarea {
+    -webkit-box-align: center;
+    vertical-align: top
+}
+
 .select,.select select,.textarea,audio,embed,img,object,video {
     max-width: 100%
 }
 
 .button,.button-submit,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
+    -moz-appearance: none;
     -webkit-appearance: none
 }
 
@@ -148,8 +154,8 @@ a {
     transition: linear .2s all
 }
 
-.button,.button-submit,.card-item {
-    -o-transition: ease-in-out .2s all
+.button,.button-submit,.card-item,.ribbon {
+    -webkit-transition: ease-in-out .2s all
 }
 
 a strong {
@@ -283,6 +289,10 @@ table td,table th {
 
 .is-uppercase {
     text-transform: uppercase!important
+}
+
+.heading,.ribbon {
+    text-transform: uppercase
 }
 
 .has-text-white {
@@ -469,9 +479,8 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 }
 
 .button,.button-submit,.file {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none
+    -webkit-user-select: none;
+    -ms-user-select: none
 }
 
 .box {
@@ -499,8 +508,6 @@ a.box:active {
 }
 
 .button,.button-submit {
-    -moz-appearance: none;
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -521,7 +528,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
+    -moz-user-select: none;
     user-select: none;
     background-color: #fff;
     color: #363636;
@@ -534,7 +541,7 @@ a.box:active {
     padding-right: 1em;
     text-align: center;
     white-space: nowrap;
-    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -542,6 +549,10 @@ a.box:active {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox
+}
+
+.breadcrumb,.delete,.file {
+    -moz-user-select: none
 }
 
 .button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
@@ -1567,14 +1578,6 @@ a.box:active {
     position: absolute!important
 }
 
-.control.is-loading::after,.loader,.select.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear
-}
-
-.control.has-icon:not(.has-icon-right) .icon,.control.has-icons-left .icon.is-left,.file-input {
-    left: 0
-}
-
 .button.is-static,.is-static.button-submit {
     background-color: #f5f5f5;
     border-color: #dbdbdb;
@@ -1767,8 +1770,6 @@ a.box:active {
 }
 
 .input,.textarea {
-    -moz-appearance: none;
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1795,7 +1796,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
     background-color: #fff;
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
@@ -2020,12 +2020,12 @@ a.box:active {
     z-index: 4
 }
 
-.control.is-loading::after,.delete:after,.delete:before,.loader,.select.is-loading::after {
+.control.is-loading::after,.select.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     content: ""
 }
 
 .select select {
-    -moz-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2272,7 +2272,7 @@ a.box:active {
 }
 
 .breadcrumb,.delete {
-    -moz-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     -webkit-touch-callout: none
 }
@@ -2658,7 +2658,8 @@ a.box:active {
 }
 
 .file-cta,.tag:not(body) {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
+    color: #4a4a4a
 }
 
 .file-label:active .file-name {
@@ -2667,6 +2668,7 @@ a.box:active {
 
 .file-input {
     height: .01em;
+    left: 0;
     outline: 0;
     position: absolute;
     top: 0;
@@ -2674,7 +2676,6 @@ a.box:active {
 }
 
 .file-cta,.file-name {
-    -moz-appearance: none;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2724,10 +2725,6 @@ a.box:active {
 
 .file-cta[disabled],.file-name[disabled] {
     cursor: not-allowed
-}
-
-.file-cta {
-    color: #4a4a4a
 }
 
 .file-name {
@@ -3004,6 +3001,10 @@ a.box:active {
     font-size: 1.5rem
 }
 
+.control.has-icon:not(.has-icon-right) .icon {
+    left: 0
+}
+
 .control.has-icons-left .input.is-small~.icon,.control.has-icons-left .select.is-small~.icon,.control.has-icons-right .input.is-small~.icon,.control.has-icons-right .select.is-small~.icon {
     font-size: .75rem
 }
@@ -3024,6 +3025,10 @@ a.box:active {
     top: 0;
     width: 2.25em;
     z-index: 4
+}
+
+.control.has-icons-left .icon.is-left {
+    left: 0
 }
 
 .control.is-loading::after {
@@ -3107,6 +3112,14 @@ a.box:active {
     top: 0;
     height: 100%;
     width: 100%
+}
+
+.delete:after,.delete:before,.tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    content: ""
 }
 
 .image.is-1by1,.image.is-square {
@@ -3225,7 +3238,6 @@ a.box:active {
     align-items: center;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    color: #4a4a4a;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3309,22 +3321,12 @@ a.box:active {
 
 .tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
     background-color: currentColor;
-    content: "";
     display: block;
-    left: 50%;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center
-}
-
-.delete:after,.delete:before,.modal-close:after,.modal-close:before {
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
 }
 
 .tag:not(body).is-delete:before {
@@ -3455,9 +3457,7 @@ a.box:active {
 }
 
 .delete {
-    -webkit-user-select: none;
     user-select: none;
-    -moz-appearance: none;
     background-color: rgba(10,10,10,.2);
     border: none;
     -webkit-border-radius: 290486px;
@@ -3485,9 +3485,7 @@ a.box:active {
 .delete:after,.delete:before {
     background-color: #fff;
     display: block;
-    left: 50%;
     position: absolute;
-    top: 50%;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3554,8 +3552,7 @@ a.box:active {
     display: block;
     font-size: 11px;
     letter-spacing: 1px;
-    margin-bottom: 5px;
-    text-transform: uppercase
+    margin-bottom: 5px
 }
 
 .breadcrumb:not(:last-child),.highlight:not(:last-child) {
@@ -3574,12 +3571,14 @@ a.box:active {
 }
 
 .loader {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
+    content: "";
     display: block;
     height: 1em;
     width: 1em
@@ -3616,7 +3615,6 @@ a.box:active {
 }
 
 .breadcrumb {
-    -webkit-user-select: none;
     user-select: none;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -4090,7 +4088,6 @@ a.box:active {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -moz-appearance: none;
     border: none;
     -webkit-border-radius: 290486px;
     border-radius: 290486px;
@@ -4124,6 +4121,8 @@ a.box:active {
     left: 50%;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -8872,13 +8871,8 @@ a.tag:hover {
 }
 
 .card-item {
-    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
-}
-
-.card-date,.card-description,.ribbon {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
 }
 
 .ribbon {
@@ -8889,9 +8883,14 @@ a.tag:hover {
     text-align: center;
     padding: 2px 0;
     border: 1px solid #fff;
+    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
-    text-transform: uppercase;
     font-size: .9rem
+}
+
+.card-date,.card-description,.post-blog .card {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .ribbon:before {
@@ -8914,11 +8913,6 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.post-blog .card,.post-blog .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
-}
-
 .post-blog .card {
     min-height: 15em;
     border: 1px solid #dcdcdc;
@@ -8926,6 +8920,12 @@ a.tag:hover {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
+}
+
+.post-blog .card .card-tags,.post-blog .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #C35163
 }
 
 .post-blog .card .ribbon {
@@ -8943,7 +8943,6 @@ a.tag:hover {
 }
 
 .post-blog .card .card-title {
-    color: #C35163;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -8958,14 +8957,16 @@ a.tag:hover {
 }
 
 .post-blog .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #C35163;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.post-blog .post-content a,.post-html .card {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-blog .card:hover {
@@ -9039,6 +9040,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-blog .post-content .button-post::-moz-selection,.post-blog .post-content .tags::-moz-selection,.post-blog .post-content blockquote::-moz-selection,.post-blog .post-content figure::-moz-selection,.post-blog .post-content h2::-moz-selection,.post-blog .post-content h3::-moz-selection,.post-blog .post-content h4::-moz-selection,.post-blog .post-content iframe::-moz-selection,.post-blog .post-content ol::-moz-selection,.post-blog .post-content p::-moz-selection,.post-blog .post-content ul::-moz-selection {
+    background: #C35163;
+    color: #fff
+}
+
+.post-blog .post-content .button-post::selection,.post-blog .post-content .tags::selection,.post-blog .post-content blockquote::selection,.post-blog .post-content figure::selection,.post-blog .post-content h2::selection,.post-blog .post-content h3::selection,.post-blog .post-content h4::selection,.post-blog .post-content iframe::selection,.post-blog .post-content ol::selection,.post-blog .post-content p::selection,.post-blog .post-content ul::selection {
+    background: #C35163;
+    color: #fff
+}
+
 .post-blog .post-content h2,.post-blog .post-content h3,.post-blog .post-content h4,.post-blog .post-content h5 {
     padding: 0 .7em
 }
@@ -9069,9 +9080,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #C35163;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#C35163),to(#C35163));
     background-image: -webkit-linear-gradient(top,#C35163 0,#C35163 100%);
     background-image: -o-linear-gradient(top,#C35163 0,#C35163 100%);
@@ -9087,6 +9096,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-blog .post-content a::-moz-selection {
+    background: #C35163;
+    color: #fff
+}
+
+.post-blog .post-content a::selection {
+    background: #C35163;
+    color: #fff
+}
+
 .post-blog .post-content a>img {
     width: 100%
 }
@@ -9097,15 +9116,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#C35163 0,#C35163 100%);
     background-image: -o-linear-gradient(top,#C35163 0,#C35163 100%);
     background-image: linear-gradient(to bottom,#C35163 0,#C35163 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
-}
-
-.post-html .card,.post-html .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    background-position: 0 0
 }
 
 .post-blog .post-content a.is-image-inside {
@@ -9152,6 +9163,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-blog .post-content ul {
+    padding-left: 2em
+}
+
+.post-blog .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-blog .post-content ul li::-moz-selection {
+    background: #C35163;
+    color: #fff
+}
+
+.post-blog .post-content ul li::selection {
+    background: #C35163;
+    color: #fff
 }
 
 .post-blog .post-content .highlight pre {
@@ -9224,6 +9254,12 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.post-html .card .card-tags,.post-html .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #4986b1
+}
+
 .post-html .card .ribbon {
     border-color: #4986b1;
     border-width: 1px;
@@ -9239,7 +9275,6 @@ a.tag:hover {
 }
 
 .post-html .card .card-title {
-    color: #4986b1;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -9254,14 +9289,16 @@ a.tag:hover {
 }
 
 .post-html .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #4986b1;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.post-css .card,.post-html .post-content a {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-html .card:hover {
@@ -9326,6 +9363,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-html .post-content .button-post::-moz-selection,.post-html .post-content .tags::-moz-selection,.post-html .post-content blockquote::-moz-selection,.post-html .post-content figure::-moz-selection,.post-html .post-content h2::-moz-selection,.post-html .post-content h3::-moz-selection,.post-html .post-content h4::-moz-selection,.post-html .post-content iframe::-moz-selection,.post-html .post-content ol::-moz-selection,.post-html .post-content p::-moz-selection,.post-html .post-content ul::-moz-selection {
+    background: #4986b1;
+    color: #fff
+}
+
+.post-html .post-content .button-post::selection,.post-html .post-content .tags::selection,.post-html .post-content blockquote::selection,.post-html .post-content figure::selection,.post-html .post-content h2::selection,.post-html .post-content h3::selection,.post-html .post-content h4::selection,.post-html .post-content iframe::selection,.post-html .post-content ol::selection,.post-html .post-content p::selection,.post-html .post-content ul::selection {
+    background: #4986b1;
+    color: #fff
+}
+
 .post-html .post-content h2,.post-html .post-content h3,.post-html .post-content h4,.post-html .post-content h5 {
     padding: 0 .7em
 }
@@ -9356,9 +9403,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #4986b1;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#4986b1),to(#4986b1));
     background-image: -webkit-linear-gradient(top,#4986b1 0,#4986b1 100%);
     background-image: -o-linear-gradient(top,#4986b1 0,#4986b1 100%);
@@ -9374,6 +9419,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-html .post-content a::-moz-selection {
+    background: #4986b1;
+    color: #fff
+}
+
+.post-html .post-content a::selection {
+    background: #4986b1;
+    color: #fff
+}
+
 .post-html .post-content a>img {
     width: 100%
 }
@@ -9384,15 +9439,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#4986b1 0,#4986b1 100%);
     background-image: -o-linear-gradient(top,#4986b1 0,#4986b1 100%);
     background-image: linear-gradient(to bottom,#4986b1 0,#4986b1 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
-}
-
-.post-css .card,.post-css .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    background-position: 0 0
 }
 
 .post-html .post-content a.is-image-inside {
@@ -9435,6 +9482,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-html .post-content ul {
+    padding-left: 2em
+}
+
+.post-html .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-html .post-content ul li::-moz-selection {
+    background: #4986b1;
+    color: #fff
+}
+
+.post-html .post-content ul li::selection {
+    background: #4986b1;
+    color: #fff
 }
 
 .post-html .post-content .highlight pre {
@@ -9512,6 +9578,12 @@ a.tag:hover {
     cursor: pointer
 }
 
+.post-css .card .card-tags,.post-css .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #378574
+}
+
 .post-css .card .ribbon {
     border-color: #378574;
     border-width: 1px;
@@ -9527,7 +9599,6 @@ a.tag:hover {
 }
 
 .post-css .card .card-title {
-    color: #378574;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -9542,14 +9613,16 @@ a.tag:hover {
 }
 
 .post-css .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #378574;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.post-css .post-content a,.post-js .card {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-css .card:hover {
@@ -9620,6 +9693,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-css .post-content .button-post::-moz-selection,.post-css .post-content .tags::-moz-selection,.post-css .post-content blockquote::-moz-selection,.post-css .post-content figure::-moz-selection,.post-css .post-content h2::-moz-selection,.post-css .post-content h3::-moz-selection,.post-css .post-content h4::-moz-selection,.post-css .post-content iframe::-moz-selection,.post-css .post-content ol::-moz-selection,.post-css .post-content p::-moz-selection,.post-css .post-content ul::-moz-selection {
+    background: #378574;
+    color: #fff
+}
+
+.post-css .post-content .button-post::selection,.post-css .post-content .tags::selection,.post-css .post-content blockquote::selection,.post-css .post-content figure::selection,.post-css .post-content h2::selection,.post-css .post-content h3::selection,.post-css .post-content h4::selection,.post-css .post-content iframe::selection,.post-css .post-content ol::selection,.post-css .post-content p::selection,.post-css .post-content ul::selection {
+    background: #378574;
+    color: #fff
+}
+
 .post-css .post-content h2,.post-css .post-content h3,.post-css .post-content h4,.post-css .post-content h5 {
     padding: 0 .7em
 }
@@ -9650,9 +9733,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #378574;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#378574),to(#378574));
     background-image: -webkit-linear-gradient(top,#378574 0,#378574 100%);
     background-image: -o-linear-gradient(top,#378574 0,#378574 100%);
@@ -9668,6 +9749,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-css .post-content a::-moz-selection {
+    background: #378574;
+    color: #fff
+}
+
+.post-css .post-content a::selection {
+    background: #378574;
+    color: #fff
+}
+
 .post-css .post-content a>img {
     width: 100%
 }
@@ -9678,15 +9769,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#378574 0,#378574 100%);
     background-image: -o-linear-gradient(top,#378574 0,#378574 100%);
     background-image: linear-gradient(to bottom,#378574 0,#378574 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
-}
-
-.post-js .card,.post-js .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    background-position: 0 0
 }
 
 .post-css .post-content a.is-image-inside {
@@ -9729,6 +9812,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-css .post-content ul {
+    padding-left: 2em
+}
+
+.post-css .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-css .post-content ul li::-moz-selection {
+    background: #378574;
+    color: #fff
+}
+
+.post-css .post-content ul li::selection {
+    background: #378574;
+    color: #fff
 }
 
 .post-css .post-content .highlight pre {
@@ -9799,6 +9901,12 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.post-js .card .card-tags,.post-js .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #f8c101
+}
+
 .post-js .card .ribbon {
     border-color: #f8c101;
     border-width: 1px;
@@ -9814,7 +9922,6 @@ a.tag:hover {
 }
 
 .post-js .card .card-title {
-    color: #f8c101;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -9829,14 +9936,16 @@ a.tag:hover {
 }
 
 .post-js .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #f8c101;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.post-js .post-content a,.post-misc .card {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-js .card:hover {
@@ -9901,6 +10010,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-js .post-content .button-post::-moz-selection,.post-js .post-content .tags::-moz-selection,.post-js .post-content blockquote::-moz-selection,.post-js .post-content figure::-moz-selection,.post-js .post-content h2::-moz-selection,.post-js .post-content h3::-moz-selection,.post-js .post-content h4::-moz-selection,.post-js .post-content iframe::-moz-selection,.post-js .post-content ol::-moz-selection,.post-js .post-content p::-moz-selection,.post-js .post-content ul::-moz-selection {
+    background: #f8c101;
+    color: #fff
+}
+
+.post-js .post-content .button-post::selection,.post-js .post-content .tags::selection,.post-js .post-content blockquote::selection,.post-js .post-content figure::selection,.post-js .post-content h2::selection,.post-js .post-content h3::selection,.post-js .post-content h4::selection,.post-js .post-content iframe::selection,.post-js .post-content ol::selection,.post-js .post-content p::selection,.post-js .post-content ul::selection {
+    background: #f8c101;
+    color: #fff
+}
+
 .post-js .post-content h2,.post-js .post-content h3,.post-js .post-content h4,.post-js .post-content h5 {
     padding: 0 .7em
 }
@@ -9931,9 +10050,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #f8c101;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#f8c101),to(#f8c101));
     background-image: -webkit-linear-gradient(top,#f8c101 0,#f8c101 100%);
     background-image: -o-linear-gradient(top,#f8c101 0,#f8c101 100%);
@@ -9949,6 +10066,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-js .post-content a::-moz-selection {
+    background: #f8c101;
+    color: #fff
+}
+
+.post-js .post-content a::selection {
+    background: #f8c101;
+    color: #fff
+}
+
 .post-js .post-content a>img {
     width: 100%
 }
@@ -9959,15 +10086,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#f8c101 0,#f8c101 100%);
     background-image: -o-linear-gradient(top,#f8c101 0,#f8c101 100%);
     background-image: linear-gradient(to bottom,#f8c101 0,#f8c101 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
-}
-
-.post-misc .card,.post-misc .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    background-position: 0 0
 }
 
 .post-js .post-content a.is-image-inside {
@@ -10010,6 +10129,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-js .post-content ul {
+    padding-left: 2em
+}
+
+.post-js .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-js .post-content ul li::-moz-selection {
+    background: #f8c101;
+    color: #fff
+}
+
+.post-js .post-content ul li::selection {
+    background: #f8c101;
+    color: #fff
 }
 
 .post-js .post-content .highlight pre {
@@ -10080,6 +10218,12 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.post-misc .card .card-tags,.post-misc .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #af1da2
+}
+
 .post-misc .card .ribbon {
     border-color: #af1da2;
     border-width: 1px;
@@ -10095,7 +10239,6 @@ a.tag:hover {
 }
 
 .post-misc .card .card-title {
-    color: #af1da2;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
@@ -10110,14 +10253,16 @@ a.tag:hover {
 }
 
 .post-misc .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #af1da2;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.post-front .card,.post-misc .post-content a {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-misc .card:hover {
@@ -10182,6 +10327,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-misc .post-content .button-post::-moz-selection,.post-misc .post-content .tags::-moz-selection,.post-misc .post-content blockquote::-moz-selection,.post-misc .post-content figure::-moz-selection,.post-misc .post-content h2::-moz-selection,.post-misc .post-content h3::-moz-selection,.post-misc .post-content h4::-moz-selection,.post-misc .post-content iframe::-moz-selection,.post-misc .post-content ol::-moz-selection,.post-misc .post-content p::-moz-selection,.post-misc .post-content ul::-moz-selection {
+    background: #af1da2;
+    color: #fff
+}
+
+.post-misc .post-content .button-post::selection,.post-misc .post-content .tags::selection,.post-misc .post-content blockquote::selection,.post-misc .post-content figure::selection,.post-misc .post-content h2::selection,.post-misc .post-content h3::selection,.post-misc .post-content h4::selection,.post-misc .post-content iframe::selection,.post-misc .post-content ol::selection,.post-misc .post-content p::selection,.post-misc .post-content ul::selection {
+    background: #af1da2;
+    color: #fff
+}
+
 .post-misc .post-content h2,.post-misc .post-content h3,.post-misc .post-content h4,.post-misc .post-content h5 {
     padding: 0 .7em
 }
@@ -10212,9 +10367,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #af1da2;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#af1da2),to(#af1da2));
     background-image: -webkit-linear-gradient(top,#af1da2 0,#af1da2 100%);
     background-image: -o-linear-gradient(top,#af1da2 0,#af1da2 100%);
@@ -10230,6 +10383,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-misc .post-content a::-moz-selection {
+    background: #af1da2;
+    color: #fff
+}
+
+.post-misc .post-content a::selection {
+    background: #af1da2;
+    color: #fff
+}
+
 .post-misc .post-content a>img {
     width: 100%
 }
@@ -10240,15 +10403,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#af1da2 0,#af1da2 100%);
     background-image: -o-linear-gradient(top,#af1da2 0,#af1da2 100%);
     background-image: linear-gradient(to bottom,#af1da2 0,#af1da2 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
-}
-
-.post-front .card,.post-front .card .card-title {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
+    background-position: 0 0
 }
 
 .post-misc .post-content a.is-image-inside {
@@ -10291,6 +10446,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-misc .post-content ul {
+    padding-left: 2em
+}
+
+.post-misc .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-misc .post-content ul li::-moz-selection {
+    background: #af1da2;
+    color: #fff
+}
+
+.post-misc .post-content ul li::selection {
+    background: #af1da2;
+    color: #fff
 }
 
 .post-misc .post-content .highlight pre {
@@ -10370,6 +10544,12 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.post-front .card .card-tags,.post-front .card .card-title {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    color: #65B149
+}
+
 .post-front .card .ribbon {
     border-color: #65B149;
     border-width: 1px;
@@ -10385,15 +10565,9 @@ a.tag:hover {
 }
 
 .post-front .card .card-title {
-    color: #65B149;
     transition: ease-in-out .2s all;
     margin-bottom: 10px;
     font-size: 1.3rem
-}
-
-.mast-header .logo-simple .logo-simple-1,.post-front .card .card-tags {
-    -webkit-transition: ease-in-out .2s all;
-    -o-transition: ease-in-out .2s all
 }
 
 .post-front .card .card-description {
@@ -10407,10 +10581,14 @@ a.tag:hover {
 .post-front .card .card-tags {
     transition: ease-in-out .2s all;
     display: inline-block;
-    color: #65B149;
     font-size: .8rem;
     text-transform: lowercase;
     margin: 10px 2px 0 0
+}
+
+.mast-header .logo-simple .logo-simple-1,.post-front .post-content a {
+    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all
 }
 
 .post-front .card:hover {
@@ -10478,6 +10656,16 @@ a.tag:hover {
     letter-spacing: .01rem
 }
 
+.post-front .post-content .button-post::-moz-selection,.post-front .post-content .tags::-moz-selection,.post-front .post-content blockquote::-moz-selection,.post-front .post-content figure::-moz-selection,.post-front .post-content h2::-moz-selection,.post-front .post-content h3::-moz-selection,.post-front .post-content h4::-moz-selection,.post-front .post-content iframe::-moz-selection,.post-front .post-content ol::-moz-selection,.post-front .post-content p::-moz-selection,.post-front .post-content ul::-moz-selection {
+    background: #65B149;
+    color: #fff
+}
+
+.post-front .post-content .button-post::selection,.post-front .post-content .tags::selection,.post-front .post-content blockquote::selection,.post-front .post-content figure::selection,.post-front .post-content h2::selection,.post-front .post-content h3::selection,.post-front .post-content h4::selection,.post-front .post-content iframe::selection,.post-front .post-content ol::selection,.post-front .post-content p::selection,.post-front .post-content ul::selection {
+    background: #65B149;
+    color: #fff
+}
+
 .post-front .post-content h2,.post-front .post-content h3,.post-front .post-content h4,.post-front .post-content h5 {
     padding: 0 .7em
 }
@@ -10508,9 +10696,7 @@ a.tag:hover {
     padding: 0 3px;
     color: #65B149;
     font-weight: 500;
-    -webkit-transition: background-position .15s linear .1s;
-    -o-transition: background-position .15s linear .1s;
-    transition: background-position .15s linear .1s;
+    transition: ease-in-out .2s all;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#65B149),to(#65B149));
     background-image: -webkit-linear-gradient(top,#65B149 0,#65B149 100%);
     background-image: -o-linear-gradient(top,#65B149 0,#65B149 100%);
@@ -10526,6 +10712,16 @@ a.tag:hover {
     background: 0 0
 }
 
+.post-front .post-content a::-moz-selection {
+    background: #65B149;
+    color: #fff
+}
+
+.post-front .post-content a::selection {
+    background: #65B149;
+    color: #fff
+}
+
 .post-front .post-content a>img {
     width: 100%
 }
@@ -10536,10 +10732,7 @@ a.tag:hover {
     background-image: -webkit-linear-gradient(top,#65B149 0,#65B149 100%);
     background-image: -o-linear-gradient(top,#65B149 0,#65B149 100%);
     background-image: linear-gradient(to bottom,#65B149 0,#65B149 100%);
-    background-position: 0 0;
-    -webkit-transition: background-position .1s linear 0s;
-    -o-transition: background-position .1s linear 0s;
-    transition: background-position .1s linear 0s
+    background-position: 0 0
 }
 
 .post-front .post-content a.is-image-inside {
@@ -10587,6 +10780,25 @@ a.tag:hover {
     right: 0;
     bottom: -.2em;
     content: "\201D"
+}
+
+.post-front .post-content ul {
+    padding-left: 2em
+}
+
+.post-front .post-content ul li {
+    list-style-type: square;
+    padding-bottom: .4em
+}
+
+.post-front .post-content ul li::-moz-selection {
+    background: #65B149;
+    color: #fff
+}
+
+.post-front .post-content ul li::selection {
+    background: #65B149;
+    color: #fff
 }
 
 .post-front .post-content .highlight pre {
