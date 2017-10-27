@@ -247,11 +247,26 @@
                               text-align: center
 
                   blockquote
-                        border-left-color: nth($color-post, index($type-post, $type))
-                        border-left-width: 0.40em
-                        border-left-style: solid
+                        padding: 0
 
-
+                        strong
+                              position: relative
+                              padding: 0 2em
+                              font-size: 1.3em
+                              &:before,
+                              &:after
+                                    font-size: 3em
+                                    position: absolute 
+                              &:before 
+                                    left: 0
+                                    top: 0.3em;
+                                    content: "\201C"
+                                    
+                              &:after 
+                                    right: 0
+                                    bottom: -0.2em
+                                    content: "\201D"
+                                         
 
 
                   .highlight

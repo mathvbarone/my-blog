@@ -30,16 +30,16 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     -webkit-touch-callout: none
 }
 
+.select,.select select,.textarea,audio,embed,img,object,video {
+    max-width: 100%
+}
+
 .button,.button-submit,.delete,.file-cta,.file-name,.input,.modal-close,.select select,.textarea {
     -moz-appearance: none;
     -webkit-appearance: none
 }
 
-.select,.select select,.textarea,audio,embed,img,object,video {
-    max-width: 100%
-}
-
-.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.hero-body,.modal-card,.tile.is-vertical {
+.file.is-boxed .file-cta,.file.is-boxed .file-label,.hero,.modal-card,.tile.is-vertical {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal
 }
@@ -150,7 +150,7 @@ a {
 }
 
 .button,.button-submit,.card-item {
-    -webkit-transition: ease-in-out .2s all
+    -o-transition: ease-in-out .2s all
 }
 
 a strong {
@@ -475,7 +475,8 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 
 .button,.button-submit,.file {
     -webkit-user-select: none;
-    -ms-user-select: none
+    -ms-user-select: none;
+    -moz-user-select: none
 }
 
 .box {
@@ -525,7 +526,6 @@ a.box:active {
     padding-top: calc(.375em - 1px);
     position: relative;
     vertical-align: top;
-    -moz-user-select: none;
     user-select: none;
     background-color: #fff;
     color: #363636;
@@ -538,7 +538,7 @@ a.box:active {
     padding-right: 1em;
     text-align: center;
     white-space: nowrap;
-    -o-transition: ease-in-out .2s all;
+    -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -548,12 +548,8 @@ a.box:active {
     display: -ms-flexbox
 }
 
-.breadcrumb,.delete,.file {
-    -moz-user-select: none
-}
-
 .card-item,.ribbon {
-    -o-transition: ease-in-out .2s all
+    -webkit-transition: ease-in-out .2s all
 }
 
 .button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
@@ -1609,10 +1605,6 @@ a.box:active {
     margin-bottom: 1em
 }
 
-.content h1,.label:not(:last-child) {
-    margin-bottom: .5em
-}
-
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     color: #363636;
     font-weight: 400;
@@ -1620,7 +1612,8 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em
+    font-size: 2em;
+    margin-bottom: .5em
 }
 
 .content h1:not(:first-child) {
@@ -2665,7 +2658,8 @@ a.box:active {
 }
 
 .file-cta,.tag:not(body) {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
+    color: #4a4a4a
 }
 
 .file-label:active .file-name {
@@ -2732,10 +2726,6 @@ a.box:active {
     cursor: not-allowed
 }
 
-.file-cta {
-    color: #4a4a4a
-}
-
 .file-name {
     border-color: #dbdbdb;
     border-style: solid;
@@ -2778,6 +2768,10 @@ a.box:active {
 .label {
     color: #363636;
     font-size: 1rem
+}
+
+.label:not(:last-child) {
+    margin-bottom: .5em
 }
 
 .label.is-small {
@@ -3232,7 +3226,6 @@ a.box:active {
     align-items: center;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    color: #4a4a4a;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -3462,6 +3455,7 @@ a.box:active {
 }
 
 .delete {
+    -moz-user-select: none;
     user-select: none;
     background-color: rgba(10,10,10,.2);
     border: none;
@@ -3621,6 +3615,7 @@ a.box:active {
 }
 
 .breadcrumb {
+    -moz-user-select: none;
     user-select: none;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -8886,7 +8881,7 @@ a.tag:hover {
     text-align: center;
     padding: 2px 0;
     border: 1px solid #fff;
-    -webkit-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all;
     font-size: .9rem
 }
@@ -9111,9 +9106,30 @@ a.tag:hover {
 }
 
 .post-blog .post-content blockquote {
-    border-left-color: #C35163;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-blog .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-blog .post-content blockquote strong:after,.post-blog .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.post-blog .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-blog .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-blog .post-content .highlight pre {
@@ -9359,9 +9375,30 @@ a.tag:hover {
 }
 
 .post-html .post-content blockquote {
-    border-left-color: #4986b1;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-html .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-html .post-content blockquote strong:after,.post-html .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.post-html .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-html .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-html .post-content .highlight pre {
@@ -9432,6 +9469,11 @@ a.tag:hover {
     box-shadow: none;
     cursor: pointer;
     transition: ease-in-out .2s all
+}
+
+.post-js .card,.post-misc .card {
+    -webkit-box-shadow: none;
+    cursor: pointer
 }
 
 .post-css .card .card-tags,.post-css .card .card-title {
@@ -9613,9 +9655,30 @@ a.tag:hover {
 }
 
 .post-css .post-content blockquote {
-    border-left-color: #378574;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-css .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-css .post-content blockquote strong:after,.post-css .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.post-css .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-css .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-css .post-content .highlight pre {
@@ -9682,9 +9745,7 @@ a.tag:hover {
 .post-js .card {
     min-height: 210px;
     border: 1px solid #dcdcdc;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -9861,9 +9922,30 @@ a.tag:hover {
 }
 
 .post-js .post-content blockquote {
-    border-left-color: #f8c101;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-js .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-js .post-content blockquote strong:after,.post-js .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.post-js .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-js .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-js .post-content .highlight pre {
@@ -9930,9 +10012,7 @@ a.tag:hover {
 .post-misc .card {
     min-height: 210px;
     border: 1px solid #dcdcdc;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -10109,9 +10189,30 @@ a.tag:hover {
 }
 
 .post-misc .post-content blockquote {
-    border-left-color: #af1da2;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-misc .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-misc .post-content blockquote strong:after,.post-misc .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.post-misc .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-misc .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-misc .post-content .highlight pre {
@@ -10348,11 +10449,6 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
-.hero,.mast-header {
-    position: fixed;
-    width: 100%
-}
-
 .post-front .post-content a.is-image-inside:after,.post-front .post-content a:hover:after {
     width: 0
 }
@@ -10369,9 +10465,35 @@ a.tag:hover {
 }
 
 .post-front .post-content blockquote {
-    border-left-color: #65B149;
-    border-left-width: .4em;
-    border-left-style: solid
+    padding: 0
+}
+
+.post-front .post-content blockquote strong {
+    position: relative;
+    padding: 0 2em;
+    font-size: 1.3em
+}
+
+.post-front .post-content blockquote strong:after,.post-front .post-content blockquote strong:before {
+    font-size: 3em;
+    position: absolute
+}
+
+.hero,.mast-header {
+    position: fixed;
+    width: 100%
+}
+
+.post-front .post-content blockquote strong:before {
+    left: 0;
+    top: .3em;
+    content: "\201C"
+}
+
+.post-front .post-content blockquote strong:after {
+    right: 0;
+    bottom: -.2em;
+    content: "\201D"
 }
 
 .post-front .post-content .highlight pre {
@@ -11066,6 +11188,8 @@ a.tag:hover {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
