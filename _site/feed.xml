@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matheus Barone | Desenvolvedor Front-end</title>
-    <description>Sou Matheus Barone, de Santos/SP. Fiz esse site para demonstrar um pouco do meu trabalho, além de repassar o que aprendo trabalhando como Desenvolvedor Front-end.
+    <description>Olá, sou Matheus Barone, de Santos/SP. Trabalho como Desenvolvedor Front-end na UOL.
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Oct 2017 01:16:31 -0200</pubDate>
-    <lastBuildDate>Sat, 28 Oct 2017 01:16:31 -0200</lastBuildDate>
+    <pubDate>Sat, 28 Oct 2017 01:47:50 -0200</pubDate>
+    <lastBuildDate>Sat, 28 Oct 2017 01:47:50 -0200</lastBuildDate>
     <generator>Jekyll v3.6.0</generator>
     
       <item>
