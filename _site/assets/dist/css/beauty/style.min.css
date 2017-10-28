@@ -8913,6 +8913,17 @@ a.tag:hover {
     transition: ease-in-out .2s all
 }
 
+.share {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto 1.875rem;
+    padding: 0 1em
+}
+
+#u_0_6 {
+    display: none
+}
+
 .post-blog .card {
     min-height: 15em;
     border: 1px solid #dcdcdc;
@@ -8925,18 +8936,18 @@ a.tag:hover {
 .post-blog .card .card-tags,.post-blog .card .card-title {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
-    color: #C35163
+    color: #cd2b46
 }
 
 .post-blog .card .ribbon {
-    border-color: #C35163;
+    border-color: #cd2b46;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
 }
 
 .post-blog .card .ribbon a {
-    color: #C35163;
+    color: #cd2b46;
     font-weight: 500;
     width: 100%;
     display: block
@@ -8975,7 +8986,7 @@ a.tag:hover {
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04);
     transform: translateY(-10px) scale(1.04);
-    background-color: #C35163
+    background-color: #cd2b46
 }
 
 .post-css .card:hover,.post-html .card:hover {
@@ -8989,13 +9000,13 @@ a.tag:hover {
 }
 
 .post-blog .breadcrumb li.is-active a {
-    color: #C35163
+    color: #cd2b46
 }
 
 .post-blog .hero-posts {
     height: 70vh;
     min-height: 70vh;
-    background-color: #C35163
+    background-color: #cd2b46
 }
 
 .post-blog .hero-posts-body {
@@ -9041,12 +9052,12 @@ a.tag:hover {
 }
 
 .post-blog .post-content .button-post::-moz-selection,.post-blog .post-content .tags::-moz-selection,.post-blog .post-content blockquote::-moz-selection,.post-blog .post-content figure::-moz-selection,.post-blog .post-content h2::-moz-selection,.post-blog .post-content h3::-moz-selection,.post-blog .post-content h4::-moz-selection,.post-blog .post-content iframe::-moz-selection,.post-blog .post-content ol::-moz-selection,.post-blog .post-content p::-moz-selection,.post-blog .post-content ul::-moz-selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
 .post-blog .post-content .button-post::selection,.post-blog .post-content .tags::selection,.post-blog .post-content blockquote::selection,.post-blog .post-content figure::selection,.post-blog .post-content h2::selection,.post-blog .post-content h3::selection,.post-blog .post-content h4::selection,.post-blog .post-content iframe::selection,.post-blog .post-content ol::selection,.post-blog .post-content p::selection,.post-blog .post-content ul::selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
@@ -9063,7 +9074,7 @@ a.tag:hover {
 }
 
 .post-blog .post-content h2,.post-blog .post-content h3 {
-    color: #C35163;
+    color: #cd2b46;
     font-weight: 700;
     margin-bottom: 30px
 }
@@ -9078,13 +9089,13 @@ a.tag:hover {
 
 .post-blog .post-content a {
     padding: 0 3px;
-    color: #C35163;
+    color: #cd2b46;
     font-weight: 500;
     transition: ease-in-out .2s all;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#C35163),to(#C35163));
-    background-image: -webkit-linear-gradient(top,#C35163 0,#C35163 100%);
-    background-image: -o-linear-gradient(top,#C35163 0,#C35163 100%);
-    background-image: linear-gradient(to bottom,#C35163 0,#C35163 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
+    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: linear-gradient(to bottom,#cd2b46 0,#cd2b46 100%);
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -9097,12 +9108,12 @@ a.tag:hover {
 }
 
 .post-blog .post-content a::-moz-selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
 .post-blog .post-content a::selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
@@ -9112,10 +9123,10 @@ a.tag:hover {
 
 .post-blog .post-content a:hover {
     color: #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#C35163),to(#C35163));
-    background-image: -webkit-linear-gradient(top,#C35163 0,#C35163 100%);
-    background-image: -o-linear-gradient(top,#C35163 0,#C35163 100%);
-    background-image: linear-gradient(to bottom,#C35163 0,#C35163 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
+    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: linear-gradient(to bottom,#cd2b46 0,#cd2b46 100%);
     background-position: 0 0
 }
 
@@ -9124,7 +9135,7 @@ a.tag:hover {
 }
 
 .post-blog .post-content strong {
-    color: #C35163;
+    color: #cd2b46;
     font-size: 1.19rem
 }
 
@@ -9175,12 +9186,12 @@ a.tag:hover {
 }
 
 .post-blog .post-content ul li::-moz-selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
 .post-blog .post-content ul li::selection {
-    background: #C35163;
+    background: #cd2b46;
     color: #fff
 }
 
@@ -9242,7 +9253,7 @@ a.tag:hover {
 }
 
 .post-blog .hero-default {
-    background-color: #C35163
+    background-color: #cd2b46
 }
 
 .post-html .card {
