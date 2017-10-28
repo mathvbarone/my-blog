@@ -126,6 +126,11 @@ Para entender melhor como funcionam esses algoritmos, (principalmente a questão
 
 ## 4- Crie uma rede de contatos (Networking)
 
+<figure>
+  <img src="/assets/dist/images/posts/dicas-emprego/networking.jpg" alt="Crie uma rede de contatos (Networking) - ilustração"/>
+  <figcaption>Oportunidades valiosas podem surgir através de pessoas conhecidas.</figcaption>
+</figure>
+
 Algumas empresas (como as voltadas para tecnologia) muitas vezes acabam dando mais importância para o conhecimento do que para um diploma. Essa é, inclusive, uma discussão comum dentro da comunidade, se vale ou não a pena fazer uma faculdade.
 
 Porém, em uma coisa todos concordam, a faculdade é uma das melhores oportunidades para se criar um networking. Lá você encontrará, além dos colegas de curso, os próprios professores, que muitas vezes acabam servindo como uma porta de entrada para o mercado de trabalho, isso sem contar o know-how que eles podem passar.
@@ -156,6 +161,11 @@ Ah! Aproveita e me adiciona! :D
 
 ## 5- Não se contente com os requisitos mínimos
 
+<figure>
+  <img src="/assets/dist/images/posts/dicas-emprego/overcome-limits.jpg" alt="Não se contente com os requisitos mínimos - ilustração"/>
+  <figcaption>Esteja sempre em busca do seu melhor.</figcaption>
+</figure>
+
 Até um tempo atrás, se uma pessoa tinha no currículo uma formação acadêmica e um segundo idioma, já era considerado um diferencial. Hoje em dia, dependendo da profissão, ter um diploma e saber falar inglês é requisito mínimo.
 
 Ou seja, se você quer ter uma relevância perante as empresas, é necessário encontrar novas formas de se destacar.
@@ -163,10 +173,11 @@ Ou seja, se você quer ter uma relevância perante as empresas, é necessário e
 Algumas dicas:
 
 - Participe de projetos, e trabalhos voluntários.
-- Documente as coisas que você estiver aprendendo.
-- Encontre formas de melhorar a sua profissão (às vezes estudando outras áreas, como tecnologia).
+- Estude para preencher todos os requisitos pedidos pelas vagas.
 - Faça o máximo de cursos possíveis. (Existe muita coisa boa e gratuita na internet. É só ter paciência de procurar).
-- Crie formas de mostrar para as empresas quem você é, antes mesmo delas te conhecerem (Criando um blog, por exemplo).
+- Documente as coisas que você estiver aprendendo.
+- Encontre formas de melhorar a sua profissão (as vezes estudando outras áreas, como tecnologia).
+- Crie formas de mostrar para as empresas quem você é, antes mesmo delas te conhecerem (Criando um blog, por exemplo :) ).
 
 Eu gostaria de destacar que ajudar outras pessoas, como fazer trabalhos voltados para causas sociais, conta muito para qualquer vaga de emprego. Então procure o que precisa ser feito para contribuir com a sua comunidade, agregue conhecimento, e ao mesmo tempo ganhe pontos com as empresas. Você ajuda os outros, e se ajuda ao mesmo tempo, acredito que essa seja a dica mais importante a ser seguida.
 
@@ -181,6 +192,8 @@ Se prepare, foque no seu objetivo, e é só uma questão de tempo até as coisas
 Se puder, coloque nos comentários outras dicas, para tentarmos ajudar o máximo de pessoas possíveis.
 
 Espero que tenham gostado.
+
+Um abraço!
 
 
 
