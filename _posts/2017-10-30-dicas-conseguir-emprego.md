@@ -119,9 +119,7 @@ O importante aqui, é entender que se usados de forma inteligente eles irão tra
 
 Faça o teste, passe dias curtindo coisas relacionadas à sua profissão. Em pouco tempo você vai perceber que esse assunto começará a aparecer com mais frequência na sua timeline.
 
-A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, de assuntos bestas para assuntos relevantes, ele passou a me sugerir um conteúdo muito mais interessante.
-
-Isso é excelente, pois acaba criando um loop de conhecimento, em que, quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
+A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, ele passou a me sugerir um conteúdo muito mais interessante. Isso acaba criando um loop de conhecimento, em que, quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
 
 Para entender melhor como funcionam esses algoritmos, (principalmente a questão da bolha social) o Felipe Castanhari fez [um vídeo <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=COgkI7GhFR0) bastante interessante abordando esse assunto.
 
