@@ -21,15 +21,15 @@ Fala galera, beleza?
 
 A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação, no mercado de trabalho.
 
-É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos dar vários passos para trás a fim de conseguir uma oportunidade.
+É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.
 
 Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.
 
 ### Como você chegou nessas dicas?
 
-No início de 2017, eu retornava dos Estados Unidos após 1 ano procurando novas oportunidades. Durante esse período deixei de atuar na minha área e, ao retornar, estava totalmente desatualizado.
+No início de 2017, eu retornava dos Estados Unidos após 1 ano procurando novas oportunidades. Durante esse período deixei de atuar na minha área e, ao retornar, me vi totalmente desatualizado.
 
-Após receber várias respostas negativas, me dei conta de que precisava melhorar meu perfil profissional. Decidi que na próxima oportunidade que aparecesse eu estaria devidamente preparado. Foi seguindo as dicas abaixo que, após alguns meses, finalmente consegui alcançar meu objetivo.
+Após receber várias respostas negativas, me dei conta de que precisava melhorar meu perfil profissional, e decidi que na próxima oportunidade que aparecesse estaria devidamente preparado. Foi seguindo as dicas abaixo que, após alguns meses, finalmente consegui alcançar meu objetivo.
 
 Portanto, se você se encontra em uma situação semelhante à minha, siga esses passos e tenho certeza que você também conseguirá conquistar aquilo que almeja.
 
@@ -44,13 +44,13 @@ O requisito mais importante para quem quer ser bem-sucedido em sua busca por opo
 
 Eu não acredito que exista trabalho perfeito, mesmo para quem trabalha com aquilo que gosta. Por outro lado, é essencial saber avaliar se você não consegue um emprego, pelo simples fato de estar procurando na profissão errada.
 
-Agora pare para refletir: O que você sente quando pensa na sua profissão?
+Agora pare para refletir: **O que você sente quando pensa na sua profissão?**
 
 O sentimento deve ser um misto de expectativa, curiosidade, busca por novidades, e vontade de conhecer outras pessoas que tenham esse interesse em comum.
 
 Nesse ponto muitas pessoas irão pensar: "Ah, eu gosto da minha profissão, mas quando estou em casa acabo me distraindo com coisas mais divertidas como assistir TV, jogar video game, ou passar horas vendo besteiras no Facebook".
 
-Nesse momento eu te pergunto: "Mas, afinal, o que é estudar?"
+Mas, afinal, o que é estudar?
 
 >**Estudar é pesquisar a fundo um determinado assunto, seja lendo, assistindo vídeos, ouvindo podcasts, ou simplesmente compartilhando conhecimento com outras pessoas.**
 
@@ -60,7 +60,7 @@ Se para você estudar é algo chato, temos duas opções:
 
 Ou você está estudando da maneira errada, ou está na profissão errada.
 
-Caso se dê conta que está na profissão errada, puxe da sua cabeça quais assuntos te despertam interesse, inclusive nas horas da diversão. Quais são seus hobbies? O que te entretém?
+Caso se dê conta que está na profissão errada, aproveite esse momento de pausa na carreira para refletir. Puxe da sua cabeça quais assuntos te despertam interesse, inclusive nas horas da diversão. Quais são seus hobbies? O que te entretém?
 
 As vezes você já faz aquilo que ama, sem perceber que consegue transformar isso numa profissão. Falando assim, pode até parecer estranho porque geralmente conectamos hobbie com diversão, e profissão com obrigação.
 
@@ -78,23 +78,21 @@ Encontre a interseção dessas duas coisas, e a sua TV vai passar um bom tempo d
 
 Bom, uma vez entendido que você está na profissão correta, é hora de melhorar os seus métodos de estudo.
 
-Sempre fui uma pessoa hiperativa, então passar horas lendo textos e mais textos não seria uma boa opção. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado. Então criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações.
+Sempre fui uma pessoa hiperativa, ou seja, passar horas lendo textos e mais textos não seria uma boa opção. Por isso, desde o começo busquei formas "não-convencionais" de estudar. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado.
 
-Como haviam muitos momentos em que não conseguiria sentar para estudar, encontrei um formato de conteúdo que se encaixou perfeitamente com a minha necessidade, o podcast.
+Eu criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações, e percebi que haviam muitos momentos em que não conseguiria sentar para estudar. Foi aí que lembrei de um formato de conteúdo que se enxaixaria perfeitamente com a minha necessidade, o podcast.
 
-Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar absorvendo conteúdo não importa a hora ou lugar. Pode ser enquanto está no onibus, na fila do banco, lavando a louça...
+Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar absorvendo conteúdo não importa a hora ou lugar. Seja no ônibus, na fila do banco, lavando a louça, etc. Eu sempre consumi esse tipo de conteúdo, porém apenas como forma de entretenimento. O que fiz foi buscar podcasts voltados para a minha profissão.
 
-Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/).
-
-Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
+Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/). Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
 
 Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
 
-Em seguida, comecei a procurar formas de absorver conteúdo em todos os momentos do meu dia. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto de que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
+Em seguida, comecei a aplicar a mesma lógica para outras formas de entretenimento. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto de que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
 
 Isso serve pra mostrar que, quando estamos realmente engajados e apaixonados pelo que fazemos, estudo vira literalmente sinônimo de diversão.
 
-Com um pouco de disciplina e organização, consegui encontrar formas de estudar várias horas por dia, sem mudar radicalmente a minha rotina.
+Com um pouco de disciplina e organização, consegui encontrar formas de estudar várias horas por dia, fugindo da forma "convencional", e sem mudar radicalmente a minha rotina.
 
 
 ## 3- Utilize os algoritmos das redes sociais a seu favor
