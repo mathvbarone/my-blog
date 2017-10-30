@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Como aumentar suas chances de conseguir um emprego"
+title: "5 dicas para ter um perfil profissional competitivo"
 date: 2017-10-30 10:47:00
 image: '/assets/dist/images/posts/dicas-emprego/dicas-emprego-post.jpg'
-description: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos'"
+description: "Saiba como se destacar e aumentar suas chances de conseguir um emprego"
 main-class: 'misc'
 head-class: post
 color: '#af1da2'
@@ -11,8 +11,8 @@ tags:
 - mercado-de-trabalho
 - dicas
 
-twitter_text: "Como aumentar suas chances de conseguir um emprego"
-introduction: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos.'"
+twitter_text: "5 dicas para ter um perfil profissional competitivo"
+introduction: "Saiba como se destacar e aumentar suas chances de conseguir um emprego."
 ---
 
 ## Introdução
