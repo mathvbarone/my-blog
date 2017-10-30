@@ -80,7 +80,7 @@ Bom, uma vez entendido que você está na profissão correta, é hora de melhora
 
 Sou uma pessoa agitada, ou seja, passar horas lendo textos e mais textos não seria uma boa opção. Por isso, desde o começo busquei formas "não-convencionais" de estudar. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado.
 
-Eu criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações, e percebi que haviam muitos momentos em que não conseguiria sentar para estudar. Foi aí que lembrei de um formato de conteúdo que se enxaixaria perfeitamente com a minha necessidade, o podcast.
+Então criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações, e percebi que haviam muitos momentos em que não conseguiria sentar para estudar. Foi aí que lembrei de um formato de conteúdo que se enxaixaria perfeitamente com a minha necessidade, o podcast.
 
 Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar estudando não importa a hora ou lugar. Seja no ônibus, na fila do banco, lavando a louça, etc. Eu sempre consumi esse tipo de conteúdo, porém apenas como forma de entretenimento. O que fiz foi buscar podcasts voltados para a minha profissão.
 
@@ -88,7 +88,7 @@ Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, com
 
 Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
 
-Em seguida, comecei a aplicar a mesma lógica para outras formas de entretenimento. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto de que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
+Em seguida, comecei a aplicar a mesma lógica para outras formas de entretenimento. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
 
 Isso serve pra mostrar que, quando estamos realmente engajados e apaixonados pelo que fazemos, estudo vira literalmente sinônimo de diversão.
 
