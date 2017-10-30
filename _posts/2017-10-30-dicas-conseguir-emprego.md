@@ -119,7 +119,7 @@ O importante aqui, é entender que se usados de forma inteligente eles irão tra
 
 Faça o teste, passe dias curtindo coisas relacionadas à sua profissão. Em pouco tempo você vai perceber que esse assunto começará a aparecer com mais frequência na sua timeline.
 
-A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, ele passou a me sugerir um conteúdo muito mais interessante. Isso acaba criando um loop de conhecimento, em que, quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
+A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, ele passou a me sugerir um conteúdo muito mais interessante. Isso acaba criando um loop de conhecimento, em que quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
 
 Para entender melhor como funcionam esses algoritmos, (principalmente a questão da bolha social) o Felipe Castanhari fez [um vídeo <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=COgkI7GhFR0) bastante interessante abordando esse assunto.
 
@@ -130,17 +130,17 @@ Para entender melhor como funcionam esses algoritmos, (principalmente a questão
   <figcaption>Oportunidades valiosas podem surgir através de pessoas conhecidas.</figcaption>
 </figure>
 
-Algumas empresas (como as voltadas para tecnologia) muitas vezes acabam dando mais importância para o conhecimento do que para um diploma. Essa é, inclusive, uma discussão comum dentro da comunidade, se vale ou não a pena fazer uma faculdade.
+Algumas empresas (como as voltadas para tecnologia) muitas vezes acabam dando mais importância para o conhecimento do que para um diploma. Essa é inclusive uma discussão comum dentro da comunidade, se vale ou não a pena fazer uma faculdade.
 
 Porém, em uma coisa todos concordam, a faculdade é uma das melhores oportunidades para se criar um networking. Lá você encontrará, além dos colegas de curso, os próprios professores, que muitas vezes acabam servindo como uma porta de entrada para o mercado de trabalho, isso sem contar o know-how que eles podem passar.
 
-Se você não pretende fazer faculdade, procure por bons cursos. Eles podem gerar muito aprendizado, até mais que a faculdade (pois, em sua maioria, focam mais na parte prática), e também gerar oportunidades de networking.
+Se você não pretende fazer faculdade, procure por bons cursos. Eles podem gerar muito aprendizado, até mais que a faculdade (pois, em sua maioria, focam mais na parte prática), e também geram oportunidades de networking.
 
 Para quem trabalha com tecnologia, encontros, meetings, eventos, todos são locais muito propícios para, além de aprender, criar uma excelente rede de contatos..
 
 Indo para o mundo digital, podemos tirar vantagem do principal objetivo de uma rede social, encontrar pessoas.
 
-Uma dica é procurar por grupos de facebook, eles são excelentes para encontrar vagas, inclusive, foi onde encontrei a vaga para trabalhar na UOL.
+Uma dica é procurar por grupos de facebook, eles são excelentes para encontrar vagas, inclusive foi onde encontrei a vaga para trabalhar na UOL.
 
 (Se você trabalha como front, procure grupos como: [“Front-end Vagas  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/213564108815633/?ref=br_rs), [“Desenvolvimento Web  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/desenvolvimentoweb/), e [“Front-end Brasil <i class="fa fa-share-square-o" aria-hidden="true"></i>"](https://www.facebook.com/profile.php?id=261496957232397)).
 
