@@ -21,19 +21,17 @@ Fala galera, beleza?
 
 A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação, no mercado de trabalho.
 
-É uma situação complicada que obriga a pessoa a avaliar sua vida profissional e, em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.
+É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos dar vários passos para trás a fim de conseguir uma oportunidade.
 
-Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é, através de algumas dicas, jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.
+Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.
 
 ### Como você chegou nessas dicas?
 
 No início de 2017, eu retornava dos Estados Unidos após 1 ano procurando novas oportunidades. Durante esse período deixei de atuar na minha área e, ao retornar, estava totalmente desatualizado.
 
-Após retornar de várias vagas recebendo respostas negativas, me dei conta de que precisava melhorar meu perfil profissional. Decidi que na próxima oportunidade que aparecesse eu estaria devidamente preparado. E foi seguindo as dicas abaixo que, após alguns meses, finalmente consegui alcançar meu objetivo.
+Após receber várias respostas negativas, me dei conta de que precisava melhorar meu perfil profissional. Decidi que na próxima oportunidade que aparecesse eu estaria devidamente preparado. Foi seguindo as dicas abaixo que, após alguns meses, finalmente consegui alcançar meu objetivo.
 
-Portanto, se você se encontra em uma situação semelhante à minha, siga essas dicas e tenho certeza que você também conseguirá conquistar aquilo que almeja.
-
-
+Portanto, se você se encontra em uma situação semelhante à minha, siga esses passos e tenho certeza que você também conseguirá conquistar aquilo que almeja.
 
 ## 1- Avalie se você está na profissão certa
 
@@ -58,7 +56,7 @@ Nesse momento eu te pergunto: "Mas, afinal, o que é estudar?"
 
 Entendeu onde eu quero chegar?
 
-Se para você, estudar é algo chato, das duas uma:
+Se para você estudar é algo chato, temos duas opções:
 
 Ou você está estudando da maneira errada, ou está na profissão errada.
 
@@ -115,6 +113,11 @@ Se escolheu usá-las a seu favor, é importante entender que cada rede social te
 Falando nessa questão de algoritmos, existe um lado ruim nisso. Eles acabam criando uma bolha social, limitando as pessoas a verem apenas aquilo que gostam. Mas isso é papo para outro post.
 
 O importante aqui, é entender que se usados de forma inteligente eles irão trabalhar para sempre te oferecer conteúdos relevantes.
+
+<figure>
+  <img src="/assets/dist/images/posts/dicas-emprego/print-timeline.jpg" alt="Minha timeline atualmente - ilustração"/>
+  <figcaption>Minha timeline atualmente.</figcaption>
+</figure>
 
 Faça o teste, passe dias curtindo coisas relacionadas à sua profissão. Em pouco tempo você vai perceber que esse assunto começará a aparecer com mais frequência na sua timeline.
 

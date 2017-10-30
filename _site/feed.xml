@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matheus Barone | Desenvolvedor Front-end</title>
-    <description>Sou Matheus Barone, de Santos/SP. Fiz esse site para demonstrar um pouco do meu trabalho, além de repassar o que aprendo trabalhando como Desenvolvedor Front-end.
+    <description>Olá, sou Matheus Barone, de Santos/SP. Trabalho como Desenvolvedor Front-end na UOL.
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Oct 2017 18:34:17 -0200</pubDate>
-    <lastBuildDate>Sun, 29 Oct 2017 18:34:17 -0200</lastBuildDate>
-    <generator>Jekyll v3.6.0</generator>
+    <pubDate>Mon, 30 Oct 2017 09:39:55 -0200</pubDate>
+    <lastBuildDate>Mon, 30 Oct 2017 09:39:55 -0200</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>Como aumentar suas chances de conseguir um emprego</title>
-        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala galera, beleza?&lt;/p&gt; &lt;p&gt;A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação, no mercado de trabalho.&lt;/p&gt; &lt;p&gt;É uma situação complicada que obriga a pessoa a avaliar sua vida profissional e, em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.&lt;/p&gt; &lt;p&gt;Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é, através de algumas dicas, jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.&lt;/p&gt; &lt;h3 id=&quot;como-você-chegou-nessas-dicas&quot;&gt;Como você...</description>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala galera, beleza?&lt;/p&gt; &lt;p&gt;A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação, no mercado de trabalho.&lt;/p&gt; &lt;p&gt;É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos dar vários passos para trás a fim de conseguir uma oportunidade.&lt;/p&gt; &lt;p&gt;Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.&lt;/p&gt; &lt;h3 id=&quot;como-você-chegou-nessas-dicas&quot;&gt;Como você chegou nessas dicas?&lt;/h3&gt; &lt;p&gt;No...</description>
         <pubDate>Fri, 27 Oct 2017 10:00:00 -0200</pubDate>
         <link>http://localhost:4000/dicas-conseguir-emprego/</link>
         <guid isPermaLink="true">http://localhost:4000/dicas-conseguir-emprego/</guid>
