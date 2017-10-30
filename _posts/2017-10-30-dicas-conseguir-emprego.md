@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Como aumentar suas chances de conseguir um emprego"
-date: 2017-10-27 12:00:00
+date: 2017-10-30 10:47:00
 image: '/assets/dist/images/posts/dicas-emprego/dicas-emprego-post.jpg'
 description: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos'"
 main-class: 'misc'
@@ -19,7 +19,7 @@ introduction: "Aprenda a ser um profissional acima dos 'Requisitos Mínimos.'"
 
 Fala galera, beleza?
 
-A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação, no mercado de trabalho.
+A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação no mercado de trabalho.
 
 É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.
 
@@ -78,11 +78,11 @@ Encontre a interseção dessas duas coisas, e a sua TV vai passar um bom tempo d
 
 Bom, uma vez entendido que você está na profissão correta, é hora de melhorar os seus métodos de estudo.
 
-Sempre fui uma pessoa hiperativa, ou seja, passar horas lendo textos e mais textos não seria uma boa opção. Por isso, desde o começo busquei formas "não-convencionais" de estudar. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado.
+Sou uma pessoa agitada, ou seja, passar horas lendo textos e mais textos não seria uma boa opção. Por isso, desde o começo busquei formas "não-convencionais" de estudar. Além disso, percebi que precisaria de um dia de 48 horas para dar conta da quantidade absurda de conteúdo a ser estudado.
 
 Eu criei uma pequena tabela em que dividia meu dia de acordo com os meus horários e obrigações, e percebi que haviam muitos momentos em que não conseguiria sentar para estudar. Foi aí que lembrei de um formato de conteúdo que se enxaixaria perfeitamente com a minha necessidade, o podcast.
 
-Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar absorvendo conteúdo não importa a hora ou lugar. Seja no ônibus, na fila do banco, lavando a louça, etc. Eu sempre consumi esse tipo de conteúdo, porém apenas como forma de entretenimento. O que fiz foi buscar podcasts voltados para a minha profissão.
+Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar estudando não importa a hora ou lugar. Seja no ônibus, na fila do banco, lavando a louça, etc. Eu sempre consumi esse tipo de conteúdo, porém apenas como forma de entretenimento. O que fiz foi buscar podcasts voltados para a minha profissão.
 
 Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/). Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
 
@@ -140,25 +140,29 @@ Se você não pretende fazer faculdade, procure por bons cursos. Eles podem gera
 
 Para quem trabalha com tecnologia, encontros, meetings, eventos, todos são locais muito propícios para, além de aprender, criar uma excelente rede de contatos..
 
-Indo para o mundo digital, as redes sociais não deixam de servir como uma forma de encontrar pessoas. Uma dica boa é procurar por grupos de facebook, eles são excelentes para encontrar vagas, inclusive, foi onde encontrei a vaga para trabalhar na UOL.
+Indo para o mundo digital, podemos tirar vantagem do principal objetivo de uma rede social, encontrar pessoas.
 
-(Se você trabalha como front, procure os grupos “Vagas Front-end”, “Desenvolvimento Web”, e “Front-end Brasil).
+Uma dica é procurar por grupos de facebook, eles são excelentes para encontrar vagas, inclusive, foi onde encontrei a vaga para trabalhar na UOL.
+
+(Se você trabalha como front, procure grupos como: [“Front-end Vagas  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/213564108815633/?ref=br_rs), [“Desenvolvimento Web  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/desenvolvimentoweb/), e [“Front-end Brasil <i class="fa fa-share-square-o" aria-hidden="true"></i>"](https://www.facebook.com/profile.php?id=261496957232397)).
 
 Já o twitter é perfeito para se colocar a par das novidades da área. Siga pessoas relevantes, interaja com elas, mais uma vez, as redes sociais são excelentes ferramentas, se utilizadas da maneira correta.
 
-(Se você trabalha como front, siga @frontendbrvagas e @frontendbr).
+(Se você trabalha como front, procure perfis como: [@frontendbrvagas <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://twitter.com/frontendbrvagas) e [@frontendbr <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://twitter.com/frontendbr)).
 
-No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o Linkedin. Para quem não conhece, é uma rede social voltada para profissionais.
+No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o [Linkedin <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.linkedin.com/). Para quem não conhece, é uma rede social voltada para profissionais.
 
 Ao criar um perfil, você basicamente gera um curriculum online. Nele é possível colocar informações relevantes como sua experiência profissional, formação acadêmica, trabalhos voluntários, competências, recomendações, e muito mais.
 
 Com uma simples busca você encontra uma lista de empresas procurando por profissionais com as suas características, além das próprias empresas chegarem facilmente até você. Isso aumenta exponencialmente as possibilidades de encontrar uma vaga, uma vez que não existe a barreira física.
 
-Portanto, pare o que estiver fazendo, e vá dedicar um tempo ao seu Linkedin.
+Portanto, pare o que estiver fazendo, e vá dedicar um tempo ao seu [Linkedin <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.linkedin.com/).
 
 Tente descrever seu lado profissional de forma clara e sucinta. Siga empresas, adicione pessoas, recomende seus colegas e ex-colegas de trabalho, e pode ter certeza que em pouco tempo você perceberá as portas se abrindo.
 
-Ah! Aproveita e me adiciona! :D
+Ah! Aproveita e [me adiciona!](https://www.linkedin.com/in/matheusbarone/) :D
+
+Muito importante salientar que, assim como você, as empresas também utilizam as redes sociais como uma forma de analisar o candidato. Seu perfil online espelha o que você é no mundo real. Através de comentários pertinentes e links interessantes, faça com  que as empresas saibam que você é uma pessoa séria e dedicada tanto no âmbito pessoal, quanto no profissional. Não deixe todo o seu esforço ser em vão por conta da "zoeira", seu futuro vale bem mais que isso.
 
 ## 5- Não se contente com os requisitos mínimos
 
@@ -169,28 +173,22 @@ Ah! Aproveita e me adiciona! :D
 
 Até um tempo atrás, se uma pessoa tinha no currículo uma formação acadêmica e um segundo idioma, já era considerado um diferencial. Hoje em dia, dependendo da profissão, ter um diploma e saber falar inglês é requisito mínimo.
 
-Ou seja, se você quer ter uma relevância perante as empresas, é necessário encontrar novas formas de se destacar.
+Se você quer ter uma relevância perante as empresas, é necessário encontrar novas formas de se destacar.
 
 Algumas dicas:
 
-- Participe de projetos, e trabalhos voluntários.
+- Participe de [projetos, e trabalhos voluntários <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://github.com/training-center/mentoria).
 - Estude para preencher todos os requisitos pedidos pelas vagas.
 - Faça o máximo de cursos possíveis. (Existe muita coisa boa e gratuita na internet. É só ter paciência de procurar).
 - Documente as coisas que você estiver aprendendo.
 - Encontre formas de melhorar a sua profissão (as vezes estudando outras áreas, como tecnologia).
-- Crie formas de mostrar para as empresas quem você é, antes mesmo delas te conhecerem (Criando um blog, por exemplo :) ).
+- Crie formas de mostrar para as empresas quem você é, antes mesmo delas te conhecerem ([Criando um blog](http://matheusbarone.com/blog/), por exemplo :) ).
 
-Eu gostaria de destacar que ajudar outras pessoas, como fazer trabalhos voltados para causas sociais, conta muito para qualquer vaga de emprego. Então procure o que precisa ser feito para contribuir com a sua comunidade, agregue conhecimento, e ao mesmo tempo ganhe pontos com as empresas. Você ajuda os outros, e se ajuda ao mesmo tempo, acredito que essa seja a dica mais importante a ser seguida.
+Ajudar outras pessoas, como fazer trabalhos voltados para causas sociais, conta muito para qualquer vaga de emprego. Então procure o que precisa ser feito para contribuir com a sua comunidade, agregue conhecimento, e ao mesmo tempo ganhe pontos com as empresas. Você ajuda os outros, e se ajuda ao mesmo tempo, acredito que essa seja a dica mais importante a ser seguida.
 
 ## Conclusão
 
-Como vocês podem ver, existem inúmeras formas de se preparar melhor para as oportunidades que vão aparecer, independente da área que você atua.
-
-Não existe crise para quem não tem medo de mudar. Quanto mais persistente e criativo você for, mais fácil será se adaptar às dificuldades.
-
-Se prepare, foque no seu objetivo, e é só uma questão de tempo até as coisas melhorarem.
-
-Se puder, coloque nos comentários outras dicas, para tentarmos ajudar o máximo de pessoas possíveis.
+Como vocês podem ver, existem inúmeras formas de se preparar melhor para as oportunidades que vão aparecer, independente da área que você atua. Não existe crise para quem não tem medo de mudar. Quanto mais persistente e criativo você for, mais fácil será se adaptar às dificuldades. Se prepare, foque no seu objetivo, e é só uma questão de tempo até as coisas melhorarem. Se puder, coloque nos comentários outras dicas, para tentarmos ajudar o máximo de pessoas possíveis.
 
 Espero que tenham gostado.
 
