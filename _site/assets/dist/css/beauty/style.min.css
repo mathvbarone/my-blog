@@ -30,11 +30,6 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
     -webkit-touch-callout: none
 }
 
-.button,.button-submit,.input,.textarea {
-    -webkit-box-align: center;
-    vertical-align: top
-}
-
 .select,.select select,.textarea,audio,embed,img,object,video {
     max-width: 100%
 }
@@ -154,8 +149,8 @@ a {
     transition: linear .2s all
 }
 
-.button,.button-submit,.card-item,.ribbon {
-    -webkit-transition: ease-in-out .2s all
+.button,.button-submit,.card-item {
+    -o-transition: ease-in-out .2s all
 }
 
 a strong {
@@ -480,7 +475,8 @@ a.has-text-danger:focus,a.has-text-danger:hover {
 
 .button,.button-submit,.file {
     -webkit-user-select: none;
-    -ms-user-select: none
+    -ms-user-select: none;
+    -moz-user-select: none
 }
 
 .box {
@@ -508,6 +504,7 @@ a.box:active {
 }
 
 .button,.button-submit {
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -528,7 +525,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    -moz-user-select: none;
+    vertical-align: top;
     user-select: none;
     background-color: #fff;
     color: #363636;
@@ -541,7 +538,7 @@ a.box:active {
     padding-right: 1em;
     text-align: center;
     white-space: nowrap;
-    -o-transition: ease-in-out .2s all;
+    -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -551,8 +548,8 @@ a.box:active {
     display: -ms-flexbox
 }
 
-.breadcrumb,.delete,.file {
-    -moz-user-select: none
+.card-item,.ribbon {
+    -webkit-transition: ease-in-out .2s all
 }
 
 .button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
@@ -1578,6 +1575,10 @@ a.box:active {
     position: absolute!important
 }
 
+.control.has-icon:not(.has-icon-right) .icon,.control.has-icons-left .icon.is-left,.file-input {
+    left: 0
+}
+
 .button.is-static,.is-static.button-submit {
     background-color: #f5f5f5;
     border-color: #dbdbdb;
@@ -1604,10 +1605,6 @@ a.box:active {
     margin-bottom: 1em
 }
 
-.content h1,.label:not(:last-child) {
-    margin-bottom: .5em
-}
-
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     color: #363636;
     font-weight: 400;
@@ -1615,7 +1612,8 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em
+    font-size: 2em;
+    margin-bottom: .5em
 }
 
 .content h1:not(:first-child) {
@@ -1770,6 +1768,7 @@ a.box:active {
 }
 
 .input,.textarea {
+    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1796,6 +1795,7 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
+    vertical-align: top;
     background-color: #fff;
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
@@ -2020,8 +2020,7 @@ a.box:active {
     z-index: 4
 }
 
-.control.is-loading::after,.select.is-loading::after {
-    -webkit-animation: spinAround .5s infinite linear;
+.control.is-loading::after,.delete:after,.delete:before,.loader,.select.is-loading::after {
     content: ""
 }
 
@@ -2224,6 +2223,7 @@ a.box:active {
 }
 
 .select.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -2668,7 +2668,6 @@ a.box:active {
 
 .file-input {
     height: .01em;
-    left: 0;
     outline: 0;
     position: absolute;
     top: 0;
@@ -2769,6 +2768,10 @@ a.box:active {
 .label {
     color: #363636;
     font-size: 1rem
+}
+
+.label:not(:last-child) {
+    margin-bottom: .5em
 }
 
 .label.is-small {
@@ -3001,10 +3004,6 @@ a.box:active {
     font-size: 1.5rem
 }
 
-.control.has-icon:not(.has-icon-right) .icon {
-    left: 0
-}
-
 .control.has-icons-left .input.is-small~.icon,.control.has-icons-left .select.is-small~.icon,.control.has-icons-right .input.is-small~.icon,.control.has-icons-right .select.is-small~.icon {
     font-size: .75rem
 }
@@ -3027,11 +3026,8 @@ a.box:active {
     z-index: 4
 }
 
-.control.has-icons-left .icon.is-left {
-    left: 0
-}
-
 .control.is-loading::after {
+    -webkit-animation: spinAround .5s infinite linear;
     animation: spinAround .5s infinite linear;
     border: 2px solid #dbdbdb;
     -webkit-border-radius: 290486px;
@@ -3112,14 +3108,6 @@ a.box:active {
     top: 0;
     height: 100%;
     width: 100%
-}
-
-.delete:after,.delete:before,.tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    content: ""
 }
 
 .image.is-1by1,.image.is-square {
@@ -3321,12 +3309,22 @@ a.box:active {
 
 .tag:not(body).is-delete:after,.tag:not(body).is-delete:before {
     background-color: currentColor;
+    content: "";
     display: block;
+    left: 50%;
     position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center
+}
+
+.delete:after,.delete:before,.modal-close:after,.modal-close:before {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
 }
 
 .tag:not(body).is-delete:before {
@@ -3457,6 +3455,7 @@ a.box:active {
 }
 
 .delete {
+    -moz-user-select: none;
     user-select: none;
     background-color: rgba(10,10,10,.2);
     border: none;
@@ -3485,7 +3484,9 @@ a.box:active {
 .delete:after,.delete:before {
     background-color: #fff;
     display: block;
+    left: 50%;
     position: absolute;
+    top: 50%;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3578,7 +3579,6 @@ a.box:active {
     border-radius: 290486px;
     border-right-color: transparent;
     border-top-color: transparent;
-    content: "";
     display: block;
     height: 1em;
     width: 1em
@@ -3615,6 +3615,7 @@ a.box:active {
 }
 
 .breadcrumb {
+    -moz-user-select: none;
     user-select: none;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
@@ -4121,8 +4122,6 @@ a.box:active {
     left: 50%;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -8871,7 +8870,6 @@ a.tag:hover {
 }
 
 .card-item {
-    -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -9117,15 +9115,18 @@ a.tag:hover {
     color: #fff
 }
 
+.about a,.post-blog .post-content a:hover {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
+    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%)
+}
+
 .post-blog .post-content a>img {
     width: 100%
 }
 
 .post-blog .post-content a:hover {
     color: #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
-    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
-    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
     background-image: linear-gradient(to bottom,#cd2b46 0,#cd2b46 100%);
     background-position: 0 0
 }
@@ -12020,24 +12021,24 @@ footer .footer-phone .fa {
 .about a {
     padding: 0 3px;
     font-weight: 500;
-    position: relative
-}
-
-.about a:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #cd2b46;
-    bottom: 0;
-    left: 0;
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
-    transition: ease-in-out .2s all
+    transition: ease-in-out .2s all;
+    background-image: linear-gradient(to bottom,#cd2b46 0,#cd2b46 100%);
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 1.1em;
+    overflow: hidden
 }
 
-.about a:hover:after {
-    width: 0
+.about a:hover {
+    color: #fff;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
+    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: linear-gradient(to bottom,#cd2b46 0,#cd2b46 100%);
+    background-position: 0 0
 }
 
 .about p {
