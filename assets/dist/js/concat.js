@@ -9903,174 +9903,173 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     });
   }), a.Typed = d;var e = { strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"], stringsElement: null, typeSpeed: 0, startDelay: 0, backSpeed: 0, shuffle: !1, backDelay: 500, loop: !1, loopCount: !1, showCursor: !0, cursorChar: "|", attr: null, contentType: "html", callback: function callback() {}, preStringTyped: function preStringTyped() {}, onStringTyped: function onStringTyped() {}, resetCallback: function resetCallback() {} };
 }(window, document, window.jQuery);
-'use strict';
+"use strict";
 
-//TARGET BLANK
+// TARGET BLANK
 (function () {
-  var links = document.links;
+  var _document = document,
+      links = _document.links;
+
   for (var i = 0, linksLength = links.length; i < linksLength; i++) {
     if (links[i].hostname != window.location.hostname) {
-      links[i].target = '_blank';
-      links[i].className += ' externalLink';
+      links[i].target = "_blank";
+      links[i].className += " externalLink";
     }
   }
 })();
 "use strict";
 
+/* eslint-env jquery */
+
 var startFilter = {
-	//EVENTS
+  // EVENTS
 
-	functions: {
+  functions: {
+    // PREVENT ENTER
 
-		//PREVENT ENTER
+    preventEnter: function preventEnter() {
+      $(window).keydown(function (event) {
+        if (!event.keyCode === 13) {
+          event.preventDefault();
+        }
+      });
+    },
 
-		preventEnter: function preventEnter() {
-			$(window).keydown(function (e) {
-				if (e.keyCode == 13) {
-					event.preventDefault();
-					return false;
-				}
-			});
-		},
+    // FILTER
+    filter: function filter() {
+      var input = $("#input");
+      var filter = input.val().toUpperCase();
+      var li = $(".card-item");
 
-		//FILTER
-		filter: function filter() {
-			var input = $("#input"),
-			    filter = input.val().toUpperCase(),
-			    ul = $(".card-list"),
-			    li = $(".card-item");
+      for (var i = 0; i < li.length; i++) {
+        var inner = li[i].getElementsByClassName("card-inner")[0];
 
-			for (var i = 0; i < li.length; i++) {
-				var inner = li[i].getElementsByClassName("card-inner")[0];
+        if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].classList.remove("is-hidden");
+        } else {
+          li[i].classList.add("is-hidden");
+        }
+      }
 
-				if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					li[i].classList.remove("is-hidden");
-				} else {
-					li[i].classList.add("is-hidden");
-				}
-			}
+      startFilter.functions.preventEnter();
+    },
 
-			startFilter.functions.preventEnter();
-		},
+    cleanField: function cleanField(e) {
+      e.preventDefault();
+      $(".card-item").removeClass("is-hidden");
+      $(".searchInput").val("");
+    }
+  },
 
-		cleanField: function cleanField(e) {
-			e.preventDefault();
-			$(".card-item").removeClass("is-hidden");
-			$(".searchInput").val("");
-		}
+  // EVENTS
+  events: {
+    init: function init() {
+      $(function () {
+        var startFunctions = startFilter.functions;
+        // FILTER
+        $(".searchField").on("keyup", startFunctions.filter);
 
-	},
-
-	//EVENTS
-	events: {
-		init: function init() {
-
-			$(function () {
-				var startFunctions = startFilter.functions;
-				//FILTER
-				$(".searchField").on("keyup", startFunctions.filter);
-
-				//CLEANFIELD
-				$(".cleanButton").on("click", startFunctions.cleanField);
-			});
-		}
-	}
+        // CLEANFIELD
+        $(".cleanButton").on("click", startFunctions.cleanField);
+      });
+    }
+  }
 };
 
-//INIT OBJECTS
+// INIT OBJECTS
 
 startFilter.events.init();
 "use strict";
 
+/* eslint-env jquery */
+
 var startForm = {
-	//EVENTS
-	functions: {
+  // EVENTS
+  functions: {
+    // FORM MSG
+    formMsg: function formMsg(message) {
+      var contact = $(".contact-box");
+      var messageText = void 0;
+      var ajaxStatus = void 0;
 
-		//FORM MSG
-		formMsg: function formMsg(message) {
-			var contact = $(".contact-box");
-			var messageBox = void 0;
-			var messageText = void 0;
-			var ajaxStatus = void 0;
+      if (message === "loading") {
+        messageText = "\n                      <figure class=\"is-loading-img\">\n                        <svg width=\"66px\"  height=\"66px\"  xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" preserveAspectRatio=\"xMidYMid\" class=\"lds-dual-ring\" style=\"background: none;\">\n                          <circle cx=\"50\" cy=\"50\" ng-attr-r=\"{{config.radius}}\" ng-attr-stroke-width=\"{{config.width}}\" ng-attr-stroke=\"{{config.c1}}\" ng-attr-stroke-dasharray=\"{{config.dasharray}}\" fill=\"none\" stroke-linecap=\"round\" r=\"40\" stroke-width=\"5\" stroke=\"#fff\" stroke-dasharray=\"62.83185307179586 62.83185307179586\" transform=\"rotate(258 50 50)\">\n                          <animateTransform attributeName=\"transform\" type=\"rotate\" calcMode=\"linear\" values=\"0 50 50;360 50 50\" keyTimes=\"0;1\" dur=\"1s\" begin=\"0s\" repeatCount=\"indefinite\"></animateTransform>\n                          </circle>\n                          <circle cx=\"50\" cy=\"50\" ng-attr-r=\"{{config.radius2}}\" ng-attr-stroke-width=\"{{config.width}}\" ng-attr-stroke=\"{{config.c2}}\" ng-attr-stroke-dasharray=\"{{config.dasharray2}}\" ng-attr-stroke-dashoffset=\"{{config.dashoffset2}}\" fill=\"none\" stroke-linecap=\"round\" r=\"34\" stroke-width=\"5\" stroke=\"#2ab7cd\" stroke-dasharray=\"53.40707511102649 53.40707511102649\" stroke-dashoffset=\"53.40707511102649\" transform=\"rotate(-258 50 50)\">\n                          <animateTransform attributeName=\"transform\" type=\"rotate\" calcMode=\"linear\" values=\"0 50 50;-360 50 50\" keyTimes=\"0;1\" dur=\"1s\" begin=\"0s\" repeatCount=\"indefinite\"></animateTransform>\n                          </circle>\n                        </svg>\n                      <figure>\n                      ";
+        ajaxStatus = "loading";
+      }
 
-			if (message == "loading") {
-				messageText = "<figure class=\"is-loading-img\">\n\t\t\t\t\t<svg width=\"66px\"  height=\"66px\"  xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" preserveAspectRatio=\"xMidYMid\" class=\"lds-dual-ring\" style=\"background: none;\">\n\t\t\t\t\t\t<circle cx=\"50\" cy=\"50\" ng-attr-r=\"{{config.radius}}\" ng-attr-stroke-width=\"{{config.width}}\" ng-attr-stroke=\"{{config.c1}}\" ng-attr-stroke-dasharray=\"{{config.dasharray}}\" fill=\"none\" stroke-linecap=\"round\" r=\"40\" stroke-width=\"5\" stroke=\"#fff\" stroke-dasharray=\"62.83185307179586 62.83185307179586\" transform=\"rotate(258 50 50)\">\n\t\t\t\t\t\t<animateTransform attributeName=\"transform\" type=\"rotate\" calcMode=\"linear\" values=\"0 50 50;360 50 50\" keyTimes=\"0;1\" dur=\"1s\" begin=\"0s\" repeatCount=\"indefinite\"></animateTransform>\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t\t<circle cx=\"50\" cy=\"50\" ng-attr-r=\"{{config.radius2}}\" ng-attr-stroke-width=\"{{config.width}}\" ng-attr-stroke=\"{{config.c2}}\" ng-attr-stroke-dasharray=\"{{config.dasharray2}}\" ng-attr-stroke-dashoffset=\"{{config.dashoffset2}}\" fill=\"none\" stroke-linecap=\"round\" r=\"34\" stroke-width=\"5\" stroke=\"#2ab7cd\" stroke-dasharray=\"53.40707511102649 53.40707511102649\" stroke-dashoffset=\"53.40707511102649\" transform=\"rotate(-258 50 50)\">\n\t\t\t\t\t\t<animateTransform attributeName=\"transform\" type=\"rotate\" calcMode=\"linear\" values=\"0 50 50;-360 50 50\" keyTimes=\"0;1\" dur=\"1s\" begin=\"0s\" repeatCount=\"indefinite\"></animateTransform>\n\t\t\t\t\t\t</circle>\n\t\t\t\t\t</svg>\n\t\t\t\t<figure>";
-				ajaxStatus = "loading";
-			}
+      if (message === "success") {
+        messageText = "\n                      <div class=\"success-box\">\n                        <svg class=\"checkmark checkmark-success\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                          <circle class=\"checkmark-circle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\"/>\n                            <path class=\"checkmark-check\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\"/>\n                        </svg>\n                        <strong>Sua mensagem foi enviada!</strong>\n                        <div class=\"column is-narrow has-text-centered\">\n                          <button type=\"button\" title=\"retornar\" class=\"button button-custom has-text-centered is-info form-return\">Retornar</button>\n                        </div>\n                      </div>\n                      ";
+        ajaxStatus = "success";
+      }
+      if (message === "error") {
+        messageText = "\n                      <div class=\"error-box\">\n                        <svg class=\"checkmark  checkmark-error\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                          <circle class=\"checkmark-circle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\"/>\n                          <path class=\"checkmark-check\" fill=\"none\" d=\"M16 16 36 36 M36 16 16 36\"/>\n                        </svg>\n                        <strong>Ocorreu um erro :( <br/> Tente novamente mais tarde</strong>\n                        <div class=\"column is-narrow has-text-centered\">\n                          <button type=\"button\" title=\"retornar\" class=\"button button-custom has-text-centered is-info form-return\">Retornar</button>\n                        </div>\n                      </div>\n                      ";
 
-			if (message == "success") {
-				messageText = "<div class=\"success-box\">\n\t\t\t\t\t<svg class=\"checkmark checkmark-success\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n\t\t\t\t\t\t<circle class=\"checkmark-circle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\"/>\n\t\t\t\t\t\t\t<path class=\"checkmark-check\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\"/>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<strong>Sua mensagem foi enviada!</strong>\n\t\t\t\t\t<div class=\"column is-narrow has-text-centered\">\n\t\t\t\t\t\t<button type=\"button\" title=\"retornar\" class=\"button button-custom has-text-centered is-info form-return\">Retornar</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>";
-				ajaxStatus = "success";
-			}
-			if (message == "error") {
-				messageText = "<div class=\"error-box\">\n\t\t\t\t\t<svg class=\"checkmark  checkmark-error\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n\t\t\t\t\t\t<circle class=\"checkmark-circle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\"/>\n\t\t\t\t\t\t<path class=\"checkmark-check\" fill=\"none\" d=\"M16 16 36 36 M36 16 16 36\"/>\n\t\t\t\t\t</svg>\n\t\t\t\t\t<strong>Ocorreu um erro :( <br/> Tente novamente mais tarde</strong>\n\t\t\t\t\t<div class=\"column is-narrow has-text-centered\">\n\t\t\t\t\t\t<button type=\"button\" title=\"retornar\" class=\"button button-custom has-text-centered is-info form-return\">Retornar</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>";
+        ajaxStatus = "error";
+      }
 
-				ajaxStatus = "error";
-			}
+      var messageBox = "\n                          <div class=\"message-alert\">\n                            <div class=\"is-" + ajaxStatus + "\">" + messageText + "</div>\n                          </div>\n                           ";
 
-			messageBox = "<div class=\"message-alert\">\n\t\t\t\t\t<div class=\"is-" + ajaxStatus + "\">" + messageText + "</div>\t\n\t\t\t\t</div>";
+      return contact.append(messageBox);
+    },
 
-			return contact.append(messageBox);
-		},
+    // AFTER MSG
+    afterMsg: function afterMsg(e) {
+      e.preventDefault();
+      $(".message-alert").hide();
+      $("#contact-form").show();
+      $(".valid").val("");
+    },
 
-		//AFTER MSG
-		afterMsg: function afterMsg(e) {
-			e.preventDefault();
-			$('.message-alert').hide();
-			$("#contact-form").show();
-			$(".valid").val("");
-		},
+    // SEND FORM
+    sendform: function sendform(e) {
+      e.preventDefault();
+      var contact = $(".contact-box");
+      var contactForm = $("#contact-form");
 
-		//SEND FORM
-		sendform: function sendform(e) {
-			e.preventDefault();
-			var contact = $(".contact-box");
-			var contactForm = $("#contact-form");
+      $.ajax({
+        url: "//formspree.io/matheusvbarone@gmail.com",
+        method: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        beforeSend: function beforeSend() {
+          contactForm.hide();
+          startForm.functions.formMsg("loading");
+        }
+      }).done(function () {
+        startForm.functions.formMsg("success");
+      }).fail(function () {
+        startForm.functions.formMsg("error");
+      }).always(function () {
+        contact.find(".is-loading").hide();
+        $(".form-return").on("click", startForm.functions.afterMsg);
+      });
+    }
+  },
 
-			$.ajax({
-				url: '//formspree.io/matheusvbarone@gmail.com',
-				method: 'POST',
-				data: $(this).serialize(),
-				dataType: 'json',
-				beforeSend: function beforeSend() {
-					contactForm.hide();
-					startForm.functions.formMsg("loading");
-				}
-			}).done(function (data) {
-				startForm.functions.formMsg("success");
-			}).fail(function () {
-				startForm.functions.formMsg("error");
-			}).always(function () {
-				contact.find(".is-loading").hide();
-				$(".form-return").on("click", startForm.functions.afterMsg);
-			});
-		}
-	},
-
-	//EVENTS
-	events: {
-		init: function init() {
-			$(function () {
-				var startFunctions = startForm.functions;
-				$("#contact-form").on("submit", startFunctions.sendform);
-			});
-		}
-	}
+  // EVENTS
+  events: {
+    init: function init() {
+      $(function () {
+        var startFunctions = startForm.functions;
+        $("#contact-form").on("submit", startFunctions.sendform);
+      });
+    }
+  }
 };
 
-//INIT OBJECTS
+// INIT OBJECTS
 startForm.events.init();
 "use strict";
 
+/* eslint-env jquery */
+
 var startScroll = {
-  //FUNCTIONS
+  // FUNCTIONS
 
   functions: {
-
-    //SMOOTHSCROLL
+    // SMOOTHSCROLL
     smoothScroll: function smoothScroll(e) {
-
-      var locationPath = location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname;
+      var locationPath = location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname === this.hostname;
       var target = $(this.hash);
 
       var scrollAnimation = function scrollAnimation() {
@@ -10081,10 +10080,9 @@ var startScroll = {
           $target.focus();
           if ($target.is(":focus")) {
             return false;
-          } else {
-            $target.attr("tabindex", "-1");
-            $target.focus();
           }
+          $target.attr("tabindex", "-1");
+          $target.focus();
         });
       };
 
@@ -10097,115 +10095,116 @@ var startScroll = {
         }
       }
     }
-
   },
 
-  //EVENTS
+  // EVENTS
   events: {
     init: function init() {
       $(function () {
-        var allowedLiks = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+        var allowedLiks = $("a[href*=\"#\"]").not("[href=\"#\"]").not("[href=\"#0\"]");
         allowedLiks.on("click", startScroll.functions.smoothScroll);
       });
     }
   }
 };
 
-//INIT OBJECTS
+// INIT OBJECTS
 
 startScroll.events.init();
 "use strict";
 
+/* eslint-env jquery */
+
 var start = {
-	//EVENTS
+  // EVENTS
 
-	functions: {
+  functions: {
+    // SHOW NAVIGATION CONSTRUCTOR
+    showNavConstructor: function showNavConstructor(element) {
+      if ($(window).scrollTop() > 40) {
+        element.addClass("is-active");
+      } else {
+        element.removeClass("is-active");
+      }
+    },
 
-		//SHOW NAVIGATION CONSTRUCTOR
-		showNavConstructor: function showNavConstructor(element) {
-			$(window).scrollTop() > 40 ? element.addClass("is-active") : element.removeClass("is-active");
-		},
+    // SHOW NAVIGATION
+    showNavigation: function showNavigation() {
+      start.functions.showNavConstructor($(".up-arrow"));
+      start.functions.showNavConstructor($(".is-index"));
+    },
 
-		//SHOW NAVIGATION
-		showNavigation: function showNavigation() {
-			start.functions.showNavConstructor($(".up-arrow"));
-			start.functions.showNavConstructor($(".is-index"));
-		},
+    // EDIT IMAGE INSIDE LINKS ON POST
+    imgInsideLinkPost: function imgInsideLinkPost() {
+      $(".post img").closest("a").addClass("is-image-inside");
+    },
 
-		//EDIT IMAGE INSIDE LINKS ON POST
-		imgInsideLinkPost: function imgInsideLinkPost() {
-			$(".post img").closest("a").addClass("is-image-inside");
-		},
+    // HERO SCROLL
+    heroScroll: function heroScroll() {
+      var headerContent = $(".hero-body");
+      var headerContentHeight = headerContent.height();
+      var scrollPos = window.scrollY;
 
-		//HERO SCROLL
-		heroScroll: function heroScroll() {
-			var headerContent = $(".hero-body");
-			var headerContentHeight = headerContent.height();
-			var scrollPos = window.scrollY;
+      if (scrollPos <= headerContentHeight) {
+        headerContent.css("transform", "translateY(" + -scrollPos / 2 + "px" + ")");
+        headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
+      }
+    }
+  },
 
-			if (scrollPos <= headerContentHeight) {
-				headerContent.css("transform", "translateY(" + -scrollPos / 2 + "px" + ")");
-				headerContent.css("opacity", 1 - scrollPos / headerContentHeight);
-			}
-		}
+  // EVENTS
+  events: {
+    init: function init() {
+      $(function () {
+        var startFunctions = start.functions;
 
-	},
+        // SHOW NAVIGATION INIT
+        $(window).on("scroll", startFunctions.showNavigation);
 
-	//EVENTS
-	events: {
-		init: function init() {
+        // HERO SCROLL
+        $(window).on("scroll", startFunctions.heroScroll);
 
-			$(function () {
-				var startFunctions = start.functions;
+        // EDIT IMAGE INSIDE LINKS ON POST
+        $(window).on("load", startFunctions.imgInsideLinkPost);
+      });
+    }
+  },
 
-				//SHOW NAVIGATION INIT
-				$(window).on("scroll", startFunctions.showNavigation);
+  // PLUGINS
 
-				//HERO SCROLL
-				$(window).on("scroll", startFunctions.heroScroll);
+  plugins: {
+    init: function init() {
+      $(function () {
+        // WOW
+        var notAndroid = !/Android/i.test(navigator.userAgent);
+        if (notAndroid) {
+          var wow = new WOW({
+            mobile: true
+          });
+          wow.init();
+        }
 
-				//EDIT IMAGE INSIDE LINKS ON POST
-				$(window).on("load", startFunctions.imgInsideLinkPost);
-			});
-		}
-	},
+        // TYPESCRIPT
+        var typeScript = function () {
+          Typed.new("#typed", {
+            stringsElement: document.getElementById("typed-strings"),
+            loop: true,
+            typeSpeed: 60
+          });
+        }();
+      });
+    }
+  },
 
-	//PLUGINS
+  // INIT OBJECT
 
-	plugins: {
-		init: function init() {
-			$(function () {
+  init: function init() {
+    start.events.init();
 
-				//WOW
-				var notAndroid = !/Android/i.test(navigator.userAgent);
-				if (notAndroid) {
-					var wow = new WOW({
-						mobile: true
-					});
-					wow.init();
-				}
-
-				//TYPESCRIPT
-				var typeScript = function () {
-					Typed.new('#typed', {
-						stringsElement: document.getElementById('typed-strings'),
-						loop: true,
-						typeSpeed: 60
-					});
-				}();
-			});
-		}
-	},
-
-	//INIT OBJECT
-
-	init: function init() {
-		start.events.init();
-
-		start.plugins.init();
-	}
+    start.plugins.init();
+  }
 };
 
-//INIT OBJECTS
+// INIT OBJECTS
 
 start.init();

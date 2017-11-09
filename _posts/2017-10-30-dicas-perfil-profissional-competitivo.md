@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 dicas para ter um perfil profissional competitivo"
+title: "5 dicas para ser um perfil profissional competitivo"
 date: 2017-10-30 10:47:00
 image: '/assets/dist/images/posts/dicas-emprego/dicas-emprego-post.jpg'
 description: "Saiba como se destacar e aumentar suas chances de conseguir um emprego"
@@ -11,7 +11,7 @@ tags:
 - mercado-de-trabalho
 - dicas
 
-twitter_text: "5 dicas para ter um perfil profissional competitivo"
+twitter_text: "5 dicas para ser um perfil profissional competitivo"
 introduction: "Saiba como se destacar e aumentar suas chances de conseguir um emprego."
 ---
 

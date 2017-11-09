@@ -1,72 +1,60 @@
+/* eslint-env jquery */
+
 const startFilter = {
-	//EVENTS
+  // EVENTS
 
-	functions: {
+  functions: {
+    // PREVENT ENTER
 
+    preventEnter: () => {
+      $(window).keydown((event) => {
+        if (!event.keyCode === 13) {
+          event.preventDefault();
+        }
+      });
+    },
 
-		//PREVENT ENTER
+    // FILTER
+    filter: () => {
+      const input = $("#input");
+      const filter = input.val().toUpperCase();
+      const li = $(".card-item");
 
-		preventEnter: () => {
-			$(window).keydown(e => {
-				if (e.keyCode == 13) {
-					event.preventDefault();
-					return false;
-				}
-			});
-		},
+      for (let i = 0; i < li.length; i++) {
+        const inner = li[i].getElementsByClassName("card-inner")[0];
 
-		//FILTER
-		filter: () => {
-			const input = $("#input"),
-				filter = input.val().toUpperCase(),
-				ul = $(".card-list"),
-				li = $(".card-item");
+        if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].classList.remove("is-hidden");
+        } else {
+          li[i].classList.add("is-hidden");
+        }
+      }
 
+      startFilter.functions.preventEnter();
+    },
 
-			for (let i = 0; i < li.length; i++) {
-				const inner = li[i].getElementsByClassName("card-inner")[0];
+    cleanField: (e) => {
+      e.preventDefault();
+      $(".card-item").removeClass("is-hidden");
+      $(".searchInput").val("");
+    },
+  },
 
-				if (inner.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					li[i].classList.remove("is-hidden");
-				}
-				else {
-					li[i].classList.add("is-hidden");
-				}
-			}
+  // EVENTS
+  events: {
+    init: () => {
+      $(() => {
+        const startFunctions = startFilter.functions;
+        // FILTER
+        $(".searchField").on("keyup", startFunctions.filter);
 
-			startFilter.functions.preventEnter();
-		},
-
-		cleanField: e => {
-			e.preventDefault();
-			$(".card-item").removeClass("is-hidden");
-			$(".searchInput").val("");
-		}
-
-	},
-
-
-	//EVENTS
-	events: {
-		init: () => {
-
-			$(() => {
-				const startFunctions = startFilter.functions;
-				//FILTER
-				$(".searchField").on("keyup", startFunctions.filter);
-
-				//CLEANFIELD
-				$(".cleanButton").on("click", startFunctions.cleanField);
-
-			});
-
-
-
-		}
-	},
+        // CLEANFIELD
+        $(".cleanButton").on("click", startFunctions.cleanField);
+      });
+    },
+  },
 };
 
-
-//INIT OBJECTS
+// INIT OBJECTS
 
 startFilter.events.init();
