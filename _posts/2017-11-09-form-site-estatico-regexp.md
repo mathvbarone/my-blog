@@ -25,9 +25,13 @@ Esse é o meu primeiro post técnico, e nele vamos criar um formulário sem a ne
 
 Para quem gosta de ver o exemplo antes de começar, [clique aqui](https://github.com/mathvbarone/form-sem-backend).
 
-Sempre me incomodou quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, encontrei no [Jekyll](https://jekyllrb.com/) uma solução para esse problema. Ele é uma plataforma criada pelo pessoal do Github, e através do [Liquid Template](https://shopify.github.io/liquid/), é possível utilizar includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.
+Sempre me sentia incomodado quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, utilizei o [Jekyll](https://jekyllrb.com/).
 
-Para fazer o envio do formulário utilizei o [Formspree](https://formspree.io/). Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver essa questão.
+O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll), e tem como objetivo criar um site em HTML, porém com as features que uma linguagem de programação nos oferecem. Como includes, laços de repetição, declaração de variáveis, etc.
+
+Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criado pelo pessoal da [Shopify](https://pt.shopify.com/).
+
+Já na hora de fazer o envio do formulário, utilizei o [Formspree](https://formspree.io/). Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
 
 Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.
 
@@ -55,7 +59,7 @@ Estando tudo pronto, hora de por a mão na massa.
 
 Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global.
 
-É uma medida de segurança, para evitar que elas sejam acessadas por terceiros através do "inspecionar elemento":
+É uma medida de segurança, para evitar que elas sejam acessadas por terceiros através do "inspecionar elemento".
 
 
 {% highlight js %}
@@ -67,7 +71,7 @@ Vamos começar criando uma função para englobar todo o nosso código. Esse é 
 
 ## Variáveis para manipularmos os elementos de UI
 
-Agora vamos criar as váriaveis necessárias para manipular os elementos de UI:
+Agora vamos criar as váriaveis necessárias para manipular os elementos de UI.
 
 {% highlight js %}
     (() => {
@@ -85,7 +89,7 @@ Agora vamos criar as váriaveis necessárias para manipular os elementos de UI:
 
 ## Estrutura de funções
 
-Agora vamos criar a estrutura de funções necessárias para fazer a validação do formulário:
+Em seguida, vamos criar a estrutura de funções necessárias para fazer a validação do formulário. Serão duas funções, uma que fará a validação em si, e uma para inicializarmos os eventos.
 
 
 {% highlight js %}
@@ -103,7 +107,7 @@ Agora vamos criar a estrutura de funções necessárias para fazer a validação
 
 ## Expressões Regulares
 
-Agora vem a parte mais interessante, as [Expressões Regulares](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions):
+Agora vem a parte mais interessante, as [Expressões Regulares](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 >**Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.**
 
@@ -130,9 +134,29 @@ Abaixo um overview do que faz cada metacharacter:
 {% endhighlight %}
 
 
-[Nesse site](https://regex101.com/) é possível brincar um pouco com as Expressões Regulares e, inclusive. foi utilizando ele que cheguei nas Expressões Regulares necessárias para nossa validação.
+[Nesse site](https://regex101.com/) é possível brincar um pouco com as Expressões Regulares e, inclusive. foi utilizando ele que cheguei no código necessário para a validação dos campos de nome, email e mensagem.
 
-Vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
+No campo de nome, colocamos como condicional a utilização de letras.
+
+{% highlight js %}
+    const nameRegexp = /[a-zA-Z\-'\s]+/;
+{% endhighlight %}
+
+No campo de email, colocamos como condicional a utilização de números e letras, seguidos do caractere "@", números e letras seguidos pelo caractere ".", e por último a utilização de letras, com no máximo 3 caracteres.
+
+{% highlight js %}
+    const emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+{% endhighlight %}
+
+
+No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.
+
+{% highlight js %}
+    const msgRegexp = /.*\S.*/;
+{% endhighlight %}
+
+
+Agora vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
 
 {% highlight js %}
 
