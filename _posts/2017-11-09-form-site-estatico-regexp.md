@@ -21,23 +21,150 @@ introduction: "Nessa primeira parte, aprenda a fazer uma validação de formulá
 
 Fala galera, beleza?
 
-Esse é o meu primeiro post técnico, e nele vou ensinar vocês a criar um formulário para site estático, ou seja, sem a necessidade de back-end.
+Esse é o meu primeiro post técnico, e nele vamos criar um formulário sem a necessidade de back-end para fazer o envio dos dados preenchidos.
 
-Para quem gosta de ver o exemplo antes de começar, [clique aqui](http://matheusbarone.com/form-sem-backend/) aqui para ver o form funcionando.
+Para quem gosta de ver o exemplo antes de começar, [clique aqui](http://matheusbarone.com/form-sem-backend/).
 
-Sempre me incomodou o fato de ter de usar uma linguagem back-end para fazer sites estáticos, apenas por causa do envio de formulário. Porém, quando resolvi refazer o meu site, encontrei no [Jekyll](https://jekyllrb.com/) uma solução para esse problema. Através do [Liquid Template](https://github.com/Shopify/liquid/wiki), ele consegue proporcionar a utilização de includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.
+Sempre me incomodou quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, encontrei no [Jekyll](https://jekyllrb.com/) uma solução para esse problema. Ele é uma plataforma criada pelo pessoal do Github, e através do [Liquid Template](https://shopify.github.io/liquid/), é possível utilizar includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.
 
-Por conta disso tive que procurar outras formas de fazer o envio de email, e foi assim que encontrei o [Formspree](https://formspree.io/). Ele é um projeto [Open Sourc](https://github.com/formspree/formspree) que tem como proposta exatamente resolver essa questão.
+Para fazer o envio do formulário utilizei o [Formspree](https://formspree.io/). Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver essa questão.
 
-Existe uma forma padrão de utilizar ele, onde, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.
+Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.
 
-Se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio do formulário sem a necessidade de redirecionar o usuário.
+Se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio dos dados, sem a necessidade de redirecionar o usuário.
 
-Como é muita coisa para ser abordada em apenas um tópico, vou divili-lo em 3 partes:
+Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:
 
-- Parte 1: Validação do formulário utilizando Expressões Regulares;
-- Parte 2: Envio do formulário utilizando AJAX;
-- Parte 3: Estilização das mensagens de envio utilizando SVG;
+- Parte 1: [Validação do formulário utilizando Expressões Regulares](http://matheusbarone.com/form-site-estatico-regexp/)
+
+- Parte 2: Envio do formulário utilizando AJAX.
+
+- Parte 3: Estilização das mensagens de envio utilizando SVG.
+
+Sem mais delongas, vamos começar! :D
+
+## Baixando o Boiterplate
+
+Como o nosso foco é fazer o envio do formulário, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.
+
+É só clonar [esse repositório](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos) na sua máquina, e seguir os passos de instalação.
+
+Estando tudo pronto, hora de por a mão na massa.
+
+## Função global
+
+Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global. É uma medida de segurança, para evitar que elas de sejam acessadas por terceiros através do "inspecionar elemento":
+
+
+{% highlight js %}
+    (() => {
+
+    })();
+{% endhighlight %}
+
+
+## Variáveis para manipularmos os elementos de UI
+
+Agora vamos criar as váriaveis necessárias para manipular os elementos de UI:
+
+{% highlight js %}
+    (() => {
+        // DECLARANDO AS VARIÁVEIS REFERENTES À INTERFACE
+        const form = document.querySelector(".form");
+        const fields = document.querySelectorAll(".input-field");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+        const submitButton = document.getElementById("submit-button");
+        const container = document.querySelector(".container");
+    })();
+{% endhighlight %}
+
+
+## Estrutura de funções
+
+Agora vamos criar a estrutura de funções necessárias para fazer a validação do formulário:
+
+
+{% highlight js %}
+    // FUNÇÃO DE VALIDAÇÃO DO FORM
+    const validateForm = () => {
+    };
+
+    // FUNÇÃO DE INICIALIZAÇÃO
+    const init = () => {
+    };
+
+    init();
+{% endhighlight %}
+
+
+## Expressões Regulares
+
+Agora vem a parte mais interessante, as [Expressões Regulares](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions):
+
+>**Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.**
+
+Ou seja, conseguimos detectar determinados padrões dentro de uma string, e dependendo desse padrão, executar ou não uma função.
+
+Abaixo um overview do que faz cada metacharacter:
+
+{% highlight html %}
+
+    ^  - INÍCIO DA LINHA
+    $ - FIM DA LINHA
+    [I-F] - LISTA PERMITIDA
+    {n} - QUANTIFICADOR
+    \c - ESCAPE
+    ? - OPCIONAL
+    \w - ALFANUMERICOS
+    + - REPETIDOR
+    ()- GRUPO
+    \d - APENAS NÚMEROS
+    \D - NÃO NÚMEROS
+    \s - ESPAÇOS
+    . - QUALQUER DIGITO
+
+{% endhighlight %}
+
+
+[Nesse site](https://regex101.com/) é possível brincar um pouco com as Expressões Regulares e, inclusive. foi utilizando ele que cheguei nas Expressões Regulares necessárias para nossa validação.
+
+Vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
+
+{% highlight js %}
+
+    const nameRegexp = /[a-zA-Z\-'\s]+/;
+    const emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+    const msgRegexp = /.*\S.*/;
+
+     submitButton.disabled = false;
+
+{% endhighlight %}
+
+Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.
+
+
+{% highlight js %}
+
+    // FUNÇÃO DE VALIDAÇÃO DO CAMPO
+    const validateField = (regExp, field) => {
+      if (regExp.test(field.value)) {
+        field.classList.remove("is-danger");
+        field.nextElementSibling.classList.add("is-hidden");
+      } else {
+        field.classList.add("is-danger");
+        field.nextElementSibling.classList.remove("is-hidden");
+        submitButton.disabled = true;
+      }
+    };
+
+{% endhighlight %}
+
+
+
+
+
 
 
 

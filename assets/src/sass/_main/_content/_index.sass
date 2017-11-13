@@ -1,5 +1,5 @@
 //HERO INDEX
-.hero-index 
+.hero-index
     min-height: 100vh
     height: 100vh
     background-position: center top;
@@ -14,37 +14,37 @@
 
     .logo-full
         width: 120px
-        +transition (ease-in-out, 0.2s, all) 
+        +transition (ease-in-out, 0.2s, all)
 
-        
-        .logo-full-1 
-            +transition (ease-in-out, 0.2s, all) 
-            stroke: #fff 
+
+        .logo-full-1
+            +transition (ease-in-out, 0.2s, all)
+            stroke: #fff
             stroke-miterlimit: 10
             stroke-width: 3px
             fill:#fff
-        .logo-full-2 
-            +transition (ease-in-out, 0.2s, all) 
+        .logo-full-2
+            +transition (ease-in-out, 0.2s, all)
             fill: #000
 
         &:hover
-            transform: scale(1.06) 
-            .logo-full-1 
+            transform: scale(1.06)
+            .logo-full-1
                 fill: #000
 
-            .logo-full-2 
-                fill: #fff     
-  
-            
+            .logo-full-2
+                fill: #fff
+
+
         @media (max-width:420px)
             width: 80px
 
 
     @media (max-width:420px)
-        padding: 30px 20px 0  
+        padding: 30px 20px 0
 
     @media (max-width:380px)
-        padding-bottom: 50px         
+        padding-bottom: 50px
 
 
 
@@ -75,23 +75,23 @@
         @media (max-width:340px)
             font-size: 1.7rem
 
- 
+
 
     .subtitle
         font-weight: 400
         font-size: 2rem
 
         .typed-words
-            display: initial  
+            display: initial
 
 
         @media (max-width:1024px)
             font-size: 1.5rem
 
         @media (max-width:540px)
-            padding-bottom: 10px 
+            padding-bottom: 10px
             font-size: 1.2rem
-            max-width: 200px;   
+            max-width: 200px;
 
 
 #typed-strings
@@ -102,7 +102,7 @@
   animation: blink 0.7s infinite
 
 @keyframes blink
-  0% 
+  0%
     opacity: 1
   50%
     opacity: 0
@@ -116,20 +116,20 @@
     white-space: nowrap
     z-index: 2
     text-decoration: none
-    +transition (ease-in-out, 0.2s, all) 
-    
+    +transition (ease-in-out, 0.2s, all)
+
     span,
     .fa
-        +transition (ease-in-out, 0.2s, all) 
-    
+        +transition (ease-in-out, 0.2s, all)
+
 
     span
         @extend .is-block
         color: #aaa9a9
         font-weight: 300
         @extend .has-text-centered
-        font-size: 1.2rem; 
-    
+        font-size: 1.2rem;
+
     .fa
         animation-name: slideInDown;
         animation-duration: 1s;
@@ -139,21 +139,21 @@
         color: #aaa9a9;
         font-size: 30px;
         padding-top: 10px;
-        
+
     &:hover
         span,
         .fa
         color: #fff;
 
-@keyframes slideInDown 
-  0% 
+@keyframes slideInDown
+  0%
     transform: translateY(-15%);
     visibility: visible;
 
-  50% 
+  50%
     transform: translateY(0);
-  
-  100% 
+
+  100%
     transform: translateY(-15%)
 
 
@@ -172,36 +172,36 @@
                 width: 90%
                 height: 1px
                 @extend .bg-grey
-    
+
         .title,
         .jobs-description,
         .jobs-company,
         .mobile-version
             @extend .has-text-centered
             @extend .has-text-left-tablet
-            
+
         .title
-            font-size: 1.8em;    
+            font-size: 1.8em;
 
         .jobs-company
             @extend .is-size-7
-            @extend .p-t-10  
-        
+            @extend .p-t-10
+
         .button
             @extend .is-info
             @extend .is-medium
             @extend .m-t-20
-        
+
         .mobile-version
             @extend .is-size-7
             @extend .is-block
-            @extend .p-t-10 
-            @extend .p-b-10 
+            @extend .p-t-10
+            @extend .p-b-10
             .fa
                 margin-right: 5px
-        
+
         .job-figure
-            +transition (ease-in-out, 0.2s, all) 
+            +transition (ease-in-out, 0.2s, all)
             &:hover
                 opacity: 0.8
                 transform: scale(1.08);
@@ -219,13 +219,13 @@
         font-size: 1.8em
         @extend .m-b-20
     >p
-        font-size: 0.9rem  
+        font-size: 0.9rem
         padding: 0 0.9rem
 
 .conhecimento-figure
     width: 80px
     height: 80px
-    margin: 1rem auto 
+    margin: 1rem auto
 
     .conhecimento-icon
         cursor: pointer
@@ -236,14 +236,14 @@
 
     .icon-ideas
         &:hover
-            fill: $yellow 
+            fill: $yellow
 
     .icon-uxui
         &:hover
-            fill: $blue 
+            fill: $blue
 
     .icon-code
         &:hover
             fill: $green
 
-       
+

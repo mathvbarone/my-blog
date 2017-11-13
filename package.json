@@ -1,7 +1,7 @@
 {
   "name": "matheusjekylltemplate",
   "version": "1.0.0",
-  "description": "My jekyll blog template.",
+  "description": "Template do meu site feito com Jekyll, SASS, JS e  ❤️ .",
   "main": "gulpfile.js",
   "scripts": {
     "test": "test"
@@ -36,5 +36,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2"
-  }
+  },
+  "dependencies": {}
 }

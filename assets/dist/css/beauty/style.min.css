@@ -9135,12 +9135,6 @@ a.tag:hover {
     color: #fff
 }
 
-.about a,.post-blog .post-content a:hover {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
-    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
-    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%)
-}
-
 .post-blog .post-content a>img {
     width: 100%
 }
@@ -9151,7 +9145,14 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
+}
+
+.about a,.post-blog .post-content a:hover {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b46),to(#cd2b46));
+    background-image: -webkit-linear-gradient(top,#cd2b46 0,#cd2b46 100%);
+    background-image: -o-linear-gradient(top,#cd2b46 0,#cd2b46 100%)
 }
 
 .post-blog .post-content a:hover {
@@ -9243,7 +9244,7 @@ a.tag:hover {
 }
 
 .post-blog .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -9260,7 +9261,7 @@ a.tag:hover {
 }
 
 .post-blog .post-content .highlight pre .language-css .nc,.post-blog .post-content .highlight pre .language-js .kr,.post-blog .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-blog .post-content .highlight pre .language-js .nx {
@@ -9476,7 +9477,8 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
 }
 
 .post-html .post-content a:hover {
@@ -9567,7 +9569,7 @@ a.tag:hover {
 }
 
 .post-html .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -9584,7 +9586,7 @@ a.tag:hover {
 }
 
 .post-html .post-content .highlight pre .language-css .nc,.post-html .post-content .highlight pre .language-js .kr,.post-html .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-html .post-content .highlight pre .language-js .nx {
@@ -9811,7 +9813,8 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
 }
 
 .post-css .post-content a:hover {
@@ -9902,7 +9905,7 @@ a.tag:hover {
 }
 
 .post-css .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -9919,7 +9922,7 @@ a.tag:hover {
 }
 
 .post-css .post-content .highlight pre .language-css .nc,.post-css .post-content .highlight pre .language-js .kr,.post-css .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-css .post-content .highlight pre .language-js .nx {
@@ -10133,7 +10136,8 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
 }
 
 .post-js .post-content a:hover {
@@ -10224,7 +10228,7 @@ a.tag:hover {
 }
 
 .post-js .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -10241,7 +10245,7 @@ a.tag:hover {
 }
 
 .post-js .post-content .highlight pre .language-css .nc,.post-js .post-content .highlight pre .language-js .kr,.post-js .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-js .post-content .highlight pre .language-js .nx {
@@ -10455,7 +10459,8 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
 }
 
 .post-misc .post-content a:hover {
@@ -10546,7 +10551,7 @@ a.tag:hover {
 }
 
 .post-misc .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -10563,7 +10568,7 @@ a.tag:hover {
 }
 
 .post-misc .post-content .highlight pre .language-css .nc,.post-misc .post-content .highlight pre .language-js .kr,.post-misc .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-misc .post-content .highlight pre .language-js .nx {
@@ -10789,7 +10794,8 @@ a.tag:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     position: initial;
-    margin-left: 5px
+    margin-left: 5px;
+    background: 0 0
 }
 
 .post-front .post-content a:hover {
@@ -10885,7 +10891,7 @@ a.tag:hover {
 }
 
 .post-front .post-content .highlight pre .language-html .na {
-    color: #ffb336;
+    color: #ffbc00;
     font-style: italic
 }
 
@@ -10902,7 +10908,7 @@ a.tag:hover {
 }
 
 .post-front .post-content .highlight pre .language-css .nc,.post-front .post-content .highlight pre .language-js .kr,.post-front .post-content .highlight pre .language-js .s2 {
-    color: #ffb336
+    color: #ffbc00
 }
 
 .post-front .post-content .highlight pre .language-js .nx {
