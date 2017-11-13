@@ -14,7 +14,7 @@ layout: compress
                <!-- ANALYTICS -->
                {% include analytics.html %}
                <!-- /ANALYTICS -->
-               
+
                <!-- HEADER -->
                {% include header.html %}
                <!-- /HEADER -->
@@ -25,8 +25,8 @@ layout: compress
 
                <!-- OFFSET -->
                <div class="offset index-offset">
-                                      
-                    <!-- CONTENT -->     
+
+                    <!-- CONTENT -->
                     {{ content }}
                     <!-- /CONTENT -->
 
@@ -39,8 +39,10 @@ layout: compress
 
                <!-- ARROW -->
                <a href="#top" class="up-arrow">
-                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
-               </a>
+                    <svg class="icon-uparrow">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
+                    </svg>
+                </a>
                <!-- ARROW -->
 
           </section>

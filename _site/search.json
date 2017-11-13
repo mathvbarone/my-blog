@@ -1,19 +1,15 @@
 [
   
     {
-<<<<<<< HEAD
-      "title"    : "Criando formulário sem Back-End (Parte 1) - Validação com RegExp",
+      "title"    : "Formulário para site estático (Parte 1) - Validação com RegExp",
       "category" : "",
-      "tags"     : "js, regexp, es6, and frontend",
-      "url"      : "/form-sem-backend-parte-1/",
+      "tags"     : "js, regexp, es6, and form-site-estatico",
+      "url"      : "/form-site-estatico-regexp/",
       "date"     : "09 Nov 2017"
     } ,
   
     {
-      "title"    : "5 dicas para ser um perfil profissional competitivo",
-=======
       "title"    : "5 dicas para ter um perfil profissional competitivo",
->>>>>>> 89e2dda50f5aaa3fcad4db6e46ba02b7aa2a8b75
       "category" : "",
       "tags"     : "mercado-de-trabalho and dicas",
       "url"      : "/dicas-perfil-profissional-competitivo/",

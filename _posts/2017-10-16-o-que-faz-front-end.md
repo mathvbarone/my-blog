@@ -66,7 +66,7 @@ Em resumo:
 
 >**O Desenvolvedor Front-end é responsável pela manipulação das informações enviadas para o navegador pelo servidor. O objetivo é fazer com que o usuário consiga acessar essas informações da forma mais rápida e intuitiva possível.**
 
-A missão é difícil e complexa. O fato de ser uma profissão nova, faz com que ela esteja em constante evolução. Isso obriga o profissional a estar sempre atento, estudando, se não em pouco tempo tudo o que você sabe se torna obsoleto. 
+A missão é difícil e complexa. O fato de ser uma profissão nova, faz com que ela esteja em constante evolução. Isso obriga o profissional a estar sempre atento, estudando, se não em pouco tempo tudo o que você sabe se torna obsoleto.
 
 Por outro lado, se olharmos o gráfico de buscas pelo termo "Front-end developer", veremos como a necessidade por esse profissional vem crescendo com o decorrer dos anos, e a tendência é essa curva continuar aumentando.
 
@@ -75,9 +75,9 @@ Por outro lado, se olharmos o gráfico de buscas pelo termo "Front-end developer
   <figcaption>Busca pelo termo "Front-end developer" de 2004 até 2017.</figcaption>
 </figure>
 
-Para ilustrar um pouco mais tudo o que esta sendo abordado no post, vou deixar aqui essa [palestra do Shankar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=cmT3clnhbiQ) no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma leve e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais. 
+Para ilustrar um pouco mais tudo o que esta sendo abordado no post, vou deixar aqui essa [palestra do Shankar](https://www.youtube.com/watch?v=cmT3clnhbiQ) no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma leve e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais.
 
-Se você se interessou pela área, eu [escrevi um post no medium <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228) que pode te ajudar a começar.
+Se você se interessou pela área, eu [escrevi um post no medium](https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228) que pode te ajudar a começar.
 
 Bom pessoal, acho que é isso. Se gostarem do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts. Críticas, e sugestões são sempre bem-vindas.
 

@@ -18,7 +18,7 @@ head-class: default
         <div id="top"></div>
         {% include header.html %}
         <!-- /HEADER -->
-        
+
         <!-- HERO -->
         {% include hero/hero-default.html %}
         <!-- HERO -->
@@ -32,9 +32,9 @@ head-class: default
                 <!-- BREADCRUMB -->
                 <nav class="breadcrumb is-small  {% if page.about %}{{ page.about }}{% endif %}" aria-label="breadcrumbs">
                     <ul>
-                        <li><a href="{{site.baseurl}}/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>                    
+                        <li><a href="{{site.baseurl}}/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>
                         {% if page.category %}
-                        <li class="is-category"><a href="#" aria-current="page"><span class="icon is-small">{{ page.category-favicon }}</span><span>{{page.category}}</span></a></li>                                        
+                        <li class="is-category"><a href="#" aria-current="page"><span class="icon is-small">{{ page.category-favicon }}</span><span>{{page.category}}</span></a></li>
                         {% endif %}
                         <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small">{{ page.favicon }}</span><span>{{ page.title }}</span></a></li>
                     </ul>
@@ -42,7 +42,7 @@ head-class: default
                 <!-- BREADCRUMB -->
 
                 <!-- CONTENT -->
-                    {{ content }}  
+                    {{ content }}
                 <!-- CONTENT -->
             </div>
 
@@ -55,7 +55,9 @@ head-class: default
 
         <!-- ARROW -->
         <a href="#top" class="up-arrow">
-            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            <svg class="icon-uparrow">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
+            </svg>
         </a>
         <!-- ARROW -->
     </body>

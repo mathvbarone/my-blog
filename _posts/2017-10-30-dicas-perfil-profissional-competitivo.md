@@ -84,9 +84,9 @@ Então criei uma pequena tabela em que dividia meu dia de acordo com os meus hor
 
 Para quem não sabe, podcast é como se fosse uma rádio, porém com episódios  pré-gravados e editados. Por ser apenas áudio, te permite continuar estudando não importa a hora ou lugar. Seja no ônibus, na fila do banco, lavando a louça, etc. Eu sempre consumi esse tipo de conteúdo, porém apenas como forma de entretenimento. O que fiz foi buscar podcasts voltados para a minha profissão.
 
-Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://hipsters.tech/), [Dev na Estrada <i class="fa fa-share-square-o" aria-hidden="true"></i>](http://devnaestrada.com.br/) e [Podprogramar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://mundopodcast.com.br/podprogramar/). Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
+Já que trabalho com tecnologia, passei a ouvir podcasts com essa temática, como [Hipsters.tech](https://hipsters.tech/), [Dev na Estrada](http://devnaestrada.com.br/) e [Podprogramar](https://mundopodcast.com.br/podprogramar/). Eles não só servem como uma fonte de conhecimento, como também me mantém atualizado a respeito das novidades do mercado, além de me apresentar novas pessoas que tem os mesmos interesses que eu. E tudo isso de forma leve e engraçada.
 
-Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
+Eu tenho certeza que se você procurar, achará bastante [conteúdo relevante para estudar](https://guiadoestudante.abril.com.br/estudo/podcasts-uteis-para-quem-tem-pouco-tempo-para-estudar/).
 
 Em seguida, comecei a aplicar a mesma lógica para outras formas de entretenimento. Por exemplo, na hora do almoço eu tinha mania de ficar vendo vídeos aleatórios (em sua maioria besteirol) no YouTube. Então passei a usar esse tempo para assistir vídeos relacionados à desenvolvimento web e tecnologia. Chegou a um ponto que até mesmo na hora de assistir Netflix, eu buscar filmes e documentários com essa temática. hahahahaha
 
@@ -121,7 +121,7 @@ Faça o teste, passe dias curtindo coisas relacionadas à sua profissão. Em pou
 
 A lógica serve para o Youtube também. Quando mudei o perfil das minhas buscas, ele passou a me sugerir um conteúdo muito mais interessante. Isso acaba criando um loop de conhecimento, em que quanto mais engajado você for nas suas buscas, mais conteúdo chegará até você.
 
-Para entender melhor como funcionam esses algoritmos, (principalmente a questão da bolha social) o Felipe Castanhari fez [um vídeo <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.youtube.com/watch?v=COgkI7GhFR0) bastante interessante abordando esse assunto.
+Para entender melhor como funcionam esses algoritmos, (principalmente a questão da bolha social) o Felipe Castanhari fez [um vídeo](https://www.youtube.com/watch?v=COgkI7GhFR0) bastante interessante abordando esse assunto.
 
 ## 4- Crie uma rede de contatos (Networking)
 
@@ -142,19 +142,19 @@ Indo para o mundo digital, podemos tirar vantagem do principal objetivo de uma r
 
 Uma dica é procurar por grupos de facebook, eles são excelentes para encontrar vagas, inclusive foi onde encontrei a vaga para trabalhar na UOL.
 
-(Se você trabalha como front, procure grupos como: [“Front-end Vagas  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/213564108815633/?ref=br_rs), [“Desenvolvimento Web  <i class="fa fa-share-square-o" aria-hidden="true"></i>”](https://www.facebook.com/groups/desenvolvimentoweb/), e [“Front-end Brasil <i class="fa fa-share-square-o" aria-hidden="true"></i>"](https://www.facebook.com/profile.php?id=261496957232397)).
+(Se você trabalha como front, procure grupos como: [“Front-end Vagas ”](https://www.facebook.com/groups/213564108815633/?ref=br_rs), [“Desenvolvimento Web ”](https://www.facebook.com/groups/desenvolvimentoweb/), e [“Front-end Brasil"](https://www.facebook.com/profile.php?id=261496957232397)).
 
 Já o twitter é perfeito para se colocar a par das novidades da área. Siga pessoas relevantes, interaja com elas, mais uma vez, as redes sociais são excelentes ferramentas, se utilizadas da maneira correta.
 
-(Se você trabalha como front, procure perfis como: [@frontendbrvagas <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://twitter.com/frontendbrvagas) e [@frontendbr <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://twitter.com/frontendbr)).
+(Se você trabalha como front, procure perfis como: [@frontendbrvagas](https://twitter.com/frontendbrvagas) e [@frontendbr](https://twitter.com/frontendbr)).
 
-No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o [Linkedin <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.linkedin.com/). Para quem não conhece, é uma rede social voltada para profissionais.
+No entanto, existe uma que você deve dar mais atenção do que todas as outras quando se trata de procurar emprego, o [Linkedin](https://www.linkedin.com/). Para quem não conhece, é uma rede social voltada para profissionais.
 
 Ao criar um perfil, você basicamente gera um curriculum online. Nele é possível colocar informações relevantes como sua experiência profissional, formação acadêmica, trabalhos voluntários, competências, recomendações, e muito mais.
 
 Com uma simples busca você encontra uma lista de empresas procurando por profissionais com as suas características, além das próprias empresas chegarem facilmente até você. Isso aumenta exponencialmente as possibilidades de encontrar uma vaga, uma vez que não existe a barreira física.
 
-Portanto, pare o que estiver fazendo, e vá dedicar um tempo ao seu [Linkedin <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://www.linkedin.com/).
+Portanto, pare o que estiver fazendo, e vá dedicar um tempo ao seu [Linkedin](https://www.linkedin.com/).
 
 Tente descrever seu lado profissional de forma clara e sucinta. Siga empresas, adicione pessoas, recomende seus colegas e ex-colegas de trabalho, e pode ter certeza que em pouco tempo você perceberá as portas se abrindo.
 
@@ -175,7 +175,7 @@ Se você quer ter uma relevância perante as empresas, é necessário encontrar 
 
 Algumas dicas:
 
-- Participe de [projetos, e trabalhos voluntários <i class="fa fa-share-square-o" aria-hidden="true"></i>](https://github.com/training-center/mentoria).
+- Participe de [projetos, e trabalhos voluntários](https://github.com/training-center/mentoria).
 - Estude para preencher todos os requisitos pedidos pelas vagas.
 - Faça o máximo de cursos possíveis. (Existe muita coisa boa e gratuita na internet. É só ter paciência de procurar).
 - Documente as coisas que você estiver aprendendo.

@@ -9,7 +9,7 @@
 $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
 
 
-.checkmark 
+.checkmark
   width: 60px
   height: 60px
   border-radius: 50%
@@ -23,18 +23,18 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
 .checkmark-success
      box-shadow: inset 0px 0px 0px $green
      animation: fill-success .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
-     .checkmark-circle 
+     .checkmark-circle
           stroke: $green
 
 .checkmark-error
      animation: fill-error .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
-     .checkmark-circle 
+     .checkmark-circle
           stroke: $black
 
 
 
 
-.checkmark-circle 
+.checkmark-circle
   stroke-dasharray: 166
   stroke-dashoffset: 166
   stroke-width: 2
@@ -43,39 +43,33 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
   animation: stroke .6s $curve forwards
 
 
-.checkmark-check 
+.checkmark-check
   transform-origin: 50% 50%
   stroke-dasharray: 48
   stroke-dashoffset: 48
   animation: stroke .3s $curve .8s forwards
 
 
-@keyframes stroke 
-  100% 
+@keyframes stroke
+  100%
     stroke-dashoffset: 0
-  
 
 
-@keyframes scale 
-  0%, 100% 
+
+@keyframes scale
+  0%, 100%
     transform: none
-  
-  50% 
+
+  50%
     transform: scale3d(1.1, 1.1, 1);
-  
-@keyframes fill-success 
-  100% 
+
+@keyframes fill-success
+  100%
     box-shadow: inset 0px 0px 0px 30px $green
 
-@keyframes fill-error 
-  100% 
-    box-shadow: inset 0px 0px 0px 30px $black    
-
-
-  
-    
-
-
+@keyframes fill-error
+  100%
+    box-shadow: inset 0px 0px 0px 30px $black
 
 
 .is-hidden
@@ -96,22 +90,29 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
      right: 20px
      bottom: -60px
      background: $primary
-     display: block
+     display: flex
      text-align: center
      width: 50px
-     line-height: 45px
      height: 50px
      border: 2px solid $primary
+     align-items: center
+     justify-content: center
+
+     .icon-uparrow
+          cursor: pointer
+          width: 16px
+          height: 16px
+          fill: white
+          transition: ease-in-out .2s all
+
 
      &.is-active
           bottom: 20px
 
-     .fa
-          color: #fff
 
      &:hover
           background: #fff
 
-          .fa
-               color: $primary
+          .icon-uparrow
+                fill: $primary
 

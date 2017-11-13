@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Criando formulário sem Back-End (Parte 1) - Validação com RegExp</title>
+  <title>Formulário para site estático (Parte 1) - Validação com RegExp</title>
   <meta name="description" content="Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares">
 
   <!-- Google Authorship Markup -->
@@ -17,7 +17,7 @@
   <!-- Social: Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@matheusvbarone">
-  <meta name="twitter:title" content="Criando formulário sem Back-End (Parte 1) - Validação com RegExp">
+  <meta name="twitter:title" content="Formulário para site estático (Parte 1) - Validação com RegExp">
   <meta name="twitter:description" content="Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares">
   
   <meta property="twitter:image:src" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/parte1.jpg">
@@ -25,8 +25,8 @@
 
   <!-- Social: Facebook / Open Graph -->
   <meta property="fb:app_id" content="2011413979095249" />
-  <meta property="og:url" content="http://localhost:4000/form-sem-backend-parte-1/">
-  <meta property="og:title" content="Criando formulário sem Back-End (Parte 1) - Validação com RegExp">
+  <meta property="og:url" content="http://localhost:4000/form-site-estatico-regexp/">
+  <meta property="og:title" content="Formulário para site estático (Parte 1) - Validação com RegExp">
   
   <meta property="og:image" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/parte1.jpg">
   
@@ -34,7 +34,7 @@
   <meta property="og:site_name" content="Matheus Barone | Desenvolvedor Front-end">
 
   <!-- Social: Google+ / Schema.org  -->
-  <meta itemprop="name" content="Criando formulário sem Back-End (Parte 1) - Validação com RegExp"/>
+  <meta itemprop="name" content="Formulário para site estático (Parte 1) - Validação com RegExp"/>
   <meta itemprop="description" content="Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares">
   <meta itemprop="image" content="http://localhost:4000/assets/dist/images/site-image.jpg"/>
 
@@ -70,9 +70,8 @@
 <!-- POST LAYOUT CRITICAL CSS -->
 
   <style>
-.button,html{background-color:#fff}.breadcrumb,.button{-webkit-touch-callout:none;white-space:nowrap}.button,.container,.offset,.post-content a{position:relative}body,h1,h2{font-weight:400}article,header,section{display:block}img{max-width:100%;height:auto}.hero,.hero-body{-webkit-box-orient:vertical;-webkit-box-direction:normal}body,h1,h2,html,li,p,ul{margin:0;padding:0}h1,h2{font-size:100%}ul{list-style:none}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}.button,body{font-size:1rem;line-height:1.5}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{color:#4a4a4a;font-family:Montserrat,sans-serif}a{color:#2ab7cd;text-decoration:none}span{font-style:inherit;font-weight:inherit}.button{-moz-appearance:none;-webkit-appearance:none;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #dbdbdb;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:none;box-shadow:none;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;height:2.25em;padding-bottom:-webkit-calc(.375em - 1px);padding-bottom:calc(.375em - 1px);padding-top:-webkit-calc(.375em - 1px);padding-top:calc(.375em - 1px);vertical-align:top;color:#363636;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-left:1em;padding-right:1em;text-align:center}.breadcrumb a,.icon{-webkit-box-align:center}.button.is-primary{background-color:#cd2b46;border-color:transparent;color:#fff}.container{margin:0 auto}.icon{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:1.5rem;width:1.5rem}.icon.is-small{height:1rem;width:1rem}.hero-posts-body,.post-offset .breadcrumb,.post-title{width:100%;max-width:50rem}.subtitle{word-break:break-word;color:#4a4a4a;font-size:1.25rem;font-weight:400;line-height:1.25}.breadcrumb:not(:last-child){margin-bottom:1.5rem}.breadcrumb{overflow:hidden;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;font-size:1rem;overflow-x:auto}.breadcrumb a{-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#7a7a7a;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:.5em .75em}.breadcrumb li,.breadcrumb ul{-webkit-box-align:center;display:flex}.breadcrumb li{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.breadcrumb li+li::before{color:#4a4a4a;content:"\0002f"}.breadcrumb ul{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.breadcrumb .icon:first-child{margin-right:.5em}.breadcrumb.is-small{font-size:.75rem}.level{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.level.is-mobile .level-item:not(:last-child){margin-bottom:0}.level.is-mobile,.level.is-mobile .level-left,.level.is-mobile .level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.level.is-mobile .level-item:not(.is-narrow){-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}.level-item,.level-left{-webkit-box-align:center}.level-item{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:flex;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.level-left,.level-right{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.level-left{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.level-right{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.hero{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.hero-body{padding:3rem 1.5rem;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.up-arrow{display:block}*{margin:0;list-style-type:none;padding:0}.offset{background:#fff}.post-offset{top:70vh}.post-offset .breadcrumb{padding:30px 0 10px 1.4em;margin:0 auto}.hero-posts{height:70vh;min-height:70vh;}.hero-posts-body{margin:auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.post-date,.post-description,.post-title{color:#fff}.post-title{font-weight:700;padding:20px 0;font-size:3.4em;line-height:1.4em}.post-description{font-size:1.4em;font-weight:300}.post-content h2,.post-content p{width:auto;width:100%;max-width:50rem;display:block;margin:0 auto 1.875rem;padding:0 1em;font-weight:300;font-style:normal;font-size:1.125rem;line-height:1.5em;letter-spacing:.01rem}.post-content h2{padding:0 .7em;color:#FFF;font-weight:700;margin-bottom:30px;font-size:1.6em}.post-content h2:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}.post-content a{padding:0 3px;color:#FFF;font-weight:500}.post-content a:after{content:'';position:absolute;width:100%;height:2px;background:#FFF;bottom:0;left:0}.hero,.mast-header{position:fixed;width:100%}.mast-header{z-index:10;-webkit-box-shadow:0 3px 5px rgba(0,0,0,.12);box-shadow:0 3px 5px rgba(0,0,0,.12);padding:5px 10px;top:0;background:#fff}.mast-header .logo-simple .logo-simple-1{fill:#000200;stroke:#fff;stroke-miterlimit:10;stroke-width:2px}.mast-header .logo-simple .logo-simple-2{fill:none}.mast-header .logo-simple .logo-simple-3{fill:#fff}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:10px;color:#000}.menu-link{font-size:.95em}.breadcrumb{max-width:51rem}.breadcrumb li:first-child a{padding-left:0}.hero{min-height:100vh;height:100vh;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.hero-body{text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}@media screen and (min-width:769px),print{.level-right .level-item:not(:last-child){margin-right:.75rem}.level{display:flex}.level-left,.level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media screen and (min-width:1024px){.container{max-width:960px;width:960px}}@media screen and (min-width:1216px){.container{max-width:1152px;width:1152px}}@media screen and (min-width:1408px){.container{max-width:1344px;width:1344px}}@media screen and (max-width:768px){.level-item:not(:last-child){margin-bottom:.75rem}}@media (max-width:540px){.hero-posts{height:60vh;min-height:60vh}.post-offset{top:60vh}.post-title{line-height:1.2em;font-size:1.9em}.post-description{font-size:1.2em}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:8px}.menu-link{font-size:.8rem}}@media (max-width:340px){.menu-link{font-size:.74rem}}
+.button,.container,.offset,.post-content a{position:relative}.button,html{background-color:#fff}.breadcrumb,.button{-webkit-touch-callout:none;white-space:nowrap}body,h1,h2{font-weight:400}article,header,section{display:block}img{max-width:100%;height:auto}.hero,.hero-body{-webkit-box-orient:vertical;-webkit-box-direction:normal}body,h1,h2,html,li,p,ul{margin:0;padding:0}h1,h2{font-size:100%}ul{list-style:none}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}.button,body{font-size:1rem;line-height:1.5}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{color:#4a4a4a;font-family:Montserrat,sans-serif}a{color:#2ab7cd;text-decoration:none}span{font-style:inherit;font-weight:inherit}.button{-moz-appearance:none;-webkit-appearance:none;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #dbdbdb;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:none;box-shadow:none;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;height:2.25em;padding-bottom:-webkit-calc(.375em - 1px);padding-bottom:calc(.375em - 1px);padding-top:-webkit-calc(.375em - 1px);padding-top:calc(.375em - 1px);vertical-align:top;color:#363636;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-left:1em;padding-right:1em;text-align:center}.breadcrumb a,.icon{-webkit-box-align:center}.button.is-primary{background-color:#cd2b46;border-color:transparent;color:#fff}.container{margin:0 auto}.icon{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:1.5rem;width:1.5rem}.icon.is-small{height:1rem;width:1rem}.hero-posts-body,.post-offset .breadcrumb,.post-title{width:100%;max-width:50rem}.subtitle{word-break:break-word;color:#4a4a4a;font-size:1.25rem;font-weight:400;line-height:1.25}.breadcrumb:not(:last-child){margin-bottom:1.5rem}.breadcrumb{overflow:hidden;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;font-size:1rem;overflow-x:auto}.breadcrumb a{-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#7a7a7a;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:.5em .75em}.breadcrumb li,.breadcrumb ul{-webkit-box-align:center;display:flex}.breadcrumb li{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.breadcrumb li+li::before{color:#4a4a4a;content:"\0002f"}.breadcrumb ul{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.breadcrumb .icon:first-child{margin-right:.5em}.breadcrumb.is-small{font-size:.75rem}.level{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.level.is-mobile .level-item:not(:last-child){margin-bottom:0}.level.is-mobile,.level.is-mobile .level-left,.level.is-mobile .level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.level.is-mobile .level-item:not(.is-narrow){-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}.level-item,.level-left{-webkit-box-align:center}.level-item{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:flex;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.level-left,.level-right{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.level-left{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.level-right{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.hero{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:0}.hero-body{padding:3rem 1.5rem;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.up-arrow{display:block}*{margin:0;list-style-type:none;padding:0}.offset{background:#fff;z-index:1}.post-offset{top:70vh}.post-offset .breadcrumb{padding:30px 0 10px 1.4em;margin:0 auto}.hero-posts{height:70vh;min-height:70vh}.hero-posts-body{margin:auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.post-date,.post-description,.post-title{color:#fff}.post-title{font-weight:700;padding:20px 0;font-size:3.4em;line-height:1.4em}.post-description{font-size:1.4em;font-weight:300}.post-content h2,.post-content p{width:auto;width:100%;max-width:50rem;display:block;margin:0 auto 1.875rem;padding:0 1em;font-weight:300;font-style:normal;font-size:1.125rem;line-height:1.5em;letter-spacing:.01rem}.post-content h2{padding:0 .7em;color:#FFF;font-weight:700;margin-bottom:30px;font-size:1.6em}.post-content h2:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}.post-content a{padding:0 3px;color:#FFF;font-weight:500}.post-content a:after{content:'';position:absolute;width:100%;height:2px;background:#FFF;bottom:0;left:0}.hero,.mast-header{position:fixed;width:100%}.mast-header{z-index:10;-webkit-box-shadow:0 3px 5px rgba(0,0,0,.12);box-shadow:0 3px 5px rgba(0,0,0,.12);padding:5px 10px;top:0;background:#fff}.mast-header .logo-simple .logo-simple-1{fill:#000200;stroke:#fff;stroke-miterlimit:10;stroke-width:2px}.mast-header .logo-simple .logo-simple-2{fill:none}.mast-header .logo-simple .logo-simple-3{fill:#fff}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:10px;color:#000}.menu-link{font-size:.95em}.breadcrumb{max-width:51rem}.breadcrumb li:first-child a{padding-left:0}.hero{min-height:100vh;height:100vh;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.hero-body{text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}@media screen and (min-width:769px),print{.level-right .level-item:not(: last-child){margin-right:.75rem}.level{display:flex}.level-left,.level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media screen and (min-width:1024px){.container{max-width:960px;width:960px}}@media screen and (min-width:1216px){.container{max-width:1152px;width:1152px}}@media screen and (min-width:1408px){.container{max-width:1344px;width:1344px}}@media screen and (max-width:768px){.level-item:not(: last-child){margin-bottom:.75rem}}@media (max-width:540px){.hero-posts{height:60vh;min-height:60vh}.post-offset{top:60vh}.post-title{line-height:1.2em;font-size:1.9em}.post-description{font-size:1.2em}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:8px}.menu-link{font-size:.8rem}}@media (max-width:340px){.menu-link{font-size:.74rem}}
 </style>
-
 
 <!-- POST LAYOUT CRITICAL CSS -->
 
@@ -171,34 +170,50 @@
 
     <!-- HEADER -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1">
-     <defs>
-          <symbol id="icon-code"  viewBox="0 0 200 200">
-               <path d="M116.3,30.2c-4.8,0.1-9,3.4-10.4,8L72.8,148.7c-1.8,5.9,1.6,12,7.4,13.8c5.9,1.8,12-1.6,13.8-7.4c0,0,0,0,0,0
+    <defs>
+        <symbol id="icon-code" viewBox="0 0 200 200">
+            <path d="M116.3,30.2c-4.8,0.1-9,3.4-10.4,8L72.8,148.7c-1.8,5.9,1.6,12,7.4,13.8c5.9,1.8,12-1.6,13.8-7.4c0,0,0,0,0,0
                l33.1-110.5c1.8-5.8-1.4-12-7.3-13.8C118.8,30.4,117.5,30.2,116.3,30.2z M56,44c-2.9,0-5.7,1.1-7.8,3.1L4,88.6
                c-4.5,4.2-4.7,11.2-0.5,15.6c0.2,0.2,0.3,0.4,0.5,0.5l44.2,41.4c4.5,4.2,11.5,4,15.7-0.5c4.2-4.5,4-11.5-0.5-15.7L27.8,96.7
                l35.6-33.4c4.5-4.1,4.9-11.1,0.8-15.6C62.1,45.4,59.1,44,56,44L56,44z M143.7,44c-6.1,0.2-10.9,5.3-10.7,11.4c0.1,3,1.4,5.9,3.6,7.9
                l35.6,33.4L136.6,130c-4.5,4.2-4.7,11.2-0.5,15.7c4.2,4.5,11.2,4.7,15.7,0.5l44.2-41.4c4.5-4.2,4.7-11.2,0.5-15.6
-               c-0.2-0.2-0.3-0.4-0.5-0.5l-44.2-41.4C149.6,45,146.7,43.9,143.7,44L143.7,44z"/>
-          </symbol>
+               c-0.2-0.2-0.3-0.4-0.5-0.5l-44.2-41.4C149.6,45,146.7,43.9,143.7,44L143.7,44z" />
+        </symbol>
 
-          <symbol id="icon-uxui"  viewBox="0 0 200 200">
-               <path d="M172.6,53.41a5,5,0,0,0-1.45-3.53L150,28.73a5,5,0,0,0-7.06,0L2,169.69a5,5,0,0,0,0,7.06L23.12,197.9a5,5,0,0,0,7.06,0l141-141A5,5,0,0,0,172.6,53.41Zm-45.4,33.4L113.11,72.72l33.4-33.4,14.09,14.09Z" transform="translate(-0.5)"/>
-               <path d="M179.94,39.87a19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,0,19.91,19.91,0,0,1,160,19.94,19.91,19.91,0,0,1,179.94,39.87Z" transform="translate(-0.5)"/>
-               <path d="M110.16,39.87A19.91,19.91,0,0,1,130.1,19.94,19.91,19.91,0,0,1,110.16,0,19.91,19.91,0,0,1,90.23,19.94,19.94,19.94,0,0,1,110.16,39.87Z" transform="translate(-0.5)"/>
-               <path d="M179.94,69.77A19.91,19.91,0,0,1,160,89.71a19.91,19.91,0,0,1,19.94,19.94,19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,69.77Z" transform="translate(-0.5)"/>
-          </symbol>
+        <symbol id="icon-uxui" viewBox="0 0 200 200">
+            <path d="M172.6,53.41a5,5,0,0,0-1.45-3.53L150,28.73a5,5,0,0,0-7.06,0L2,169.69a5,5,0,0,0,0,7.06L23.12,197.9a5,5,0,0,0,7.06,0l141-141A5,5,0,0,0,172.6,53.41Zm-45.4,33.4L113.11,72.72l33.4-33.4,14.09,14.09Z"
+                transform="translate(-0.5)" />
+            <path d="M179.94,39.87a19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,0,19.91,19.91,0,0,1,160,19.94,19.91,19.91,0,0,1,179.94,39.87Z"
+                transform="translate(-0.5)" />
+            <path d="M110.16,39.87A19.91,19.91,0,0,1,130.1,19.94,19.91,19.91,0,0,1,110.16,0,19.91,19.91,0,0,1,90.23,19.94,19.94,19.94,0,0,1,110.16,39.87Z"
+                transform="translate(-0.5)" />
+            <path d="M179.94,69.77A19.91,19.91,0,0,1,160,89.71a19.91,19.91,0,0,1,19.94,19.94,19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,69.77Z"
+                transform="translate(-0.5)" />
+        </symbol>
 
-          <symbol id="icon-ideas"  viewBox="0 0 200 200">
-               <path d="M153.14,61.72c-.27-.47-.56-.89-1.13-1.72A63.43,63.43,0,0,0,100.4,32.91a62.28,62.28,0,0,0-34.49,11c-1,.64-2,1.36-3.37,2.42-1,.76-2,1.6-2.91,2.39l-.57.48a36.18,36.18,0,0,0-3.35,3.28,46,46,0,0,0-3.61,4.09c-.35.42-.7.85-1.18,1.48s-.74,1.05-1,1.36a5.94,5.94,0,0,0-.71,1,13.28,13.28,0,0,0-.87,1.3c-6.75,10.28-10.1,21.07-9.95,32a53.65,53.65,0,0,0,6.05,25c.11.26.23.53.47,1a82.72,82.72,0,0,0,5.67,9.7l.9,1.28c2.2,3.25,4.34,6.43,6.17,9.47.47,1.16,1,2.27,1.48,3.41a48.49,48.49,0,0,1,2.42,6.3,31.76,31.76,0,0,1,1.18,7.76l-.41,7.05,78.69-.3-1.81-7.15a16,16,0,0,1,.3-4,37.66,37.66,0,0,1,1.62-6.5c.36-1.09.78-2.16,1-2.73l.4-.64a14.56,14.56,0,0,0,1.54-3.35c1.79-3.08,3.79-6.1,6-9.45l1.08-1.63a86.48,86.48,0,0,0,6.1-10.79A53.7,53.7,0,0,0,163,92.93V92.1A55.84,55.84,0,0,0,153.14,61.72ZM58,67.39l.42-.6.25-.41c.5-.64,1-1.3,1.3-1.79l1.24-1.52a34.66,34.66,0,0,1,2.63-2.95,29,29,0,0,1,2.52-2.46l.6-.51c.75-.65,1.51-1.31,2.81-2.29.73-.55,1.45-1.1,2.34-1.67a51.19,51.19,0,0,1,28.36-9.11c16.57-.06,32.8,8.48,42.72,22.78l.49.76c5.25,7.86,8,16.15,8.14,24.61v.89a43,43,0,0,1-4.59,20.16,76.2,76.2,0,0,1-5.35,9.46l-1.05,1.59c-2.44,3.65-4.62,6.94-6.77,10.74l-.41,1.11a9.79,9.79,0,0,1-.77,1.58,7,7,0,0,0-.82,1.49c-.52,1.27-1,2.6-1.47,3.9a48.29,48.29,0,0,0-2.07,8.39c-.09.58-.17,1.14-.24,1.7l-54.58.21a43,43,0,0,0-1.31-6.61,58.81,58.81,0,0,0-3-7.82c-.48-1.06-1-2.13-1.41-3.26L67.6,135c-2.18-3.71-4.47-7.13-6.89-10.7l-.9-1.26a73.05,73.05,0,0,1-5.1-8.82l-.39-.85A42.39,42.39,0,0,1,49.6,93.68C49.47,84.9,52.27,76.08,58,67.39Zm-6,47.14Z" transform="translate(-10.07 0)"/>
-               <path d="M124.45,93.52,95.79,140.93a.67.67,0,0,1-1.24-.44L99.1,109a.68.68,0,0,0-.66-.8l-20.84.08a.67.67,0,0,1-.58-1l28.66-47.41a.67.67,0,0,1,1.24.44l-4.56,31.53a.65.65,0,0,0,.66.77l20.84-.08A.7.7,0,0,1,124.45,93.52Z" transform="translate(-10.07 0)"/>
-               <path d="M61.26,175v0a27.3,27.3,0,0,0,0,5.32c1.18,7.76,9.44,8.18,12.13,8.35,1.38,0,2.76.09,4.15.09,3.76,0,4.53.37,5.84,2.46,3.28,5.2,10.28,8.39,18.34,8.36,7.76,0,14.19-3,17.44-8,1.6-2.49,2.6-3,6.48-3h1.84c3,0,9,0,12.35-4.14,2.79-3.44,2-7.18,1.3-9.79Z" transform="translate(-10.07 0)"/>
-               <path d="M30.87,72.09A10.59,10.59,0,0,1,20.75,79.6a10.31,10.31,0,0,1-3.17-.48,10.64,10.64,0,1,1,13.29-7Z" transform="translate(-10.07 0)"/>
-               <path d="M57.32,35.28A10.46,10.46,0,0,1,51,37.39a10.65,10.65,0,0,1-6.39-19.21,10.43,10.43,0,0,1,6.15-2,10.82,10.82,0,0,1,8.74,4.18A10.65,10.65,0,0,1,57.32,35.28Z" transform="translate(-10.07 0)"/>
-               <path d="M111,10.6a10.64,10.64,0,1,1-21.28.11A10.6,10.6,0,0,1,100.32,0,10.67,10.67,0,0,1,111,10.6Z" transform="translate(-10.07 0)"/>
-               <path d="M158.32,33.15a10.66,10.66,0,0,1-8.57,4.41,10.66,10.66,0,0,1-8.65-16.9,10.81,10.81,0,0,1,8.74-4.27A10.17,10.17,0,0,1,156,18.3a10.66,10.66,0,0,1,2.36,14.85Z" transform="translate(-10.07 0)"/>
-               <path d="M183.09,79.33a10.65,10.65,0,0,1-13.38-6.9,10.64,10.64,0,1,1,13.38,6.9Z" transform="translate(-10.07 0)"/>
-          </symbol>
-     </defs>
+        <symbol id="icon-ideas" viewBox="0 0 200 200">
+            <path d="M153.14,61.72c-.27-.47-.56-.89-1.13-1.72A63.43,63.43,0,0,0,100.4,32.91a62.28,62.28,0,0,0-34.49,11c-1,.64-2,1.36-3.37,2.42-1,.76-2,1.6-2.91,2.39l-.57.48a36.18,36.18,0,0,0-3.35,3.28,46,46,0,0,0-3.61,4.09c-.35.42-.7.85-1.18,1.48s-.74,1.05-1,1.36a5.94,5.94,0,0,0-.71,1,13.28,13.28,0,0,0-.87,1.3c-6.75,10.28-10.1,21.07-9.95,32a53.65,53.65,0,0,0,6.05,25c.11.26.23.53.47,1a82.72,82.72,0,0,0,5.67,9.7l.9,1.28c2.2,3.25,4.34,6.43,6.17,9.47.47,1.16,1,2.27,1.48,3.41a48.49,48.49,0,0,1,2.42,6.3,31.76,31.76,0,0,1,1.18,7.76l-.41,7.05,78.69-.3-1.81-7.15a16,16,0,0,1,.3-4,37.66,37.66,0,0,1,1.62-6.5c.36-1.09.78-2.16,1-2.73l.4-.64a14.56,14.56,0,0,0,1.54-3.35c1.79-3.08,3.79-6.1,6-9.45l1.08-1.63a86.48,86.48,0,0,0,6.1-10.79A53.7,53.7,0,0,0,163,92.93V92.1A55.84,55.84,0,0,0,153.14,61.72ZM58,67.39l.42-.6.25-.41c.5-.64,1-1.3,1.3-1.79l1.24-1.52a34.66,34.66,0,0,1,2.63-2.95,29,29,0,0,1,2.52-2.46l.6-.51c.75-.65,1.51-1.31,2.81-2.29.73-.55,1.45-1.1,2.34-1.67a51.19,51.19,0,0,1,28.36-9.11c16.57-.06,32.8,8.48,42.72,22.78l.49.76c5.25,7.86,8,16.15,8.14,24.61v.89a43,43,0,0,1-4.59,20.16,76.2,76.2,0,0,1-5.35,9.46l-1.05,1.59c-2.44,3.65-4.62,6.94-6.77,10.74l-.41,1.11a9.79,9.79,0,0,1-.77,1.58,7,7,0,0,0-.82,1.49c-.52,1.27-1,2.6-1.47,3.9a48.29,48.29,0,0,0-2.07,8.39c-.09.58-.17,1.14-.24,1.7l-54.58.21a43,43,0,0,0-1.31-6.61,58.81,58.81,0,0,0-3-7.82c-.48-1.06-1-2.13-1.41-3.26L67.6,135c-2.18-3.71-4.47-7.13-6.89-10.7l-.9-1.26a73.05,73.05,0,0,1-5.1-8.82l-.39-.85A42.39,42.39,0,0,1,49.6,93.68C49.47,84.9,52.27,76.08,58,67.39Zm-6,47.14Z"
+                transform="translate(-10.07 0)" />
+            <path d="M124.45,93.52,95.79,140.93a.67.67,0,0,1-1.24-.44L99.1,109a.68.68,0,0,0-.66-.8l-20.84.08a.67.67,0,0,1-.58-1l28.66-47.41a.67.67,0,0,1,1.24.44l-4.56,31.53a.65.65,0,0,0,.66.77l20.84-.08A.7.7,0,0,1,124.45,93.52Z"
+                transform="translate(-10.07 0)" />
+            <path d="M61.26,175v0a27.3,27.3,0,0,0,0,5.32c1.18,7.76,9.44,8.18,12.13,8.35,1.38,0,2.76.09,4.15.09,3.76,0,4.53.37,5.84,2.46,3.28,5.2,10.28,8.39,18.34,8.36,7.76,0,14.19-3,17.44-8,1.6-2.49,2.6-3,6.48-3h1.84c3,0,9,0,12.35-4.14,2.79-3.44,2-7.18,1.3-9.79Z"
+                transform="translate(-10.07 0)" />
+            <path d="M30.87,72.09A10.59,10.59,0,0,1,20.75,79.6a10.31,10.31,0,0,1-3.17-.48,10.64,10.64,0,1,1,13.29-7Z" transform="translate(-10.07 0)"
+            />
+            <path d="M57.32,35.28A10.46,10.46,0,0,1,51,37.39a10.65,10.65,0,0,1-6.39-19.21,10.43,10.43,0,0,1,6.15-2,10.82,10.82,0,0,1,8.74,4.18A10.65,10.65,0,0,1,57.32,35.28Z"
+                transform="translate(-10.07 0)" />
+            <path d="M111,10.6a10.64,10.64,0,1,1-21.28.11A10.6,10.6,0,0,1,100.32,0,10.67,10.67,0,0,1,111,10.6Z" transform="translate(-10.07 0)"
+            />
+            <path d="M158.32,33.15a10.66,10.66,0,0,1-8.57,4.41,10.66,10.66,0,0,1-8.65-16.9,10.81,10.81,0,0,1,8.74-4.27A10.17,10.17,0,0,1,156,18.3a10.66,10.66,0,0,1,2.36,14.85Z"
+                transform="translate(-10.07 0)" />
+            <path d="M183.09,79.33a10.65,10.65,0,0,1-13.38-6.9,10.64,10.64,0,1,1,13.38,6.9Z" transform="translate(-10.07 0)" />
+        </symbol>
+
+        <symbol id="up-arrow" viewbox="0 0 16 16">
+            <path d="M1.9,12L8,6.3l6.1,5.7c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.6-0.1,0.8-0.4c0.4-0.4,0.4-1.2-0.1-1.6L8.8,3.9
+			c-0.4-0.4-1.1-0.4-1.5,0l-6.9,6.5c-0.4,0.4-0.5,1.1-0.1,1.6C0.7,12.5,1.4,12.5,1.9,12z"/>
+        </symbol>
+    </defs>
 </svg>	
 
 <header class="mast-header ">
@@ -244,7 +259,7 @@
           
             <time itemprop="datePublished" datetime="2017-11-09T16:20:00-02:00" class="post-date date">09 Nov 2017</time>
           
-          <h1 class="post-title" itemprop="name">Criando formulário sem Back-End (Parte 1) - Validação com RegExp</h1>
+          <h1 class="post-title" itemprop="name">Formulário para site estático (Parte 1) - Validação com RegExp</h1>
           <p itemprop="description" class="post-description subtitle">Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares</p>
     </div>
 </section>
@@ -257,7 +272,7 @@
             <ul>
                 <li><a href="/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>
                 <li><a href="/blog"><span class="icon is-small"><i class="fa fa-th-large"></i></span><span>Blog</span></a></li>
-                <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-square" aria-hidden="true"></i></span><span>Criando formulário sem Back-End (Parte 1) - Validação com RegExp</span></a></li>
+                <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-square" aria-hidden="true"></i></span><span>Formulário para site estático (Parte 1) - Validação com RegExp</span></a></li>
             </ul>
         </nav>
         <!-- BREADCRUMB -->
@@ -270,13 +285,13 @@
 
 <p>Fala galera, beleza?</p>
 
-<p>Esse é o meu primeiro post técnico, e nele vou ensinar vocês a criar algo que todo mundo que trabalha com front já teve que fazer: um formulário. Não tem como fugir, ele é requisito básico para qualquer site, seja ele institucional, ecommerce, landing page, etc.</p>
+<p>Esse é o meu primeiro post técnico, e nele vou ensinar vocês a criar um formulário para site estático, ou seja, sem a necessidade de back-end.</p>
 
-<p>Uma coisa que sempre me incomodou bastante é a necessidade de utilizar uma linguagem back-end, como o PHP, apenas pelo fato dele ter que fazer o envio de um formulário, mesmo para sites estáticos.</p>
+<p>Para quem gosta de ver o exemplo antes de começar, <a href="http://matheusbarone.com/form-sem-backend/">clique aqui</a> aqui para ver o form funcionando.</p>
 
-<p>Porém, quando resolvi refazer o meu site encontrei no <a href="https://jekyllrb.com/">Jekyll  <i class="fa fa-share-square-o" aria-hidden="true"></i></a> uma solução para esse problema. Através do <a href="https://github.com/Shopify/liquid/wiki">Liquid Template  <i class="fa fa-share-square-o" aria-hidden="true"></i></a>, ele consegue proporcionar a utilização de includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.</p>
+<p>Sempre me incomodou o fato de ter de usar uma linguagem back-end para fazer sites estáticos, apenas por causa do envio de formulário. Porém, quando resolvi refazer o meu site, encontrei no <a href="https://jekyllrb.com/">Jekyll</a> uma solução para esse problema. Através do <a href="https://github.com/Shopify/liquid/wiki">Liquid Template</a>, ele consegue proporcionar a utilização de includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.</p>
 
-<p>Por conta disso tive que procurar outras formas de fazer o envio de email, e foi assim que encontrei o <a href="https://formspree.io/">Formspree  <i class="fa fa-share-square-o" aria-hidden="true"></i></a>. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Source <i class="fa fa-share-square-o" aria-hidden="true"></i></a> que tem como proposta exatamente resolver essa questão.</p>
+<p>Por conta disso tive que procurar outras formas de fazer o envio de email, e foi assim que encontrei o <a href="https://formspree.io/">Formspree</a>. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Sourc</a> que tem como proposta exatamente resolver essa questão.</p>
 
 <p>Existe uma forma padrão de utilizar ele, onde, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.</p>
 
@@ -290,7 +305,7 @@
   <li>Parte 3: Estilização das mensagens de envio utilizando SVG;</li>
 </ul>
 
-                            
+
             </article>
             <!-- CONTENT -->
 
@@ -313,8 +328,8 @@
                 <div id="disqus_thread"></div>
 <script>		
   var disqus_config = function () {
-    this.page.url = "http://localhost:4000/form-sem-backend-parte-1/";  
-    this.page.identifier = "/form-sem-backend-parte-1/";
+    this.page.url = "http://localhost:4000/form-site-estatico-regexp/";  
+    this.page.identifier = "/form-site-estatico-regexp/";
   };
 
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -383,7 +398,7 @@
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="/assets/dist/css/style.min.css">
-  <link rel="canonical" href="http://localhost:4000/form-sem-backend-parte-1/">
+  <link rel="canonical" href="http://localhost:4000/form-site-estatico-regexp/">
   <link rel="alternate" type="application/rss+xml" title="Matheus Barone | Desenvolvedor Front-end" href="http://localhost:4000/feed.xml" />
   <!-- STYLESHEET -->
 
@@ -396,7 +411,9 @@
 
     <!-- ARROW -->
     <a href="#top" class="up-arrow">
-        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        <svg class="icon-uparrow">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
+        </svg>
     </a>
     <!-- ARROW -->
 

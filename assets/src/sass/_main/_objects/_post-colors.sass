@@ -233,14 +233,23 @@
                         background-repeat: no-repeat;
                         background-position: 0 1.1em;
                         overflow: hidden;
-                        &:after
-                              background: none;
+
                         &::selection
                               background: nth($color-post, index($type-post, $type))
                               color: #fff
 
                         >img
                               width: 100%
+
+                        &.is-blank
+                              &:after
+                                    content: "\f045"
+                                    font: normal normal normal 17px/1 FontAwesome;
+                                    text-rendering: auto;
+                                    -webkit-font-smoothing: antialiased;
+                                    position: initial;
+                                    margin-left: 5px;
+
 
 
 
