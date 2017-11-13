@@ -23,7 +23,7 @@ Fala galera, beleza?
 
 Esse é o meu primeiro post técnico, e nele vamos criar um formulário sem a necessidade de back-end para fazer o envio dos dados preenchidos.
 
-Para quem gosta de ver o exemplo antes de começar, [clique aqui](http://matheusbarone.com/form-sem-backend/).
+Para quem gosta de ver o exemplo antes de começar, [clique aqui](https://github.com/mathvbarone/form-sem-backend).
 
 Sempre me incomodou quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, encontrei no [Jekyll](https://jekyllrb.com/) uma solução para esse problema. Ele é uma plataforma criada pelo pessoal do Github, e através do [Liquid Template](https://shopify.github.io/liquid/), é possível utilizar includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.
 
@@ -47,13 +47,15 @@ Sem mais delongas, vamos começar! :D
 
 Como o nosso foco é fazer o envio do formulário, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.
 
-É só clonar [esse repositório](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos) na sua máquina, e seguir os passos de instalação.
+É só clonar [esse repositório](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos), e seguir os passos de instalação.
 
 Estando tudo pronto, hora de por a mão na massa.
 
 ## Função global
 
-Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global. É uma medida de segurança, para evitar que elas de sejam acessadas por terceiros através do "inspecionar elemento":
+Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global.
+
+É uma medida de segurança, para evitar que elas sejam acessadas por terceiros através do "inspecionar elemento":
 
 
 {% highlight js %}
@@ -142,7 +144,7 @@ Vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por
 
 {% endhighlight %}
 
-Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.
+Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado:
 
 
 {% highlight js %}
@@ -160,6 +162,19 @@ Agora criaremos uma função para fazer a validação do que for digitado pelo u
     };
 
 {% endhighlight %}
+
+Agora é só executarmos as funções utilizando as variáveis declaradas lá em cima:
+
+
+{% highlight js %}
+
+    validateField(nameRegexp, nameInput);
+    validateField(emailRegexp, emailInput);
+    validateField(msgRegexp, messageInput);
+
+{% endhighlight %}
+
+
 
 
 

@@ -287,7 +287,7 @@
 
 <p>Esse é o meu primeiro post técnico, e nele vamos criar um formulário sem a necessidade de back-end para fazer o envio dos dados preenchidos.</p>
 
-<p>Para quem gosta de ver o exemplo antes de começar, <a href="http://matheusbarone.com/form-sem-backend/">clique aqui</a>.</p>
+<p>Para quem gosta de ver o exemplo antes de começar, <a href="https://github.com/mathvbarone/form-sem-backend">clique aqui</a>.</p>
 
 <p>Sempre me incomodou quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, encontrei no <a href="https://jekyllrb.com/">Jekyll</a> uma solução para esse problema. Ele é uma plataforma criada pelo pessoal do Github, e através do <a href="https://shopify.github.io/liquid/">Liquid Template</a>, é possível utilizar includes, laços de repetição, e várias outras coisas apenas com o bom e velho HTML.</p>
 
@@ -317,13 +317,15 @@
 
 <p>Como o nosso foco é fazer o envio do formulário, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.</p>
 
-<p>É só clonar <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos">esse repositório</a> na sua máquina, e seguir os passos de instalação.</p>
+<p>É só clonar <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos">esse repositório</a>, e seguir os passos de instalação.</p>
 
 <p>Estando tudo pronto, hora de por a mão na massa.</p>
 
 <h2 id="função-global">Função global</h2>
 
-<p>Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global. É uma medida de segurança, para evitar que elas de sejam acessadas por terceiros através do “inspecionar elemento”:</p>
+<p>Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global.</p>
+
+<p>É uma medida de segurança, para evitar que elas sejam acessadas por terceiros através do “inspecionar elemento”:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 
@@ -394,7 +396,7 @@
 
      <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></figure>
 
-<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.</p>
+<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE VALIDAÇÃO DO CAMPO</span>
     <span class="kr">const</span> <span class="nx">validateField</span> <span class="o">=</span> <span class="p">(</span><span class="nx">regExp</span><span class="p">,</span> <span class="nx">field</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -407,6 +409,12 @@
         <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">};</span></code></pre></figure>
+
+<p>Agora é só executarmos as funções utilizando as variáveis declaradas lá em cima:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">validateField</span><span class="p">(</span><span class="nx">nameRegexp</span><span class="p">,</span> <span class="nx">nameInput</span><span class="p">);</span>
+    <span class="nx">validateField</span><span class="p">(</span><span class="nx">emailRegexp</span><span class="p">,</span> <span class="nx">emailInput</span><span class="p">);</span>
+    <span class="nx">validateField</span><span class="p">(</span><span class="nx">msgRegexp</span><span class="p">,</span> <span class="nx">messageInput</span><span class="p">);</span></code></pre></figure>
 
 
             </article>
