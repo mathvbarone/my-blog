@@ -1,6 +1,7 @@
 [
   
     {
+<<<<<<< HEAD
       "title"    : "Criando formulário sem Back-End (Parte 1) - Validação com RegExp",
       "category" : "",
       "tags"     : "js, regexp, es6, and frontend",
@@ -10,6 +11,9 @@
   
     {
       "title"    : "5 dicas para ser um perfil profissional competitivo",
+=======
+      "title"    : "5 dicas para ter um perfil profissional competitivo",
+>>>>>>> 89e2dda50f5aaa3fcad4db6e46ba02b7aa2a8b75
       "category" : "",
       "tags"     : "mercado-de-trabalho and dicas",
       "url"      : "/dicas-perfil-profissional-competitivo/",
