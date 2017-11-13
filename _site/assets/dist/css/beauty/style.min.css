@@ -8923,7 +8923,7 @@ a.tag:hover {
 }
 
 .post-blog .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -8938,7 +8938,7 @@ a.tag:hover {
 }
 
 .post-blog .card .ribbon {
-    border-color: #cd2b46;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
@@ -9258,7 +9258,7 @@ a.tag:hover {
 }
 
 .post-html .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9273,7 +9273,7 @@ a.tag:hover {
 }
 
 .post-html .card .ribbon {
-    border-color: #4986b1;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
@@ -9577,7 +9577,7 @@ a.tag:hover {
 }
 
 .post-css .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9597,7 +9597,7 @@ a.tag:hover {
 }
 
 .post-css .card .ribbon {
-    border-color: #378574;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
@@ -9907,7 +9907,7 @@ a.tag:hover {
 }
 
 .post-js .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -9920,7 +9920,7 @@ a.tag:hover {
 }
 
 .post-js .card .ribbon {
-    border-color: #f8c101;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
@@ -10224,7 +10224,7 @@ a.tag:hover {
 }
 
 .post-misc .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10237,7 +10237,7 @@ a.tag:hover {
 }
 
 .post-misc .card .ribbon {
-    border-color: #af1da2;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem
@@ -10548,7 +10548,7 @@ a.tag:hover {
 }
 
 .post-front .card {
-    min-height: 15em;
+    min-height: 15.5em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -10563,7 +10563,7 @@ a.tag:hover {
 }
 
 .post-front .card .ribbon {
-    border-color: #65B149;
+    border-color: #dcdcdc;
     border-width: 1px;
     border-style: solid;
     font-size: .7rem

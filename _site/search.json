@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Criando formulário sem Back-End (Parte 1) - Validação com RegExp",
+      "category" : "",
+      "tags"     : "js, regexp, es6, and frontend",
+      "url"      : "/form-sem-backend-parte-1/",
+      "date"     : "09 Nov 2017"
+    } ,
+  
+    {
       "title"    : "5 dicas para ser um perfil profissional competitivo",
       "category" : "",
       "tags"     : "mercado-de-trabalho and dicas",

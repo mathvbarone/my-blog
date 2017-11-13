@@ -59,6 +59,10 @@
     
     
         <url>
+            <loc>http://localhost:4000/form-sem-backend-parte-1/</loc>
+        </url>
+  
+        <url>
             <loc>http://localhost:4000/dicas-perfil-profissional-competitivo/</loc>
         </url>
   
