@@ -219,10 +219,6 @@ Se o usuário digitou o que é esperado no campo de input, ele conseguirá habil
 
 Agora vamos executar as funções de validação utilizando as variáveis declaradas lá em cima.
 
-Nós poderiamos criar um array com as informações de cada campo e suas determinadas expressões, e em seguida iterar em cada um deles executando a função de validação.
-
-Porém, para não criar uma complexidade muito grande ao tutorial, optei por deixar a forma simplificada.
-
 {% highlight js %}
 
       validateField(nameRegexp, nameInput);
