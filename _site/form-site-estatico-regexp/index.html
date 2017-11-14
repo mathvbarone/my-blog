@@ -381,9 +381,8 @@
 <p>Alguns links de estudo:</p>
 
 <ul>
-  <li><a href="https://support.google.com/analytics/answer/1034324?hl=pt-BR">Lista completa do que faz cada metacaractere</a></li>
   <li><a href="https://tableless.com.br/o-basico-sobre-expressoes-regulares/">Post do tableless que explica mais a fundo o que são Expressões Regulares</a></li>
-  <li><a href="https://regex101.com/">Site para validar Expressões Regulares</a></li>
+  <li><a href="https://regex101.com">Site para validar Expressões Regulares</a></li>
 </ul>
 
 <p>Voltando ao nosso formulário, no campo de nome temos a seguinte expressão:</p>
@@ -418,6 +417,27 @@
 <p>No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">msgRegexp</span> <span class="o">=</span> <span class="sr">/.*</span><span class="se">\S</span><span class="sr">.*/</span><span class="p">;</span></code></pre></figure>
+
+<p>Caso tenha ficado com alguma dúvida, abaixo um overview dos principais metacaracteres:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">^</code>  - Início da linha;</li>
+  <li><code class="highlighter-rouge">$</code> - Fim da linha;</li>
+  <li><code class="highlighter-rouge">[I-F]</code> - Lista permitida;</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="err">n</span><span class="p">}</span></code> - Quantificador;</li>
+  <li><code class="highlighter-rouge">\c</code> - Escape;</li>
+  <li><code class="highlighter-rouge">\w</code> - Alfanuméricos;</li>
+  <li><code class="highlighter-rouge">+</code> - Repetidor;</li>
+  <li><code class="highlighter-rouge">()</code>- Grupo;</li>
+  <li><code class="highlighter-rouge">\d</code> - Apenas números;</li>
+  <li><code class="highlighter-rouge">\D</code> - Não números;</li>
+  <li><code class="highlighter-rouge">\s</code> - Espaços;</li>
+  <li><code class="highlighter-rouge">.</code> - Qualquer caractere;</li>
+  <li><code class="highlighter-rouge">?</code> - Caractere anterior é opcional;</li>
+  <li><code class="highlighter-rouge">*</code> - Caractere anterior repete uma ou mais vezes;</li>
+</ul>
+
+<p><a href="https://support.google.com/analytics/answer/1034324?hl=pt-BR">Veja lista completa</a></p>
 
 <p>Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:</p>
 

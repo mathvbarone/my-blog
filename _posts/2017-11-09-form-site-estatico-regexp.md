@@ -118,9 +118,8 @@ Ou seja, com elas conseguimos detectar determinados padrões dentro de uma strin
 
 Alguns links de estudo:
 
-- [Lista completa do que faz cada metacaractere](https://support.google.com/analytics/answer/1034324?hl=pt-BR)
 - [Post do tableless que explica mais a fundo o que são Expressões Regulares](https://tableless.com.br/o-basico-sobre-expressoes-regulares/)
-- [Site para validar Expressões Regulares](https://regex101.com/)
+- [Site para validar Expressões Regulares](https://regex101.com)
 
 Voltando ao nosso formulário, no campo de nome temos a seguinte expressão:
 
@@ -154,13 +153,32 @@ Para melhor entendimento, fiz uma lista detalhando cada metacaractere:
 - `?` - Esse metacaractere indica que o grupo declarado anteriormente é opcional; 
 - `$` - Fim da expressão; 
 
-
 No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.
+
 
 {% highlight js %}
     msgRegexp = /.*\S.*/;
 {% endhighlight %}
 
+
+Caso tenha ficado com alguma dúvida, abaixo um overview dos principais metacaracteres:
+
+- `^`  - Início da linha;
+- `$` - Fim da linha;
+- `[I-F]` - Lista permitida;
+- `{n}` - Quantificador;
+- `\c` - Escape;
+- `\w` - Alfanuméricos;
+- `+` - Repetidor;
+- `()`- Grupo;
+- `\d` - Apenas números;
+- `\D` - Não números;
+- `\s` - Espaços;
+- `.` - Qualquer caractere;
+- `?` - Caractere anterior é opcional;
+- `*` - Caractere anterior repete uma ou mais vezes;
+
+[Veja lista completa](https://support.google.com/analytics/answer/1034324?hl=pt-BR)
 
 Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
 
