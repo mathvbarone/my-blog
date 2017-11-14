@@ -287,19 +287,26 @@
 
 <p>Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a necessidade de back-end para fazer o envio dos dados preenchidos.</p>
 
-<p>Para quem gosta de ver o exemplo antes de começar, <a href="https://github.com/mathvbarone/form-sem-backend">clique aqui</a>.</p>
+<p>Abaixo um exemplo de como ficará nosso formulário:</p>
+
+<iframe style="width: 100%; height: 600px" async="" src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/">
+</iframe>
+
+<h2 id="jekyll-e-formspree">Jekyll e Formspree</h2>
 
 <p>Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos.</p>
 
-<p>Por isso, ao refazer o meu site busquei alternativas para resolver esse problema. Foi então que descobri o <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+<p>Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o <a href="https://jekyllrb.com/">Jekyll</a>.</p>
 
 <p>O Jekyll é uma plataforma criada pelo pessoal do <a href="https://github.com/jekyll/jekyll">Github</a> que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao <a href="https://shopify.github.io/liquid/">Liquid Template</a>, uma linguagem de programação criada pela galera da <a href="https://pt.shopify.com/">Shopify</a>.</p>
 
 <p>Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o <a href="https://formspree.io/">Formspree</a> como alternativa. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Source</a> que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.</p>
 
-<p>Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.</p>
+<p>Existe uma forma padrão de utilizá-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida os dados são enviados.</p>
 
 <p>No entanto, se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio dos dados, e uma animação em SVG como notificação de sucesso/falha.</p>
+
+<h2 id="partes-do-tutorial">Partes do tutorial</h2>
 
 <p>Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:</p>
 

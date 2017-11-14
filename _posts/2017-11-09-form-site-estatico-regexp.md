@@ -23,19 +23,29 @@ Fala galera, beleza?
 
 Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a necessidade de back-end para fazer o envio dos dados preenchidos.
 
-Para quem gosta de ver o exemplo antes de começar, [clique aqui](https://github.com/mathvbarone/form-sem-backend).
+Abaixo um exemplo de como ficará nosso formulário:
+
+<iframe
+  style="width: 100%; height: 600px"
+  async src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/">
+</iframe>
+
+
+## Jekyll e Formspree
 
 Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos.
 
-Por isso, ao refazer o meu site busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
+Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
 
 O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll) que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criada pela galera da [Shopify](https://pt.shopify.com/).
 
 Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
 
-Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.
+Existe uma forma padrão de utilizá-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida os dados são enviados.
 
 No entanto, se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio dos dados, e uma animação em SVG como notificação de sucesso/falha.
+
+## Partes do tutorial
 
 Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:
 
