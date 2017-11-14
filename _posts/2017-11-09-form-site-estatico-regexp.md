@@ -3,7 +3,7 @@ layout: post
 title: "Formulário para site estático (Parte 1) - Validação com RegExp"
 date: 2017-11-09 16:20
 image: '/assets/dist/images/posts/form-sem-backend/parte1.jpg'
-description: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
+description: "Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares"
 main-class: 'js'
 head-class: post
 color: '#f8c101'
@@ -13,8 +13,8 @@ tags:
 - es6
 - form-site-estatico
 
-twitter_text: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
-introduction: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares."
+twitter_text: "Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares"
+introduction: "Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares."
 ---
 
 ## Introdução
@@ -37,13 +37,13 @@ No entanto, se você já estudou um pouco de experiência do usuário, deve sabe
 
 Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:
 
-- Parte 1: [Validação do formulário utilizando Expressões Regulares](http://matheusbarone.com/form-site-estatico-regexp/)
+- Parte 1: [Validação do formulário utilizando Expressões Regulares](/form-site-estatico-regexp/)
 
 - Parte 2: Envio do formulário utilizando AJAX.
 
 - Parte 3: Estilização das mensagens de envio utilizando SVG.
 
-Caso você se perca no meio do caminho, pode consultar o código [aqui](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
+Caso você se perca no meio do caminho, pode consultar o código dessa primeira parte [aqui](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
 
 Sem mais delongas, vamos começar! :D
 
