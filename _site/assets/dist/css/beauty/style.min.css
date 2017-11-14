@@ -8947,7 +8947,7 @@ a.tag:hover {
 }
 
 .post-blog .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9021,10 +9021,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-blog .breadcrumb li.is-active a {
-    color: #cd2b46
-}
-
 .post-blog .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -9038,7 +9034,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-blog .breadcrumb li.is-active a {
+    color: #cd2b46
 }
 
 .post-blog .post-date,.post-blog .post-description,.post-blog .post-title {
@@ -9288,7 +9289,7 @@ a.tag:hover {
 }
 
 .post-html .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9353,10 +9354,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-html .breadcrumb li.is-active a {
-    color: #4986b1
-}
-
 .post-html .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -9370,7 +9367,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-html .breadcrumb li.is-active a {
+    color: #4986b1
 }
 
 .post-html .post-date,.post-html .post-description,.post-html .post-title {
@@ -9613,7 +9615,7 @@ a.tag:hover {
 }
 
 .post-css .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9689,10 +9691,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-css .breadcrumb li.is-active a {
-    color: #378574
-}
-
 .post-css .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -9706,7 +9704,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-css .breadcrumb li.is-active a {
+    color: #378574
 }
 
 .post-css .post-date,.post-css .post-description,.post-css .post-title {
@@ -9949,7 +9952,7 @@ a.tag:hover {
 }
 
 .post-js .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10012,10 +10015,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-js .breadcrumb li.is-active a {
-    color: #ffbc00
-}
-
 .post-js .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -10029,7 +10028,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-js .breadcrumb li.is-active a {
+    color: #ffbc00
 }
 
 .post-js .post-date,.post-js .post-description,.post-js .post-title {
@@ -10272,7 +10276,7 @@ a.tag:hover {
 }
 
 .post-misc .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10335,10 +10339,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-misc .breadcrumb li.is-active a {
-    color: #af1da2
-}
-
 .post-misc .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -10352,7 +10352,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-misc .breadcrumb li.is-active a {
+    color: #af1da2
 }
 
 .post-misc .post-date,.post-misc .post-description,.post-misc .post-title {
@@ -10602,7 +10607,7 @@ a.tag:hover {
 }
 
 .post-front .card {
-    min-height: 15.5em;
+    min-height: 15.1em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -10670,10 +10675,6 @@ a.tag:hover {
     color: #fff
 }
 
-.post-front .breadcrumb li.is-active a {
-    color: #65B149
-}
-
 .post-front .hero-posts {
     height: 70vh;
     min-height: 70vh;
@@ -10687,7 +10688,12 @@ a.tag:hover {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    padding: 3rem 1rem 0
+}
+
+.post-front .breadcrumb li.is-active a {
+    color: #65B149
 }
 
 .post-front .post-date,.post-front .post-description,.post-front .post-title {
@@ -14464,17 +14470,8 @@ footer .footer-phone .fa {
 }
 
 @media (max-width:540px) {
-    .post-blog .hero-posts,.post-css .hero-posts,.post-front .hero-posts,.post-html .hero-posts,.post-js .hero-posts,.post-misc .hero-posts {
-        height: 60vh;
-        min-height: 60vh
-    }
-
     .button-custom,.button-submit {
         font-size: 1rem
-    }
-
-    .post-offset {
-        top: 60vh
     }
 
     .post-blog .post-title {
@@ -14577,6 +14574,54 @@ footer .footer-phone .fa {
 }
 
 @media (max-width:340px) {
+    .post-blog .post-title {
+        font-size: 1.6em
+    }
+
+    .post-blog .post-description {
+        font-size: 1em
+    }
+
+    .post-html .post-title {
+        font-size: 1.6em
+    }
+
+    .post-html .post-description {
+        font-size: 1em
+    }
+
+    .post-css .post-title {
+        font-size: 1.6em
+    }
+
+    .post-css .post-description {
+        font-size: 1em
+    }
+
+    .post-js .post-title {
+        font-size: 1.6em
+    }
+
+    .post-js .post-description {
+        font-size: 1em
+    }
+
+    .post-misc .post-title {
+        font-size: 1.6em
+    }
+
+    .post-misc .post-description {
+        font-size: 1em
+    }
+
+    .post-front .post-title {
+        font-size: 1.6em
+    }
+
+    .post-front .post-description {
+        font-size: 1em
+    }
+
     .menu-link {
         font-size: .74rem
     }

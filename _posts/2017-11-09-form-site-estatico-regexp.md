@@ -3,7 +3,7 @@ layout: post
 title: "Formulário para site estático (Parte 1) - Validação com RegExp"
 date: 2017-11-09 16:20
 image: '/assets/dist/images/posts/form-sem-backend/parte1.jpg'
-description: "Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
+description: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
 main-class: 'js'
 head-class: post
 color: '#f8c101'
@@ -13,25 +13,23 @@ tags:
 - es6
 - form-site-estatico
 
-twitter_text: "Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
-introduction: "Nessa primeira parte, aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares."
+twitter_text: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares"
+introduction: "Aprenda a fazer uma validação de formulário dinâmida utilizando Expressões Regulares."
 ---
 
 ## Introdução
 
 Fala galera, beleza?
 
-Esse é o meu primeiro post técnico, e nele vamos criar um formulário sem a necessidade de back-end para fazer o envio dos dados preenchidos.
+Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a necessidade de back-end para fazer o envio dos dados preenchidos.
 
 Para quem gosta de ver o exemplo antes de começar, [clique aqui](https://github.com/mathvbarone/form-sem-backend).
 
-Sempre me sentia incomodado quando, apenas por causa do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, utilizei o [Jekyll](https://jekyllrb.com/).
+Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
 
-O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll), e tem como objetivo criar um site em HTML, porém com as features que uma linguagem de programação nos oferecem. Como includes, laços de repetição, declaração de variáveis, etc.
+O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll) que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criado pelo pessoal da [Shopify](https://pt.shopify.com/).
 
-Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criado pelo pessoal da [Shopify](https://pt.shopify.com/).
-
-Já na hora de fazer o envio do formulário, utilizei o [Formspree](https://formspree.io/). Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
+Apesar de ser bem completo, o Liquid Template não dá suporte ao envio de fomulário, por isso a saida foi utilizar o [Formspree](https://formspree.io/). Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
 
 Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.
 

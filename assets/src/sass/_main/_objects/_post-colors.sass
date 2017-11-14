@@ -56,7 +56,7 @@
 
       .post-#{$type}
             .card
-                  min-height: 15.5em;
+                  min-height: 15.1em;
                   border: 1px solid gainsboro
                   box-shadow: none
                   cursor: pointer
@@ -115,27 +115,24 @@
 
             //INTERNAS
 
-
-            .breadcrumb
-                  li.is-active
-                        a
-                               color: nth($color-post, index($type-post, $type))
-
             .hero-posts
                   height: 70vh
                   min-height: 70vh
                   background-color: nth($color-post, index($type-post, $type))
-
-                  @media (max-width:540px)
-                        height: 60vh
-                        min-height: 60vh
-
 
                   &-body
                         width: 100%
                         margin: auto
                         max-width: 50rem;
                         justify-content: center
+                        padding: 3rem 1rem 0 1rem;
+
+
+            .breadcrumb
+                  li.is-active
+                        a
+                               color: nth($color-post, index($type-post, $type))
+
 
 
             .post-date,
@@ -156,12 +153,18 @@
                         line-height: 1.2em
                         font-size: 1.9em
 
+                  @media (max-width:340px)
+                        font-size: 1.6em;
+
             .post-description
                   font-size: 1.4em
                   font-weight: 300
 
                   @media (max-width:540px)
                         font-size: 1.2em
+
+                  @media (max-width:340px)
+                        font-size: 1em
 
             .post-content
 
