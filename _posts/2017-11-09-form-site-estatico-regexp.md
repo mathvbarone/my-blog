@@ -72,7 +72,7 @@ Vamos começar criando uma função auto executável para englobar todo o nosso 
 Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers.
 
 
-## Variáveis para manipularmos os elementos de UI
+## Variáveis
 
 Agora vamos criar as váriaveis necessárias para manipular os elementos de UI.
 
@@ -114,52 +114,55 @@ Chegamos na parte mais interessante, as [Expressões Regulares](https://develope
 
 >**Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.**
 
-Ou seja, conseguimos detectar determinados padrões dentro de uma string, e dependendo desse padrão, executar ou não uma função.
+Ou seja, com elas conseguimos detectar determinados padrões dentro de uma string e, dependendo desse padrão, executar ou não uma função.
 
-Abaixo um overview do que faz cada metacharacter:
+Alguns links de estudo:
 
-{% highlight html %}
+- [Lista completa do que faz cada metacaractere](https://support.google.com/analytics/answer/1034324?hl=pt-BR);
+- [Um post do tableless que explica mais a fundo como utilizar essa ferramenta](https://tableless.com.br/o-basico-sobre-expressoes-regulares/);
+- [Site para brincar um pouco com as Expressões Regulares](https://regex101.com/);
 
-    ^  - INÍCIO DA LINHA
-    $ - FIM DA LINHA
-    [I-F] - LISTA PERMITIDA
-    {n} - QUANTIFICADOR
-    \c - ESCAPE
-    ? - OPCIONAL
-    \w - ALFANUMERICOS
-    + - REPETIDOR
-    ()- GRUPO
-    \d - APENAS NÚMEROS
-    \D - NÃO NÚMEROS
-    \s - ESPAÇOS
-    . - QUALQUER DIGITO
-
-{% endhighlight %}
-
-
-[Nesse site](https://regex101.com/) é possível brincar um pouco com as Expressões Regulares e, inclusive. foi utilizando ele que cheguei no código necessário para a validação dos campos de nome, email e mensagem.
-
-No campo de nome, colocamos como condicional a utilização de letras.
+Voltando ao nosso formulário, no campo de nome temos a seguinte expressão:
 
 {% highlight js %}
-    const nameRegexp = /[a-zA-Z\-'\s]+/;
+    nameRegexp = /[a-zA-Z\-'\s]+/;
 {% endhighlight %}
 
-No campo de email, colocamos como condicional a utilização de números e letras, seguidos do caractere "@", números e letras seguidos pelo caractere ".", e por último a utilização de letras, com no máximo 3 caracteres.
+Essa expressão tem como condicional a utilização de letras maiúsculas e minúsculas, e espaços
+
+
+Já o campo de email é um pouco mais complexo:
 
 {% highlight js %}
-    const emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+    emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
 {% endhighlight %}
+
+Para melhor entendimento, fiz uma lista detalhando cada metacaractere:
+ 
+- `^` - Início da expressão; 
+- `[]` - Classe de caracteres;
+- `A-z0-9` - Alfanuméricos; 
+- `.` - Qualquer caractere;
+- `-` - Caractere "`-`",
+- `{1,}@` - Apenas 1 caractere "`@`";
+- `\w+` - Forma abreviada dos alfanuméricos, sem limite de caracteres;
+- `\.` - Caractere "`.`";
+- `[A-z]{2,3}` - Entre 2 e 3 caracteres de letras maiúsculas e minúsculas;
+- `()` - Grupo de caracteres;
+- `\.` - Caractere "`.`";
+- `[a-z]{2}` - 2 caracteres de letras minúsculas;;
+- `?` - Esse metacaractere indica que o grupo declarado anteriormente é opcional; 
+- `$` - Fim da expressão; 
 
 
 No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.
 
 {% highlight js %}
-    const msgRegexp = /.*\S.*/;
+    msgRegexp = /.*\S.*/;
 {% endhighlight %}
 
 
-Agora vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
+Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:
 
 {% highlight js %}
 

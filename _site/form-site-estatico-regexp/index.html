@@ -339,7 +339,7 @@
 
 <p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers.</p>
 
-<h2 id="variáveis-para-manipularmos-os-elementos-de-ui">Variáveis para manipularmos os elementos de UI</h2>
+<h2 id="variáveis">Variáveis</h2>
 
 <p>Agora vamos criar as váriaveis necessárias para manipular os elementos de UI.</p>
 
@@ -376,39 +376,50 @@
   <p><strong>Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.</strong></p>
 </blockquote>
 
-<p>Ou seja, conseguimos detectar determinados padrões dentro de uma string, e dependendo desse padrão, executar ou não uma função.</p>
+<p>Ou seja, com elas conseguimos detectar determinados padrões dentro de uma string e, dependendo desse padrão, executar ou não uma função.</p>
 
-<p>Abaixo um overview do que faz cada metacharacter:</p>
+<p>Alguns links de estudo:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">    ^  - INÍCIO DA LINHA
-    $ - FIM DA LINHA
-    [I-F] - LISTA PERMITIDA
-    {n} - QUANTIFICADOR
-    \c - ESCAPE
-    ? - OPCIONAL
-    \w - ALFANUMERICOS
-    + - REPETIDOR
-    ()- GRUPO
-    \d - APENAS NÚMEROS
-    \D - NÃO NÚMEROS
-    \s - ESPAÇOS
-    . - QUALQUER DIGITO</code></pre></figure>
+<ul>
+  <li><a href="https://support.google.com/analytics/answer/1034324?hl=pt-BR">Lista completa do que faz cada metacaractere</a>;</li>
+  <li><a href="https://tableless.com.br/o-basico-sobre-expressoes-regulares/">Um post do tableless que explica mais a fundo como utilizar essa ferramenta</a>;</li>
+  <li><a href="https://regex101.com/">Site para brincar um pouco com as Expressões Regulares</a>;</li>
+</ul>
 
-<p><a href="https://regex101.com/">Nesse site</a> é possível brincar um pouco com as Expressões Regulares e, inclusive. foi utilizando ele que cheguei no código necessário para a validação dos campos de nome, email e mensagem.</p>
+<p>Voltando ao nosso formulário, no campo de nome temos a seguinte expressão:</p>
 
-<p>No campo de nome, colocamos como condicional a utilização de letras.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">nameRegexp</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">\-</span><span class="sr">'</span><span class="se">\s]</span><span class="sr">+/</span><span class="p">;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">nameRegexp</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">\-</span><span class="sr">'</span><span class="se">\s]</span><span class="sr">+/</span><span class="p">;</span></code></pre></figure>
+<p>Essa expressão tem como condicional a utilização de letras maiúsculas e minúsculas, e espaços</p>
 
-<p>No campo de email, colocamos como condicional a utilização de números e letras, seguidos do caractere “@”, números e letras seguidos pelo caractere “.”, e por último a utilização de letras, com no máximo 3 caracteres.</p>
+<p>Já o campo de email é um pouco mais complexo:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">emailRegexp</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">A-z0-9.-</span><span class="se">]{1,}</span><span class="sr">@</span><span class="se">\w</span><span class="sr">+</span><span class="se">\.[</span><span class="sr">A-z</span><span class="se">]{2,3}(\.[</span><span class="sr">a-z</span><span class="se">]{2})?</span><span class="sr">$/</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">emailRegexp</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">A-z0-9.-</span><span class="se">]{1,}</span><span class="sr">@</span><span class="se">\w</span><span class="sr">+</span><span class="se">\.[</span><span class="sr">A-z</span><span class="se">]{2,3}(\.[</span><span class="sr">a-z</span><span class="se">]{2})?</span><span class="sr">$/</span><span class="p">;</span></code></pre></figure>
+
+<p>Para melhor entendimento, fiz uma lista detalhando cada metacaractere:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">^</code> - Início da expressão;</li>
+  <li><code class="highlighter-rouge">[]</code> - Classe de caracteres;</li>
+  <li><code class="highlighter-rouge">A-z0-9</code> - Alfanuméricos;</li>
+  <li><code class="highlighter-rouge">.</code> - Qualquer caractere;</li>
+  <li><code class="highlighter-rouge">-</code> - Caractere “<code class="highlighter-rouge">-</code>”,</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="err">1,</span><span class="p">}</span><span class="err">@</span></code> - Apenas 1 caractere “<code class="highlighter-rouge">@</code>”;</li>
+  <li><code class="highlighter-rouge">\w+</code> - Forma abreviada dos alfanuméricos, sem limite de caracteres;</li>
+  <li><code class="highlighter-rouge">\.</code> - Caractere “<code class="highlighter-rouge">.</code>”;</li>
+  <li><code class="highlighter-rouge">[A-z]{2,3}</code> - Entre 2 e 3 caracteres de letras maiúsculas e minúsculas;</li>
+  <li><code class="highlighter-rouge">()</code> - Grupo de caracteres;</li>
+  <li><code class="highlighter-rouge">\.</code> - Caractere “<code class="highlighter-rouge">.</code>”;</li>
+  <li><code class="highlighter-rouge">[a-z]{2}</code> - 2 caracteres de letras minúsculas;;</li>
+  <li><code class="highlighter-rouge">?</code> - Esse metacaractere indica que o grupo declarado anteriormente é opcional;</li>
+  <li><code class="highlighter-rouge">$</code> - Fim da expressão;</li>
+</ul>
 
 <p>No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">msgRegexp</span> <span class="o">=</span> <span class="sr">/.*</span><span class="se">\S</span><span class="sr">.*/</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">msgRegexp</span> <span class="o">=</span> <span class="sr">/.*</span><span class="se">\S</span><span class="sr">.*/</span><span class="p">;</span></code></pre></figure>
 
-<p>Agora vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:</p>
+<p>Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso botão desabilitado por padrão:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">nameRegexp</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">\-</span><span class="sr">'</span><span class="se">\s]</span><span class="sr">+/</span><span class="p">;</span>
     <span class="kr">const</span> <span class="nx">emailRegexp</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">A-z0-9.-</span><span class="se">]{1,}</span><span class="sr">@</span><span class="se">\w</span><span class="sr">+</span><span class="se">\.[</span><span class="sr">A-z</span><span class="se">]{2,3}(\.[</span><span class="sr">a-z</span><span class="se">]{2})?</span><span class="sr">$/</span><span class="p">;</span>
