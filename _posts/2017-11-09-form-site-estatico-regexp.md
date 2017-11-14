@@ -25,9 +25,11 @@ Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a n
 
 Para quem gosta de ver o exemplo antes de começar, [clique aqui](https://github.com/mathvbarone/form-sem-backend).
 
-Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos. Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
+Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos.
 
-O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll) que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criado pelo pessoal da [Shopify](https://pt.shopify.com/).
+Por isso, ao refazer o meu site busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
+
+O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll) que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criada pela galera da [Shopify](https://pt.shopify.com/).
 
 Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
 
@@ -37,7 +39,7 @@ No entanto, se você já estudou um pouco de experiência do usuário, deve sabe
 
 Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:
 
-- Parte 1: [Validação do formulário utilizando Expressões Regulares](/form-site-estatico-regexp/)
+- Parte 1: [Validação do formulário utilizando Expressões Regulares;](/form-site-estatico-regexp/)
 
 - Parte 2: Envio do formulário utilizando AJAX.
 
