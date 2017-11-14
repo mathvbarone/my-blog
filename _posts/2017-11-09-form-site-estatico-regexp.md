@@ -51,9 +51,9 @@ Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 
 
 - Parte 1: [Validação do formulário utilizando Expressões Regulares;](/form-site-estatico-regexp/)
 
-- Parte 2: Envio do formulário utilizando AJAX.
+- Parte 2: Envio do formulário utilizando AJAX; (Em breve)
 
-- Parte 3: Estilização das mensagens de envio utilizando SVG.
+- Parte 3: Estilização das mensagens de envio utilizando SVG; (Em breve)
 
 Caso você se perca no meio do caminho, pode consultar o código dessa primeira parte [aqui](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
 
@@ -175,7 +175,7 @@ Caso tenha ficado com alguma dúvida, abaixo um overview dos principais metacara
 
 - `^`  - Início da linha;
 - `$` - Fim da linha;
-- `[I-F]` - Lista permitida;
+- `[a-Z]` - Lista permitida;
 - `{n}` - Quantificador;
 - `\c` - Escape;
 - `\w` - Alfanuméricos;
