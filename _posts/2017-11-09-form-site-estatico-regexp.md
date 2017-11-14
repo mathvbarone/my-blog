@@ -2,7 +2,7 @@
 layout: post
 title: "Formulário para site estático (Parte 1) - Validação com RegExp"
 date: 2017-11-09 16:20
-image: '/assets/dist/images/posts/form-sem-backend/parte1.jpg'
+image: '/assets/dist/images/posts/form-sem-backend/regexp.jpg'
 description: "Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares"
 main-class: 'js'
 head-class: post
@@ -25,7 +25,7 @@ Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a n
 
 Abaixo um exemplo de como ficará nosso formulário:
 
-<iframe style="min-height: 600px;" async src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/"></iframe>
+<iframe style="min-height: 600px;" async src="https://jsfiddle.net/matheusbarone/2d5dffnv/2/embedded/result/"></iframe>
 
 ## Jekyll e Formspree
 
@@ -73,7 +73,7 @@ Vamos começar criando uma função auto executável para englobar todo o nosso 
 
 É um [design pattern](https://nandovieira.com.br/design-patterns-no-javascript-module) que tem como objetivo encapsular nossas variáveis e funções, para que elas não se encontrem no escopo global.
 
-Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem variaveis de outras possiveis bibliotecas que possam ser importadas no site.
+Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem com variáveis de outras possiveis bibliotecas que possam ser importadas no site.
 
 
 ## Variáveis
@@ -165,7 +165,7 @@ No campo de mensagem, colocamos como condicional que o campo não esteja vazio, 
 {% endhighlight %}
 
 
-Caso tenha ficado com alguma dúvida, abaixo um overview dos principais metacaracteres:
+Caso tenha ficado alguma dúvida, abaixo um overview dos principais metacaracteres:
 
 - `^`  - Início da linha;
 - `$` - Fim da linha;
@@ -196,7 +196,9 @@ Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso bo
 
 {% endhighlight %}
 
-Agora criaremos uma função para fazer a validação do que for digitado pelo usuário. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.
+Agora criaremos uma função para fazer a validação do que for digitado pelo usuário.
+
+Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.
 
 
 {% highlight js %}

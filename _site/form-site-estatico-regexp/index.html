@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Formulário para site estático (Parte 1) - Validação com RegExp">
   <meta name="twitter:description" content="Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares">
   
-  <meta property="twitter:image:src" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/parte1.jpg">
+  <meta property="twitter:image:src" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/regexp.jpg">
   
 
   <!-- Social: Facebook / Open Graph -->
@@ -28,7 +28,7 @@
   <meta property="og:url" content="http://localhost:4000/form-site-estatico-regexp/">
   <meta property="og:title" content="Formulário para site estático (Parte 1) - Validação com RegExp">
   
-  <meta property="og:image" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/parte1.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/dist/images/posts/form-sem-backend/regexp.jpg">
   
   <meta property="og:description" content="Aprenda a fazer uma validação de formulário dinâmica utilizando Expressões Regulares">
   <meta property="og:site_name" content="Matheus Barone | Desenvolvedor Front-end">
@@ -289,7 +289,7 @@
 
 <p>Abaixo um exemplo de como ficará nosso formulário:</p>
 
-<iframe style="min-height: 600px;" async="" src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/"></iframe>
+<iframe style="min-height: 600px;" async="" src="https://jsfiddle.net/matheusbarone/2d5dffnv/2/embedded/result/"></iframe>
 
 <h2 id="jekyll-e-formspree">Jekyll e Formspree</h2>
 
@@ -341,7 +341,7 @@
 
 <p>É um <a href="https://nandovieira.com.br/design-patterns-no-javascript-module">design pattern</a> que tem como objetivo encapsular nossas variáveis e funções, para que elas não se encontrem no escopo global.</p>
 
-<p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem variaveis de outras possiveis bibliotecas que possam ser importadas no site.</p>
+<p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem com variáveis de outras possiveis bibliotecas que possam ser importadas no site.</p>
 
 <h2 id="variáveis">Variáveis</h2>
 
@@ -422,7 +422,7 @@
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">msgRegexp</span> <span class="o">=</span> <span class="sr">/.*</span><span class="se">\S</span><span class="sr">.*/</span><span class="p">;</span></code></pre></figure>
 
-<p>Caso tenha ficado com alguma dúvida, abaixo um overview dos principais metacaracteres:</p>
+<p>Caso tenha ficado alguma dúvida, abaixo um overview dos principais metacaracteres:</p>
 
 <ul>
   <li><code class="highlighter-rouge">^</code>  - Início da linha;</li>
@@ -451,7 +451,9 @@
 
     <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></figure>
 
-<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.</p>
+<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário.</p>
+
+<p>Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE VALIDAÇÃO DO CAMPO</span>
     <span class="kr">const</span> <span class="nx">validateField</span> <span class="o">=</span> <span class="p">(</span><span class="nx">regExp</span><span class="p">,</span> <span class="nx">field</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
