@@ -25,21 +25,17 @@ Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a n
 
 Abaixo um exemplo de como ficará nosso formulário:
 
-<iframe
-  style="width: 100%; height: 600px"
-  async src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/">
-</iframe>
-
+<iframe style="min-height: 600px;" async src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/"></iframe>
 
 ## Jekyll e Formspree
 
-Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos.
+Uma coisa que me incomodava quando estava desenvolvendo um site estático, era ter de utilizar algum framework javascript para reutilizar códigos html. 
 
 Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o [Jekyll](https://jekyllrb.com/).
 
-O Jekyll é uma plataforma criada pelo pessoal do [Github](https://github.com/jekyll/jekyll) que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criada pela galera da [Shopify](https://pt.shopify.com/).
+O Jekyll é uma plataforma criada pelo pessoal do Github que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criada pela galera da [Shopify](https://pt.shopify.com/).
 
-Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto [Open Source](https://github.com/formspree/formspree) que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.
+Como o Liquid Template não dá suporte ao envio de formulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto open source que tem como proposta resolver o que eu precisava, fazer envio de formulários em um site estático.
 
 Existe uma forma padrão de utilizá-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida os dados são enviados.
 
@@ -55,13 +51,11 @@ Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 
 
 - Parte 3: Estilização das mensagens de envio utilizando SVG; (Em breve)
 
-Caso você se perca no meio do caminho, pode consultar o código dessa primeira parte [aqui](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
-
 Sem mais delongas, vamos começar! :D
 
-## Baixando o Boiterplate
+## Baixando o Boilerplate
 
-Como o nosso foco é a parte do Javascript, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.
+Como o nosso foco é a parte do Javascript, criei um boilerplate para que você não precise se preocupar com o HTML e o CSS.
 
 É só clonar [esse repositório](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos), e seguir os passos de instalação.
 
@@ -79,7 +73,7 @@ Vamos começar criando uma função auto executável para englobar todo o nosso 
 
 É um [design pattern](https://nandovieira.com.br/design-patterns-no-javascript-module) que tem como objetivo encapsular nossas variáveis e funções, para que elas não se encontrem no escopo global.
 
-Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers.
+Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem variaveis de outras possiveis bibliotecas que possam ser importadas no site.
 
 
 ## Variáveis
@@ -89,13 +83,13 @@ Agora vamos criar as váriaveis necessárias para manipular os elementos de UI.
 {% highlight js %}
     (() => {
         // DECLARANDO AS VARIÁVEIS REFERENTES À INTERFACE
+        const container = document.querySelector(".container");
         const form = document.querySelector(".form");
         const fields = document.querySelectorAll(".input-field");
         const nameInput = document.getElementById("name");
         const emailInput = document.getElementById("email");
         const messageInput = document.getElementById("message");
         const submitButton = document.getElementById("submit-button");
-        const container = document.querySelector(".container");
     })();
 {% endhighlight %}
 
@@ -118,7 +112,7 @@ Em seguida, vamos criar a estrutura inicial do nosso script. Serão duas funçõ
 {% endhighlight %}
 
 
-## Expressões Regulares
+## Validação com Expressões Regulares
 
 Chegamos na parte mais interessante, as [Expressões Regulares](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
 
@@ -198,7 +192,7 @@ Voltando ao código, vamos setar nossas Expressões Regulares, e deixar nosso bo
     const emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
     const msgRegexp = /.*\S.*/;
 
-     submitButton.disabled = false;
+    submitButton.disabled = false;
 
 {% endhighlight %}
 
@@ -250,23 +244,10 @@ Por último, é só dispararmos a função de validação cada vez que um dos in
 
 Bom pessoal, por enquanto ficamos por aqui.
 
-Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil.
+Caso você tenha se perdido no meio do caminho, pode consultar o [código dessa primeira parte](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
+
+Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil. Lembrando que as informações também deve ser validadas no back-end.
 
 Feedback, criticas e sugestões são muito bem vindas.
 
 Valeu, e até a parte 2 :D.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

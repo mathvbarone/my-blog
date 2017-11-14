@@ -289,18 +289,17 @@
 
 <p>Abaixo um exemplo de como ficará nosso formulário:</p>
 
-<iframe style="width: 100%; height: 600px" async="" src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/">
-</iframe>
+<iframe style="min-height: 600px;" async="" src="https://jsfiddle.net/matheusbarone/2d5dffnv/1/embedded/result/"></iframe>
 
 <h2 id="jekyll-e-formspree">Jekyll e Formspree</h2>
 
-<p>Sempre me senti incomodado quando, apenas por conta do envio de formulário, tinha que utilizar uma linguagem back-end para desenvolver sites estáticos.</p>
+<p>Uma coisa que me incomodava quando estava desenvolvendo um site estático, era ter de utilizar algum framework javascript para reutilizar códigos html.</p>
 
 <p>Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o <a href="https://jekyllrb.com/">Jekyll</a>.</p>
 
-<p>O Jekyll é uma plataforma criada pelo pessoal do <a href="https://github.com/jekyll/jekyll">Github</a> que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao <a href="https://shopify.github.io/liquid/">Liquid Template</a>, uma linguagem de programação criada pela galera da <a href="https://pt.shopify.com/">Shopify</a>.</p>
+<p>O Jekyll é uma plataforma criada pelo pessoal do Github que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo graças ao <a href="https://shopify.github.io/liquid/">Liquid Template</a>, uma linguagem de programação criada pela galera da <a href="https://pt.shopify.com/">Shopify</a>.</p>
 
-<p>Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o <a href="https://formspree.io/">Formspree</a> como alternativa. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Source</a> que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.</p>
+<p>Como o Liquid Template não dá suporte ao envio de formulário, tive que utilizar o <a href="https://formspree.io/">Formspree</a> como alternativa. Ele é um projeto open source que tem como proposta resolver o que eu precisava, fazer envio de formulários em um site estático.</p>
 
 <p>Existe uma forma padrão de utilizá-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida os dados são enviados.</p>
 
@@ -322,13 +321,11 @@
   </li>
 </ul>
 
-<p>Caso você se perca no meio do caminho, pode consultar o código dessa primeira parte <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js">aqui</a>.</p>
-
 <p>Sem mais delongas, vamos começar! :D</p>
 
-<h2 id="baixando-o-boiterplate">Baixando o Boiterplate</h2>
+<h2 id="baixando-o-boilerplate">Baixando o Boilerplate</h2>
 
-<p>Como o nosso foco é a parte do Javascript, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.</p>
+<p>Como o nosso foco é a parte do Javascript, criei um boilerplate para que você não precise se preocupar com o HTML e o CSS.</p>
 
 <p>É só clonar <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos">esse repositório</a>, e seguir os passos de instalação.</p>
 
@@ -344,7 +341,7 @@
 
 <p>É um <a href="https://nandovieira.com.br/design-patterns-no-javascript-module">design pattern</a> que tem como objetivo encapsular nossas variáveis e funções, para que elas não se encontrem no escopo global.</p>
 
-<p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers.</p>
+<p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers, além de evitar que elas conflitem variaveis de outras possiveis bibliotecas que possam ser importadas no site.</p>
 
 <h2 id="variáveis">Variáveis</h2>
 
@@ -352,13 +349,13 @@
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="c1">// DECLARANDO AS VARIÁVEIS REFERENTES À INTERFACE</span>
+        <span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".container"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">form</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".form"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">fields</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">".input-field"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">nameInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"name"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">emailInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"email"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">messageInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"message"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">submitButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"submit-button"</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".container"</span><span class="p">);</span>
     <span class="p">})();</span></code></pre></figure>
 
 <h2 id="estrutura-de-funções">Estrutura de funções</h2>
@@ -375,7 +372,7 @@
 
     <span class="nx">init</span><span class="p">();</span></code></pre></figure>
 
-<h2 id="expressões-regulares">Expressões Regulares</h2>
+<h2 id="validação-com-expressões-regulares">Validação com Expressões Regulares</h2>
 
 <p>Chegamos na parte mais interessante, as <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">Expressões Regulares</a>.</p>
 
@@ -452,7 +449,7 @@
     <span class="kr">const</span> <span class="nx">emailRegexp</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">A-z0-9.-</span><span class="se">]{1,}</span><span class="sr">@</span><span class="se">\w</span><span class="sr">+</span><span class="se">\.[</span><span class="sr">A-z</span><span class="se">]{2,3}(\.[</span><span class="sr">a-z</span><span class="se">]{2})?</span><span class="sr">$/</span><span class="p">;</span>
     <span class="kr">const</span> <span class="nx">msgRegexp</span> <span class="o">=</span> <span class="sr">/.*</span><span class="se">\S</span><span class="sr">.*/</span><span class="p">;</span>
 
-     <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></figure>
+    <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></figure>
 
 <p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.</p>
 
@@ -488,12 +485,13 @@
 
 <p>Bom pessoal, por enquanto ficamos por aqui.</p>
 
-<p>Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil.</p>
+<p>Caso você tenha se perdido no meio do caminho, pode consultar o <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js">código dessa primeira parte</a>.</p>
+
+<p>Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil. Lembrando que as informações também deve ser validadas no back-end.</p>
 
 <p>Feedback, criticas e sugestões são muito bem vindas.</p>
 
 <p>Valeu, e até a parte 2 :D.</p>
-
 
             </article>
             <!-- CONTENT -->
