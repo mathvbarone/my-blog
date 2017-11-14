@@ -118,9 +118,9 @@ Ou seja, com elas conseguimos detectar determinados padrões dentro de uma strin
 
 Alguns links de estudo:
 
-- [Lista completa do que faz cada metacaractere](https://support.google.com/analytics/answer/1034324?hl=pt-BR);
-- [Um post do tableless que explica mais a fundo como utilizar essa ferramenta](https://tableless.com.br/o-basico-sobre-expressoes-regulares/);
-- [Site para brincar um pouco com as Expressões Regulares](https://regex101.com/);
+- [Lista completa do que faz cada metacaractere](https://support.google.com/analytics/answer/1034324?hl=pt-BR)
+- [Post do tableless que explica mais a fundo o que são Expressões Regulares](https://tableless.com.br/o-basico-sobre-expressoes-regulares/)
+- [Site para validar Expressões Regulares](https://regex101.com/)
 
 Voltando ao nosso formulário, no campo de nome temos a seguinte expressão:
 
