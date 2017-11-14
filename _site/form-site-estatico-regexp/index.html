@@ -293,11 +293,11 @@
 
 <p>O Jekyll é uma plataforma criada pelo pessoal do <a href="https://github.com/jekyll/jekyll">Github</a> que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo é possível graças ao <a href="https://shopify.github.io/liquid/">Liquid Template</a>, uma linguagem de programação criado pelo pessoal da <a href="https://pt.shopify.com/">Shopify</a>.</p>
 
-<p>Apesar de ser bem completo, o Liquid Template não dá suporte ao envio de fomulário, por isso a saida foi utilizar o <a href="https://formspree.io/">Formspree</a>. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Source</a> que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.</p>
+<p>Como o Liquid Template não dá suporte ao envio de fomulário, tive que utilizar o <a href="https://formspree.io/">Formspree</a> como alternativa. Ele é um projeto <a href="https://github.com/formspree/formspree">Open Source</a> que tem como proposta exatamente resolver a questão de envio de formulários para sites estáticos.</p>
 
 <p>Existe uma forma padrão de utiliza-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida o email é enviado.</p>
 
-<p>Se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio dos dados, sem a necessidade de redirecionar o usuário.</p>
+<p>No entanto, se você já estudou um pouco de experiência do usuário, deve saber que tirar a pessoa da sua página nunca é uma boa solução. Por isso utilizaremos AJAX para fazer o envio dos dados, e uma animação em SVG como notificação de sucesso/falha.</p>
 
 <p>Como é muita coisa para ser abordada em apenas um tópico, vou divir o post em 3 partes:</p>
 
@@ -313,11 +313,13 @@
   </li>
 </ul>
 
+<p>Caso você se perca no meio do caminho, pode consultar o código <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js">aqui</a>.</p>
+
 <p>Sem mais delongas, vamos começar! :D</p>
 
 <h2 id="baixando-o-boiterplate">Baixando o Boiterplate</h2>
 
-<p>Como o nosso foco é fazer o envio do formulário, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.</p>
+<p>Como o nosso foco é a parte do Javascript, criei um boiterplate para que você não precise se preocupar com o HTML e o CSS.</p>
 
 <p>É só clonar <a href="https://github.com/mathvbarone/tutorial-form-para-sites-estaticos">esse repositório</a>, e seguir os passos de instalação.</p>
 
@@ -325,13 +327,15 @@
 
 <h2 id="função-global">Função global</h2>
 
-<p>Vamos começar criando uma função para englobar todo o nosso código. Esse é um design pattern que tem como objetivo encapsular nossas variáveis e funções para que não se encontrem no escopo global.</p>
-
-<p>É uma medida de segurança, para evitar que elas sejam acessadas por terceiros através do “inspecionar elemento”.</p>
+<p>Vamos começar criando uma função auto executável para englobar todo o nosso código.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 
     <span class="p">})();</span></code></pre></figure>
+
+<p>É um <a href="https://nandovieira.com.br/design-patterns-no-javascript-module">design pattern</a> que tem como objetivo encapsular nossas variáveis e funções, para que elas não se encontrem no escopo global.</p>
+
+<p>Serve como medida de segurança, evitando que elas sejam acessadas por terceiros, através das ferramentas de inspeção oferecidas pelos browsers.</p>
 
 <h2 id="variáveis-para-manipularmos-os-elementos-de-ui">Variáveis para manipularmos os elementos de UI</h2>
 
@@ -350,7 +354,7 @@
 
 <h2 id="estrutura-de-funções">Estrutura de funções</h2>
 
-<p>Em seguida, vamos criar a estrutura de funções necessárias para fazer a validação do formulário. Serão duas funções, uma que fará a validação em si, e uma para inicializarmos os eventos.</p>
+<p>Em seguida, vamos criar a estrutura inicial do nosso script. Serão duas funções, uma que fará a validação em si, e uma para inicializarmos os eventos.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE VALIDAÇÃO DO FORM</span>
     <span class="kr">const</span> <span class="nx">validateForm</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -364,7 +368,7 @@
 
 <h2 id="expressões-regulares">Expressões Regulares</h2>
 
-<p>Agora vem a parte mais interessante, as <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">Expressões Regulares</a>.</p>
+<p>Chegamos na parte mais interessante, as <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">Expressões Regulares</a>.</p>
 
 <blockquote>
   <p><strong>Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string.</strong></p>
@@ -410,7 +414,7 @@
 
      <span class="nx">submitButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></figure>
 
-<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário, baseado nas Expressões Regulares. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado:</p>
+<p>Agora criaremos uma função para fazer a validação do que for digitado pelo usuário. Se o usuário digitou o que é esperado no campo de input, ele conseguirá habilitar o botão de submit e enviar os dados, caso contrário, mostraremos uma mensagem avisando para ele o que precisa ser digitado.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE VALIDAÇÃO DO CAMPO</span>
     <span class="kr">const</span> <span class="nx">validateField</span> <span class="o">=</span> <span class="p">(</span><span class="nx">regExp</span><span class="p">,</span> <span class="nx">field</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -429,6 +433,26 @@
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">validateField</span><span class="p">(</span><span class="nx">nameRegexp</span><span class="p">,</span> <span class="nx">nameInput</span><span class="p">);</span>
     <span class="nx">validateField</span><span class="p">(</span><span class="nx">emailRegexp</span><span class="p">,</span> <span class="nx">emailInput</span><span class="p">);</span>
     <span class="nx">validateField</span><span class="p">(</span><span class="nx">msgRegexp</span><span class="p">,</span> <span class="nx">messageInput</span><span class="p">);</span></code></pre></figure>
+
+<p>Por último, é só dispararmos a função de validação cada vez que um dos inputs for preenchido, e tirar o evento default do botão de envio do form.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE INICIALIZAÇÃO</span>
+    <span class="kr">const</span> <span class="nx">init</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">fields</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">field</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">field</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="nx">validateForm</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="nx">submitButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="p">(</span><span class="nx">evnt</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">evnt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">};</span></code></pre></figure>
+
+<p>Bom pessoal, por enquanto ficamos por aqui.</p>
+
+<p>Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil.</p>
+
+<p>Feedback, criticas e sugestões são muito bem vindas.</p>
+
+<p>Valeu, e até a parte 2 :D.</p>
 
 
             </article>
