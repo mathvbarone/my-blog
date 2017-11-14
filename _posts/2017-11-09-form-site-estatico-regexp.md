@@ -35,7 +35,7 @@ Por isso, ao refazer o meu site, busquei alternativas para resolver esse problem
 
 O Jekyll é uma plataforma criada pelo pessoal do Github que tem como proposta dar a um site estático, features como includes, variáveis, laços de repetição, e muitas outras coisas. Isso tudo graças ao [Liquid Template](https://shopify.github.io/liquid/), uma linguagem de programação criada pela galera da [Shopify](https://pt.shopify.com/).
 
-Como o Liquid Template não dá suporte ao envio de formulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto open source que tem como proposta resolver o que eu precisava, fazer envio de formulários em um site estático.
+Como o Liquid Template não dá suporte ao envio de formulário, tive que utilizar o [Formspree](https://formspree.io/) como alternativa. Ele é um projeto open source que tem como proposta fazer exatamente o que eu precisava: envio de formulários em um site estático.
 
 Existe uma forma padrão de utilizá-lo em que, após submetido o formulário, o usuário é redirecionado para uma página anti-spam, e em seguida os dados são enviados.
 
