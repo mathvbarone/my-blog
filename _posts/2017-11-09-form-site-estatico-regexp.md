@@ -217,22 +217,17 @@ Se o usuário digitou o que é esperado no campo de input, ele conseguirá habil
 
 {% endhighlight %}
 
-Agora vamos executar as funções utilizando as variáveis declaradas lá em cima.
+Agora vamos executar as funções de validação utilizando as variáveis declaradas lá em cima.
 
-Para isso, criaremos um array com as informações de cada campo, e suas determinadas expressões, e em seguida iteraremos em cada um deles executando a função de validação.
+Nós poderiamos criar um array com as informações de cada campo e suas determinadas expressões, e em seguida iterar em cada um deles executando a função de validação.
 
+Porém, para não criar uma complexidade muito grande ao tutorial, optei por deixar a forma simplificada.
 
 {% highlight js %}
 
-    const regExpAndFieldArray = [
-      { regExp: nameRegexp, field: nameInput },
-      { regExp: emailRegexp, field: emailInput },
-      { regExp: msgRegexp, field: messageInput },
-    ];
-
-    regExpAndFieldArray.forEach((regExpAndField) => {
-      validateField(regExpAndField.regExp, regExpAndField.field);
-    });
+      validateField(nameRegexp, nameInput);
+      validateField(emailRegexp, emailInput);
+      validateField(msgRegexp, messageInput);
 
 {% endhighlight %}
 

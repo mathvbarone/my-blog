@@ -467,19 +467,15 @@
       <span class="p">}</span>
     <span class="p">};</span></code></pre></figure>
 
-<p>Agora vamos executar as funções utilizando as variáveis declaradas lá em cima.</p>
+<p>Agora vamos executar as funções de validação utilizando as variáveis declaradas lá em cima.</p>
 
-<p>Para isso, criaremos um array com as informações de cada campo, e suas determinadas expressões, e em seguida iteraremos em cada um deles executando a função de validação.</p>
+<p>Nós poderiamos criar um array com as informações de cada campo e suas determinadas expressões, e em seguida iterar em cada um deles executando a função de validação.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">regExpAndFieldArray</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">nameRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">nameInput</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">emailRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">emailInput</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">msgRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">messageInput</span> <span class="p">},</span>
-    <span class="p">];</span>
+<p>Porém, para não criar uma complexidade muito grande ao tutorial, optei por deixar a forma simplificada.</p>
 
-    <span class="nx">regExpAndFieldArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">regExpAndField</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">validateField</span><span class="p">(</span><span class="nx">regExpAndField</span><span class="p">.</span><span class="nx">regExp</span><span class="p">,</span> <span class="nx">regExpAndField</span><span class="p">.</span><span class="nx">field</span><span class="p">);</span>
-    <span class="p">});</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">      <span class="nx">validateField</span><span class="p">(</span><span class="nx">nameRegexp</span><span class="p">,</span> <span class="nx">nameInput</span><span class="p">);</span>
+      <span class="nx">validateField</span><span class="p">(</span><span class="nx">emailRegexp</span><span class="p">,</span> <span class="nx">emailInput</span><span class="p">);</span>
+      <span class="nx">validateField</span><span class="p">(</span><span class="nx">msgRegexp</span><span class="p">,</span> <span class="nx">messageInput</span><span class="p">);</span></code></pre></figure>
 
 <p>Por último, é só dispararmos a função de validação cada vez que um dos inputs for preenchido, e tirar o evento default do botão de envio do form.</p>
 
