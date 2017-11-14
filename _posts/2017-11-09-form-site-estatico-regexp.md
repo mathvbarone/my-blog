@@ -248,7 +248,7 @@ Bom pessoal, por enquanto ficamos por aqui.
 
 Caso você tenha se perdido no meio do caminho, pode consultar o [código dessa primeira parte](https://github.com/mathvbarone/tutorial-form-para-sites-estaticos/blob/master/docs/parte-1/js/script.js).
 
-Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil. Lembrando que as informações também deve ser validadas no back-end.
+Validação de formulário é algo primordial para qualquer front. Por mais que você não se interesse pelo tutorial como um todo, essa parte em específico com certeza será muito útil. Lembrando que, caso você não esteja trabalhando em um site estático, as informações também deve ser validadas no back-end.
 
 Feedback, criticas e sugestões são muito bem vindas.
 
