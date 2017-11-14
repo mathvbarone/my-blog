@@ -235,10 +235,10 @@ Por último, é só dispararmos a função de validação cada vez que um dos in
     // FUNÇÃO DE INICIALIZAÇÃO
     const init = () => {
         fields.forEach((field) => {
-        field.addEventListener("input", validateForm);
+            field.addEventListener("input", validateForm);
         });
         submitButton.addEventListener("click", (evnt) => {
-        evnt.preventDefault();
+            evnt.preventDefault();
         });
     };
 
