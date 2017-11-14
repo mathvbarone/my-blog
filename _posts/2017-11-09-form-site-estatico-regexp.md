@@ -86,10 +86,10 @@ Agora vamos criar as váriaveis necessárias para manipular os elementos de UI.
         const container = document.querySelector(".container");
         const form = document.querySelector(".form");
         const fields = document.querySelectorAll(".input-field");
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const messageInput = document.getElementById("message");
-        const submitButton = document.getElementById("submit-button");
+        const nameInput = document.querySelector("#name");
+        const emailInput = document.querySelector("#email");
+        const messageInput = document.querySelector("#message");
+        const submitButton = document.querySelector("#submit-button");
     })();
 {% endhighlight %}
 
@@ -217,14 +217,22 @@ Se o usuário digitou o que é esperado no campo de input, ele conseguirá habil
 
 {% endhighlight %}
 
-Agora é só executarmos as funções utilizando as variáveis declaradas lá em cima:
+Agora vamos executar as funções utilizando as variáveis declaradas lá em cima.
+
+Para isso, criaremos um array com as informações de cada campo, e suas determinadas expressões, e em seguida iteraremos em cada um deles executando a função de validação.
 
 
 {% highlight js %}
 
-    validateField(nameRegexp, nameInput);
-    validateField(emailRegexp, emailInput);
-    validateField(msgRegexp, messageInput);
+    const regExpAndFieldArray = [
+      { regExp: nameRegexp, field: nameInput },
+      { regExp: emailRegexp, field: emailInput },
+      { regExp: msgRegexp, field: messageInput },
+    ];
+
+    regExpAndFieldArray.forEach((regExpAndField) => {
+      validateField(regExpAndField.regExp, regExpAndField.field);
+    });
 
 {% endhighlight %}
 
@@ -234,9 +242,8 @@ Por último, é só dispararmos a função de validação cada vez que um dos in
 
     // FUNÇÃO DE INICIALIZAÇÃO
     const init = () => {
-        fields.forEach((field) => {
-            field.addEventListener("input", validateForm);
-        });
+        fields.forEach(field => field.addEventListener("input", validateForm));
+        
         submitButton.addEventListener("click", (evnt) => {
             evnt.preventDefault();
         });

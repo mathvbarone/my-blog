@@ -352,10 +352,10 @@
         <span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".container"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">form</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".form"</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">fields</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">".input-field"</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">nameInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"name"</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">emailInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"email"</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">messageInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"message"</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">submitButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"submit-button"</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">nameInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#name"</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">emailInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#email"</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">messageInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#message"</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">submitButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#submit-button"</span><span class="p">);</span>
     <span class="p">})();</span></code></pre></figure>
 
 <h2 id="estrutura-de-funções">Estrutura de funções</h2>
@@ -467,19 +467,26 @@
       <span class="p">}</span>
     <span class="p">};</span></code></pre></figure>
 
-<p>Agora é só executarmos as funções utilizando as variáveis declaradas lá em cima:</p>
+<p>Agora vamos executar as funções utilizando as variáveis declaradas lá em cima.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="nx">validateField</span><span class="p">(</span><span class="nx">nameRegexp</span><span class="p">,</span> <span class="nx">nameInput</span><span class="p">);</span>
-    <span class="nx">validateField</span><span class="p">(</span><span class="nx">emailRegexp</span><span class="p">,</span> <span class="nx">emailInput</span><span class="p">);</span>
-    <span class="nx">validateField</span><span class="p">(</span><span class="nx">msgRegexp</span><span class="p">,</span> <span class="nx">messageInput</span><span class="p">);</span></code></pre></figure>
+<p>Para isso, criaremos um array com as informações de cada campo, e suas determinadas expressões, e em seguida iteraremos em cada um deles executando a função de validação.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kr">const</span> <span class="nx">regExpAndFieldArray</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">nameRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">nameInput</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">emailRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">emailInput</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="na">regExp</span><span class="p">:</span> <span class="nx">msgRegexp</span><span class="p">,</span> <span class="na">field</span><span class="p">:</span> <span class="nx">messageInput</span> <span class="p">},</span>
+    <span class="p">];</span>
+
+    <span class="nx">regExpAndFieldArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">regExpAndField</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">validateField</span><span class="p">(</span><span class="nx">regExpAndField</span><span class="p">.</span><span class="nx">regExp</span><span class="p">,</span> <span class="nx">regExpAndField</span><span class="p">.</span><span class="nx">field</span><span class="p">);</span>
+    <span class="p">});</span></code></pre></figure>
 
 <p>Por último, é só dispararmos a função de validação cada vez que um dos inputs for preenchido, e tirar o evento default do botão de envio do form.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// FUNÇÃO DE INICIALIZAÇÃO</span>
     <span class="kr">const</span> <span class="nx">init</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nx">fields</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">field</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-            <span class="nx">field</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="nx">validateForm</span><span class="p">);</span>
-        <span class="p">});</span>
+        <span class="nx">fields</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">field</span> <span class="o">=&gt;</span> <span class="nx">field</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="nx">validateForm</span><span class="p">));</span>
+        
         <span class="nx">submitButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="p">(</span><span class="nx">evnt</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
             <span class="nx">evnt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
         <span class="p">});</span>
