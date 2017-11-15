@@ -157,7 +157,7 @@ Para melhor entendimento, fiz uma lista detalhando cada metacaractere:
 - `?` - Esse metacaractere indica que o grupo declarado anteriormente é opcional; 
 - `$` - Fim da expressão; 
 
-No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere.
+No campo de mensagem, colocamos como condicional que o campo não esteja vazio, podendo ser preenchido por qualquer outro caractere:
 
 
 {% highlight js %}
