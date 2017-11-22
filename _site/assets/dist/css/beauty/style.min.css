@@ -8943,7 +8943,7 @@ a.tag:hover {
 }
 
 .post-blog .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9278,7 +9278,7 @@ a.tag:hover {
 }
 
 .post-html .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9597,7 +9597,7 @@ a.tag:hover {
 }
 
 .post-css .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -9927,7 +9927,7 @@ a.tag:hover {
 }
 
 .post-js .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10244,7 +10244,7 @@ a.tag:hover {
 }
 
 .post-misc .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     box-shadow: none;
     transition: ease-in-out .2s all
@@ -10568,7 +10568,7 @@ a.tag:hover {
 }
 
 .post-front .card {
-    min-height: 15.1em;
+    min-height: 15.6em;
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -11829,6 +11829,14 @@ footer .footer-phone .fa {
 }
 
 .jobs-list>li .job-figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     transition: ease-in-out .2s all
 }
 
