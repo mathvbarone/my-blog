@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="http://schema.org/BlogPosting" class="post-front">
+<!-- HEAD -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Afinal, o que faz um desenvolvedor Front-end?</title>
+  <meta name="description" content="Se você se interessa pela área, comece por aqui">
+
+  <!-- Google Authorship Markup -->
+  <meta name="google-site-verification" content="8kDtWUmUQEh7QXoj_shRaxcgYAVpHs_YQ7TeniN0kmI" />
+  <link rel="author" href="https://plus.google.com/+MatheusBarone1?rel=author">
+  <link rel="alternate" href="http://localhost:4000" hreflang="pt-br"/>
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@matheusvbarone">
+  <meta name="twitter:title" content="Afinal, o que faz um desenvolvedor Front-end?">
+  <meta name="twitter:description" content="Se você se interessa pela área, comece por aqui">
+  
+  <meta property="twitter:image:src" content="http://localhost:4000/assets/dist/images/posts/front-end/front-end-post.jpg">
+  
+
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:app_id" content="2011413979095249" />
+  <meta property="og:url" content="http://localhost:4000/o-que-faz-front-end-Copia/">
+  <meta property="og:title" content="Afinal, o que faz um desenvolvedor Front-end?">
+  
+  <meta property="og:image" content="http://localhost:4000/assets/dist/images/posts/front-end/front-end-post.jpg">
+  
+  <meta property="og:description" content="Se você se interessa pela área, comece por aqui">
+  <meta property="og:site_name" content="Matheus Barone | Desenvolvedor Front-end">
+
+  <!-- Social: Google+ / Schema.org  -->
+  <meta itemprop="name" content="Afinal, o que faz um desenvolvedor Front-end?"/>
+  <meta itemprop="description" content="Se você se interessa pela área, comece por aqui">
+  <meta itemprop="image" content="http://localhost:4000/assets/dist/images/site-image.jpg"/>
+
+
+   <!-- Apple Touch Icons -->
+   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-57x57.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-114x114.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-72x72.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-144x144.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-60x60.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-120x120.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-76x76.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/dist/images/icons/apple-touch-icon-152x152.png" />
+   <!-- favicon -->
+   <link rel="icon" type="image/png" href="http://localhost:4000/assets/dist/images/icons/favicon-196x196.png" sizes="196x196" />
+   <link rel="icon" type="image/png" href="http://localhost:4000/assets/dist/images/icons/favicon-96x96.png" sizes="96x96" />
+   <link rel="icon" type="image/png" href="http://localhost:4000/assets/dist/images/icons/favicon-32x32.png" sizes="32x32" />
+   <link rel="icon" type="image/png" href="http://localhost:4000/assets/dist/images/icons/favicon-16x16.png" sizes="16x16" />
+   <link rel="icon" type="image/png" href="http://localhost:4000/assets/dist/images/icons/favicon-128.png" sizes="128x128" />
+     <!-- Windows 8 Tile Icons -->
+   <meta name="application-name" content="Matheus Barone | Desenvolvedor Front-End"/>
+   <meta name="msapplication-TileColor" content="#FFFFFF" />
+   <meta name="msapplication-TileImage" content="http://localhost:4000/assets/dist/images/icons/mstile-144x144.png" />
+   <meta name="msapplication-square70x70logo" content="http://localhost:4000/assets/dist/images/icons/mstile-70x70.png" />
+   <meta name="msapplication-square150x150logo" content="http://localhost:4000/assets/dist/images/icons/mstile-150x150.png" />
+   <meta name="msapplication-wide310x150logo" content="http://localhost:4000/assets/dist/images/icons/mstile-310x150.png" />
+   <meta name="msapplication-square310x310logo" content="http://localhost:4000/assets/dist/images/icons/mstile-310x310.png" />
+
+  <!-- Android Lolipop Theme Color -->
+  <meta name="theme-color" content="#cd2b46">
+
+
+<!-- POST LAYOUT CRITICAL CSS -->
+
+  <style>
+.button,.container,.offset,.post-content a{position:relative}.button,html{background-color:#fff}.breadcrumb,.button{-webkit-touch-callout:none;white-space:nowrap}body,h1,h2{font-weight:400}article,header,section{display:block}img{max-width:100%;height:auto}.hero,.hero-body{-webkit-box-orient:vertical;-webkit-box-direction:normal}body,h1,h2,html,li,p,ul{margin:0;padding:0}h1,h2{font-size:100%}ul{list-style:none}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}.button,body{font-size:1rem;line-height:1.5}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{color:#4a4a4a;font-family:Montserrat,sans-serif}a{color:#2ab7cd;text-decoration:none}span{font-style:inherit;font-weight:inherit}.button{-moz-appearance:none;-webkit-appearance:none;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #dbdbdb;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:none;box-shadow:none;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;height:2.25em;padding-bottom:-webkit-calc(.375em - 1px);padding-bottom:calc(.375em - 1px);padding-top:-webkit-calc(.375em - 1px);padding-top:calc(.375em - 1px);vertical-align:top;color:#363636;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-left:1em;padding-right:1em;text-align:center}.breadcrumb a,.icon{-webkit-box-align:center}.button.is-primary{background-color:#cd2b46;border-color:transparent;color:#fff}.container{margin:0 auto}.icon{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:1.5rem;width:1.5rem}.icon.is-small{height:1rem;width:1rem}.hero-posts-body,.post-offset .breadcrumb,.post-title{width:100%;max-width:50rem}.subtitle{word-break:break-word;color:#4a4a4a;font-size:1.25rem;font-weight:400;line-height:1.25}.breadcrumb:not(:last-child){margin-bottom:1.5rem}.breadcrumb{overflow:hidden;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;font-size:1rem;overflow-x:auto}.breadcrumb a{-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#7a7a7a;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:.5em .75em}.breadcrumb li,.breadcrumb ul{-webkit-box-align:center;display:flex}.breadcrumb li{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.breadcrumb li+li::before{color:#4a4a4a;content:"\0002f"}.breadcrumb ul{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.breadcrumb .icon:first-child{margin-right:.5em}.breadcrumb.is-small{font-size:.75rem}.level{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.level.is-mobile .level-item:not(:last-child){margin-bottom:0}.level.is-mobile,.level.is-mobile .level-left,.level.is-mobile .level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.level.is-mobile .level-item:not(.is-narrow){-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}.level-item,.level-left{-webkit-box-align:center}.level-item{-webkit-align-items:center;-ms-flex-align:center;align-items:center;display:flex;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.level-left,.level-right{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.level-left{-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.level-right{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.hero{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:0}.hero-body{padding:3rem 1.5rem;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.up-arrow{display:block}*{margin:0;list-style-type:none;padding:0}.offset{background:#fff;z-index:1}.post-offset{top:70vh}.post-offset .breadcrumb{padding:30px 0 10px 1.4em;margin:0 auto}.hero-posts{height:70vh;min-height:70vh}.hero-posts-body{margin:auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.post-date,.post-description,.post-title{color:#fff}.post-title{font-weight:700;padding:20px 0;font-size:3.4em;line-height:1.4em}.post-description{font-size:1.4em;font-weight:300}.post-content h2,.post-content p{width:auto;width:100%;max-width:50rem;display:block;margin:0 auto 1.875rem;padding:0 1em;font-weight:300;font-style:normal;font-size:1.125rem;line-height:1.5em;letter-spacing:.01rem}.post-content h2{padding:0 .7em;color:#FFF;font-weight:700;margin-bottom:30px;font-size:1.6em}.post-content h2:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}.post-content a{padding:0 3px;color:#FFF;font-weight:500}.post-content a:after{content:'';position:absolute;width:100%;height:2px;background:#FFF;bottom:0;left:0}.hero,.mast-header{position:fixed;width:100%}.mast-header{z-index:10;-webkit-box-shadow:0 3px 5px rgba(0,0,0,.12);box-shadow:0 3px 5px rgba(0,0,0,.12);padding:5px 10px;top:0;background:#fff}.mast-header .logo-simple .logo-simple-1{fill:#000200;stroke:#fff;stroke-miterlimit:10;stroke-width:2px}.mast-header .logo-simple .logo-simple-2{fill:none}.mast-header .logo-simple .logo-simple-3{fill:#fff}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:10px;color:#000}.menu-link{font-size:.95em}.breadcrumb{max-width:51rem}.breadcrumb li:first-child a{padding-left:0}.hero{min-height:100vh;height:100vh;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.hero-body{text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}@media screen and (min-width:769px),print{.level-right .level-item:not(: last-child){margin-right:.75rem}.level{display:flex}.level-left,.level-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media screen and (min-width:1024px){.container{max-width:960px;width:960px}}@media screen and (min-width:1216px){.container{max-width:1152px;width:1152px}}@media screen and (min-width:1408px){.container{max-width:1344px;width:1344px}}@media screen and (max-width:768px){.level-item:not(: last-child){margin-bottom:.75rem}}@media (max-width:540px){.hero-posts{height:60vh;min-height:60vh}.post-offset{top:60vh}.post-title{line-height:1.2em;font-size:1.9em}.post-description{font-size:1.2em}.menu-link:not(.button):not(.button-submit):not(.button-submit){margin-right:8px}.menu-link{font-size:.8rem}}@media (max-width:340px){.menu-link{font-size:.74rem}}
+</style>
+
+<!-- POST LAYOUT CRITICAL CSS -->
+
+<!-- INDEX LAYOUT CRITICAL CSS -->
+
+<!-- INDEX LAYOUT CRITICAL CSS -->
+
+<!-- DEFAULT LAYOUT CRITICAL CSS -->
+
+<!-- DEFAULT LAYOUT CRITICAL CSS -->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '190779964790158');
+  fbq('track', 'PageView');
+</script>
+<noscript><img alt="facebook-image" height="1" width="1" class="is-hidden"
+  src="https://www.facebook.com/tr?id=190779964790158&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+
+
+<!-- /HEAD -->
+
+<body>
+    <!-- ANALYTICS -->
+    <!-- GOOGLE -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78614910-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78614910-2');
+</script>
+<!-- GOOGLE -->
+
+
+<!-- FACEBOOK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2011413979095249',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- FACEBOOK -->
+
+
+<!-- TWITTER -->
+
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+<!-- TWITTER -->
+
+
+    <!-- /ANALYTICS -->
+
+    <!-- HEADER -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1">
+    <defs>
+        <symbol id="icon-code" viewBox="0 0 200 200">
+            <path d="M116.3,30.2c-4.8,0.1-9,3.4-10.4,8L72.8,148.7c-1.8,5.9,1.6,12,7.4,13.8c5.9,1.8,12-1.6,13.8-7.4c0,0,0,0,0,0
+               l33.1-110.5c1.8-5.8-1.4-12-7.3-13.8C118.8,30.4,117.5,30.2,116.3,30.2z M56,44c-2.9,0-5.7,1.1-7.8,3.1L4,88.6
+               c-4.5,4.2-4.7,11.2-0.5,15.6c0.2,0.2,0.3,0.4,0.5,0.5l44.2,41.4c4.5,4.2,11.5,4,15.7-0.5c4.2-4.5,4-11.5-0.5-15.7L27.8,96.7
+               l35.6-33.4c4.5-4.1,4.9-11.1,0.8-15.6C62.1,45.4,59.1,44,56,44L56,44z M143.7,44c-6.1,0.2-10.9,5.3-10.7,11.4c0.1,3,1.4,5.9,3.6,7.9
+               l35.6,33.4L136.6,130c-4.5,4.2-4.7,11.2-0.5,15.7c4.2,4.5,11.2,4.7,15.7,0.5l44.2-41.4c4.5-4.2,4.7-11.2,0.5-15.6
+               c-0.2-0.2-0.3-0.4-0.5-0.5l-44.2-41.4C149.6,45,146.7,43.9,143.7,44L143.7,44z" />
+        </symbol>
+
+        <symbol id="icon-uxui" viewBox="0 0 200 200">
+            <path d="M172.6,53.41a5,5,0,0,0-1.45-3.53L150,28.73a5,5,0,0,0-7.06,0L2,169.69a5,5,0,0,0,0,7.06L23.12,197.9a5,5,0,0,0,7.06,0l141-141A5,5,0,0,0,172.6,53.41Zm-45.4,33.4L113.11,72.72l33.4-33.4,14.09,14.09Z"
+                transform="translate(-0.5)" />
+            <path d="M179.94,39.87a19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,0,19.91,19.91,0,0,1,160,19.94,19.91,19.91,0,0,1,179.94,39.87Z"
+                transform="translate(-0.5)" />
+            <path d="M110.16,39.87A19.91,19.91,0,0,1,130.1,19.94,19.91,19.91,0,0,1,110.16,0,19.91,19.91,0,0,1,90.23,19.94,19.94,19.94,0,0,1,110.16,39.87Z"
+                transform="translate(-0.5)" />
+            <path d="M179.94,69.77A19.91,19.91,0,0,1,160,89.71a19.91,19.91,0,0,1,19.94,19.94,19.91,19.91,0,0,1,19.94-19.94A19.91,19.91,0,0,1,179.94,69.77Z"
+                transform="translate(-0.5)" />
+        </symbol>
+
+        <symbol id="icon-ideas" viewBox="0 0 200 200">
+            <path d="M153.14,61.72c-.27-.47-.56-.89-1.13-1.72A63.43,63.43,0,0,0,100.4,32.91a62.28,62.28,0,0,0-34.49,11c-1,.64-2,1.36-3.37,2.42-1,.76-2,1.6-2.91,2.39l-.57.48a36.18,36.18,0,0,0-3.35,3.28,46,46,0,0,0-3.61,4.09c-.35.42-.7.85-1.18,1.48s-.74,1.05-1,1.36a5.94,5.94,0,0,0-.71,1,13.28,13.28,0,0,0-.87,1.3c-6.75,10.28-10.1,21.07-9.95,32a53.65,53.65,0,0,0,6.05,25c.11.26.23.53.47,1a82.72,82.72,0,0,0,5.67,9.7l.9,1.28c2.2,3.25,4.34,6.43,6.17,9.47.47,1.16,1,2.27,1.48,3.41a48.49,48.49,0,0,1,2.42,6.3,31.76,31.76,0,0,1,1.18,7.76l-.41,7.05,78.69-.3-1.81-7.15a16,16,0,0,1,.3-4,37.66,37.66,0,0,1,1.62-6.5c.36-1.09.78-2.16,1-2.73l.4-.64a14.56,14.56,0,0,0,1.54-3.35c1.79-3.08,3.79-6.1,6-9.45l1.08-1.63a86.48,86.48,0,0,0,6.1-10.79A53.7,53.7,0,0,0,163,92.93V92.1A55.84,55.84,0,0,0,153.14,61.72ZM58,67.39l.42-.6.25-.41c.5-.64,1-1.3,1.3-1.79l1.24-1.52a34.66,34.66,0,0,1,2.63-2.95,29,29,0,0,1,2.52-2.46l.6-.51c.75-.65,1.51-1.31,2.81-2.29.73-.55,1.45-1.1,2.34-1.67a51.19,51.19,0,0,1,28.36-9.11c16.57-.06,32.8,8.48,42.72,22.78l.49.76c5.25,7.86,8,16.15,8.14,24.61v.89a43,43,0,0,1-4.59,20.16,76.2,76.2,0,0,1-5.35,9.46l-1.05,1.59c-2.44,3.65-4.62,6.94-6.77,10.74l-.41,1.11a9.79,9.79,0,0,1-.77,1.58,7,7,0,0,0-.82,1.49c-.52,1.27-1,2.6-1.47,3.9a48.29,48.29,0,0,0-2.07,8.39c-.09.58-.17,1.14-.24,1.7l-54.58.21a43,43,0,0,0-1.31-6.61,58.81,58.81,0,0,0-3-7.82c-.48-1.06-1-2.13-1.41-3.26L67.6,135c-2.18-3.71-4.47-7.13-6.89-10.7l-.9-1.26a73.05,73.05,0,0,1-5.1-8.82l-.39-.85A42.39,42.39,0,0,1,49.6,93.68C49.47,84.9,52.27,76.08,58,67.39Zm-6,47.14Z"
+                transform="translate(-10.07 0)" />
+            <path d="M124.45,93.52,95.79,140.93a.67.67,0,0,1-1.24-.44L99.1,109a.68.68,0,0,0-.66-.8l-20.84.08a.67.67,0,0,1-.58-1l28.66-47.41a.67.67,0,0,1,1.24.44l-4.56,31.53a.65.65,0,0,0,.66.77l20.84-.08A.7.7,0,0,1,124.45,93.52Z"
+                transform="translate(-10.07 0)" />
+            <path d="M61.26,175v0a27.3,27.3,0,0,0,0,5.32c1.18,7.76,9.44,8.18,12.13,8.35,1.38,0,2.76.09,4.15.09,3.76,0,4.53.37,5.84,2.46,3.28,5.2,10.28,8.39,18.34,8.36,7.76,0,14.19-3,17.44-8,1.6-2.49,2.6-3,6.48-3h1.84c3,0,9,0,12.35-4.14,2.79-3.44,2-7.18,1.3-9.79Z"
+                transform="translate(-10.07 0)" />
+            <path d="M30.87,72.09A10.59,10.59,0,0,1,20.75,79.6a10.31,10.31,0,0,1-3.17-.48,10.64,10.64,0,1,1,13.29-7Z" transform="translate(-10.07 0)"
+            />
+            <path d="M57.32,35.28A10.46,10.46,0,0,1,51,37.39a10.65,10.65,0,0,1-6.39-19.21,10.43,10.43,0,0,1,6.15-2,10.82,10.82,0,0,1,8.74,4.18A10.65,10.65,0,0,1,57.32,35.28Z"
+                transform="translate(-10.07 0)" />
+            <path d="M111,10.6a10.64,10.64,0,1,1-21.28.11A10.6,10.6,0,0,1,100.32,0,10.67,10.67,0,0,1,111,10.6Z" transform="translate(-10.07 0)"
+            />
+            <path d="M158.32,33.15a10.66,10.66,0,0,1-8.57,4.41,10.66,10.66,0,0,1-8.65-16.9,10.81,10.81,0,0,1,8.74-4.27A10.17,10.17,0,0,1,156,18.3a10.66,10.66,0,0,1,2.36,14.85Z"
+                transform="translate(-10.07 0)" />
+            <path d="M183.09,79.33a10.65,10.65,0,0,1-13.38-6.9,10.64,10.64,0,1,1,13.38,6.9Z" transform="translate(-10.07 0)" />
+        </symbol>
+
+        <symbol id="up-arrow" viewbox="0 0 16 16">
+            <path d="M1.9,12L8,6.3l6.1,5.7c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.6-0.1,0.8-0.4c0.4-0.4,0.4-1.2-0.1-1.6L8.8,3.9
+			c-0.4-0.4-1.1-0.4-1.5,0l-6.9,6.5c-0.4,0.4-0.5,1.1-0.1,1.6C0.7,12.5,1.4,12.5,1.9,12z"/>
+        </symbol>
+    </defs>
+</svg>	
+
+<header class="mast-header ">
+	<div class="container">
+		<!-- Main container -->
+		<nav class="level is-mobile">
+			<!-- Left side -->
+			<div class="level-left">
+				<a  href="http://localhost:4000/" class="level-item" title="© 2017 Matheus Barone - Desenvolvedor Front-end | Todos os Direitos Reservados">
+					<svg id="logo-simple" class="logo-simple" data-name="logo-simple" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 153.91 153.91">
+     <rect class="logo-simple-1" x="1" y="1" width="151.91" height="151.91" rx="4.23" ry="4.23"/>
+     <g>
+       <polygon class="logo-simple-2" points="83.29 56.08 76.89 56.08 76.89 97.83 83.29 97.83 83.84 97.83 90.24 97.83 90.24 56.08 83.84 56.08 83.29 56.08"/>
+       <path class="logo-simple-2" d="M157.29,232.19a6.26,6.26,0,0,0-4.42-10.69H139V234h13.92A6,6,0,0,0,157.29,232.19Z" transform="translate(-34.8 -165.42)"/>
+       <path class="logo-simple-2" d="M152.87,247.94H139v15.31h13.92a7.65,7.65,0,1,0,0-15.31Z" transform="translate(-34.8 -165.42)"/>
+       <path class="logo-simple-3" d="M172.85,247.39a20.55,20.55,0,0,0-4.47-6.71,21.41,21.41,0,0,0,3.43-6,20.14,20.14,0,0,0-.35-14.81,20.26,20.26,0,0,0-10.73-10.74,19.59,19.59,0,0,0-7.85-1.59H97.57L83.85,229.35,70.13,207.58H49.06V221.5h7v41.75h-7v13.92H76.89V263.25h-7V233.43l13.92,22,13.92-22v29.82h-7v13.92h62.06a21,21,0,0,0,8.4-1.69A21.63,21.63,0,0,0,172.75,264a21.83,21.83,0,0,0,.1-16.6ZM139,221.5h13.92a6.26,6.26,0,0,1,0,12.52H139ZM125,263.25H111.68V221.5H125ZM158.29,261a7.38,7.38,0,0,1-5.42,2.24H139V247.94h13.92A7.66,7.66,0,0,1,158.29,261Z" transform="translate(-34.8 -165.42)"/>
+     </g>
+  </svg>															  
+				</a>
+			</div>
+
+			<!-- Right side -->
+			<nav class="menu">
+				<ul class="level-right">
+     <li class="level-item menu-item"><a href="http://localhost:4000" class="menu-link" title="Home">Home</a></li>
+     <li class="level-item menu-item"><a href="http://localhost:4000/sobre/" class="menu-link" title="Sobre mim">Sobre mim</a></li>
+     <li class="level-item menu-item"><a href="http://localhost:4000/#contato" class="menu-link" title="Contato">Contato</a></li>
+     <li class="level-item menu-item"><a href="http://localhost:4000/blog/" class="button is-primary menu-link" title="Blog">Blog</a></li>
+</ul>
+			</nav>
+		</nav>
+
+	</div>
+</header>
+
+    <!-- /HEADER -->
+
+    <!-- HEADER POST -->
+    <div id="top"></div>
+    <!-- HERO -->
+<section class="hero hero-posts has-header" >
+    <div class="panel hero-posts-body hero-body">
+          
+            <time itemprop="datePublished" datetime="2017-10-16T14:12:00-02:00" class="post-date date">16 Oct 2017</time>
+          
+          <h1 class="post-title" itemprop="name">Afinal, o que faz um desenvolvedor Front-end?</h1>
+          <p itemprop="description" class="post-description subtitle">Se você se interessa pela área, comece por aqui</p>
+    </div>
+</section>
+<!-- /HERO -->
+    <!-- /HEADER POST -->
+
+    <div class="offset post-offset">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="/"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Home</span></a></li>
+                <li><a href="/blog"><span class="icon is-small"><i class="fa fa-th-large"></i></span><span>Blog</span></a></li>
+                <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small"><i class="fa fa-square" aria-hidden="true"></i></span><span>Afinal, o que faz um desenvolvedor Front-end?</span></a></li>
+            </ul>
+        </nav>
+        <!-- BREADCRUMB -->
+
+        <!-- POST -->
+        <section class="post">
+            <!-- CONTENT -->
+            <article class="post-content" role="article" id="post" itemprop="articleBody">
+                <h2 id="introdução">Introdução</h2>
+
+<p>Fala pessoal, beleza?</p>
+
+<p>Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na <a href="https://www.uol.com.br/">UOL</a>.</p>
+
+<p>Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por “Web-designer”, que é o termo mais conhecido pelo público em geral.</p>
+
+<p>Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.</p>
+
+<p>Então, se você passa pelo mesmo problema que eu, ou, caiu aqui de paraquedas, seja bem-vindo!</p>
+
+<p>Pega uma pipoca, um refrigerante, e vem comigo.</p>
+
+<h2 id="tá-mas-o-que-exatamente-você-faz">Tá, mas, o que exatamente você faz?</h2>
+
+<figure>
+  <img src="/assets/dist/images/posts/front-end/front-end-illustration.jpg" alt="A gente faz arte, com código." />
+  <figcaption>A gente faz arte, com código.</figcaption>
+</figure>
+
+<p>Bom, primeiro é importante saber que o termo desenvolvedor “Front” ou “Back” - end, é o nome dado para programadores voltados para a Web (Por isso acabo utilizando “Web-designer” como resposta para a minha profissão).</p>
+
+<p>A Web nada mais é do que a possibilidade de você, no conforto da sua casa, acessar informações armazenadas em computadores do outro lado do mundo. Esses computadores são chamados de servidores.</p>
+
+<p>Quando você acessa um site, seu navegador (Chrome, IE, Firefox) se conecta ao servidor onde ele está hospedado, e faz o download de informações como textos, imagens e vídeos. Em seguida, essas informações são interpretadas e renderizadas na tela para que você possa interagir com elas.</p>
+
+<h2 id="e-onde-entra-o-tal-do-front-end">E onde entra o tal do “Front-end”?</h2>
+
+<p>Até um tempo atrás, essa interação era limitada, uma vez que o usuário acessava as informações apenas na tela do computador. Tanto que, a mesma pessoa que as manipulava do lado do servidor, também cuidava delas do lado do cliente.</p>
+
+<p>Porém, desde que os smartphones se popularizaram, ocorreu uma grande mudança de paradigmas no desenvolvimento web, obrigando as empresas a especificarem as funções.</p>
+
+<p>Uma galera focou apenas em manipular as informações do lado do servidor, os chamados “Back”-end, enquanto outra galera foi cuidar do lado do usuário, os chamados “Front”-end.</p>
+
+<figure>
+  <img src="/assets/dist/images/posts/front-end/frontend-backend-illustration.jpg" alt="Illustração - Front-end vs Back-end." />
+  <figcaption>Illustração - Front-end vs Back-end.</figcaption>
+</figure>
+
+<p>Essa divisão foi necessária porque hoje em dia existe um infinito número de telas e dispositivos capazes de acessar essas informações. Fora que é muito importante que essas páginas sejam otimizadas para serem acessadas em conexões lentas, como o 3g.</p>
+
+<p>Isso sem levar em conta a parte de rankeamento do site, que eu vou deixar para abordar em outro post.</p>
+
+<p>Em resumo:</p>
+
+<blockquote>
+  <p><strong>O Desenvolvedor Front-end é responsável pela manipulação das informações enviadas para o navegador pelo servidor. O objetivo é fazer com que o usuário consiga acessar essas informações da forma mais rápida e intuitiva possível.</strong></p>
+</blockquote>
+
+<p>A missão é difícil e complexa. O fato de ser uma profissão nova, faz com que ela esteja em constante evolução. Isso obriga o profissional a estar sempre atento, estudando, se não em pouco tempo tudo o que você sabe se torna obsoleto.</p>
+
+<p>Por outro lado, se olharmos o gráfico de buscas pelo termo “Front-end developer”, veremos como a necessidade por esse profissional vem crescendo com o decorrer dos anos, e a tendência é essa curva continuar aumentando.</p>
+
+<figure>
+  <img src="/assets/dist/images/posts/front-end/front-end-search.jpg" alt="Busca pelo termo 'Front-end developer' de 2004 até 2017" />
+  <figcaption>Busca pelo termo "Front-end developer" de 2004 até 2017.</figcaption>
+</figure>
+
+<p>Para ilustrar um pouco mais tudo o que esta sendo abordado no post, vou deixar aqui essa <a href="https://www.youtube.com/watch?v=cmT3clnhbiQ">palestra do Shankar</a> no Frontinsampa 2014, que me inspirou bastante a seguir na área. Ele consegue, de uma forma leve e engraçada, demonstrar a importância do Desenvolvedor Front-end nos dias atuais.</p>
+
+<p>Se você se interessou pela área, eu <a href="https://medium.com/@matheusvbarone/e-se-hoje-fosse-meu-primeiro-dia-como-desenvolvedor-front-end-5fc5b19e2228">escrevi um post no medium</a> que pode te ajudar a começar.</p>
+
+<p>Bom pessoal, acho que é isso. Se gostarem do assunto, coloquem nos comentários que irei me aprofundar mais nesse tema nos próximos posts. Críticas, e sugestões são sempre bem-vindas.</p>
+
+<p>Valeu!</p>
+
+
+            </article>
+            <!-- CONTENT -->
+
+            <!-- <section class="share">
+      <a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?"
+      data-size="large">
+    Tweet</a>
+
+    <div
+    class="fb-like"
+    data-share="true"
+    data-width="450"
+    data-show-faces="true">
+  </div>
+</section> -->
+
+            <section class="comments">
+                <!-- COMENTS -->
+                <div id="disqus_thread"></div>
+<script>		
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/o-que-faz-front-end-Copia/";  
+    this.page.identifier = "/o-que-faz-front-end-Copia/";
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://matheusbarone.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                <!-- COMENTS -->
+            </section>
+
+
+
+        </section>
+        <!-- POST -->
+
+        <!-- FOOTER -->
+        <footer class="footer">
+     <div class="container">
+          <div class="content has-text-centered">
+            <span class="footer-infos">
+                © 2017 Matheus Barone | Desenvolvedor Front-end<br>
+                <span>Feito por mim (com a ajuda de algumas xícaras de café).</span>
+            </span>
+            <a class="footer-phone" href="tel:+5513981252789"><i class="fa-lg fa fa-mobile" aria-hidden="true"></i>(13) 98125-2789</a>
+
+			<ul class="redes">
+                <li class="redes-item">
+                    <a class="redes-link" href="https://www.facebook.com/matheusvbarone" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="redes-item">
+                    <a class="redes-link" href="https://github.com/mathvbarone" target="_blank" title="Github">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="redes-item">
+                    <a class="redes-link" href="https://twitter.com/matheusvbarone" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="redes-item">
+                    <a class="redes-link" href="https://www.linkedin.com/in/matheusbarone/" target="_blank" title="Linkedin">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="redes-item">
+                    <a class="redes-link" href="mailto:matheusvbarone@gmail.com" target="_blank" title="Email">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </a>
+                </li>
+			</ul>
+          </div>
+     </div>
+</footer>
+
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="/assets/dist/css/style.min.css">
+  <link rel="canonical" href="http://localhost:4000/o-que-faz-front-end-Copia/">
+  <link rel="alternate" type="application/rss+xml" title="Matheus Barone | Desenvolvedor Front-end" href="http://localhost:4000/feed.xml" />
+  <!-- STYLESHEET -->
+
+<!-- SCRIPTS -->
+    <script src="/assets/dist/js/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<!-- /SCRIPTS -->
+
+
+
+
+<!-- FONTAWESOME -->
+    <script src="https://use.fontawesome.com/f46f00c11e.js"></script>
+<!-- FONTAWESOME -->
+        <!-- FOOTER -->
+
+    </div>
+
+    <!-- ARROW -->
+    <a href="#top" class="up-arrow">
+        <svg class="icon-uparrow">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
+        </svg>
+    </a>
+    <!-- ARROW -->
+
+</body>
+
+</html>

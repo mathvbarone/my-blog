@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Nov 2017 12:38:09 -0200</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2017 12:38:09 -0200</lastBuildDate>
+    <pubDate>Wed, 22 Nov 2017 13:47:57 -0200</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2017 13:47:57 -0200</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -16,6 +16,24 @@
         <pubDate>Thu, 09 Nov 2017 16:20:00 -0200</pubDate>
         <link>http://localhost:4000/form-site-estatico-regexp/</link>
         <guid isPermaLink="true">http://localhost:4000/form-site-estatico-regexp/</guid>
+        
+        <category>js</category>
+        
+        <category>regexp</category>
+        
+        <category>es6</category>
+        
+        <category>form-site-estatico</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Formulário para site estático (Parte 1) - Validação com RegExp</title>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala galera, beleza?&lt;/p&gt; &lt;p&gt;Esse é o meu primeiro post técnico, e nele vamos criar um formulário, sem a necessidade de back-end para fazer o envio dos dados preenchidos.&lt;/p&gt; &lt;p&gt;Abaixo um exemplo de como ficará nosso formulário:&lt;/p&gt; &lt;iframe style=&quot;min-height: 600px;&quot; async=&quot;&quot; src=&quot;https://jsfiddle.net/matheusbarone/2d5dffnv/2/embedded/result/&quot;&gt;&lt;/iframe&gt; &lt;h2 id=&quot;jekyll-e-formspree&quot;&gt;Jekyll e Formspree&lt;/h2&gt; &lt;p&gt;Uma coisa que me incomodava quando estava desenvolvendo um site estático, era ter de utilizar algum framework javascript para reutilizar códigos html.&lt;/p&gt; &lt;p&gt;Por isso, ao refazer o meu site, busquei alternativas para resolver esse problema. Foi então que descobri o &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;O Jekyll é uma plataforma criada pelo pessoal do Github que...</description>
+        <pubDate>Thu, 09 Nov 2017 16:20:00 -0200</pubDate>
+        <link>http://localhost:4000/form-site-estatico-regexp-Copia/</link>
+        <guid isPermaLink="true">http://localhost:4000/form-site-estatico-regexp-Copia/</guid>
         
         <category>js</category>
         
@@ -43,11 +61,41 @@
       </item>
     
       <item>
+        <title>5 dicas para ter um perfil profissional competitivo</title>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala galera, beleza?&lt;/p&gt; &lt;p&gt;A parte mais difícil da carreira de qualquer profissional é o momento de colocação, ou recolocação no mercado de trabalho.&lt;/p&gt; &lt;p&gt;É uma situação complicada que obriga a pessoa a avaliar sua vida profissional, e em alguns casos, dar vários passos para trás a fim de conseguir uma oportunidade.&lt;/p&gt; &lt;p&gt;Acho importante deixar claro que esse post não tem a pretensão de ser um texto motivacional, a intenção é jogar uma luz para aqueles que tem força de vontade, mas não sabem como aumentar suas chances de conseguir um emprego.&lt;/p&gt; &lt;h3 id=&quot;como-você-chegou-nessas-dicas&quot;&gt;Como você chegou nessas dicas?&lt;/h3&gt; &lt;p&gt;No...</description>
+        <pubDate>Mon, 30 Oct 2017 08:47:00 -0200</pubDate>
+        <link>http://localhost:4000/dicas-perfil-profissional-competitivo-Copia/</link>
+        <guid isPermaLink="true">http://localhost:4000/dicas-perfil-profissional-competitivo-Copia/</guid>
+        
+        <category>mercado-de-trabalho</category>
+        
+        <category>dicas</category>
+        
+        
+      </item>
+    
+      <item>
         <title>Afinal, o que faz um desenvolvedor Front-end?</title>
         <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, beleza?&lt;/p&gt; &lt;p&gt;Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na &lt;a href=&quot;https://www.uol.com.br/&quot;&gt;UOL&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por “Web-designer”, que é o termo mais conhecido pelo público em geral.&lt;/p&gt; &lt;p&gt;Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.&lt;/p&gt; &lt;p&gt;Então, se você passa pelo mesmo problema que eu, ou,...</description>
         <pubDate>Mon, 16 Oct 2017 14:12:00 -0200</pubDate>
         <link>http://localhost:4000/o-que-faz-front-end/</link>
         <guid isPermaLink="true">http://localhost:4000/o-que-faz-front-end/</guid>
+        
+        <category>front-end</category>
+        
+        <category>web</category>
+        
+        <category>introducao</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Afinal, o que faz um desenvolvedor Front-end?</title>
+        <description>&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt; &lt;p&gt;Fala pessoal, beleza?&lt;/p&gt; &lt;p&gt;Pra quem não me conhece, meu nome é Matheus Barone, sou de Santos/SP. E atualmente trabalho como desenvolvedor Front-end na &lt;a href=&quot;https://www.uol.com.br/&quot;&gt;UOL&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Sempre que alguém me pergunta qual é a minha profissão, fico meio na dúvida sobre o que falar, e acabo optando por “Web-designer”, que é o termo mais conhecido pelo público em geral.&lt;/p&gt; &lt;p&gt;Grande parte disso se dá pelo fato dessa profissão ser extremamente nova, o que significa que as pessoas que não trabalham com tecnologia dificilmente vão saber do que se trata.&lt;/p&gt; &lt;p&gt;Então, se você passa pelo mesmo problema que eu, ou,...</description>
+        <pubDate>Mon, 16 Oct 2017 14:12:00 -0200</pubDate>
+        <link>http://localhost:4000/o-que-faz-front-end-Copia/</link>
+        <guid isPermaLink="true">http://localhost:4000/o-que-faz-front-end-Copia/</guid>
         
         <category>front-end</category>
         
