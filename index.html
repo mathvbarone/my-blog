@@ -5,9 +5,13 @@ index: is-index
 head-class: index
 ---
 
+
 <!-- MAIN -->
 <main class="panel" id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog"
     data-section-name="content">
+
+    
+    {{ site.url }}
 
     {% if site.posts.size > 0 %}
     <!-- LAST POSTS -->
@@ -15,8 +19,6 @@ head-class: index
         <!-- TITULO -->
         <h2 class="title is-2 has-text-centered has-text-weight-bold wow slideInUp animated" data-wow-duration="0.3s" data-wow-delay="0.2s">Últimos posts</h2>
         <!-- /TITULO -->
-
-        {{ site.url }}
 
         <!-- LISTA DE POSTS -->
 
