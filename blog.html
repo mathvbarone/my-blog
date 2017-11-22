@@ -25,7 +25,7 @@ favicon: <i class="fa fa-square" aria-hidden="true"></i>
 
         <ul class="columns card-list is-multiline m-t-30 p-b-60">
             {% for post in site.posts %}
-            <li class="column is-one-third card-item {% if site.posts.size > 6 %} wow slideInUp {% endif %}" {% if site.posts.size > 6 %}data-wow-duration="0.8s" data-wow-delay="0.2s"{% endif %}>
+            <li class="column is-one-third card-item {% if site.posts.size > 3 %} wow slideInUp {% endif %}" {% if site.posts.size > 3 %}data-wow-duration="0.8s" data-wow-delay="0.2s"{% endif %}>
                 <div class="media card-inner">
                     <div class="media-content">
                         <article class="post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
