@@ -4,7 +4,7 @@ email: matheusvbarone@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Olá, sou Matheus Barone, de Santos/SP. Trabalho como Desenvolvedor Front-end na UOL.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://matheusbarone.com" # the base hostname & protocol for your site
+url: "https://www.matheusbarone.com" # the base hostname & protocol for your site
 twitter_username: matheusvbarone
 github_username:  mathvbarone   
 
