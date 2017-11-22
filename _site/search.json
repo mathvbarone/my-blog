@@ -9,14 +9,6 @@
     } ,
   
     {
-      "title"    : "Formulário para site estático (Parte 1) - Validação com RegExp",
-      "category" : "",
-      "tags"     : "js, regexp, es6, and form-site-estatico",
-      "url"      : "/form-site-estatico-regexp-Copia/",
-      "date"     : "09 Nov 2017"
-    } ,
-  
-    {
       "title"    : "5 dicas para ter um perfil profissional competitivo",
       "category" : "",
       "tags"     : "mercado-de-trabalho and dicas",
@@ -25,26 +17,10 @@
     } ,
   
     {
-      "title"    : "5 dicas para ter um perfil profissional competitivo",
-      "category" : "",
-      "tags"     : "mercado-de-trabalho and dicas",
-      "url"      : "/dicas-perfil-profissional-competitivo-Copia/",
-      "date"     : "30 Oct 2017"
-    } ,
-  
-    {
       "title"    : "Afinal, o que faz um desenvolvedor Front-end?",
       "category" : "",
       "tags"     : "front-end, web, and introducao",
       "url"      : "/o-que-faz-front-end/",
-      "date"     : "16 Oct 2017"
-    } ,
-  
-    {
-      "title"    : "Afinal, o que faz um desenvolvedor Front-end?",
-      "category" : "",
-      "tags"     : "front-end, web, and introducao",
-      "url"      : "/o-que-faz-front-end-Copia/",
       "date"     : "16 Oct 2017"
     } 
   
