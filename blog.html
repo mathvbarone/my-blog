@@ -39,7 +39,7 @@ favicon: <i class="fa fa-square" aria-hidden="true"></i>
                                         {% include date.html date=post.date %}
                                     </time>
                                     <h2 class="card-title title is-4" itemprop="name">{{ post.title }}</h2>
-                                    <p class="card-description description">
+                                    <p class="card-description description" itemprop="description">
                                         {{ post.introduction | strip_html | truncatewords:20 }}
                                     </p>
                                 </a>
