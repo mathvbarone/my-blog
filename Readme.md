@@ -3,7 +3,7 @@
 ### Meu site/blog, feito com jekyll, sass, js, e 💗 
 
 
-![Screenshot](site-screenshot.png)
+![Screenshot](site-screenshot.jpg)
 
 
 
