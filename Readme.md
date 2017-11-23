@@ -3,7 +3,7 @@
 ### Meu site/blog, feito com jekyll, sass, js, e 💗 
 
 
-![Screenshot](matheus-barone-site.png)
+![Screenshot](site-screenshot.png)
 
 
 
