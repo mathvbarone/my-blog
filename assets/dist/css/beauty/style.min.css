@@ -11623,6 +11623,10 @@ a.tag:hover {
     background: #C35163
 }
 
+.content .redes-link:after {
+    content: ''
+}
+
 footer {
     background: #4e4e4e;
     padding: 40px 0
