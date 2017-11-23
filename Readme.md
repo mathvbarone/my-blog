@@ -1,6 +1,6 @@
-### Matheus Barone Site
+## Matheus Barone Site
 
-#### Meu site pessoal.
+### Meu site/blog, feito com jekyll, sass, js, e 💗 
 
 
 ![Screenshot](matheus-barone-site.png)
