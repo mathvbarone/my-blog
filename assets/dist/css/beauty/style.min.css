@@ -1,4 +1,4 @@
-body,code,h1,h2,h3,h4,h5,h6 {
+body,code {
     font-weight: 400
 }
 
@@ -28,6 +28,11 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
 
 .button,.button-submit,.file,.is-unselectable {
     -webkit-touch-callout: none
+}
+
+.button,.button-submit,.input,.textarea {
+    -webkit-box-align: center;
+    vertical-align: top
 }
 
 .select,.select select,.textarea,audio,embed,img,object,video {
@@ -72,7 +77,8 @@ article,aside,figure,footer,header,hgroup,hr,pre code,section {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-size: 100%
+    font-size: 100%;
+    font-weight: 400
 }
 
 ul {
@@ -500,7 +506,6 @@ a.box:active {
 }
 
 .button,.button-submit {
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -521,7 +526,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
     user-select: none;
     background-color: #fff;
     color: #363636;
@@ -543,10 +547,6 @@ a.box:active {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox
-}
-
-.card-item,.up-arrow .icon-uparrow {
-    -webkit-transition: ease-in-out .2s all
 }
 
 .button-submit:active,.button-submit:focus,.button.is-active,.button.is-focused,.button:active,.button:focus,.is-active.button-submit,.is-focused.button-submit {
@@ -1602,6 +1602,10 @@ a.box:active {
     margin-bottom: 1em
 }
 
+.content h1,.label:not(:last-child) {
+    margin-bottom: .5em
+}
+
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
     color: #363636;
     font-weight: 400;
@@ -1609,8 +1613,7 @@ a.box:active {
 }
 
 .content h1 {
-    font-size: 2em;
-    margin-bottom: .5em
+    font-size: 2em
 }
 
 .content h1:not(:first-child) {
@@ -1765,7 +1768,6 @@ a.box:active {
 }
 
 .input,.textarea {
-    -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1792,7 +1794,6 @@ a.box:active {
     padding-top: -webkit-calc(.375em - 1px);
     padding-top: calc(.375em - 1px);
     position: relative;
-    vertical-align: top;
     background-color: #fff;
     color: #363636;
     -webkit-box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
@@ -2765,10 +2766,6 @@ a.box:active {
 .label {
     color: #363636;
     font-size: 1rem
-}
-
-.label:not(:last-child) {
-    margin-bottom: .5em
 }
 
 .label.is-small {
@@ -8877,6 +8874,7 @@ a.tag:hover {
     width: 16px;
     height: 16px;
     fill: #fff;
+    -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
@@ -8894,6 +8892,7 @@ a.tag:hover {
 }
 
 .card-item {
+    -webkit-transition: ease-in-out .2s all;
     transition: ease-in-out .2s all
 }
 
@@ -8947,7 +8946,6 @@ a.tag:hover {
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -9282,7 +9280,6 @@ a.tag:hover {
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
@@ -9601,13 +9598,7 @@ a.tag:hover {
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
-}
-
-.post-js .card,.post-misc .card {
-    -webkit-box-shadow: none;
-    cursor: pointer
 }
 
 .post-css .card .card-tags,.post-css .card .card-title {
@@ -9929,6 +9920,7 @@ a.tag:hover {
 .post-js .card {
     min-height: 15.6em;
     border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
     transition: ease-in-out .2s all
 }
@@ -10246,6 +10238,7 @@ a.tag:hover {
 .post-misc .card {
     min-height: 15.6em;
     border: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
     box-shadow: none;
     transition: ease-in-out .2s all
 }
@@ -10572,7 +10565,6 @@ a.tag:hover {
     border: 1px solid #dcdcdc;
     -webkit-box-shadow: none;
     box-shadow: none;
-    cursor: pointer;
     transition: ease-in-out .2s all
 }
 
