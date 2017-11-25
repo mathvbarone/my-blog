@@ -10823,6 +10823,10 @@ a.tag:hover {
     content: "\201D"
 }
 
+.content .redes-link:after,footer .footer-phone:after {
+    content: ''
+}
+
 .post-front .post-content ul {
     padding-left: 2em
 }
@@ -11621,10 +11625,6 @@ a.tag:hover {
 
 .content .redes-link:hover .fa-envelope-o {
     background: #C35163
-}
-
-.content .redes-link:after {
-    content: ''
 }
 
 footer {
