@@ -12016,7 +12016,7 @@ footer .footer-phone .fa {
     padding-left: 1em
 }
 
-.about h2,.about h3,.about h4 {
+.about h2,.about h3 {
     padding-left: .6em;
     color: #cd2b46
 }
@@ -12035,7 +12035,8 @@ footer .footer-phone .fa {
 
 .about h4 {
     margin-bottom: 0;
-    font-size: 1em
+    font-size: 1em;
+    padding-left: .7em
 }
 
 .about ul {
@@ -12050,7 +12051,8 @@ footer .footer-phone .fa {
 }
 
 .about ul>li>p {
-    padding-left: .7em
+    padding-left: 1.1em;
+    font-size: .8rem
 }
 
 .about ul>li>p:not(:last-child) {
@@ -14447,7 +14449,7 @@ footer .footer-phone .fa {
         font-size: 1.2rem
     }
 
-    .about h2,.about h3,.about h4,.about ul>li>p {
+    .about h2,.about h3,.about ul>li>p {
         padding-left: 0
     }
 }
