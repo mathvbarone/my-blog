@@ -1,5 +1,5 @@
 .offset.is-about
-    background:  #fff;
+    background-color:  #fff;
 
 .breadcrumb.is-about
     padding: 30px 0 10px 1.4em;
@@ -29,7 +29,6 @@
         font-weight: 300;
         font-style: normal;
         font-size: 1.125rem;
-        line-height: 1.4em;
         letter-spacing: .01rem;
         padding-left: 1em;
 
@@ -38,12 +37,7 @@
     h4
         padding-left: 0.6em;
         color: $primary
-        &:before
-                display: block;
-                content: " ";
-                margin-top: -60px;
-                height: 75px;
-                visibility: hidden;
+
 
 
         @media (max-width:768px)
@@ -68,14 +62,21 @@
     ul
         padding: 0;
         >li
-            list-style-type: disc;
+            list-style-type: square;
             padding: 0;
-            line-height: 9.9em;
             margin-left: 2.1em;
+            margin-bottom: 1em;
             >p
-                padding-left: 0.6em
+                padding-left: 0.7em
+                &:not(:last-child)
+                    margin-bottom: 0;
                 @media (max-width:768px)
                     padding-left: 0
+            >h3
+                &:before
+                    height: initial
+            >h4
+                padding-bottom: 3px;
 
 
     a
