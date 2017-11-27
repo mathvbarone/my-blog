@@ -9023,6 +9023,7 @@ a.tag:hover {
 }
 
 .post-css .card:hover,.post-html .card:hover {
+    position: relative;
     z-index: 5;
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04)
@@ -9156,7 +9157,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
@@ -9348,7 +9349,6 @@ a.tag:hover {
 }
 
 .post-html .card:hover {
-    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #4986b1
 }
@@ -9481,7 +9481,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
@@ -9666,7 +9666,6 @@ a.tag:hover {
 }
 
 .post-css .card:hover {
-    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #378574
 }
@@ -9674,7 +9673,8 @@ a.tag:hover {
 .post-js .card:hover,.post-misc .card:hover {
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04);
-    z-index: 5
+    z-index: 5;
+    position: relative
 }
 
 .post-css .card:hover .card-date,.post-css .card:hover .card-description,.post-css .card:hover .card-tags,.post-css .card:hover .card-title {
@@ -9805,7 +9805,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
@@ -9990,7 +9990,6 @@ a.tag:hover {
 }
 
 .post-js .card:hover {
-    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #ffbc00
 }
@@ -10123,7 +10122,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
@@ -10308,7 +10307,6 @@ a.tag:hover {
 }
 
 .post-misc .card:hover {
-    position: relative;
     transform: translateY(-10px) scale(1.04);
     background-color: #af1da2
 }
@@ -10441,7 +10439,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
@@ -10769,7 +10767,7 @@ a.tag:hover {
     font: normal normal normal 17px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    position: initial;
+    position: relative;
     margin-left: 5px;
     background: 0 0
 }
