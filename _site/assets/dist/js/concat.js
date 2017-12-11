@@ -9914,6 +9914,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     if (links[i].hostname !== window.location.hostname) {
       links[i].target = "_blank";
       links[i].className += " is-blank";
+      links[i].rel = "noopener";
     }
   }
 })();
