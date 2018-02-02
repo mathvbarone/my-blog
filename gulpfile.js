@@ -1,59 +1,57 @@
-const     gulp           = require('gulp'),
-		plumber       = require('gulp-plumber'),
-		sass          = require('gulp-sass'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		browserSync   = require('browser-sync'),
-		uglify        = require('gulp-uglify'),
-		concat        = require('gulp-concat'),
-		imagemin      = require('gulp-imagemin'),
-		rename        = require('gulp-rename'),
-		beautifycss   = require('gulp-cssbeautify'),
-		cssmin        = require('gulp-cssmin'),
-		gcmq  	    = require('gulp-group-css-media-queries'),
-		babel	    = require('gulp-babel'),
-		cp            = require('child_process');
+const gulp = require("gulp"),
+  plumber = require("gulp-plumber"),
+  sass = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  browserSync = require("browser-sync"),
+  uglify = require("gulp-uglify"),
+  concat = require("gulp-concat"),
+  imagemin = require("gulp-imagemin"),
+  rename = require("gulp-rename"),
+  beautifycss = require("gulp-cssbeautify"),
+  cssmin = require("gulp-cssmin"),
+  gcmq = require("gulp-group-css-media-queries"),
+  babel = require("gulp-babel"),
+  cp = require("child_process");
 
 
 /**
  * Files Path
  */
 
-var paths = {
-	src: {
-		sass: ['assets/src/sass/**/*.sass'],
-		js: 'assets/src/js/**/*.js',
-		img: 'assets/src/images/**/*'
-	},
-	dest: {
-		sass: 'assets/dist/css',
-		js: 'assets/dist/js',
-		img: 'assets/dist/images',
-		beauty: {
-			sass: 'assets/dist/css/beauty'
-		}
-	}
-}
-
-
-
-var messages = {
-	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+let paths = {
+  src: {
+    sass: ["assets/src/sass/**/*.sass"],
+    js: "assets/src/js/**/*.js",
+    img: "assets/src/images/**/*",
+  },
+  dest: {
+    sass: "assets/dist/css",
+    js: "assets/dist/js",
+    img: "assets/dist/images",
+    beauty: {
+      sass: "assets/dist/css/beauty",
+    },
+  },
 };
 
-var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+
+let messages = {
+  jekyllBuild: "<span style=\"color: grey\">Running:</span> $ jekyll build",
+};
+
+let jekyllCommand = (/^win/.test(process.platform)) ? "jekyll.bat" : "jekyll";
 
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function (done) {
+gulp.task("jekyll-build", (done) => {
 	browserSync.notify(messages.jekyllBuild);
 	return cp.spawn(jekyllCommand, ['s'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
 
-
-gulp.task('css', function() {
+gulp.task("css", () => {
 	gulp.src(paths.src.sass)
 	    .pipe(plumber())
 	    .pipe(sass())
@@ -75,7 +73,7 @@ gulp.task('css', function() {
 /**
  * Javascript Task
  */
-gulp.task('js', function() {
+gulp.task("js", () => {
 	gulp.src(['assets/src/js/jquery.js',
 			'assets/src/js/libs/**.js',
 			'assets/src/js/custom/**.js',
@@ -95,7 +93,7 @@ gulp.task('js', function() {
 /**
  * Imagemin Task
  */
-gulp.task('imagemin', function() {
+gulp.task("imagemin", () => {
 	return gulp.src(paths.src.img)
 		.pipe(plumber())
 		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
@@ -107,7 +105,7 @@ gulp.task('imagemin', function() {
  * Watch stylus files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
- gulp.task('watch', function () {
+gulp.task("watch", () => {
 	gulp.watch(paths.src.sass, ['css']);
 	gulp.watch(paths.src.js, ['js']);
 	gulp.watch('assets/src/img/**/*.{jpg,png,gif}', ['imagemin']);
@@ -119,4 +117,4 @@ gulp.task('imagemin', function() {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', [ 'jekyll-build', 'imagemin', 'js', 'css', 'watch']);
+gulp.task("default", ["jekyll-build", "imagemin", "js", "css", "watch"]);

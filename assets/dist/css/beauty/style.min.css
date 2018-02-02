@@ -9945,7 +9945,7 @@ a.tag:hover {
 .post-js .card .card-tags,.post-js .card .card-title {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
-    color: #ffbc00
+    color: #cdaf2b
 }
 
 .post-js .card .ribbon {
@@ -9956,7 +9956,7 @@ a.tag:hover {
 }
 
 .post-js .card .ribbon a {
-    color: #ffbc00;
+    color: #cdaf2b;
     font-weight: 500;
     width: 100%;
     display: block
@@ -9991,7 +9991,7 @@ a.tag:hover {
 
 .post-js .card:hover {
     transform: translateY(-10px) scale(1.04);
-    background-color: #ffbc00
+    background-color: #cdaf2b
 }
 
 .post-js .card:hover .card-date,.post-js .card:hover .card-description,.post-js .card:hover .card-tags,.post-js .card:hover .card-title {
@@ -10001,7 +10001,7 @@ a.tag:hover {
 .post-js .hero-posts {
     height: 70vh;
     min-height: 70vh;
-    background-color: #ffbc00
+    background-color: #cdaf2b
 }
 
 .post-js .hero-posts-body {
@@ -10016,7 +10016,7 @@ a.tag:hover {
 }
 
 .post-js .breadcrumb li.is-active a {
-    color: #ffbc00
+    color: #cdaf2b
 }
 
 .post-js .post-date,.post-js .post-description,.post-js .post-title {
@@ -10052,12 +10052,12 @@ a.tag:hover {
 }
 
 .post-js .post-content .button-post::-moz-selection,.post-js .post-content .tags::-moz-selection,.post-js .post-content blockquote::-moz-selection,.post-js .post-content figure::-moz-selection,.post-js .post-content h2::-moz-selection,.post-js .post-content h3::-moz-selection,.post-js .post-content h4::-moz-selection,.post-js .post-content iframe::-moz-selection,.post-js .post-content ol::-moz-selection,.post-js .post-content p::-moz-selection,.post-js .post-content ul::-moz-selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
 .post-js .post-content .button-post::selection,.post-js .post-content .tags::selection,.post-js .post-content blockquote::selection,.post-js .post-content figure::selection,.post-js .post-content h2::selection,.post-js .post-content h3::selection,.post-js .post-content h4::selection,.post-js .post-content iframe::selection,.post-js .post-content ol::selection,.post-js .post-content p::selection,.post-js .post-content ul::selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
@@ -10074,7 +10074,7 @@ a.tag:hover {
 }
 
 .post-js .post-content h2,.post-js .post-content h3 {
-    color: #ffbc00;
+    color: #cdaf2b;
     font-weight: 700;
     margin-bottom: 30px
 }
@@ -10089,13 +10089,13 @@ a.tag:hover {
 
 .post-js .post-content a {
     padding: 0 3px;
-    color: #ffbc00;
+    color: #cdaf2b;
     font-weight: 500;
     transition: ease-in-out .2s all;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#ffbc00),to(#ffbc00));
-    background-image: -webkit-linear-gradient(top,#ffbc00 0,#ffbc00 100%);
-    background-image: -o-linear-gradient(top,#ffbc00 0,#ffbc00 100%);
-    background-image: linear-gradient(to bottom,#ffbc00 0,#ffbc00 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cdaf2b),to(#cdaf2b));
+    background-image: -webkit-linear-gradient(top,#cdaf2b 0,#cdaf2b 100%);
+    background-image: -o-linear-gradient(top,#cdaf2b 0,#cdaf2b 100%);
+    background-image: linear-gradient(to bottom,#cdaf2b 0,#cdaf2b 100%);
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -10104,12 +10104,12 @@ a.tag:hover {
 }
 
 .post-js .post-content a::-moz-selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
 .post-js .post-content a::selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
@@ -10129,10 +10129,10 @@ a.tag:hover {
 
 .post-js .post-content a:hover {
     color: #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#ffbc00),to(#ffbc00));
-    background-image: -webkit-linear-gradient(top,#ffbc00 0,#ffbc00 100%);
-    background-image: -o-linear-gradient(top,#ffbc00 0,#ffbc00 100%);
-    background-image: linear-gradient(to bottom,#ffbc00 0,#ffbc00 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cdaf2b),to(#cdaf2b));
+    background-image: -webkit-linear-gradient(top,#cdaf2b 0,#cdaf2b 100%);
+    background-image: -o-linear-gradient(top,#cdaf2b 0,#cdaf2b 100%);
+    background-image: linear-gradient(to bottom,#cdaf2b 0,#cdaf2b 100%);
     background-position: 0 0
 }
 
@@ -10141,7 +10141,7 @@ a.tag:hover {
 }
 
 .post-js .post-content strong {
-    color: #ffbc00;
+    color: #cdaf2b;
     font-size: 1.19rem
 }
 
@@ -10181,12 +10181,12 @@ a.tag:hover {
 }
 
 .post-js .post-content ul li::-moz-selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
 .post-js .post-content ul li::selection {
-    background: #ffbc00;
+    background: #cdaf2b;
     color: #fff
 }
 
@@ -10248,7 +10248,7 @@ a.tag:hover {
 }
 
 .post-js .hero-default {
-    background-color: #ffbc00
+    background-color: #cdaf2b
 }
 
 .post-misc .card {
@@ -10262,7 +10262,7 @@ a.tag:hover {
 .post-misc .card .card-tags,.post-misc .card .card-title {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
-    color: #af1da2
+    color: #cd2b5e
 }
 
 .post-misc .card .ribbon {
@@ -10273,7 +10273,7 @@ a.tag:hover {
 }
 
 .post-misc .card .ribbon a {
-    color: #af1da2;
+    color: #cd2b5e;
     font-weight: 500;
     width: 100%;
     display: block
@@ -10308,7 +10308,7 @@ a.tag:hover {
 
 .post-misc .card:hover {
     transform: translateY(-10px) scale(1.04);
-    background-color: #af1da2
+    background-color: #cd2b5e
 }
 
 .post-misc .card:hover .card-date,.post-misc .card:hover .card-description,.post-misc .card:hover .card-tags,.post-misc .card:hover .card-title {
@@ -10318,7 +10318,7 @@ a.tag:hover {
 .post-misc .hero-posts {
     height: 70vh;
     min-height: 70vh;
-    background-color: #af1da2
+    background-color: #cd2b5e
 }
 
 .post-misc .hero-posts-body {
@@ -10333,7 +10333,7 @@ a.tag:hover {
 }
 
 .post-misc .breadcrumb li.is-active a {
-    color: #af1da2
+    color: #cd2b5e
 }
 
 .post-misc .post-date,.post-misc .post-description,.post-misc .post-title {
@@ -10369,12 +10369,12 @@ a.tag:hover {
 }
 
 .post-misc .post-content .button-post::-moz-selection,.post-misc .post-content .tags::-moz-selection,.post-misc .post-content blockquote::-moz-selection,.post-misc .post-content figure::-moz-selection,.post-misc .post-content h2::-moz-selection,.post-misc .post-content h3::-moz-selection,.post-misc .post-content h4::-moz-selection,.post-misc .post-content iframe::-moz-selection,.post-misc .post-content ol::-moz-selection,.post-misc .post-content p::-moz-selection,.post-misc .post-content ul::-moz-selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
 .post-misc .post-content .button-post::selection,.post-misc .post-content .tags::selection,.post-misc .post-content blockquote::selection,.post-misc .post-content figure::selection,.post-misc .post-content h2::selection,.post-misc .post-content h3::selection,.post-misc .post-content h4::selection,.post-misc .post-content iframe::selection,.post-misc .post-content ol::selection,.post-misc .post-content p::selection,.post-misc .post-content ul::selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
@@ -10391,7 +10391,7 @@ a.tag:hover {
 }
 
 .post-misc .post-content h2,.post-misc .post-content h3 {
-    color: #af1da2;
+    color: #cd2b5e;
     font-weight: 700;
     margin-bottom: 30px
 }
@@ -10406,13 +10406,13 @@ a.tag:hover {
 
 .post-misc .post-content a {
     padding: 0 3px;
-    color: #af1da2;
+    color: #cd2b5e;
     font-weight: 500;
     transition: ease-in-out .2s all;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#af1da2),to(#af1da2));
-    background-image: -webkit-linear-gradient(top,#af1da2 0,#af1da2 100%);
-    background-image: -o-linear-gradient(top,#af1da2 0,#af1da2 100%);
-    background-image: linear-gradient(to bottom,#af1da2 0,#af1da2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b5e),to(#cd2b5e));
+    background-image: -webkit-linear-gradient(top,#cd2b5e 0,#cd2b5e 100%);
+    background-image: -o-linear-gradient(top,#cd2b5e 0,#cd2b5e 100%);
+    background-image: linear-gradient(to bottom,#cd2b5e 0,#cd2b5e 100%);
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -10421,12 +10421,12 @@ a.tag:hover {
 }
 
 .post-misc .post-content a::-moz-selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
 .post-misc .post-content a::selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
@@ -10446,10 +10446,10 @@ a.tag:hover {
 
 .post-misc .post-content a:hover {
     color: #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#af1da2),to(#af1da2));
-    background-image: -webkit-linear-gradient(top,#af1da2 0,#af1da2 100%);
-    background-image: -o-linear-gradient(top,#af1da2 0,#af1da2 100%);
-    background-image: linear-gradient(to bottom,#af1da2 0,#af1da2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cd2b5e),to(#cd2b5e));
+    background-image: -webkit-linear-gradient(top,#cd2b5e 0,#cd2b5e 100%);
+    background-image: -o-linear-gradient(top,#cd2b5e 0,#cd2b5e 100%);
+    background-image: linear-gradient(to bottom,#cd2b5e 0,#cd2b5e 100%);
     background-position: 0 0
 }
 
@@ -10458,7 +10458,7 @@ a.tag:hover {
 }
 
 .post-misc .post-content strong {
-    color: #af1da2;
+    color: #cd2b5e;
     font-size: 1.19rem
 }
 
@@ -10498,12 +10498,12 @@ a.tag:hover {
 }
 
 .post-misc .post-content ul li::-moz-selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
 .post-misc .post-content ul li::selection {
-    background: #af1da2;
+    background: #cd2b5e;
     color: #fff
 }
 
@@ -10565,7 +10565,7 @@ a.tag:hover {
 }
 
 .post-misc .hero-default {
-    background-color: #af1da2
+    background-color: #cd2b5e
 }
 
 .post-offset .breadcrumb {
@@ -10586,7 +10586,7 @@ a.tag:hover {
 .post-front .card .card-tags,.post-front .card .card-title {
     -webkit-transition: ease-in-out .2s all;
     -o-transition: ease-in-out .2s all;
-    color: #65B149
+    color: #2bcd6c
 }
 
 .post-front .card .ribbon {
@@ -10597,7 +10597,7 @@ a.tag:hover {
 }
 
 .post-front .card .ribbon a {
-    color: #65B149;
+    color: #2bcd6c;
     font-weight: 500;
     width: 100%;
     display: block
@@ -10636,7 +10636,7 @@ a.tag:hover {
     -webkit-transform: translateY(-10px) scale(1.04);
     -ms-transform: translateY(-10px) scale(1.04);
     transform: translateY(-10px) scale(1.04);
-    background-color: #65B149
+    background-color: #2bcd6c
 }
 
 .post-front .card:hover .card-date,.post-front .card:hover .card-description,.post-front .card:hover .card-tags,.post-front .card:hover .card-title {
@@ -10646,7 +10646,7 @@ a.tag:hover {
 .post-front .hero-posts {
     height: 70vh;
     min-height: 70vh;
-    background-color: #65B149
+    background-color: #2bcd6c
 }
 
 .post-front .hero-posts-body {
@@ -10661,7 +10661,7 @@ a.tag:hover {
 }
 
 .post-front .breadcrumb li.is-active a {
-    color: #65B149
+    color: #2bcd6c
 }
 
 .post-front .post-date,.post-front .post-description,.post-front .post-title {
@@ -10697,12 +10697,12 @@ a.tag:hover {
 }
 
 .post-front .post-content .button-post::-moz-selection,.post-front .post-content .tags::-moz-selection,.post-front .post-content blockquote::-moz-selection,.post-front .post-content figure::-moz-selection,.post-front .post-content h2::-moz-selection,.post-front .post-content h3::-moz-selection,.post-front .post-content h4::-moz-selection,.post-front .post-content iframe::-moz-selection,.post-front .post-content ol::-moz-selection,.post-front .post-content p::-moz-selection,.post-front .post-content ul::-moz-selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
 .post-front .post-content .button-post::selection,.post-front .post-content .tags::selection,.post-front .post-content blockquote::selection,.post-front .post-content figure::selection,.post-front .post-content h2::selection,.post-front .post-content h3::selection,.post-front .post-content h4::selection,.post-front .post-content iframe::selection,.post-front .post-content ol::selection,.post-front .post-content p::selection,.post-front .post-content ul::selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
@@ -10719,7 +10719,7 @@ a.tag:hover {
 }
 
 .post-front .post-content h2,.post-front .post-content h3 {
-    color: #65B149;
+    color: #2bcd6c;
     font-weight: 700;
     margin-bottom: 30px
 }
@@ -10734,13 +10734,13 @@ a.tag:hover {
 
 .post-front .post-content a {
     padding: 0 3px;
-    color: #65B149;
+    color: #2bcd6c;
     font-weight: 500;
     transition: ease-in-out .2s all;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#65B149),to(#65B149));
-    background-image: -webkit-linear-gradient(top,#65B149 0,#65B149 100%);
-    background-image: -o-linear-gradient(top,#65B149 0,#65B149 100%);
-    background-image: linear-gradient(to bottom,#65B149 0,#65B149 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2bcd6c),to(#2bcd6c));
+    background-image: -webkit-linear-gradient(top,#2bcd6c 0,#2bcd6c 100%);
+    background-image: -o-linear-gradient(top,#2bcd6c 0,#2bcd6c 100%);
+    background-image: linear-gradient(to bottom,#2bcd6c 0,#2bcd6c 100%);
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -10749,12 +10749,12 @@ a.tag:hover {
 }
 
 .post-front .post-content a::-moz-selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
 .post-front .post-content a::selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
@@ -10779,10 +10779,10 @@ a.tag:hover {
 
 .post-front .post-content a:hover {
     color: #fff;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#65B149),to(#65B149));
-    background-image: -webkit-linear-gradient(top,#65B149 0,#65B149 100%);
-    background-image: -o-linear-gradient(top,#65B149 0,#65B149 100%);
-    background-image: linear-gradient(to bottom,#65B149 0,#65B149 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2bcd6c),to(#2bcd6c));
+    background-image: -webkit-linear-gradient(top,#2bcd6c 0,#2bcd6c 100%);
+    background-image: -o-linear-gradient(top,#2bcd6c 0,#2bcd6c 100%);
+    background-image: linear-gradient(to bottom,#2bcd6c 0,#2bcd6c 100%);
     background-position: 0 0
 }
 
@@ -10791,7 +10791,7 @@ a.tag:hover {
 }
 
 .post-front .post-content strong {
-    color: #65B149;
+    color: #2bcd6c;
     font-size: 1.19rem
 }
 
@@ -10835,12 +10835,12 @@ a.tag:hover {
 }
 
 .post-front .post-content ul li::-moz-selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
 .post-front .post-content ul li::selection {
-    background: #65B149;
+    background: #2bcd6c;
     color: #fff
 }
 
@@ -10902,7 +10902,7 @@ a.tag:hover {
 }
 
 .post-front .hero-default {
-    background-color: #65B149
+    background-color: #2bcd6c
 }
 
 .bg-black {
@@ -11717,7 +11717,7 @@ footer .footer-phone .fa {
 }
 
 .hero-index-body .title {
-    padding: 0 0 10px;
+    padding: 0 0 2.6rem;
     font-size: 3.5rem
 }
 
@@ -14447,7 +14447,7 @@ footer .footer-phone .fa {
         font-size: 1.2rem
     }
 
-    .about h2,.about h3,.about ul>li>p {
+    .about h2,.about h3,.about h4,.about ul>li>p {
         padding-left: 0
     }
 }
