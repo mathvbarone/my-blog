@@ -18,7 +18,7 @@ const gulp = require("gulp"),
  * Files Path
  */
 
-let paths = {
+const paths = {
   src: {
     sass: ["assets/src/sass/**/*.sass"],
     js: "assets/src/js/**/*.js",
@@ -35,70 +35,68 @@ let paths = {
 };
 
 
-let messages = {
+const messages = {
   jekyllBuild: "<span style=\"color: grey\">Running:</span> $ jekyll build",
 };
 
-let jekyllCommand = (/^win/.test(process.platform)) ? "jekyll.bat" : "jekyll";
+const jekyllCommand = (/^win/.test(process.platform)) ? "jekyll.bat" : "jekyll";
 
 /**
  * Build the Jekyll Site
  */
 gulp.task("jekyll-build", (done) => {
-	browserSync.notify(messages.jekyllBuild);
-	return cp.spawn(jekyllCommand, ['s'], {stdio: 'inherit'})
-		.on('close', done);
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn(jekyllCommand, ["s"], { stdio: "inherit" })
+    .on("close", done);
 });
 
 
 gulp.task("css", () => {
-	gulp.src(paths.src.sass)
-	    .pipe(plumber())
-	    .pipe(sass())
-	    .pipe(gcmq())
-	    .pipe(autoprefixer({
-		   browsers: ['last 30 versions'],
-		   cascade: false
-	    }))
-	    .pipe(cssmin())
-	    .pipe(plumber.stop())
-	    .pipe(rename('style.min.css'))
-	    .pipe(gulp.dest(paths.dest.sass))
-	    .pipe(browserSync.reload({stream:true}))
-	    .pipe(beautifycss())
-	    .pipe(gulp.dest(paths.dest.beauty.sass))
- });
+  gulp.src(paths.src.sass)
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gcmq())
+    .pipe(autoprefixer({
+      browsers: ["last 30 versions"],
+      cascade: false,
+    }))
+    .pipe(cssmin())
+    .pipe(plumber.stop())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest(paths.dest.sass))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(beautifycss())
+    .pipe(gulp.dest(paths.dest.beauty.sass));
+});
 
 
 /**
  * Javascript Task
  */
 gulp.task("js", () => {
-	gulp.src(['assets/src/js/jquery.js',
-			'assets/src/js/libs/**.js',
-			'assets/src/js/custom/**.js',
-			'assets/src/js/main.js'])
-	    .pipe(plumber())
-	    .pipe(babel({
-			presets: ['env']
-	 	}))
-	    .pipe(concat('concat.js'))
-	    .pipe(gulp.dest(paths.dest.js))
-	    .pipe(rename('main.min.js'))
-	    .pipe(uglify())
-	    .pipe(plumber.stop())
-	    .pipe(gulp.dest(paths.dest.js));
- });
+  gulp.src(["assets/src/js/jquery.js",
+    "assets/src/js/libs/**.js",
+    "assets/src/js/custom/**.js",
+    "assets/src/js/main.js"])
+    .pipe(plumber())
+    .pipe(babel({
+      presets: ["env"],
+    }))
+    .pipe(concat("concat.js"))
+    .pipe(gulp.dest(paths.dest.js))
+    .pipe(rename("main.min.js"))
+    .pipe(uglify())
+    .pipe(plumber.stop())
+    .pipe(gulp.dest(paths.dest.js));
+});
 
 /**
  * Imagemin Task
  */
-gulp.task("imagemin", () => {
-	return gulp.src(paths.src.img)
-		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-		.pipe(gulp.dest(paths.dest.img));
-});
+gulp.task("imagemin", () => gulp.src(paths.src.img)
+  .pipe(plumber())
+  .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+  .pipe(gulp.dest(paths.dest.img)));
 
 
 /**
@@ -106,11 +104,11 @@ gulp.task("imagemin", () => {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task("watch", () => {
-	gulp.watch(paths.src.sass, ['css']);
-	gulp.watch(paths.src.js, ['js']);
-	gulp.watch('assets/src/img/**/*.{jpg,png,gif}', ['imagemin']);
-	gulp.watch(['jekyll-build']);
-	// gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(paths.src.sass, ["css"]);
+  gulp.watch(paths.src.js, ["js"]);
+  gulp.watch("assets/src/img/**/*.{jpg,png,gif}", ["imagemin"]);
+  gulp.watch(["jekyll-build"]);
+  // gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**

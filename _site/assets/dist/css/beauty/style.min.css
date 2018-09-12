@@ -625,7 +625,7 @@ a.box:active {
     color: #363636
 }
 
-.button.is-link[disabled],.is-link[disabled].button-submit {
+.button.is-link[disabled],.is-link.button-submit[disabled] {
     background-color: transparent;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -660,7 +660,7 @@ a.box:active {
     color: #0a0a0a
 }
 
-.button.is-white[disabled],.is-white[disabled].button-submit {
+.button.is-white[disabled],.is-white.button-submit[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -676,7 +676,7 @@ a.box:active {
     background-color: #000
 }
 
-.button.is-white.is-inverted[disabled],.is-white.is-inverted[disabled].button-submit {
+.button.is-white.is-inverted[disabled],.is-white.is-inverted.button-submit[disabled] {
     background-color: #0a0a0a;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -704,7 +704,7 @@ a.box:active {
     border-color: transparent transparent #fff #fff!important
 }
 
-.button.is-white.is-outlined[disabled],.is-white.is-outlined[disabled].button-submit {
+.button.is-white.is-outlined[disabled],.is-white.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -723,7 +723,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-white.is-inverted.is-outlined[disabled],.is-white.is-inverted.is-outlined[disabled].button-submit {
+.button.is-white.is-inverted.is-outlined[disabled],.is-white.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #0a0a0a;
     -webkit-box-shadow: none;
@@ -759,7 +759,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-black[disabled],.is-black[disabled].button-submit {
+.button.is-black[disabled],.is-black.button-submit[disabled] {
     background-color: #0a0a0a;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -775,7 +775,7 @@ a.box:active {
     background-color: #f2f2f2
 }
 
-.button.is-black.is-inverted[disabled],.is-black.is-inverted[disabled].button-submit {
+.button.is-black.is-inverted[disabled],.is-black.is-inverted.button-submit[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -803,7 +803,7 @@ a.box:active {
     border-color: transparent transparent #0a0a0a #0a0a0a!important
 }
 
-.button.is-black.is-outlined[disabled],.is-black.is-outlined[disabled].button-submit {
+.button.is-black.is-outlined[disabled],.is-black.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #0a0a0a;
     -webkit-box-shadow: none;
@@ -822,7 +822,7 @@ a.box:active {
     color: #0a0a0a
 }
 
-.button.is-black.is-inverted.is-outlined[disabled],.is-black.is-inverted.is-outlined[disabled].button-submit {
+.button.is-black.is-inverted.is-outlined[disabled],.is-black.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -858,7 +858,7 @@ a.box:active {
     color: #363636
 }
 
-.button.is-light[disabled],.is-light[disabled].button-submit {
+.button.is-light[disabled],.is-light.button-submit[disabled] {
     background-color: #f5f5f5;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -874,7 +874,7 @@ a.box:active {
     background-color: #292929
 }
 
-.button.is-light.is-inverted[disabled],.is-light.is-inverted[disabled].button-submit {
+.button.is-light.is-inverted[disabled],.is-light.is-inverted.button-submit[disabled] {
     background-color: #363636;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -902,7 +902,7 @@ a.box:active {
     border-color: transparent transparent #f5f5f5 #f5f5f5!important
 }
 
-.button.is-light.is-outlined[disabled],.is-light.is-outlined[disabled].button-submit {
+.button.is-light.is-outlined[disabled],.is-light.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #f5f5f5;
     -webkit-box-shadow: none;
@@ -921,7 +921,7 @@ a.box:active {
     color: #f5f5f5
 }
 
-.button.is-light.is-inverted.is-outlined[disabled],.is-light.is-inverted.is-outlined[disabled].button-submit {
+.button.is-light.is-inverted.is-outlined[disabled],.is-light.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #363636;
     -webkit-box-shadow: none;
@@ -957,7 +957,7 @@ a.box:active {
     color: #f5f5f5
 }
 
-.button.is-dark[disabled],.is-dark[disabled].button-submit {
+.button.is-dark[disabled],.is-dark.button-submit[disabled] {
     background-color: #363636;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -973,7 +973,7 @@ a.box:active {
     background-color: #e8e8e8
 }
 
-.button.is-dark.is-inverted[disabled],.is-dark.is-inverted[disabled].button-submit {
+.button.is-dark.is-inverted[disabled],.is-dark.is-inverted.button-submit[disabled] {
     background-color: #f5f5f5;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1001,7 +1001,7 @@ a.box:active {
     border-color: transparent transparent #363636 #363636!important
 }
 
-.button.is-dark.is-outlined[disabled],.is-dark.is-outlined[disabled].button-submit {
+.button.is-dark.is-outlined[disabled],.is-dark.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #363636;
     -webkit-box-shadow: none;
@@ -1020,7 +1020,7 @@ a.box:active {
     color: #363636
 }
 
-.button.is-dark.is-inverted.is-outlined[disabled],.is-dark.is-inverted.is-outlined[disabled].button-submit {
+.button.is-dark.is-inverted.is-outlined[disabled],.is-dark.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #f5f5f5;
     -webkit-box-shadow: none;
@@ -1056,7 +1056,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-primary[disabled],.is-primary[disabled].button-submit {
+.button.is-primary[disabled],.is-primary.button-submit[disabled] {
     background-color: #cd2b46;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1072,7 +1072,7 @@ a.box:active {
     background-color: #f2f2f2
 }
 
-.button.is-primary.is-inverted[disabled],.is-primary.is-inverted[disabled].button-submit {
+.button.is-primary.is-inverted[disabled],.is-primary.is-inverted.button-submit[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1100,7 +1100,7 @@ a.box:active {
     border-color: transparent transparent #cd2b46 #cd2b46!important
 }
 
-.button.is-primary.is-outlined[disabled],.is-primary.is-outlined[disabled].button-submit {
+.button.is-primary.is-outlined[disabled],.is-primary.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #cd2b46;
     -webkit-box-shadow: none;
@@ -1119,7 +1119,7 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-primary.is-inverted.is-outlined[disabled],.is-primary.is-inverted.is-outlined[disabled].button-submit {
+.button.is-primary.is-inverted.is-outlined[disabled],.is-primary.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1155,7 +1155,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-info[disabled],.jobs-list>li .button[disabled],.jobs-list>li [disabled].button-submit,[disabled].button-submit {
+.button-submit[disabled],.button.is-info[disabled],.jobs-list>li .button-submit[disabled],.jobs-list>li .button[disabled] {
     background-color: #2ab7cd;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1171,7 +1171,7 @@ a.box:active {
     background-color: #f2f2f2
 }
 
-.button.is-info.is-inverted[disabled],.is-inverted[disabled].button-submit,.jobs-list>li .button.is-inverted[disabled] {
+.button.is-info.is-inverted[disabled],.is-inverted.button-submit[disabled],.jobs-list>li .button.is-inverted[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1199,7 +1199,7 @@ a.box:active {
     border-color: transparent transparent #2ab7cd #2ab7cd!important
 }
 
-.button.is-info.is-outlined[disabled],.is-outlined[disabled].button-submit,.jobs-list>li .button.is-outlined[disabled] {
+.button.is-info.is-outlined[disabled],.is-outlined.button-submit[disabled],.jobs-list>li .button.is-outlined[disabled] {
     background-color: transparent;
     border-color: #2ab7cd;
     -webkit-box-shadow: none;
@@ -1218,7 +1218,7 @@ a.box:active {
     color: #2ab7cd
 }
 
-.button.is-info.is-inverted.is-outlined[disabled],.is-inverted.is-outlined[disabled].button-submit,.jobs-list>li .button.is-inverted.is-outlined[disabled] {
+.button.is-info.is-inverted.is-outlined[disabled],.is-inverted.is-outlined.button-submit[disabled],.jobs-list>li .button.is-inverted.is-outlined[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1254,7 +1254,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-success[disabled],.is-success[disabled].button-submit {
+.button.is-success[disabled],.is-success.button-submit[disabled] {
     background-color: #149000;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1270,7 +1270,7 @@ a.box:active {
     background-color: #f2f2f2
 }
 
-.button.is-success.is-inverted[disabled],.is-success.is-inverted[disabled].button-submit {
+.button.is-success.is-inverted[disabled],.is-success.is-inverted.button-submit[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1298,7 +1298,7 @@ a.box:active {
     border-color: transparent transparent #149000 #149000!important
 }
 
-.button.is-success.is-outlined[disabled],.is-success.is-outlined[disabled].button-submit {
+.button.is-success.is-outlined[disabled],.is-success.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #149000;
     -webkit-box-shadow: none;
@@ -1317,7 +1317,7 @@ a.box:active {
     color: #149000
 }
 
-.button.is-success.is-inverted.is-outlined[disabled],.is-success.is-inverted.is-outlined[disabled].button-submit {
+.button.is-success.is-inverted.is-outlined[disabled],.is-success.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1353,7 +1353,7 @@ a.box:active {
     color: rgba(0,0,0,.7)
 }
 
-.button.is-warning[disabled],.is-warning[disabled].button-submit {
+.button.is-warning[disabled],.is-warning.button-submit[disabled] {
     background-color: #ffdd57;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1369,7 +1369,7 @@ a.box:active {
     background-color: rgba(0,0,0,.7)
 }
 
-.button.is-warning.is-inverted[disabled],.is-warning.is-inverted[disabled].button-submit {
+.button.is-warning.is-inverted[disabled],.is-warning.is-inverted.button-submit[disabled] {
     background-color: rgba(0,0,0,.7);
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1397,7 +1397,7 @@ a.box:active {
     border-color: transparent transparent #ffdd57 #ffdd57!important
 }
 
-.button.is-warning.is-outlined[disabled],.is-warning.is-outlined[disabled].button-submit {
+.button.is-warning.is-outlined[disabled],.is-warning.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #ffdd57;
     -webkit-box-shadow: none;
@@ -1416,7 +1416,7 @@ a.box:active {
     color: #ffdd57
 }
 
-.button.is-warning.is-inverted.is-outlined[disabled],.is-warning.is-inverted.is-outlined[disabled].button-submit {
+.button.is-warning.is-inverted.is-outlined[disabled],.is-warning.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: rgba(0,0,0,.7);
     -webkit-box-shadow: none;
@@ -1452,7 +1452,7 @@ a.box:active {
     color: #fff
 }
 
-.button.is-danger[disabled],.is-danger[disabled].button-submit {
+.button.is-danger[disabled],.is-danger.button-submit[disabled] {
     background-color: #cd2b46;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1468,7 +1468,7 @@ a.box:active {
     background-color: #f2f2f2
 }
 
-.button.is-danger.is-inverted[disabled],.is-danger.is-inverted[disabled].button-submit {
+.button.is-danger.is-inverted[disabled],.is-danger.is-inverted.button-submit[disabled] {
     background-color: #fff;
     border-color: transparent;
     -webkit-box-shadow: none;
@@ -1496,7 +1496,7 @@ a.box:active {
     border-color: transparent transparent #cd2b46 #cd2b46!important
 }
 
-.button.is-danger.is-outlined[disabled],.is-danger.is-outlined[disabled].button-submit {
+.button.is-danger.is-outlined[disabled],.is-danger.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #cd2b46;
     -webkit-box-shadow: none;
@@ -1515,7 +1515,7 @@ a.box:active {
     color: #cd2b46
 }
 
-.button.is-danger.is-inverted.is-outlined[disabled],.is-danger.is-inverted.is-outlined[disabled].button-submit {
+.button.is-danger.is-inverted.is-outlined[disabled],.is-danger.is-inverted.is-outlined.button-submit[disabled] {
     background-color: transparent;
     border-color: #fff;
     -webkit-box-shadow: none;
@@ -1537,7 +1537,7 @@ a.box:active {
     font-size: 1.5rem
 }
 
-.button[disabled],[disabled].button-submit {
+.button-submit[disabled],.button[disabled] {
     cursor: not-allowed;
     background-color: #fff;
     border-color: #dbdbdb;
@@ -4565,40 +4565,8 @@ a.box:active {
     padding-right: var(--columnGap)
 }
 
-.columns.is-variable.is-0 {
-    --columnGap: 0rem
-}
-
-.columns.is-variable.is-1 {
-    --columnGap: 0.25rem
-}
-
-.columns.is-variable.is-2 {
-    --columnGap: 0.5rem
-}
-
-.columns.is-variable.is-3 {
-    --columnGap: 0.75rem
-}
-
-.columns.is-variable.is-4 {
-    --columnGap: 1rem
-}
-
-.columns.is-variable.is-5 {
-    --columnGap: 1.25rem
-}
-
-.columns.is-variable.is-6 {
-    --columnGap: 1.5rem
-}
-
-.columns.is-variable.is-7 {
-    --columnGap: 1.75rem
-}
-
-.columns.is-variable.is-8 {
-    --columnGap: 2rem
+.columns.is-variable.is-0,.columns.is-variable.is-1,.columns.is-variable.is-2,.columns.is-variable.is-3,.columns.is-variable.is-4,.columns.is-variable.is-5,.columns.is-variable.is-6,.columns.is-variable.is-7,.columns.is-variable.is-8 {
+    --columnGap: $i * 0.25rem
 }
 
 .tile {
@@ -11492,7 +11460,7 @@ a.tag:hover {
     fill: #000
 }
 
-.menu-link:not(.button):not(.button-submit):not(.button-submit) {
+.menu-link:not(.button):not(.button-submit) {
     margin-right: 10px;
     color: #000
 }
@@ -14511,7 +14479,7 @@ footer .footer-phone .fa {
         font-size: 1.2em
     }
 
-    .menu-link:not(.button):not(.button-submit):not(.button-submit) {
+    .menu-link:not(.button):not(.button-submit) {
         margin-right: 8px
     }
 
