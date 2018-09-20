@@ -68,6 +68,10 @@
   <meta name="theme-color" content="#cd2b46">
 
 
+<!-- Add manifest -->
+<link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
+
+
 <!-- POST LAYOUT CRITICAL CSS -->
 {% if page.head-class == "post" %}
   {% include criticalcss/post.html %}
