@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://matheusbarone.com" # the base hostname & protocol for your site
 twitter_username: matheusvbarone
-github_username:  mathvbarone   
+github_username:  mathvbarone
 
 # Build settings
 markdown: kramdown
@@ -29,6 +29,15 @@ links:
     url: /tags
   - title: Sobre mim
     url: /sobre
+
+
+files_to_cache:
+ - '/assets/dist/js/main.min.js'
+
+pages_to_cache:
+  - '/sobre/'
+  - '/tags/'
+  - '/offline/index.html'
 
 
 # exclude my node related stuff
