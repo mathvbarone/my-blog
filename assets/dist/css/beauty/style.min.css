@@ -14579,7 +14579,8 @@ footer .footer-phone .fa {
     }
 
     .hero-index-body .title {
-        font-size: 1.7rem
+        font-size: 1.4rem;
+        line-height: 1.9rem
     }
 }
 
