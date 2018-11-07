@@ -1,4 +1,4 @@
-const staticCacheName = 'matheus-barone-2018-09-20-11-19';
+const staticCacheName = 'matheus-barone-2018-11-07-19-04';
 
 const filesToCache = [
   
