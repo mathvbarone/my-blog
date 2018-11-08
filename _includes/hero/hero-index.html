@@ -1,7 +1,11 @@
 <!-- HERO -->
 <section class="hero is-fullheight hero-index has-header">
   <div class="panel hero-index-body hero-body">
+    {% if page.lang == 'en' %}
+    <a href="{{ site.url }}/en/" title="© 2018 Matheus Barone - Software Engineer | All Rights Reserved"></a>
+    {%else %}
     <a href="/blog" title="© 2018 Matheus Barone - Software Engineer | Todos os Direitos Reservados">
+    {% endif %}
       {% include svg-icons/logo-full.html %}
     </a>
     <h1 class="title">

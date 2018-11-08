@@ -3,7 +3,15 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"
+<html
+{% if page.lang == 'en' %}
+  lang="en" xml:lang="en"
+{% else %}
+  lang="pt-br" xml:lang="pt-br"
+{% endif %}
+itemscope itemtype="http://schema.org/WebPage"
+  {% if page.main-class %}
+    class="post-{{ page.main-class }}"
   {% endif %}>
 <!-- HEAD -->
 {% include head.html %}
