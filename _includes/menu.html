@@ -1,5 +1,9 @@
 <ul class="level-right">
+  {% if page.lang == 'en' %}
+    <li class="level-item menu-item"><a href="{{ site.url }}/en/" class="menu-link" title="Home">Home</a></li>
+    {% else %}
      <li class="level-item menu-item"><a href="{{ site.url }}" class="menu-link" title="Home">Home</a></li>
+  {% endif %}
     {% if page.lang == 'en' %}
       <li class="level-item menu-item"><a href="{{ site.url }}/about/" class="menu-link" title="Sobre mim">About</a></li>
      {% else %}
@@ -14,4 +18,5 @@
     {% if page.lang != 'en' %}
      <li class="level-item menu-item"><a href="{{ site.url }}/blog/" class="button is-primary menu-link" title="Blog">Blog</a></li>
     {% endif %}
+
 </ul>
