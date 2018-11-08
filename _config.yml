@@ -3,7 +3,7 @@ title: Matheus Barone | Software Engineer
 email: matheusvbarone@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Olá, sou Matheus Barone, de Santos/SP. Trabalho como Software Engineer na Avanade.
-  descriptionEn: > # this means to ignore newlines until "baseurl:"
+descriptionEn: > # this means to ignore newlines until "baseurl:"
    Hi, my name is Matheus from Brazil. I'm a Software Engineer.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://matheusbarone.com" # the base hostname & protocol for your site
