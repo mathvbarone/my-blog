@@ -7,13 +7,14 @@
 
 
   <meta name="description" content="
-    {% if page.description %}
-      {% if page.lang == 'en' %}
-        {{ page.descriptionEn | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.descriptionEn }}
-      {% else %}
+    {% if page.lang == 'en' %}
+      {{ site.descriptionEn }}
+    {% else %}
+      {% if page.description %}
         {{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}
       {% endif %}
-    {% endif %}">
+    {% endif %}"
+  >
 
   <!-- Google Authorship Markup -->
   <meta name="google-site-verification" content="8kDtWUmUQEh7QXoj_shRaxcgYAVpHs_YQ7TeniN0kmI" />
