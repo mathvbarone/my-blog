@@ -3,47 +3,49 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
-     <!-- HEAD -->
-     {% include head.html %}
-     <!-- /HEAD -->
-     <body>
-          <div id="top"></div>
-          <section id="main-box" class="main-box">
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"
+  {% endif %}>
+<!-- HEAD -->
+{% include head.html %}
+<!-- /HEAD -->
 
-               <!-- ANALYTICS -->
-               {% include analytics.html %}
-               <!-- /ANALYTICS -->
+<body>
+  <div id="top"></div>
+  <section id="main-box" class="main-box">
 
-               <!-- HEADER -->
-               {% include header.html %}
-               <!-- /HEADER -->
+    <!-- ANALYTICS -->
+    {% include analytics.html %}
+    <!-- /ANALYTICS -->
 
-               <!-- /HERO -->
-               {% include hero/hero-index.html %}
-               <!-- HERO -->
+    <!-- HEADER -->
+    {% include header.html %}
+    <!-- /HEADER -->
 
-               <!-- OFFSET -->
-               <div class="offset index-offset">
+    <!-- /HERO -->
+    {% include hero/hero-index.html %}
+    <!-- HERO -->
 
-                    <!-- CONTENT -->
-                    {{ content }}
-                    <!-- /CONTENT -->
+    <!-- OFFSET -->
+    <div class="offset index-offset">
 
-                    <!-- FOOTER -->
-                    {% include footer.html %}
-                    <!-- /FOOTER -->
+      <!-- CONTENT -->
+      {{ content }}
+      <!-- /CONTENT -->
 
-               </div>
-               <!-- OFFSET -->
+      <!-- FOOTER -->
+      {% include footer.html %}
+      <!-- /FOOTER -->
 
-               <!-- ARROW -->
-               <a href="#top" class="up-arrow">
-                    <svg class="icon-uparrow">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
-                    </svg>
-                </a>
-               <!-- ARROW -->
+    </div>
+    <!-- OFFSET -->
 
-          </section>
-     </body>
+    <!-- ARROW -->
+    <a href="#top" class="up-arrow">
+      <svg class="icon-uparrow">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#up-arrow"></use>
+      </svg>
+    </a>
+    <!-- ARROW -->
+
+  </section>
+</body>

@@ -5,14 +5,27 @@
       {% include svg-icons/logo-full.html %}
     </a>
     <h1 class="title">
+      {% if page.lang == 'en' %}
+      Hi, my name is Matheus. <span>I'm a Software Engineer</span>
+      {% else %}
       Olá, meu nome é Matheus. <span>Trabalho como Software Engineer</span>
+      {%endif%}
     </h1>
     <h2 class="subtitle">
+      {% if page.lang == 'en' %}
+      It means I develop
+      {% else %}
       Isso quer dizer que desenvolvo
+      {%endif%}
       <strong id="typed-strings">
-        <p class="typed-words">portais.</p>
         <p class="typed-words">web-apps.</p>
-        <p class="typed-words">sites institucionais.</p>
+        <p class="typed-words">
+        {% if page.lang == 'en' %}
+        websites
+        {% else %}
+        sites institucionais.
+        {%endif%}
+        </p>
         <p class="typed-words">landing-pages.</p>
         <p class="typed-words">e-commerce.</p>
       </strong>
@@ -20,8 +33,13 @@
     </h2>
 
 
-    <a href="#contato" class="button is-success button-custom" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">Precisa
-      de ajuda? :)</a>
+    <a href="#contato" class="button is-success button-custom" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">
+      {% if page.lang == 'en' %}
+      Need help? :)
+      {% else %}
+      Precisa de ajuda? :)
+      {%endif%}
+    </a>
 
 
     <div class="learn-more">

@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
+            <loc>http://localhost:4000/about/index.html</loc>
+        </url>
+    
+        <url>
             <loc>http://localhost:4000/blog/index.html</loc>
         </url>
     
@@ -11,6 +15,10 @@
     
         <url>
             <loc>http://localhost:4000/category/css/</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/en/</loc>
         </url>
     
         <url>

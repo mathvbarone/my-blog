@@ -3,9 +3,13 @@
           <div class="content has-text-centered">
             <span class="footer-infos">
                 © 2018 Matheus Barone | Software Engineer<br>
+                {% if page.lang != 'en' %}
                 <span>Feito por mim (com a ajuda de algumas xícaras de café).</span>
+                {% endif %}
             </span>
-            <a class="footer-phone" href="tel:+5513981252789"><i class="fa-lg fa fa-mobile" aria-hidden="true"></i>(13) 98125-2789</a>
+            <a class="footer-phone" href="tel:+5513981252789"><i class="fa-lg fa fa-mobile" aria-hidden="true"></i>
+              {% if page.lang == 'en' %}+55{% endif %} (13) 98125-2789
+            </a>
 
 			<ul class="redes">
                 <li class="redes-item">
@@ -46,7 +50,7 @@
   <!-- STYLESHEET -->
 
 <!-- SCRIPTS -->
-<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>    
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="{{ "/assets/dist/js/main.min.js" | prepend: site.baseurl }}"></script>
 <!-- /SCRIPTS -->
 

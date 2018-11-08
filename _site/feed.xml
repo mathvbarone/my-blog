@@ -2,12 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matheus Barone | Software Engineer</title>
-    <description>Olá, sou Matheus Barone, de Santos/SP. Trabalho como Software Engineer na Avanade.
+    <description>Olá, sou Matheus Barone, de Santos/SP. Trabalho como Software Engineer na Avanade. descriptionEn: &gt; # this means to ignore newlines until &quot;baseurl:&quot;
+ Hi, my name is Matheus from Brazil. I'm a Software Engineer.
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Nov 2018 19:04:12 -0200</pubDate>
-    <lastBuildDate>Wed, 07 Nov 2018 19:04:12 -0200</lastBuildDate>
+    <pubDate>Wed, 07 Nov 2018 22:58:15 -0200</pubDate>
+    <lastBuildDate>Wed, 07 Nov 2018 22:58:15 -0200</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>

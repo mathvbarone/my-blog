@@ -4,12 +4,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+
+  <meta name="description" content="
+    {% if page.description %}
+      {% if page.lang == 'en' %}
+        {{ page.descriptionEn | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.descriptionEn }}
+      {% else %}
+        {{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}
+      {% endif %}
+    {% endif %}">
 
   <!-- Google Authorship Markup -->
   <meta name="google-site-verification" content="8kDtWUmUQEh7QXoj_shRaxcgYAVpHs_YQ7TeniN0kmI" />
   <link rel="author" href="https://plus.google.com/+MatheusBarone1?rel=author">
-  <link rel="alternate" href="{{ site.url }}" hreflang="pt-br"/>
+  <link rel="alternate" href="{{ site.url }}" hreflang="pt-br" />
 
   <!-- Social: Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -35,91 +44,90 @@
   <meta property="og:site_name" content="{{ site.title }}">
 
   <!-- Social: Google+ / Schema.org  -->
-  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta itemprop="image" content="{{ "/assets/dist/images/site-image.jpg" | prepend: site.baseurl | prepend: site.url }}"/>
+  <meta itemprop="image" content="{{ "/assets/dist/images/site-image.jpg" | prepend: site.baseurl | prepend: site.url }}" />
 
 
-   <!-- Apple Touch Icons -->
-   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-57x57.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-114x114.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-72x72.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-144x144.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-60x60.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-120x120.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-76x76.png" />
-   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-152x152.png" />
-   <!-- favicon -->
-   <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-196x196.png" sizes="196x196" />
-   <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-96x96.png" sizes="96x96" />
-   <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-32x32.png" sizes="32x32" />
-   <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-16x16.png" sizes="16x16" />
-   <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-128.png" sizes="128x128" />
-     <!-- Windows 8 Tile Icons -->
-   <meta name="application-name" content="Matheus Barone | Desenvolvedor Front-End"/>
-   <meta name="msapplication-TileColor" content="#FFFFFF" />
-   <meta name="msapplication-TileImage" content="{{ site.url }}/assets/dist/images/icons/mstile-144x144.png" />
-   <meta name="msapplication-square70x70logo" content="{{ site.url }}/assets/dist/images/icons/mstile-70x70.png" />
-   <meta name="msapplication-square150x150logo" content="{{ site.url }}/assets/dist/images/icons/mstile-150x150.png" />
-   <meta name="msapplication-wide310x150logo" content="{{ site.url }}/assets/dist/images/icons/mstile-310x150.png" />
-   <meta name="msapplication-square310x310logo" content="{{ site.url }}/assets/dist/images/icons/mstile-310x310.png" />
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.url }}/assets/dist/images/icons/apple-touch-icon-152x152.png" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/dist/images/icons/favicon-128.png" sizes="128x128" />
+  <!-- Windows 8 Tile Icons -->
+  <meta name="application-name" content="Matheus Barone | Desenvolvedor Front-End" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="{{ site.url }}/assets/dist/images/icons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="{{ site.url }}/assets/dist/images/icons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="{{ site.url }}/assets/dist/images/icons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="{{ site.url }}/assets/dist/images/icons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="{{ site.url }}/assets/dist/images/icons/mstile-310x310.png" />
 
   <!-- Android Lolipop Theme Color -->
   <meta name="theme-color" content="#cd2b46">
 
 
-<!-- Add manifest -->
-<link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
+  <!-- Add manifest -->
+  <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
 
 
-<!-- POST LAYOUT CRITICAL CSS -->
-{% if page.head-class == "post" %}
+  <!-- POST LAYOUT CRITICAL CSS -->
+  {% if page.head-class == "post" %}
   {% include criticalcss/post.html %}
-{% endif %}
-<!-- POST LAYOUT CRITICAL CSS -->
+  {% endif %}
+  <!-- POST LAYOUT CRITICAL CSS -->
 
-<!-- INDEX LAYOUT CRITICAL CSS -->
-{% if page.head-class == "index" %}
+  <!-- INDEX LAYOUT CRITICAL CSS -->
+  {% if page.head-class == "index" %}
   {% include criticalcss/index.html %}
-{% endif %}
-<!-- INDEX LAYOUT CRITICAL CSS -->
+  {% endif %}
+  <!-- INDEX LAYOUT CRITICAL CSS -->
 
-<!-- DEFAULT LAYOUT CRITICAL CSS -->
-{% if page.head-class == "default" %}
+  <!-- DEFAULT LAYOUT CRITICAL CSS -->
+  {% if page.head-class == "default" %}
   {% include criticalcss/default.html %}
-{% endif %}
-<!-- DEFAULT LAYOUT CRITICAL CSS -->
+  {% endif %}
+  <!-- DEFAULT LAYOUT CRITICAL CSS -->
 
 
 
-<!-- Add Service Worker -->
-<script type="text/javascript">
-  if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(function(registration) {
-          console.info("Service Worker registration successful with scope: ", registration.scope);
-      }).catch(function(err) {
-          console.error("Service Worker registration failed: ", err);
+  <!-- Add Service Worker -->
+  <script type="text/javascript">
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").then(function (registration) {
+        console.info("Service Worker registration successful with scope: ", registration.scope);
+      }).catch(function (err) {
+        console.error("Service Worker registration failed: ", err);
       });
-  }
-</script>
+    }
+  </script>
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '190779964790158');
-  fbq('track', 'PageView');
-</script>
-<noscript><img alt="facebook-image" height="1" width="1" class="is-hidden"
-  src="https://www.facebook.com/tr?id=190779964790158&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '190779964790158');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img alt="facebook-image" height="1" width="1" class="is-hidden" src="https://www.facebook.com/tr?id=190779964790158&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
-
-
