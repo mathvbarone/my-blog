@@ -37,13 +37,15 @@
     </h2>
 
 
-    <a href="#contato" class="button is-success button-custom" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">
-      {% if page.lang == 'en' %}
+    {% if page.lang == 'en' %}
+      <a href="#contact" class="button is-success button-custom" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Need help? :)">
       Need help? :)
-      {% else %}
-      Precisa de ajuda? :)
-      {%endif%}
-    </a>
+      </a>
+        {% else %}
+        <a href="#contato" class="button is-success button-custom" data-wow-duration="0.3s" data-wow-delay="0.8s" title="Vamos trabalhar juntos? :)">
+        Precisa de ajuda? :)
+      </a>
+    {%endif%}
 
 
     <div class="learn-more">
