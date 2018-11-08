@@ -18,6 +18,9 @@
     "author": "Matheus Volpe Barone",
     "license": "ISC",
     "devDependencies": {
+        "@babel/cli": "^7.1.5",
+        "@babel/core": "^7.1.5",
+        "@babel/preset-env": "^7.1.5",
         "babel-core": "^6.26.0",
         "babel-preset-env": "^1.6.0",
         "browser-sync": "^2.18.13",
@@ -26,7 +29,7 @@
         "eslint-plugin-import": "^2.8.0",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
-        "gulp-babel": "^7.0.0",
+        "gulp-babel": "^7.0.1",
         "gulp-concat": "^2.6.1",
         "gulp-cssbeautify": "^0.1.3",
         "gulp-cssmin": "^0.1.7",
@@ -37,5 +40,7 @@
         "gulp-sass": "^3.1.0",
         "gulp-uglify": "^2.1.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0"
+    }
 }
