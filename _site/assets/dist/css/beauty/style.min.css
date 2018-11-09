@@ -11791,6 +11791,10 @@ footer .footer-phone .fa {
     }
 }
 
+.jobs-list {
+    outline: 0
+}
+
 .jobs-list>li {
     position: relative;
     padding: 50px 0
