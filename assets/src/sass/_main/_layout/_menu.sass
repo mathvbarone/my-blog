@@ -6,15 +6,31 @@
         color: $primary
 
     @media (max-width:540px)
-        margin-right: 8px        
+        margin-right: 8px
 
 .menu-link
     font-size: 0.95em
 
     @media (max-width:540px)
-        font-size: 0.8rem  
+        font-size: 0.8rem
 
     @media (max-width:340px)
-        font-size: 0.74rem           
+        font-size: 0.74rem
 
-           
+.menu-language
+  width: 43px
+  margin-left: 1rem
+  .flag
+      border-radius: 3px
+      transition: linear 0.2s all
+
+  &:hover
+      .flag
+        transform: scale(1.1)
+
+  @media (max-width:340px)
+    width: 30px
+    .flag
+      height: 22px
+
+

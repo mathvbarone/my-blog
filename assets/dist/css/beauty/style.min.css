@@ -10741,11 +10741,6 @@ a.tag:hover {
     background: 0 0
 }
 
-.hero,.mast-header {
-    position: fixed;
-    width: 100%
-}
-
 .post-front .post-content a:hover {
     color: #fff;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#2bcd6c),to(#2bcd6c));
@@ -11415,7 +11410,9 @@ a.tag:hover {
     -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.12);
     box-shadow: 0 3px 5px rgba(0,0,0,.12);
     padding: 5px 10px;
+    position: fixed;
     top: 0;
+    width: 100%;
     background: #fff;
     -webkit-transition: linear .3s all;
     -o-transition: linear .3s all;
@@ -11478,6 +11475,25 @@ a.tag:hover {
     font-size: .95em
 }
 
+.menu-language {
+    width: 43px;
+    margin-left: 1rem
+}
+
+.menu-language .flag {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: linear .2s all;
+    -o-transition: linear .2s all;
+    transition: linear .2s all
+}
+
+.menu-language:hover .flag {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
 .breadcrumb {
     max-width: 51rem
 }
@@ -11495,6 +11511,8 @@ a.tag:hover {
     height: 100vh;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    position: fixed;
+    width: 100%;
     z-index: 0
 }
 
@@ -14582,6 +14600,14 @@ footer .footer-phone .fa {
 
     .menu-link {
         font-size: .74rem
+    }
+
+    .menu-language {
+        width: 30px
+    }
+
+    .menu-language .flag {
+        height: 22px
     }
 
     .hero-index-body .title {

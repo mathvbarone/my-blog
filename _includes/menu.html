@@ -18,4 +18,24 @@
     {% if page.lang != 'en' %}
      <li class="level-item menu-item"><a href="{{ site.url }}/blog/" class="button is-primary menu-link" title="Blog">Blog</a></li>
     {% endif %}
+
+    {% if page.lang == 'en' %}
+     <li class="menu-language">
+        <a title="Portuguese version" href="{{ site.url }}">
+          <figure>
+            <img alt="Brazilian flag. Click to see a version of the website in portuguese." class="flag" src="../assets/dist/images/icons/brazil-flag.svg" alt="">
+            <figcaption class="is-hidden">Brazilian flag. Click to see a version of the website in portuguese.</figcaption>
+          </figure>
+        </a>
+    </li>
+    {% else %}
+      <li class="menu-language">
+          <a title="Versão em inglês" href="{{ site.url }}/en/">
+            <figure>
+              <img alt="Imagem da bandeira dos Estados Unidos, clique para ser encaminhado a uma versão do site em inglês." class="flag" src="../assets/dist/images/icons/usa-flag.svg" alt="">
+              <figcaption class="is-hidden">Imagem da bandeira dos Estados Unidos, clique para ser encaminhado a uma versão do site em inglês.</figcaption>
+            </figure>
+          </a>
+      </li>
+    {% endif %}
 </ul>

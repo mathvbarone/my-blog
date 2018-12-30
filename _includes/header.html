@@ -7,11 +7,14 @@
       <!-- Left side -->
       <div class="level-left">
         {% if page.lang == 'en' %}
-        <a href="{{ site.url }}/en/" class="level-item" title="© 2018 Matheus Barone - Software Engineer | All Rights Reserved"></a>
+        <a href="{{ site.url }}/en/" class="level-item" title="© 2018 Matheus Barone - Software Engineer | All Rights Reserved">
+            {% include svg-icons/logo-simple.html %}
+        </a>
         {% else %}
-        <a href="{{ site.url }}/" class="level-item" title="© 2018 Matheus Barone - Software Engineer | Todos os Direitos Reservados"></a>
-        {% endif %}
+        <a href="{{ site.url }}/" class="level-item" title="© 2018 Matheus Barone - Software Engineer | Todos os Direitos Reservados">
           {% include svg-icons/logo-simple.html %}
+        </a>
+        {% endif %}
         </a>
       </div>
 
