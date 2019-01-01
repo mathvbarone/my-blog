@@ -248,7 +248,7 @@ head-class: index
                             <div class="field-body">
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left">
-                                        <input type="text" class="input valid" name="name" placeholder="Nome" required>
+                                        <input type="text" class="input valid" name="name" placeholder="Nome" maxlength="255" required>
                                         <span class="icon is-large is-left">
                                             <i class="fa fa-user"></i>
                                         </span>
@@ -256,7 +256,7 @@ head-class: index
                                 </div>
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left has-icons-right">
-                                        <input type="email" class="input valid" name="_replyto" placeholder="Email" required>
+                                        <input type="email" class="input valid" name="_replyto" placeholder="Email" maxlength="254" required>
                                         <span class="icon is-large is-left">
                                             <i class="fa fa-envelope"></i>
                                         </span>
@@ -269,7 +269,7 @@ head-class: index
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <textarea name="message" class="textarea valid" cols="30" rows="6" placeholder="Mensagem" required></textarea>
+                                        <textarea  maxlength="1300" name="message" class="textarea valid" cols="30" rows="6" placeholder="Mensagem" required></textarea>
                                     </div>
                                 </div>
                             </div>
